@@ -4,6 +4,9 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 \title{CSE232 Assignment 2} 
 \author{Nurseiit Abdimomyn -- 20172001}
@@ -33,10 +36,32 @@
     Let $n$ be an integer.  Prove or disprove the following:  If $3n$ is odd, then $n$ is odd.
     \newline
     $f(3n) \to f(n)$ where $f(x)$ is $T$ for $x$ is odd. $F$ otherwise.
-    \newline
+    \newline \newline
     Proof by a contrapositive:
     \newline
-    
+    $\neg f(n) \to \neg f(3n)$
+    \newline
+    Let's write $n = 2k$, then it's clear that $3n = 6k$. Which is also even as $6k = 2*(3k)$ Q.E.D.
+  \item
+    $f(x) = f(y) \to x = y;$ \newline
+    $g(x) = g(y) \to x = y;$ \newline
+    So is true for $f(g(x)) = f(g(y)) \to f(x) = f(y) \to x = y;$ \newline
+    Q.E.D
+  \item
+    $\forall n \in \mathbb{Z} (\ceil{n/2} + \floor{n/2} = n)$ \newline
+    Let's consider the cases when $n$ is even and $n$ is odd. \newline \newline
+    For $n$ is $even$: It is obvious even without proving that the equation above holds in this particular case. \newline
+    For $n$ is $odd$: let's take $n = 2k + 1$, then $n/2 = k + 1/2$; \newline
+    So, $\floor{k + 1/2} = k$ and $\ceil{k + 1/2} = k + 1$. \newline
+    Thus, $\ceil{k + 1/2} + \floor{k + 1/2} = k + k + 1 = 2*k + 1$ which by our definition is equal to $n$. \newline Q.E.D.
+  \item
+    When finding how many integers from $1$ to $n$ are divisible by some integer $k$, one can prove that $\floor{n/k}$ is the answer. \newline \newline
+    So by applying Inclusion-Exclusion Principle here we can see that the number of integers from $1$ to $1000$ which are divisible by either $4$ or $9$ is nothing but: \newline
+    $\floor{1000/4} + \floor{1000/9} - \floor{1000/(4*9)} = 250 + 111 - 27 = 334$
+  \item
+    Via Inclusion-Exclusion Principle the answer will be as follows: \newline
+    $\floor{1000/4} + \floor{1000/6} - \floor{1000/x}$ where $x = LCM(4, 6) = 12;$ \newline
+    So, $250 + 166 - 83 = 333$.
 \end{enumerate}
 
 \end{document}
