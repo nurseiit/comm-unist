@@ -63,7 +63,13 @@
     $\floor[\Big]{\dfrac{1000}{4}} + \floor[\Big]{\dfrac{1000}{6}} - \floor[\Big]{\dfrac{1000}{x}}$ where $x = LCM(4, 6) = 12;$ \newline \newline
     So, $250 + 166 - 83 = 333$.
   \item
-    TBA
+    Below is the general solution for the problem to the number of two-to-one functions from set with $2n$ elements to the set with $n$ elements.
+    \newline
+    Let's first count the total number of combinations where we can arrange $2n$ elements into $n$ pairs. \newline
+    We begin by picking an arbitrary number first and we'll have $(2n - 1)$ choices to choose the second one. Then, we choose arbitrary number again and have $(2n - 3)$ choices left to choose its pair. Continue until we have chosen all $n$ pairs and have $(2n - 1) * (2n - 3) * ... * 1$ possible ways in total.
+    \newline Next we have to match these $n$ pairs from the first set with exactly one element from the second $(\{a, b, c\})$ set. Thus, we'll have to deal with every permutation of it, which will multiply our answer by $n!$ (factorial of $n$).
+    \newline Finally, we have $((2n-1) * (2n - 3) * ... * 1) * n!$ as an answer. Which when multiplied by $2^n$ yields to $(2n)!$. Thus, can be simplified as $\dfrac{(2n)!}{2^n}$.
+    \newline So the final answer will be $n = 3$; $\dfrac{(2*3)!}{2^3} = 90.$
   \item
     Let's first define the squares in which we can't place any cities as an $invalid$ place; And as $valid$ where we can.
     \begin{enumerate}
