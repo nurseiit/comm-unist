@@ -5,4 +5,4 @@
 sudo apt-get install python3-tk
 ```
 3. Then, open the **playground.ipynb** via *Jupyter Notebook*.
-4. There's one little problem here: *you have to reset notebook *everytime* you change your code*.
+4. There's one little problem here: *you have to reset the notebook *everytime* you change your code*.
