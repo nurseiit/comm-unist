@@ -6,10 +6,4 @@ class PIN():
 
     def __init__(self, SetMode):
         self.SetMode = SetMode
-        self.Out = "0"
-        
-
-
-        
-    
-    
+        self.Out = "0"        
