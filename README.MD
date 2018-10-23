@@ -4,4 +4,6 @@
 ### Assingment 2:
 #### Score: 90/100
 ##### Misinterpreted the 2nd problem's statement
-
+### Midterm Exam:
+#### Score: 150/164
+##### TBD
