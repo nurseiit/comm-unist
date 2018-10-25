@@ -23,5 +23,6 @@ In short, they won't even listen to you if your code is fine but it looks differ
 rely on your coding abilities *(even if you went to ACM ICPC World Finals)*, it won't make any difference. Instead, focus on
 understanding the definitions and remembering the details from slides.
 
-IMHO, this is the most *Korean* course I've ever happened to take. *~(You are not correct unless your answer is not 100% the same)*
+IMHO, this is the most *Korean Stereotypical* course I've ever happened to take. 
+*~(You are not correct unless your answer is 100% the same)*
 
