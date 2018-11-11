@@ -26,3 +26,5 @@ understanding the definitions and remembering the details from slides.
 IMHO, this is the most *Korean Stereotypical* course I've ever happened to take. 
 *~(You are not correct unless your answer is 100% the same)*
 
+**Edit 1:** Heheh, ironically it appears that I was wrong about this very part, it *is* one of the most of *that* type courses, though it doesn't even get near the all time (for now) best (or worst, you bet) from that category, OOP taught by S.K. It needs a dedicated blog post on its own.
+
