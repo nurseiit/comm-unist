@@ -259,7 +259,7 @@ You should see the branch `origin/gitlab`, which is prepared for this lab. Check
 (snapshot) looks like by checking out with this command.
 
 ```sh
-git chekcout -t origin/gitlab
+git checkout -t origin/gitlab
 ```
 
 This command will checkout out the `gitlab` branch in the `origin` repository, create a branch
