@@ -125,9 +125,9 @@ use a sequence of commands like this.
 ```sh
 mkdir gitlab
 cd gitlab
-echo "Hello World!" >> hello.txt
+echo 'Hello World!' >> hello.txt
 git add hello.txt
-git commit -m "Hello World!"
+git commit -m 'Hello World!'
 ```
 ### 4. Inspecting the repository: log and diff
 
@@ -189,7 +189,7 @@ repositories, run this command.
 git remote -v
 ```
 
-You will see that the repository on Gitlab is connected to your local repository with the name `origin`. This is because
+You will see that the repository on Gitlab is connected to your local repository (e.g. on your uni server account) with the name `origin`. This is because
 you have cloned the repository.
 
 In addition, you should also know which branch are you in. Running the following command will show you the list of branches
