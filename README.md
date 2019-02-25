@@ -60,7 +60,7 @@ submit labs, and your grade will be posted.
 
 Before cloning or working with the labs, you may want to create and register your ssh key
 to your account. Follow the instrcution here.
-- https://docs.gitlab.com/ee/ssh/
+- https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair
 
 
 
