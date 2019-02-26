@@ -24,7 +24,7 @@ Lecture Slides
 --------------
 
 * Original version: https://www.cs.cmu.edu/afs/cs/academic/class/15213-s18/www/schedule.html
-* Modified version for this course: /slides
+* Modified version for this course: [/slides](/slides)
 
 Grading
 -------
