@@ -113,9 +113,9 @@ Schedule
 
 |   Date    |                Lecture                 |     Recitation     |        Lab         |
 |-----------|----------------------------------------|--------------------|--------------------|
-|Feb/25(Mon)|              [Introduction](/slides/01-overview.pdf)              |                    |                    |
+|Feb/25(Mon)|[Introduction](/slides/01-overview.pdf)              |                    |                    |
 |Feb/26(Tue)|                                        |                    |                    |
-|Feb/27(Wed)|     Bits, Bytes, and Ints: Part 1      |                    |  lab0: gitlab out  |
+|Feb/27(Wed)|[Bits, Bytes, and Ints: Part 1](/slides/02-bits-ints-part1.pdf)|                    |  lab0: gitlab out  |
 |Feb/28(Thu)|                                        |                    |                    |
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|     In-class recitation by TAs         |      basics        | lab1: datalab out  |
