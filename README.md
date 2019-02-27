@@ -25,6 +25,7 @@ Announcements
 Logistics
 ---------
 
+- Lecture slides: [/slides](/slides)
 
 Grading
 -------
@@ -113,9 +114,9 @@ Schedule
 |   Date    |                Lecture                 |     Recitation     |        Lab         |
 |-----------|----------------------------------------|--------------------|--------------------|
 |Feb/25(Mon)|                                        |                    |                    |
-|Feb/26(Tue)|              Introduction              |                    |                    |
+|Feb/26(Tue)|              [Introduction](/slides/lecture01.pdf)              |                    |                    |
 |Feb/27(Wed)|                                        |                    |                    |
-|Feb/28(Thu)|                 Arrays                 |                    |  lab0: gitlab out  |
+|Feb/28(Thu)|                 [Arrays](/slides/lecture02.pdf)                 |                    |  lab0: gitlab out  |
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
 |Mar/05(Tue)|              Linked Lists              |                    |      lab1 out      |
