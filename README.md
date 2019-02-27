@@ -19,6 +19,8 @@ Course Staffs
 Announcements
 -------------
 
+* [02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.
+* [02-28] Lab0 is out. due: Mar 06 11:59pm
 
 Logistics
 ---------
