@@ -40,6 +40,9 @@ Please note that you should use your name and email, not mine.
 
 #### `TODO-1` run the above two commands to update the config on the machine that you are working on.
 
+##### Max score: 1
+- 1: **The configured email matches your unist.ac.kr email**
+
 ### 2. Clone this repository.
 
 There are two ways to have a git repository. Firstly, you can create your own one, which will
@@ -61,6 +64,9 @@ git clone <repo url>
 ```
 
 #### `TODO-2` clone this repository on your machine (e.g., uni server).
+
+##### Max score: 0
+Will not be graded.
 
 To obtain the url of this repository, click the blue clone button on the top right.
 
@@ -115,6 +121,8 @@ git commit -m "<message>"
 This will make a commit with message `<message>`.
 
 #### `TODO-3` write something and make your first commit to your submit repo.
+##### Max score: 1
+- 1: You should add a file `hello.txt` under directory `gitlab` which contains a string `Hello World!`.
 
 > If you made a mistake and start over, delete the repository that you have cloned and clone the one on the Gitlab again.
 
@@ -130,6 +138,7 @@ git add hello.txt
 git commit -m 'Hello World!'
 ```
 ### 4. Inspecting the repository: log and diff
+
 
 Now you have some of you own commits in your repository. How can then check and learn from your old commits/changes?
 
@@ -212,7 +221,7 @@ git pull
 ```
 
 #### `TODO-5` Push your changes you made earlier to the Gitlab
-
+##### Max score: 0
 Running this command should suffice.
 
 ```sh
@@ -248,6 +257,8 @@ git branch -a
 You may see some branches other than master, which you will use for this lab.
 
 #### `TODO-6` Work on another branch.
+#### Max score: 2
+- 2: The `hello.c` is completed to print `Hellow World!`.
 
 Check the branches on the `origin` repository, which is the one one the class Gitlab.
 
@@ -305,6 +316,8 @@ This command will merge the branch with name `<branch>` into the one that you ar
 a.k.a., *checked out*.
 
 #### `TODO-7`
+##### Max score: 1
+- 1: The branch `gitlab` is correctly merged into `master`.
 
 Merge the `giitlab` branch into the `master` branch. Firstly, make sure that you are at `master` branch
 with this command.
@@ -356,7 +369,8 @@ but you may have tens or hundreds later. You can create `.gitignore` file to hid
 
 
 #### `TODO-8` Let's ignore a.out
-
+##### Max score: 1
+- 1: `a.out` is correctly ignored.
 
 Add the `a.out` to `.gitignore`. The following commands should work. Not that you can freely edit `.gitignore` with your text editor,
 and also use regular expressions. For example, if you us vi, you may want to have `*.swp` in you `.gitignore` to hide the temp files of
@@ -383,6 +397,8 @@ the *latest* snapshot of the branch. Tags do not. Tags are used only to name a s
 when submitting a lab.
 
 #### `TODO-9` Creating a tag to complete this lab.
+##### Max score: 1
+- 1: the tag `lab0-submit` exists.
 
 At this moment your `master` branch should point a branch with three files (`hello.c`, `hello.txt`, `Makefile`) under `gitlab`. 
 Create a tag with the name `lab0-submit` and push it like this. Note that you should explicitly submit your new tag.
