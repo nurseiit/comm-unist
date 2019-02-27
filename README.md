@@ -1,4 +1,4 @@
-# The lab repo for CSE251-2019-spring
+# The lab repo for CSE221-2019-spring
 
 This is the repository that you should play with during this semester.
 
