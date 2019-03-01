@@ -9,9 +9,9 @@ Course Staffs
   - Hyungon Moon (hyungon@unist.ac.kr, @hyungon)
 - TAs
   - Sehoon Kim (sshhee@unist.ac.kr, @sehoon)
-  - TBD1
-  - TBD2
-  - TBD3
+  - Minsu Kang (minsu@unist.ac.kr, @minsu)
+  - Yun Ha Han(diana438@unist.ac.kr, @yunha)
+  - Changmin Yi(ulistar93@unist.ac.kr, @changmin)
   
 
 Announcements
