@@ -10,10 +10,9 @@ Course Staffs
 - TAs
   - Seon Ha (seonha@unist.ac.kr, @seon)
   - Alisheri Anvar (alisher@unist.ac.kr, @alisheri)
-  - TBD1
-  - TBD2
-  - TBD3
-  - TBD4
+  - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
+  - Ki Hwan Kim (kh1875@unist.ac.kr, @kihwan)
+  - Nguyen Thanh Ngyuen(ntnguyen@unist.ac.kr, @ngyenthanh)
   
 
 Announcements
