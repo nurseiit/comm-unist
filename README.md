@@ -17,7 +17,7 @@ Course Staffs
 Announcements
 -------------
 
-* [03-01] We meet at 106-501-1 on Mar 4 10:30am instead of our regular class room.
+* [03-01] We meet at **106-505-1** on Mar 4 10:30am instead of our regular class room.
 * [02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.
 * [02-28] Lab0 is out. due: Mar 06 11:59pm
 * [02-25] There will be recitations either in the evening or on Friday.
