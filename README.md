@@ -122,7 +122,7 @@ Schedule
 |Feb/28(Thu)|                 [Arrays](/slides/lecture02.pdf)                 |                    |  lab0: gitlab out  |
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
-|Mar/05(Tue)|              Linked Lists              |                    |      lab1 out      |
+|Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |      lab1 out      |
 |Mar/06(Wed)|                                        |                    | lab0: due 11:59pm  |
 |Mar/07(Thu)|           Stacks and Queues            |                    |                    |
 |Mar/08(Fri)| Analysis of Algorithms (1) (Tentative) |                    |                    |
