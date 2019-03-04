@@ -16,7 +16,11 @@ Course Staffs
 
 Announcements
 -------------
+* **[03-04] VPN setup done:**
 
+  For those of you applied ealier, VPN access has been set up. Visit vpn.unist.ac.kr to use VPN.
+  You can use your portal ID/PW. We'll give you one (and only one) more chance to apply during this week.
+  
 * [03-04] Black screen problem on putty? [click](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/10)
 * [03-01] We meet at **106-505-1** on Mar 4 10:30am instead of our regular class room.
 * [02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.
