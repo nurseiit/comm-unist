@@ -18,8 +18,12 @@ Course Staffs
 Announcements
 -------------
 
-* [02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.
-* [02-28] Lab0 is out. due: Mar 06 11:59pm
+* **[03-04] VPN setup done:**
+
+  For those of you applied ealier, VPN access has been set up. Visit vpn.unist.ac.kr to use VPN.
+  You can use your portal ID/PW.
+* **[02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.**
+* **[02-28] Lab0 is out. due: Mar 06 11:59pm**
 
 Logistics
 ---------
