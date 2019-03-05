@@ -8,10 +8,10 @@ Course Staffs
 - Instructor
   - Hyungon Moon (hyungon@unist.ac.kr, @hyungon)
 - TAs
-  - Sehoon Kim (sshhee@unist.ac.kr, @sehoon)
-  - Minsu Kang (minsu@unist.ac.kr, @minsu)
-  - Yun Ha Han(diana438@unist.ac.kr, @yunha)
-  - Changmin Yi(ulistar93@unist.ac.kr, @changmin)
+  - Changmin Yi(ulistar93@unist.ac.kr, @changmin, Wed 18:00~19:00 @106-605)
+  - Sehoon Kim (sshhee@unist.ac.kr, @sehoon, Tue 14:30~15:30 @106-605)
+  - Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:00~21:00)
+  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00~16:00)
   
 
 Announcements
