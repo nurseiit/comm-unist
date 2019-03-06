@@ -8,11 +8,11 @@ Course Staffs
 - Instructor
   - Hyungon Moon (hyungon@unist.ac.kr, @hyungon)
 - TAs
-  - Seon Ha (seonha@unist.ac.kr, @seon)
-  - Alisheri Anvar (alisher@unist.ac.kr, @alisheri)
-  - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
   - Ki Hwan Kim (kh1875@unist.ac.kr, @kihwan)
+  - Seon Ha (seonha@unist.ac.kr, @seon)
+  - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
   - Nguyen Thanh Ngyuen(ntnguyen@unist.ac.kr, @ngyenthanh)
+  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00~16:00 @106-303)
   
 
 Announcements
@@ -122,8 +122,8 @@ Schedule
 |Feb/28(Thu)|                 [Arrays](/slides/lecture02.pdf)                 |                    |  lab0: gitlab out  |
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
-|Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |      lab1 out      |
-|Mar/06(Wed)|                                        |                    | lab0: due 11:59pm  |
+|Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
+|Mar/06(Wed)|                                        |                    | lab0: due 11:59pm lab1 out  |
 |Mar/07(Thu)|           Stacks and Queues            |                    |                    |
 |Mar/08(Fri)| Analysis of Algorithms (1) (Tentative) |                    |                    |
 |Mar/11(Mon)|                                        |                    |                    |
