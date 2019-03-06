@@ -16,6 +16,13 @@ Course Staffs
 
 Announcements
 -------------
+* **[03-06]** lab 0 pre-graded. Use this command to check your grade on your local repository. Or, check the branch `grader-lab0` on Gitlab.
+Note that this grading is not final.
+
+```sh
+git fetch origin
+git checkout -t origin/grader-lab0
+```
 
 * **[03-06]** lab 0 deadline is extended due to the university network issue.
 
