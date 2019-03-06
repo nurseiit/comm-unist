@@ -11,7 +11,7 @@ Course Staffs
   - Changmin Yi(ulistar93@unist.ac.kr, @changmin, Wed 17:30~18:30 @106-605)
   - Sehoon Kim (sshhee@unist.ac.kr, @sehoon, Tue 14:30~15:30 @106-605)
   - Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:00~21:00 @106-707-1)
-  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00~16:00 @106-303)
+  - Alisheri Anvar (alisher@unist.ac.kr, @alisheri)
   
 
 Announcements
@@ -127,14 +127,14 @@ Schedule
 |Feb/28(Thu)|                                        |                    | lab0: gitlab out   |
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|     In-class recitation by TAs         |      basics        |                    |
-|Mar/05(Tue)|                                        |                    |  lab1: datalab out |
-|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)      |                    |  lab0: due 11:59pm |
-|Mar/07(Thu)|                                        |                    |                    |
-|Mar/08(Fri)|    Floating Point       (Tentative)    |      data lab      |                    |
-|Mar/11(Mon)|         Machine Prog: Basics           |                    | lab2: bomblab out  |
-|Mar/12(Tue)|                                        |                    | lab1: due 11:59pm  |
-|Mar/13(Wed)|         Machine Prog: Control          |                    |                    |
-|Mar/14(Thu)|                                        |                    |                    |
+|Mar/05(Tue)|                                        |                    |   |
+|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)      |   lab1: datalab out                 |   |
+|Mar/07(Thu)|                                        |                    | lab0: due 11:59pm                   |
+|Mar/08(Fri)|        |            |                    |
+|Mar/11(Mon)|          Floating Point       (Tentative)          |                    | lab2: bomblab out  |
+|Mar/12(Tue)|                                        |                    |   |
+|Mar/13(Wed)|           Machine Prog: Basics        |      data lab (8:40pm-10:00pm @ TBD)              |                    |
+|Mar/14(Thu)|          Machine Prog: Control                              |                    | lab1: due 11:59pm                   |
 |Mar/15(Fri)|                                        |      bomb lab      |                    |
 |Mar/18(Mon)|        Machine Prog: Procedures        |                    |                    |
 |Mar/19(Tue)|                                        |                    |                    |
