@@ -10,7 +10,7 @@ Course Staffs
 - TAs
   - Ki Hwan Kim (kh1875@unist.ac.kr, @kihwan, Wed 13:00-14:00 @106-303)
   - Seon Ha (seonha@unist.ac.kr, @seon, Fri 15:00-16:00 @106-605)
-  - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
+  - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon, Tue 16:00-17:00 @106-303)
   - Nguyen Thanh Nguyen(ntnguyen@unist.ac.kr, @nguyenthanh, Mon 14:00 - 15:00 @106-707-1)
   - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00-16:00 @106-303)
   
