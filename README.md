@@ -8,11 +8,11 @@ Course Staffs
 - Instructor
   - Hyungon Moon (hyungon@unist.ac.kr, @hyungon)
 - TAs
-  - Ki Hwan Kim (kh1875@unist.ac.kr, @kihwan)
+  - Ki Hwan Kim (kh1875@unist.ac.kr, @kihwan, Wed 13:00-14:00 @106-303)
   - Seon Ha (seonha@unist.ac.kr, @seon)
   - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
   - Nguyen Thanh Ngyuen(ntnguyen@unist.ac.kr, @ngyenthanh)
-  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00~16:00 @106-303)
+  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00-16:00 @106-303)
   
 
 Announcements
