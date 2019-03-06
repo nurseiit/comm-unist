@@ -128,7 +128,7 @@ Schedule
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|     In-class recitation by TAs         |      basics        |                    |
 |Mar/05(Tue)|                                        |                    |  lab1: datalab out |
-|Mar/06(Wed)|     Bits, Bytes, and Ints: Part 2      |                    |  lab0: due 11:59pm |
+|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)      |                    |  lab0: due 11:59pm |
 |Mar/07(Thu)|                                        |                    |                    |
 |Mar/08(Fri)|    Floating Point       (Tentative)    |      data lab      |                    |
 |Mar/11(Mon)|         Machine Prog: Basics           |                    | lab2: bomblab out  |
