@@ -123,8 +123,8 @@ Schedule
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
 |Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
-|Mar/06(Wed)|                                        |                    | lab0: due 11:59pm lab1 out  |
-|Mar/07(Thu)|           Stacks and Queues            |                    |                    |
+|Mar/06(Wed)|                                        |                    |  lab1 out  |
+|Mar/07(Thu)|           Stacks and Queues            |                    | lab0: due 11:59pm                   |
 |Mar/08(Fri)| Analysis of Algorithms (1) (Tentative) |                    |                    |
 |Mar/11(Mon)|                                        |                    |                    |
 |Mar/12(Tue)|       Analysis of Algorithms (2)       |                    |      lab2 out      |
