@@ -11,7 +11,7 @@ Course Staffs
   - Changmin Yi(ulistar93@unist.ac.kr, @changmin, Wed 17:30~18:30 @106-605)
   - Sehoon Kim (sshhee@unist.ac.kr, @sehoon, Tue 14:30~15:30 @106-605)
   - Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:00~21:00 @106-707-1)
-  - Alisheri Anvar (alisher@unist.ac.kr, @alisheri)
+  - Alisheri Anvar (alisher@unist.ac.kr, @alisheri, Thu 19:30~20:30 @106-709)
   
 
 Announcements
