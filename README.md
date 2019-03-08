@@ -111,7 +111,7 @@ Schedule
 |Mar/11(Mon)|          Floating Point                 |                    | lab1: datalab out   |
 |Mar/12(Tue)|                                        |                    |   |
 |Mar/13(Wed)|           Machine Prog: Basics        |      data lab (8:40pm-10:00pm @ TBD)              |                    |
-|Mar/14(Thu)|          Machine Prog: Control                              |                    |                   |
+|Mar/14(Thu)|          Machine Prog: Control (7:00pm - 8:15pm)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
 |Mar/18(Mon)|        Machine Prog: Procedures        |                   | lab2: bomblab out                   |
