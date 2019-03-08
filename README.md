@@ -100,31 +100,31 @@ Schedule
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
 |Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
-|Mar/06(Wed)|                                        |                    |  lab1 out  |
+|Mar/06(Wed)|                                        |                    |    |
 |Mar/07(Thu)|           Stacks and Queues            |                    | lab0: due 11:59pm                   |
 |Mar/08(Fri)| Analysis of Algorithms (1) (Tentative) |                    |                    |
 |Mar/11(Mon)|                                        |                    |                    |
-|Mar/12(Tue)|       Analysis of Algorithms (2)       |                    |      lab2 out      |
-|Mar/13(Wed)|                                        |                    | lab1: due 11:59pm  |
+|Mar/12(Tue)|       Analysis of Algorithms (2)       |                    |      lab1 out      |
+|Mar/13(Wed)|                                        |                    |   |
 |Mar/14(Thu)|               Recursion                |                    |                    |
 |Mar/15(Fri)|                                        |                    |                    |
-|Mar/18(Mon)|                                        |                    |                    |
-|Mar/19(Tue)|           List and Iterators           |                    |                    |
+|Mar/18(Mon)|                                        |                    | lab1: due 11:59pm                   |
+|Mar/19(Tue)|           List and Iterators           |                    |   lab2 out                 |
 |Mar/20(Wed)|                                        |                    |                    |
-|Mar/21(Thu)|                 Trees                  |                    |      lab3 out      |
-|Mar/22(Fri)|               DROP DATE                |                    | lab2: due 11:59pm  |
+|Mar/21(Thu)|                 Trees                  |                    |            |
+|Mar/22(Fri)|               DROP DATE                |                    |   |
 |Mar/25(Mon)|                                        |                    |                    |
 |Mar/26(Tue)|      Binary Trees and Forests (1)      |                    |                    |
 |Mar/27(Wed)|                                        |                    |                    |
 |Mar/28(Thu)|      Binary Trees and Forests (2)      |                    |                    |
 |Mar/29(Fri)|                                        |                    |                    |
-|Apr/01(Mon)|                                        |                    |                    |
-|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |                    |
+|Apr/01(Mon)|                                        |                    | lab2: due 11:59pm           |
+|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |  lab3 out                  |
 |Apr/03(Wed)|                                        |                    |                    |
 |Apr/04(Thu)|     Heaps and Priority Queues (2)      |                    |                    |
 |Apr/05(Fri)|                                        |                    |                    |
-|Apr/08(Mon)|                                        |                    |      lab4 out      |
-|Apr/09(Tue)|            Maps and Hashing            |                    | lab3: due 11:59pm  |
+|Apr/08(Mon)|                                        |                    | lab3: due 11:59pm         |
+|Apr/09(Tue)|            Maps and Hashing            |                    | lab4 out |
 |Apr/10(Wed)|                                        |                    |                    |
 |Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
