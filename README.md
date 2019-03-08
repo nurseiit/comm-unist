@@ -105,22 +105,24 @@ Schedule
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|     In-class recitation by TAs         |      basics        |                    |
 |Mar/05(Tue)|                                        |                    |   |
-|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)     | |   lab1: datalab out                    |
+|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)     | |                      |
 |Mar/07(Thu)|                                        |                    | lab0: due 11:59pm                   |
 |Mar/08(Fri)|        |            |                    |
-|Mar/11(Mon)|          Floating Point       (Tentative)          |                    | lab2: bomblab out  |
+|Mar/11(Mon)|          Floating Point                 |                    | lab1: datalab out   |
 |Mar/12(Tue)|                                        |                    |   |
 |Mar/13(Wed)|           Machine Prog: Basics        |      data lab (8:40pm-10:00pm @ TBD)              |                    |
-|Mar/14(Thu)|          Machine Prog: Control                              |                    | lab1: due 11:59pm                   |
-|Mar/15(Fri)|                                        |      bomb lab      |                    |
-|Mar/18(Mon)|        Machine Prog: Procedures        |                    |                    |
+|Mar/14(Thu)|          Machine Prog: Control                              |                    |                   |
+|Mar/15(Fri)|                                        |            |                    |
+|Mar/17(Sun)| | |lab1: due 11:59pm |
+|Mar/18(Mon)|        Machine Prog: Procedures        |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|           Machine Prog: Data           |                    |lab3: attacklab out |
-|Mar/21(Thu)|                                        |                    | lab2: due 11:59pm  |
-|Mar/22(Fri)|                                        |     attack lab     |                    |
-|Mar/25(Mon)|         Machine Prog: Advanced         |                    |                    |
+|Mar/20(Wed)|           Machine Prog: Data           |  bomb lab (tentative)                   | |
+|Mar/21(Thu)|                                        |                    |   |
+|Mar/22(Fri)|                                        |          |                    |
+|Mar/24(Sun)| | | lab2: due 11:59pm |
+|Mar/25(Mon)|         Machine Prog: Advanced         |                    |  lab3: attacklab out                  |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|           Code Optimization            |                    |                    |
+|Mar/27(Wed)|           Code Optimization            | attack lab (tentative)                   |                    |
 |Mar/28(Thu)|                                        |                    |                    |
 |Mar/29(Fri)|   The Memory Hierarchy (Tentative)     |                    |                    |
 |Apr/01(Mon)|             Cache Memories             |                    | lab4: cachelab out |
