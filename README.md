@@ -16,6 +16,8 @@ Course Staffs
 
 Announcements
 -------------
+* **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
+
 * **[03-06]** lab 0 pre-graded. Use this command to check your grade on your local repository. Or, check the branch `grader-lab0` on Gitlab.
 Note that this grading is not final.
 
