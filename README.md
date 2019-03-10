@@ -105,12 +105,12 @@ Schedule
 |Feb/27(Wed)|[Bits, Bytes, and Ints: Part 1](/slides/02-bits-ints-part1.pdf)|                    |    |
 |Feb/28(Thu)|                                        |                    | lab0: gitlab out   |
 |Mar/01(Fri)|                                        |                    |                    |
-|Mar/04(Mon)|     In-class recitation by TAs         |      basics        |                    |
+|Mar/04(Mon)|     [In-class recitation by TAs](/recitation/rec0.pdf)         |      [basics](/recitation/rec0.pdf)        |                    |
 |Mar/05(Tue)|                                        |                    |   |
-|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](slides/03-bits-ints-part2.pdf)     | |                      |
+|Mar/06(Wed)|     [Bits, Bytes, and Ints: Part 2](/slides/03-bits-ints-part2.pdf)     | |                      |
 |Mar/07(Thu)|                                        |                    | lab0: due 11:59pm                   |
 |Mar/08(Fri)|        |            |                    |
-|Mar/11(Mon)|          Floating Point                 |                    | lab1: datalab out   |
+|Mar/11(Mon)|    [Bits, Bytes and Ints: Part2 (cont'd)](/slides/03-bits-ints-part2.pdf), [Floating Point](/slides/04-float.pdf)                 |                    | lab1: datalab out   |
 |Mar/12(Tue)|                                        |                    |   |
 |Mar/13(Wed)|           Machine Prog: Basics        |      data lab (8:40pm-10:00pm @ TBD)              |                    |
 |Mar/14(Thu)|          Machine Prog: Control (7:00pm - 8:15pm)                             |                    |                   |
