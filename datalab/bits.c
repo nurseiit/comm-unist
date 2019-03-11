@@ -274,7 +274,13 @@ int isLess(int x, int y) {
  *   Rating: 4 
  */
 int bang(int x) {
-  return 2;
+  /*
+   * For x to equal to 0, both x and -x should be non-negative.
+   */
+  int xIsNotNegative = (~(x >> 31)) & 1;
+  int minusX = (~x + 1);
+  int minusX_isNotNegative = (~(minusX >> 31)) & 1;
+  return xIsNotNegative & minusX_isNotNegative;
 }
 /*
  * isPower2 - returns 1 if x is a power of 2, and 0 otherwise
