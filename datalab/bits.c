@@ -245,7 +245,16 @@ int logicalShift(int x, int n) {
  *   Rating: 2
  */
 int isPositive(int x) {
-  return 2;
+  /*
+   * One can check the most significant bit.
+   * 1. Because `x` is 32 bit signed int, if we shift x to 31 bits (x >> 31),
+   *    we move the most significant bit to least significant place
+   *    and check if it's 1 or 0 via ((x >> 1) & 1).
+   * 2. Don't forget that 0 is not positive.
+   */
+  int sign_bit = (x >> 31) & 1;
+  int is_zero = !x;
+  return !(sign_bit | is_zero);
 }
 /* 
  * isLess - if x < y  then return 1, else return 0 
