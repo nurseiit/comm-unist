@@ -373,5 +373,12 @@ int floatIsLess(unsigned uf, unsigned ug) {
  *  Rating: 2
  */
 int sign(int x) {
-    return 2;
+  /*
+   * Basically, sign(x) = (x > 0) - (x < 0).
+   * Below is to use only allowed operators to express the above.
+   */
+  int isNegative = (x >> 31) & 1;
+  int isNotZero = !!x;
+  int isPositive = !isNegative & isNotZero;
+  return (isPositive + ~isNegative + 1);
 }
