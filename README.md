@@ -12,11 +12,15 @@ Course Staffs
   - Seon Ha (seonha@unist.ac.kr, @seon, Fri 15:00-16:00 @106-605)
   - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon, Tue 16:00-17:00 @106-303)
   - Nguyen Thanh Nguyen(ntnguyen@unist.ac.kr, @nguyenthanh, Mon 14:00 - 15:00 @106-707-1)
-  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 15:00-16:00 @106-303)
+  - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 17:00-18:00 @106-303)
   
 
 Announcements
 -------------
+* **[03-12]** Lab1 is out. Due is Mar 18 (Mon) 11:59pm.
+
+* **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
+
 * **[03-06]** lab 0 pre-graded. Use this command to check your grade on your local repository. Or, check the branch `grader-lab0` on Gitlab.
 Note that this grading is not final.
 
@@ -100,31 +104,31 @@ Schedule
 |Mar/01(Fri)|                                        |                    |                    |
 |Mar/04(Mon)|                                        |                    |                    |
 |Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
-|Mar/06(Wed)|                                        |                    |  lab1 out  |
+|Mar/06(Wed)|                                        |                    |    |
 |Mar/07(Thu)|           Stacks and Queues            |                    | lab0: due 11:59pm                   |
 |Mar/08(Fri)| Analysis of Algorithms (1) (Tentative) |                    |                    |
 |Mar/11(Mon)|                                        |                    |                    |
-|Mar/12(Tue)|       Analysis of Algorithms (2)       |                    |      lab2 out      |
-|Mar/13(Wed)|                                        |                    | lab1: due 11:59pm  |
+|Mar/12(Tue)|       Analysis of Algorithms (2)       |                    |      lab1 out      |
+|Mar/13(Wed)|                                        |                    |   |
 |Mar/14(Thu)|               Recursion                |                    |                    |
 |Mar/15(Fri)|                                        |                    |                    |
-|Mar/18(Mon)|                                        |                    |                    |
-|Mar/19(Tue)|           List and Iterators           |                    |                    |
+|Mar/18(Mon)|                                        |                    | lab1: due 11:59pm                   |
+|Mar/19(Tue)|           List and Iterators           |                    |   lab2 out                 |
 |Mar/20(Wed)|                                        |                    |                    |
-|Mar/21(Thu)|                 Trees                  |                    |      lab3 out      |
-|Mar/22(Fri)|               DROP DATE                |                    | lab2: due 11:59pm  |
+|Mar/21(Thu)|                 Trees                  |                    |            |
+|Mar/22(Fri)|               DROP DATE                |                    |   |
 |Mar/25(Mon)|                                        |                    |                    |
 |Mar/26(Tue)|      Binary Trees and Forests (1)      |                    |                    |
 |Mar/27(Wed)|                                        |                    |                    |
 |Mar/28(Thu)|      Binary Trees and Forests (2)      |                    |                    |
 |Mar/29(Fri)|                                        |                    |                    |
-|Apr/01(Mon)|                                        |                    |                    |
-|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |                    |
+|Apr/01(Mon)|                                        |                    | lab2: due 11:59pm           |
+|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |  lab3 out                  |
 |Apr/03(Wed)|                                        |                    |                    |
 |Apr/04(Thu)|     Heaps and Priority Queues (2)      |                    |                    |
 |Apr/05(Fri)|                                        |                    |                    |
-|Apr/08(Mon)|                                        |                    |      lab4 out      |
-|Apr/09(Tue)|            Maps and Hashing            |                    | lab3: due 11:59pm  |
+|Apr/08(Mon)|                                        |                    | lab3: due 11:59pm         |
+|Apr/09(Tue)|            Maps and Hashing            |                    | lab4 out |
 |Apr/10(Wed)|                                        |                    |                    |
 |Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
