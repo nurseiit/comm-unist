@@ -285,7 +285,20 @@ int bang(int x) {
  *   Rating: 4
  */
 int isPower2(int x) {
-  return 2;
+  /*
+   * Powers of 2 are of the form [10...000],
+   * so subtracting 1 gives all ones except for the most significant
+   * or Nth bit for x = 2^N. Thus, (x & (x - 1)) for any x = 2^N is zero.
+   * 
+   * Also, check if x is positive.
+   */
+  int minusOne = (~1 + 1);
+  int xMinusOne = x + minusOne;
+  int xIsPower2 = !(x & xMinusOne);
+  // Check for corner cases.
+  int xIsNegative = ((x >> 31) & 1);
+  int notZero = !!x;
+  return xIsPower2 & !xIsNegative & notZero;
 }
 /* 
  * fitsBits - return 1 if x can be represented as an 
