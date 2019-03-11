@@ -206,7 +206,10 @@ int tmin(void) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  /*
+   * Simple maths - invert x, add 1 to negate x.
+   */
+  return (~x + 1);
 }
 /* 
  * getByte - Extract byte n from word x
