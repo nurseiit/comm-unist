@@ -193,7 +193,10 @@ int bitOr(int x, int y) {
  *   Rating: 1
  */
 int tmin(void) {
-  return 2;
+  /*
+   * Force overflow via adding 1 to INTMAX = 1 << 31.
+   */
+  return ~(1 << 31) + 1;
 }
 /* 
  * negate - return -x 
