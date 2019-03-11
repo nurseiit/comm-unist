@@ -230,7 +230,22 @@ int getByte(int x, int n) {
  *   Rating: 4
  */
 int bitCount(int x) {
-  return 2;
+  // (TODO) Explanation.
+  int one_part = 85 | (85 << 8);
+  int ones = (one_part << 16) | one_part;    // 01010101 01010101 01010101 01010101
+  int two_part = 51 | (51 << 8);
+  int twos = (two_part << 16) | two_part;    // 00110011 00110011 00110011 00110011
+  int four_part = 15 | (15 << 8);
+  int fours = (four_part << 16) | four_part; // 00001111 00001111 00001111 00001111
+  int eights = 255 | (255 << 16);            // 00000000 11111111 00000000 11111111
+  int sixteens = (1 << 15) + ~1 + 1;         // 00000000 00000000 11111111 11111111
+
+  int result = (x & ones) + ((x >> 1) & ones);
+  result = (result & twos) + ((result >> 2) & twos);
+  result = (result & fours) + ((result >> 4) & fours);
+  result = (result & eights) + ((result >> 8) & eights);
+  result = (result & sixteens) + ((result >> 16)& sixteens);
+  return result;
 }
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
