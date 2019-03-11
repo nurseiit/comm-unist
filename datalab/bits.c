@@ -178,7 +178,13 @@ NOTES:
  *   Rating: 1
  */
 int bitOr(int x, int y) {
-  return 2;
+  /*
+   * One can apply De'Morgan's Law 
+   * -> (A or B) = neg ((neg A) and (neg B))
+   */
+  int not_x = ~x;
+  int not_y = ~y;
+  return ~(not_x & not_y);
 }
 /* 
  * tmin - return minimum two's complement integer 
