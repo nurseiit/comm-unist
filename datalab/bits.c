@@ -230,7 +230,18 @@ int getByte(int x, int n) {
  *   Rating: 4
  */
 int bitCount(int x) {
-  // (TODO) Explanation.
+  /*
+   * int is 32 bit, so the naive way would require about
+   * 32 shift operations and 32 addtion operations to count
+   * the number of 1 bits. But, the limit is 40 :(
+   * 
+   * One can count bits by using certain `masks` to be
+   * able to sum many bits at the same time, so to speak.
+   * 
+   * Using the `masks` defined below, we can first sum every neighbor
+   * bits, save it; sum every 2 neighbor bits, save it ... until we
+   * reach 16 neighbor bits – at the end we get the sum of 1 bits of int.
+   */
   int one_part = 85 | (85 << 8);
   int ones = (one_part << 16) | one_part;    // 01010101 01010101 01010101 01010101
   int two_part = 51 | (51 << 8);
