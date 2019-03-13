@@ -375,7 +375,14 @@ int isPower2(int x) {
  *   Rating: 2
  */
 int fitsBits(int x, int n) {
-  return 2;
+  int minusN = ~n + 1;
+  // Remaining bits.
+  int left = 32 + minusN;
+  // Fill significant bits with 1s or 0s depending on the sign.
+  int converted = (x << left) >> left;
+  // Check if the `converted` result equals the original.
+  int isEqual = !(x ^ converted);
+  return isEqual;
 }
 /* 
  * floatInt2Float - Return bit-level equivalent of expression (float) x
