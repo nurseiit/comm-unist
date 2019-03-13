@@ -194,7 +194,7 @@ int bitOr(int x, int y) {
  */
 int tmin(void) {
   /*
-   * Force overflow via adding 1 to INTMAX = 1 << 31.
+   * Force overflow via adding 1 to INTMAX.
    */
   return ~(1 << 31) + 1;
 }
@@ -405,6 +405,6 @@ int sign(int x) {
    */
   int isNegative = (x >> 31) & 1;
   int isNotZero = !!x;
-  int isPositive = !isNegative & isNotZero;
+  int isPositive = (!isNegative) & isNotZero;
   return (isPositive + ~isNegative + 1);
 }
