@@ -267,7 +267,15 @@ int bitCount(int x) {
  *   Rating: 3 
  */
 int logicalShift(int x, int n) {
-  return 2;
+  int isNegative = (1 << 31) & x;
+  // Normal shift.
+  int shifted = x >> n;
+  // Significant `1` – shifted right by `n` pos-s, shifted left by `1` pos-n
+  // to form `1111..(n times)..000`.
+  int inverter = (isNegative >> n) << 1; 
+  // In case `x` is negative, we need to invert
+  // the leading `n` filled 1s to 0s.
+  return inverter ^ shifted;
 }
 /* 
  * isPositive - return 1 if x > 0, return 0 otherwise 
