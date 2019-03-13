@@ -220,7 +220,11 @@ int negate(int x) {
  *   Rating: 2
  */
 int getByte(int x, int n) {
-  return 2;
+  int mask = 255; // 11111111 – filter.
+  int where = n << 3; // Multiply by `8`.
+  // Shift right to truncate the less significant bytes.
+  // Finally, filter only the last byte via `mask`.
+  return (x >> where) & mask;
 }
 /*
  * bitCount - returns count of number of 1's in word
