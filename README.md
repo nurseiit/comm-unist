@@ -113,7 +113,7 @@ Schedule
 |Mar/08(Fri)|        |            |                    |
 |Mar/11(Mon)|    [Bits, Bytes and Ints: Part2 (cont'd)](/slides/03-bits-ints-part2.pdf),<br/> [Floating Point](/slides/04-float.pdf)                 |                    | lab1: datalab out   |
 |Mar/12(Tue)|                                        |                    |   |
-|Mar/13(Wed)|           [Floating Point](/slides/04-float.pdf),<br/> Machine Prog: Basics        |      data lab - 8:40pm-10:00pm @ 202-106<br/>(room 106 @ 학술정보관 - the Library building)              |                    |
+|Mar/13(Wed)|           [Floating Point](/slides/04-float.pdf),<br/> [Machine Prog: Basics](/slides/05-machine-basics.pdf)        |      data lab - 8:40pm-10:00pm @ 202-106<br/>(room 106 @ 학술정보관 - the Library building)              |                    |
 |Mar/14(Thu)|          Machine Prog: Control <br/> (7:00pm - 8:15pm @ 106-T205)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
