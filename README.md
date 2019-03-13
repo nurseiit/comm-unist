@@ -106,9 +106,9 @@ Schedule
 |Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
 |Mar/06(Wed)|                                        |                    |    |
 |Mar/07(Thu)|           [Stacks and Queues](/slides/lecture04.pdf)            |                    | lab0: due 11:59pm                   |
-|Mar/08(Fri)| |                    |                    |
+|Mar/08(Fri)|  |                    |                    |
 |Mar/11(Mon)|                                        |                    |                    |
-|Mar/12(Tue)|       [Analysis of Algorithms](/slides/lecture05.pdf)      |                    |      lab1 out      |
+|Mar/12(Tue)|       [Analysis of Algorithms](/slides/lecture05.pdf)       |                    |      lab1 out      |
 |Mar/13(Wed)|                                        |                    |   |
 |Mar/14(Thu)|               [Recursion](/slides/lecture06.pdf)                |                    |                    |
 |Mar/15(Fri)|                                        |                    |                    |
