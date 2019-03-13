@@ -296,7 +296,22 @@ int isPositive(int x) {
  *   Rating: 3
  */
 int isLess(int x, int y) {
-  return 2;
+  /*
+   * One could compare (x, y) via subtracting `y` from `x`
+   * and checking for the sign of the result. But,
+   * there could be an overflow in some cases. Thus,
+   * we take the first 30 bits of each integers
+   * and check via subtraction. Lastly, compare the last bits.
+   */
+  int xLastBit = x & 1;
+  int yLastBit = y & 1;
+  int lastBitIsLess = ((xLastBit + ~yLastBit + 1) >> 31) & 1;
+  int xHalf = x >> 1;
+  int yHalf = y >> 1;
+  int subtraction = (xHalf + (~yHalf + 1));
+  int subtractionIsNegative = (subtraction >> 31) & 1;
+  int subtractionIsZero = !subtraction;
+  return subtractionIsNegative | (subtractionIsZero & lastBitIsLess);
 }
 /* 
  * bang - Compute !x without using !
