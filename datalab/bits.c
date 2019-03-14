@@ -408,7 +408,16 @@ unsigned floatInt2Float(int x) {
  *   Rating: 2
  */
 unsigned floatNegate(unsigned uf) {
- return 2;
+  int expo = 255; // 1111 1111.
+  int maskExpo = expo << 23; // shift to form – 0 1111 1111 000...
+  int maskFrac = (1 << 23) + ~0;
+  int frac = maskFrac & uf;
+  int isNaN = (maskExpo & uf) == maskExpo; // `true` if all exp bits are set to 1.
+  // also, check if the fraction part is not zero.
+  if(isNaN && frac)
+    return uf;
+  // Simply invert the sign bit
+  return uf ^ (1 << 31);
 }
 /* 
  * floatIsLess - Compute f < g for floating point arguments f and g.
