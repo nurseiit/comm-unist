@@ -194,9 +194,9 @@ int bitOr(int x, int y) {
  */
 int tmin(void) {
   /*
-   * Force overflow via adding 1 to INTMAX.
+   * 2^31 in Two's complement in 32 bits is the minimum.
    */
-  return ~(1 << 31) + 1;
+  return (1 << 31);
 }
 /* 
  * negate - return -x 
