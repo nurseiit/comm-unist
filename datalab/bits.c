@@ -431,7 +431,34 @@ unsigned floatNegate(unsigned uf) {
  *   Rating: 3
  */
 int floatIsLess(unsigned uf, unsigned ug) {
-    return 2;
+  int expo = 255; // 1111 1111.
+  int maskExpo = expo << 23; // shift to form – 0 1111 1111 000...
+  int maskFrac = (1 << 23) + ~0;
+
+  int uf_frac = maskFrac & uf;
+  int ug_frac = maskFrac & ug;
+  
+  int uf_expo = (maskExpo & uf);
+  int ug_expo = (maskExpo & ug);
+  
+  int uf_isNaN = (uf_expo == maskExpo) && uf_frac;
+  int ug_isNaN = (ug_expo == maskExpo) && ug_frac;
+  
+  int uf_sign = (uf >> 31) & 1;
+  int ug_sign = (ug >> 31) & 1;
+
+  // Check whether any number is NaN.
+  if (uf_isNaN || ug_isNaN) return 0;
+  // Check if the exp & frac parts are 0 on both numbers (+0, -0).
+  if(!(uf << 1) && !(ug << 1)) return 0;
+
+  // If the signs are different, compare signs.
+  if(uf_sign ^ ug_sign) return uf_sign > ug_sign;
+  // If the expo parts are different, compare them depending on the sign.
+  if(uf_expo ^ ug_expo) return (uf_expo < ug_expo) ^ uf_sign;
+  // If the fraction parts are different, compare them depending on the sign.
+  if(uf_frac ^ ug_frac) return (uf_frac < ug_frac) ^ uf_sign;
+  return 0;
 }
 /* 
  * sign - return 1 if positive, 0 if zero, and -1 if negative
