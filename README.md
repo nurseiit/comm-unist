@@ -117,25 +117,25 @@ Schedule
 |Mar/14(Thu)|          [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> (7:00pm - 8:15pm @ 106-T205)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
-|Mar/18(Mon)|        Machine Prog: Procedures        |                   | lab2: bomblab out                   |
+|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> Machine Prog: Procedures        |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|           Machine Prog: Data           |  bomb lab (tentative)                   | |
+|Mar/20(Wed)|           Machine Prog: Procedures <br/> Machine Prog: Data           |  bomb lab (tentative)                   | |
 |Mar/21(Thu)|                                        |                    |   |
 |Mar/22(Fri)|                                        |          |                    |
-|Mar/24(Sun)| | | lab2: due 11:59pm |
-|Mar/25(Mon)|         Machine Prog: Advanced         |                    |  lab3: attacklab out                  |
+|Mar/24(Sun)| | |  |
+|Mar/25(Mon)|         Machine Prog: Advanced         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|           Code Optimization            | attack lab (tentative)                   |                    |
-|Mar/28(Thu)|                                        |                    |                    |
+|Mar/27(Wed)|           Code Optimization            | attack lab (tentative)                   |    lab2: due 11:59pm                |
+|Mar/28(Thu)|                                        |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|   The Memory Hierarchy (Tentative)     |                    |                    |
-|Apr/01(Mon)|             Cache Memories             |                    | lab4: cachelab out |
-|Apr/02(Tue)|                                        |                    | lab3: due 11:59pm  |
+|Apr/01(Mon)|             Cache Memories             |                    |  |
+|Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
-|Apr/04(Thu)|                                        |                    |                    |
-|Apr/05(Fri)|                                        |                    |                    |
-|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |  lab5: tshlab out  |
-|Apr/09(Tue)|                                        |                    | lab4: due 11:59pm  |
-|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                    |
+|Apr/04(Thu)|                                        |                    |  lab3: due 11:59pm                    |
+|Apr/05(Fri)|                                        |                    |   lab4: cachelab out                 |
+|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |    |
+|Apr/09(Tue)|                                        |                    |   |
+|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week              |                    |                    |
@@ -143,13 +143,13 @@ Schedule
 |Apr/17(Wed)|              Midterm Week              |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            System Level I/O            |                    |                    |
-|Apr/23(Tue)|                                        |                    |                    |
-|Apr/24(Wed)|        Virtual MEmory: Concepts        |                    |lab6: malloclab out |
-|Apr/25(Thu)|                                        |                    | lab5: due 11:59pm  |
+|Apr/22(Mon)|            System Level I/O            |                    | lab4: due 11:59pm     |
+|Apr/23(Tue)|                                        |                    |  lab5: tshlab out                  |
+|Apr/24(Wed)|        Virtual Memory: Concepts        |                    | |
+|Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
-|Apr/29(Mon)|        Virtual Memory: Systems         |                    |                    |
-|Apr/30(Tue)|                                        |                    |                    |
+|Apr/29(Mon)|        Virtual Memory: Systems         |                    | lab5: due 11:59pm                   |
+|Apr/30(Tue)|                                        |                    |lab6: malloclab out                    |
 |May/01(Wed)|     Dynamic Memory Allocation (1)      |                    |                    |
 |May/02(Thu)|                                        |                    |                    |
 |May/03(Fri)|                                        |                    |                    |
