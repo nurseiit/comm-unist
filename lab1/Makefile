@@ -22,12 +22,12 @@ test:
 
 random-test:
 	rm -f .test.cpp random-test && ./gen-testcase.py && \
-		g++ -O2 .test.cpp DoublyLinkedList.cc -o random-test && \
+		g++ -std=c++11 -O2 .test.cpp DoublyLinkedList.cc -o random-test && \
 		./random-test
 
 random-asan:
 	rm -f .test.cpp random-asan && ./gen-testcase.py && \
-		g++ -O2 .test.cpp DoublyLinkedList.cc -fsanitize=address -o random-asan && \
+		g++ -std=c++11 -O2 .test.cpp DoublyLinkedList.cc -fsanitize=address -o random-asan && \
 		./random-asan
 
 
