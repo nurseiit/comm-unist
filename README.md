@@ -117,9 +117,9 @@ Schedule
 |Mar/14(Thu)|          [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> (7:00pm - 8:15pm @ 106-T205)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
-|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> Machine Prog: Procedures        |                   | lab2: bomblab out                   |
+|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)        |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|           Machine Prog: Procedures <br/> Machine Prog: Data           |  bomb lab (tentative)                   | |
+|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)  <br/> Machine Prog: Data           |  bomb lab (tentative)                   | |
 |Mar/21(Thu)|                                        |                    |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
