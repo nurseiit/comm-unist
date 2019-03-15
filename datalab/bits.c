@@ -395,28 +395,28 @@ int fitsBits(int x, int n) {
  */
 unsigned floatInt2Float(int x) {
   // Start with bias.
-	unsigned expo = 127;
+  unsigned expo = 127;
   unsigned frac;
   // Set the sign.
   unsigned result = x & (1 << 31);
   unsigned temp = x;
-	if (x == 0) return x;
+  if (x == 0) return x;
   // Make `x` positive.
-	if (result) x = temp = -x;
+  if (result) x = temp = -x;
   // Count expo.
-	while ((temp >> 1) > 0) {
-		temp >>= 1;
-		expo += 1;	
-	}
+  while ((temp >> 1) > 0) {
+    temp >>= 1;
+    expo += 1;	
+  }
   // Add expo to the answer.
-	result |= (expo << 23);
+  result |= (expo << 23);
   // Truncate useless bits until frac part.
-	x <<= ((127 + 30) - expo);   
-	frac = x >> 7;
+  x <<= ((127 + 30) - expo);   
+  frac = x >> 7;
   // Filter to remove everything after frac part.
-	frac &= ((1 << 23) - 1);
+  frac &= ((1 << 23) - 1);
   // Add frac to the answer.
-	result |= frac;
+  result |= frac;
   // Round.
   if ((x & (1 << 6)) && ((x & 255) ^ (1 << 6))) result++;
   return result;
