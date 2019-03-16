@@ -17,6 +17,12 @@ Course Staffs
 
 Announcements
 -------------
+* **[03-17]** Lab1 is pre-graded. Please check the `grader-lab1` branch in your submissiong repository. The next scheduled runs are:
+  - Around 8:30am 3/17.
+  - Around 6pm 3/17.
+  - Around 10pm 3/17.
+  - Around the noon 3/18.
+
 * **[03-12]** Lab1 is out. Due is Mar 18 (Mon) 11:59pm.
 
 * **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
