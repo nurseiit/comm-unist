@@ -20,6 +20,7 @@ Discussions
 
 Announcements
 -------------
+* **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
 * **[03-16]** We will discuss the recitation schedule on Monday.
 * **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
 * **[03-11]** Lab 1 (datalab) is out. The deadline is Mar 17 (Sun) 11:59pm.
