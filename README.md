@@ -35,19 +35,18 @@ cd gitlab
 cd datalab
 ```
 
+### lab2: bomblab
+- Out: Mar 18 (Mon)
+- Due: Mar 27 (Wed) 11:59pm
+- Recitation: TBD
+- Leading TA: Sehoon Kim (sshhee@unist.ac.kr, @sehoon)
+- Instruction: [bomblab/README.md](/bomblab/README.md)
+
+
 ### Notes
 
 - You are expected to be familiar with the concept of `branch` in `git`.
   - Grader will create and push branches named `grader-<lab_name>`. For example, `grader-lab0`.
   - Later labs will pushed to either `master` or `deploy-<lab_name>` branch.
 
-
-- For later labs being deployed through non-master branch, you may want to
-obtain them by:
-
-```
-git pull
-git branch -a
-git checkout -t origin/deploy-lab2
-```
 
