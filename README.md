@@ -13,7 +13,11 @@ Course Staffs
   - Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon, Tue 16:00-17:00 @106-303)
   - Nguyen Thanh Nguyen(ntnguyen@unist.ac.kr, @nguyenthanh, Mon 14:00 - 15:00 @106-707-1)
   - Yun Ha Han(diana438@unist.ac.kr, @yunha, Thu 17:00-18:00 @106-303)
-  
+
+Discussions
+-----------
+* [*Closed* (Answered) Issues](https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
+* [*Open* (In discussion) Issues](https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues)
 
 Announcements
 -------------
