@@ -13,8 +13,12 @@ Course Staffs
   - Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:30~21:30 @106-707-1)
   - Alisheri Anvar (alisher@unist.ac.kr, @alisheri, Thu 19:30~20:30)
   
-
+Discussions
+-----------
+* [*Closed* (Answered) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
+* [*Open* (In discussion) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues)
 Announcements
+
 -------------
 * **[03-16]** We will discuss the recitation schedule on Monday.
 * **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
