@@ -40,5 +40,7 @@ class DoublyLinkedList: public List {
     string to_string();
 
     string to_reverse_string();
+
+    string intToStr(int x);
 };
 #endif

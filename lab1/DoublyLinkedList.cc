@@ -110,7 +110,7 @@ string DoublyLinkedList::to_string() {
   string result = "";
   Linked* now = Front;
   while (now) {
-    result += ('0' + now->value);
+    result += intToStr(now->value) + " ";
     now = now->right;
   }
   return result;
@@ -125,8 +125,21 @@ string DoublyLinkedList::to_reverse_string() {
   string result = "";
   Linked* now = Back;
   while (now) {
-    result += ('0' + now->value);
+    result += intToStr(now->value) + " ";
     now = now->left;
   }
   return result;
 };
+
+string DoublyLinkedList::intToStr(int x) {
+  string result = "";
+  if (x < 0) {
+    result += "-";
+    x = -x;
+  }
+  do {
+    result += (x % 10 + '0');
+    x /= 10;
+  } while (x > 0);
+  return result;
+}
