@@ -17,8 +17,8 @@ Discussions
 -----------
 * [*Closed* (Answered) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
 * [*Open* (In discussion) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues)
-Announcements
 
+Announcements
 -------------
 * **[03-16]** We will discuss the recitation schedule on Monday.
 * **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
