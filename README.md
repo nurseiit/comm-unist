@@ -139,9 +139,9 @@ Schedule
 |Mar/28(Thu)|      Binary Trees and Forests (2)      |                    |                    |
 |Mar/29(Fri)|                                        |                    |                    |
 |Apr/01(Mon)|                                        |                    |            |
-|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |                   |
-|Apr/03(Wed)|                                        |                    |   lab2: due 11:59pm                 |
-|Apr/04(Thu)|     Heaps and Priority Queues (2)      |                    |   lab3 out                 |
+|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |  lab2: due 11:59pm                  |
+|Apr/03(Wed)|                                        |                    |  lab3 out                 |
+|Apr/04(Thu)|     Heaps and Priority Queues (2)      |                    |                    |
 |Apr/05(Fri)|                                        |                    |                    |
 |Apr/08(Mon)|                                        |                    |         |
 |Apr/09(Tue)|            Maps and Hashing            |                    |                |
