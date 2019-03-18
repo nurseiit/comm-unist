@@ -21,6 +21,12 @@ Discussions
 
 Announcements
 -------------
+* **[03-18]** There will be more pre-gradings as some students requested as Follows. The real grader will run at 0:05 3/19.
+  - Around 3pm 3/18.
+  - Around 6pm 3/18.
+  - Around 9pm 3/18.
+  - Around 11pm 3/18.
+
 * **[03-17]** Lab1 is pre-graded. Please check the `grader-lab1` branch in your submissiong repository. The next scheduled runs are:
   - Around 8:30am 3/17.
   - Around 6pm 3/17.
