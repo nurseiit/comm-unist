@@ -20,6 +20,8 @@ Discussions
 
 Announcements
 -------------
+* **[03-18]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (TBD).
+* **[03-18]** Grading issues claimed after the class has all been checked and found no error so far. I left a not on your private repo's issue. Please create a private issue if the result of running `driver.pl` does not match the grader's output.
 * **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
 * **[03-16]** We will discuss the recitation schedule on Monday.
 * **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
@@ -124,10 +126,10 @@ Schedule
 |Mar/14(Thu)|          [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> (7:00pm - 8:15pm @ 106-T205)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
-|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)        |                   | lab2: bomblab out                   |
+|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf)         |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)  <br/> Machine Prog: Data           |  bomb lab (tentative)                   | |
-|Mar/21(Thu)|                                        |                    |   |
+|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)  <br/> Machine Prog: Data           |                    | |
+|Mar/21(Thu)|                                        |  bomb lab (7:00pm- @ TBD)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
 |Mar/25(Mon)|         Machine Prog: Advanced         |                    |                   |
