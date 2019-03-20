@@ -20,7 +20,7 @@ Discussions
 
 Announcements
 -------------
-* **[03-18]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (TBD).
+* **[03-20]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (104-E102).
 * **[03-18]** Grading issues claimed after the class has all been checked and found no error so far. I left a not on your private repo's issue. Please create a private issue if the result of running `driver.pl` does not match the grader's output.
 * **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
 * **[03-16]** We will discuss the recitation schedule on Monday.
@@ -129,7 +129,7 @@ Schedule
 |Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf)         |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
 |Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
-|Mar/21(Thu)|                                        |  bomb lab (7:00pm- @ TBD)                  |   |
+|Mar/21(Thu)|                                        |  bomb lab (7:00pm- @ 104-E102)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
 |Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
