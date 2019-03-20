@@ -128,16 +128,16 @@ Schedule
 |Mar/17(Sun)| | |lab1: due 11:59pm |
 |Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf)         |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)  <br/> Machine Prog: Data           |                    | |
+|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
 |Mar/21(Thu)|                                        |  bomb lab (7:00pm- @ TBD)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
-|Mar/25(Mon)|         Machine Prog: Advanced         |                    |                   |
+|Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|           Code Optimization            | attack lab (tentative)                   |    lab2: due 11:59pm                |
-|Mar/28(Thu)|                                        |                    | lab3: attacklab out                    |
-|Mar/29(Fri)|   The Memory Hierarchy (Tentative)     |                    |                    |
-|Apr/01(Mon)|             Cache Memories             |                    |  |
+|Mar/27(Wed)|        Machine Prog: Advanced            | attack lab (tentative)                   |    lab2: due 11:59pm                |
+|Mar/28(Thu)|        Code Optimization (Tentative)                            |                    | lab3: attacklab out                    |
+|Mar/29(Fri)|         |                    |                    |
+|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |                    |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
 |Apr/04(Thu)|                                        |                    |  lab3: due 11:59pm                    |
