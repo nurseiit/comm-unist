@@ -129,7 +129,7 @@ Schedule
 |Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf)         |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
 |Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
-|Mar/21(Thu)|                                        |  bomb lab (7:00pm- @ 104-E102)                  |   |
+|Mar/21(Thu)|                                        |  [bomb lab (7:00pm- @ 104-E102)](/recitation/rec2/CSE251_recitation2.pptx)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
 |Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
