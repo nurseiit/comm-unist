@@ -134,10 +134,10 @@ Schedule
 |Mar/24(Sun)| | |  |
 |Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|        Machine Prog: Advanced            | attack lab (tentative)                   |    lab2: due 11:59pm                |
-|Mar/28(Thu)|        Code Optimization (Tentative) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/27(Wed)|        Machine Prog: Advanced            |                    |    lab2: due 11:59pm                |
+|Mar/28(Thu)|        Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|         |                    |                    |
-|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |                    |  |
+|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
 |Apr/04(Thu)|                                        |                    |  lab3: due 11:59pm                    |
