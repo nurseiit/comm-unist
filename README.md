@@ -131,7 +131,7 @@ Schedule
 |Mar/18(Mon)|                                        |                    | lab1: due 11:59pm                   |
 |Mar/19(Tue)|           [List and Iterators](/slides/lecture07.pdf)           |                    |                    |
 |Mar/20(Wed)|                                        |                    |                    |
-|Mar/21(Thu)|                 Trees                  |                    | lab2 out           |
+|Mar/21(Thu)|                 [Trees](/slides/lecture08.pdf)                  |                    | lab2 out           |
 |Mar/22(Fri)|               DROP DATE                |                    |   |
 |Mar/25(Mon)|                                        |                    |                    |
 |Mar/26(Tue)|      Binary Trees and Forests (1)      |                    |                    |
