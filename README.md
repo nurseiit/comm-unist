@@ -140,10 +140,10 @@ Schedule
 |Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
-|Apr/04(Thu)|                                        |                    |  lab3: due 11:59pm                    |
-|Apr/05(Fri)|                                        |                    |   lab4: cachelab out                 |
-|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |    |
-|Apr/09(Tue)|                                        |                    |   |
+|Apr/04(Thu)|                                        |                    |                      |
+|Apr/05(Fri)|                                        |                    |                   |
+|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |   lab3: due 11:59pm |
+|Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
 |Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
