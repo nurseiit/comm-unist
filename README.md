@@ -21,6 +21,8 @@ Discussions
 
 Announcements
 -------------
+* **[03-21]** Lab 2 is posted. Please refer to your submission repository for the details.
+
 * **[03-18]** There will be more pre-gradings as some students requested as Follows. The real grader will run at 0:05 3/19.
   - Around 3pm 3/18.
   - Around 6pm 3/18.
