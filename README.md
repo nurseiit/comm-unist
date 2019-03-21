@@ -25,6 +25,7 @@ cd gitlab
 
 ## Lab1: Linked List
 
+- Lead TA: All
 - Instruction: [lab1/README.md](/lab1/README.md)
 - Out: Mar 12 (Tue)
 - Due: Mar 18 (Mon)
@@ -33,19 +34,23 @@ cd gitlab
 cd lab1
 ```
 
+## Lab2: Linked List, Stack and Queue
+
+- Lead TA: Yunha Han (diana438@unist.ac.kr, @yunha, Thu 17:00-18:00 @106-303)
+- Instruction: [lab2/README.md](lab2/README.md)
+- Out: Mar 21 (Thu)
+- Due: Apr 03 (Wed) 11:59 pm
+
+```sh
+cd lab2
+```
+
+
 ### Notes
 
 - You are expected to be familiar with the concept of `branch` in `git`.
-  - Grader will create and push branches named `grader-<lab_name>`. For example, `grader-lab0`.
-  - Later labs will pushed to either `master` or `deploy-<lab_name>` branch.
+- Grader will create and push branches named `grader-<lab_name>`. For example, `grader-lab0`.
+- Grader will first check `submit-labx` branches (e.g., `submit-lab2`) and if it does not exist,
+will check the `master` branch.
 
-
-- For later labs being deployed through non-master branch, you may want to
-obtain them by:
-
-```
-git pull
-git branch -a
-git checkout -t origin/deploy-lab2
-```
 

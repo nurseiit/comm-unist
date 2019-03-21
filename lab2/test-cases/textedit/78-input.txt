@@ -1,0 +1,1972 @@
+insert g
+insert t
+left
+insert d
+insert h
+left
+insert b
+insert t
+left
+insert n
+left
+insert t
+left
+insert k
+left
+insert z
+del
+insert g
+left
+del
+insert d
+insert i
+left
+insert y
+insert n
+left
+insert w
+insert o
+left
+insert f
+left
+insert e
+insert a
+insert w
+insert t
+left
+insert b
+left
+insert j
+del
+left
+insert y
+left
+insert h
+left
+insert z
+left
+insert y
+left
+insert n
+left
+insert k
+insert q
+left
+insert o
+insert h
+insert j
+left
+insert e
+insert e
+left
+insert i
+insert d
+left
+insert a
+left
+insert h
+insert h
+insert f
+insert u
+insert r
+insert s
+left
+insert x
+insert a
+insert g
+left
+insert s
+insert a
+insert k
+insert c
+insert e
+left
+insert s
+left
+del
+left
+insert e
+insert m
+left
+insert e
+left
+insert p
+insert u
+insert y
+left
+insert t
+left
+insert v
+left
+insert c
+insert r
+insert v
+insert c
+left
+insert w
+left
+insert v
+left
+insert n
+insert w
+insert m
+insert p
+del
+left
+insert u
+insert n
+insert v
+left
+insert p
+insert l
+del
+left
+insert n
+left
+del
+insert v
+insert l
+insert o
+insert o
+insert m
+left
+insert k
+left
+insert x
+insert t
+insert u
+insert f
+insert o
+left
+insert b
+del
+left
+insert j
+left
+insert o
+left
+insert k
+insert y
+insert a
+insert h
+del
+left
+insert z
+insert d
+del
+insert m
+left
+insert g
+left
+insert m
+insert n
+left
+insert c
+del
+insert j
+insert o
+left
+del
+left
+insert f
+left
+insert c
+insert x
+insert d
+left
+insert s
+left
+insert v
+left
+insert j
+insert u
+insert q
+insert y
+insert d
+left
+insert l
+left
+insert g
+insert y
+left
+insert j
+insert m
+left
+del
+insert o
+left
+insert u
+insert m
+del
+left
+insert e
+insert q
+insert s
+left
+insert j
+left
+insert h
+insert h
+left
+insert q
+insert o
+left
+insert u
+insert n
+insert q
+left
+insert h
+left
+insert i
+insert e
+insert g
+left
+insert w
+left
+insert m
+insert s
+insert d
+left
+insert q
+insert e
+insert g
+left
+insert p
+insert o
+left
+insert l
+left
+del
+left
+insert q
+insert k
+left
+del
+insert e
+left
+insert w
+insert i
+left
+insert k
+del
+left
+insert g
+insert u
+left
+insert k
+insert o
+left
+insert t
+insert s
+insert c
+left
+insert v
+left
+insert w
+left
+insert d
+left
+insert g
+left
+insert g
+left
+insert n
+left
+insert y
+left
+insert j
+insert u
+insert z
+left
+insert u
+insert g
+insert l
+left
+insert c
+left
+insert s
+insert b
+insert m
+left
+insert w
+insert y
+insert p
+left
+insert x
+insert x
+insert j
+left
+insert o
+insert z
+left
+insert c
+left
+insert a
+insert i
+insert l
+left
+insert w
+left
+insert e
+left
+insert d
+left
+insert i
+del
+left
+insert t
+left
+insert v
+del
+left
+insert g
+insert j
+left
+insert i
+left
+insert z
+left
+insert w
+left
+insert k
+insert m
+left
+insert q
+left
+insert k
+left
+insert r
+left
+insert t
+insert b
+left
+insert l
+insert c
+left
+insert m
+insert m
+left
+insert c
+insert m
+left
+insert t
+insert r
+insert z
+del
+left
+insert p
+insert g
+insert t
+insert w
+left
+insert k
+insert g
+insert o
+left
+insert p
+insert d
+insert q
+left
+insert j
+del
+left
+insert n
+left
+insert a
+left
+insert p
+left
+insert o
+left
+insert b
+insert w
+left
+insert j
+insert y
+insert d
+insert g
+left
+insert a
+insert l
+insert t
+left
+insert h
+insert q
+left
+insert g
+left
+insert y
+insert q
+left
+insert l
+del
+insert e
+left
+insert p
+insert i
+insert w
+left
+insert z
+left
+insert r
+insert n
+left
+insert z
+insert e
+left
+insert m
+left
+insert k
+insert x
+left
+insert g
+insert f
+insert x
+insert a
+insert v
+left
+insert y
+del
+left
+insert o
+left
+insert u
+insert m
+insert h
+left
+insert b
+left
+insert b
+insert u
+del
+left
+insert v
+left
+insert w
+left
+insert w
+del
+insert f
+left
+insert q
+left
+insert n
+insert v
+left
+insert m
+insert s
+insert t
+left
+del
+insert t
+left
+insert k
+insert z
+insert b
+left
+left
+right
+undo
+left
+right
+insert x
+del
+right
+right
+insert t
+del
+left
+del
+undo
+right
+right
+del
+right
+right
+insert t
+left
+del
+del
+undo
+undo
+del
+insert p
+right
+left
+del
+undo
+undo
+undo
+undo
+del
+undo
+insert n
+right
+undo
+insert g
+right
+left
+left
+insert v
+undo
+insert p
+del
+undo
+left
+right
+del
+insert k
+left
+right
+del
+left
+del
+undo
+right
+left
+undo
+insert b
+right
+insert v
+left
+undo
+del
+insert w
+insert n
+left
+right
+right
+undo
+del
+del
+undo
+del
+insert v
+insert p
+undo
+del
+undo
+del
+insert v
+undo
+insert c
+del
+del
+undo
+insert q
+insert e
+undo
+undo
+del
+right
+undo
+left
+insert x
+undo
+insert o
+del
+right
+left
+undo
+left
+insert l
+del
+left
+left
+insert e
+right
+undo
+left
+right
+del
+insert g
+undo
+undo
+undo
+insert c
+right
+right
+undo
+right
+undo
+insert o
+left
+right
+left
+undo
+undo
+left
+insert v
+insert a
+del
+undo
+insert c
+undo
+right
+del
+right
+left
+right
+left
+left
+insert y
+insert h
+right
+right
+del
+right
+del
+insert t
+undo
+del
+insert w
+undo
+del
+left
+right
+right
+undo
+left
+insert z
+del
+undo
+undo
+right
+left
+undo
+right
+right
+right
+right
+del
+del
+insert y
+undo
+insert j
+right
+undo
+left
+insert d
+del
+right
+undo
+right
+insert q
+insert w
+insert v
+right
+del
+insert g
+left
+undo
+del
+right
+insert e
+del
+left
+insert u
+right
+right
+del
+del
+insert v
+left
+right
+left
+insert l
+del
+right
+del
+left
+undo
+undo
+undo
+insert s
+undo
+del
+undo
+right
+right
+right
+del
+right
+right
+right
+undo
+right
+undo
+del
+undo
+right
+undo
+insert p
+del
+insert s
+right
+undo
+del
+insert w
+right
+del
+insert e
+del
+insert n
+right
+right
+right
+undo
+del
+undo
+undo
+undo
+insert t
+insert m
+del
+del
+del
+left
+undo
+insert v
+left
+del
+right
+undo
+right
+right
+right
+right
+del
+del
+right
+insert z
+del
+right
+left
+left
+left
+right
+left
+insert r
+undo
+del
+del
+insert p
+undo
+right
+undo
+left
+insert g
+del
+undo
+right
+undo
+insert p
+insert u
+right
+insert o
+del
+insert y
+insert w
+right
+left
+del
+insert a
+insert q
+insert l
+left
+insert d
+left
+del
+left
+insert c
+insert y
+del
+del
+left
+insert s
+undo
+insert i
+insert d
+undo
+del
+insert n
+right
+right
+del
+insert c
+insert q
+del
+left
+left
+left
+right
+insert p
+insert v
+undo
+insert l
+del
+undo
+undo
+insert j
+right
+undo
+right
+del
+right
+right
+del
+left
+left
+undo
+del
+del
+del
+insert p
+left
+del
+del
+del
+left
+left
+right
+left
+right
+left
+del
+undo
+insert p
+undo
+insert a
+insert u
+undo
+right
+undo
+undo
+left
+left
+del
+insert p
+left
+del
+del
+del
+insert c
+undo
+undo
+insert k
+insert q
+left
+left
+right
+left
+insert j
+undo
+del
+right
+right
+undo
+del
+undo
+insert s
+undo
+right
+right
+insert z
+undo
+del
+insert y
+insert h
+del
+insert s
+undo
+undo
+right
+insert t
+left
+del
+del
+del
+del
+del
+insert o
+del
+undo
+right
+right
+left
+right
+right
+left
+del
+right
+undo
+right
+insert h
+insert h
+left
+undo
+del
+insert t
+right
+left
+del
+del
+del
+insert i
+insert l
+del
+insert w
+left
+undo
+del
+del
+left
+left
+right
+right
+insert x
+undo
+del
+del
+undo
+undo
+left
+del
+right
+left
+undo
+undo
+left
+right
+undo
+undo
+del
+insert l
+undo
+insert r
+insert q
+insert i
+right
+del
+insert p
+right
+insert i
+del
+del
+del
+undo
+undo
+del
+del
+undo
+right
+undo
+insert z
+right
+left
+undo
+undo
+del
+undo
+insert j
+right
+del
+left
+left
+undo
+del
+right
+right
+del
+del
+left
+insert d
+del
+undo
+insert k
+right
+del
+left
+del
+right
+insert l
+right
+del
+left
+right
+undo
+del
+del
+right
+insert g
+left
+undo
+right
+right
+right
+left
+left
+right
+del
+insert b
+del
+undo
+left
+del
+right
+insert m
+right
+left
+undo
+right
+undo
+right
+undo
+insert v
+undo
+insert i
+del
+undo
+left
+left
+right
+left
+del
+left
+undo
+undo
+insert z
+undo
+undo
+undo
+left
+insert b
+insert d
+left
+undo
+del
+left
+insert z
+right
+del
+left
+del
+left
+undo
+del
+undo
+del
+del
+right
+del
+insert i
+right
+del
+insert e
+right
+left
+undo
+del
+insert p
+insert e
+del
+right
+insert h
+del
+del
+right
+right
+right
+del
+left
+insert a
+right
+del
+undo
+right
+left
+insert f
+insert x
+left
+del
+insert d
+insert o
+left
+del
+undo
+undo
+right
+insert h
+del
+left
+left
+left
+insert r
+insert v
+del
+left
+undo
+undo
+undo
+undo
+del
+left
+insert z
+insert r
+insert w
+insert p
+del
+del
+undo
+del
+undo
+undo
+right
+del
+left
+insert k
+del
+del
+del
+left
+del
+undo
+del
+undo
+insert x
+del
+undo
+insert g
+right
+del
+insert p
+undo
+del
+del
+left
+left
+left
+insert d
+left
+del
+left
+right
+undo
+left
+undo
+del
+right
+undo
+left
+right
+right
+right
+undo
+left
+right
+insert s
+insert q
+insert m
+right
+del
+insert n
+left
+right
+right
+insert l
+undo
+insert h
+left
+insert e
+right
+undo
+right
+insert d
+left
+right
+insert b
+right
+insert a
+del
+right
+left
+insert q
+insert t
+undo
+insert v
+insert s
+del
+undo
+insert t
+insert o
+insert m
+left
+undo
+left
+right
+undo
+left
+left
+left
+right
+del
+right
+insert n
+del
+left
+del
+insert m
+del
+del
+undo
+insert h
+right
+undo
+del
+left
+insert u
+insert m
+del
+del
+left
+left
+left
+right
+del
+del
+insert g
+del
+right
+del
+left
+right
+del
+left
+right
+right
+right
+insert i
+insert b
+right
+del
+left
+undo
+undo
+insert w
+left
+left
+del
+right
+undo
+undo
+del
+left
+del
+insert l
+left
+left
+right
+left
+del
+left
+right
+left
+right
+undo
+left
+right
+insert i
+del
+del
+undo
+insert q
+right
+undo
+insert h
+left
+left
+left
+insert t
+left
+left
+insert k
+undo
+del
+insert k
+undo
+undo
+insert j
+left
+right
+undo
+insert n
+del
+del
+undo
+insert h
+left
+right
+insert p
+left
+undo
+del
+undo
+left
+undo
+right
+insert w
+right
+del
+left
+del
+right
+del
+del
+del
+left
+undo
+right
+right
+undo
+left
+undo
+left
+left
+del
+left
+right
+right
+left
+del
+insert t
+left
+left
+insert j
+del
+del
+insert t
+del
+left
+insert f
+insert u
+left
+insert c
+right
+undo
+left
+del
+left
+undo
+undo
+right
+undo
+del
+right
+right
+del
+left
+right
+insert q
+insert z
+undo
+del
+del
+left
+undo
+del
+undo
+insert n
+undo
+right
+del
+left
+left
+right
+left
+insert v
+undo
+del
+del
+left
+left
+right
+right
+right
+undo
+del
+undo
+del
+insert u
+left
+left
+right
+insert q
+left
+right
+left
+insert j
+left
+insert u
+undo
+undo
+insert a
+left
+left
+right
+insert h
+right
+del
+insert r
+right
+right
+del
+right
+del
+left
+undo
+undo
+right
+insert g
+insert t
+del
+undo
+insert i
+del
+undo
+insert c
+left
+left
+undo
+left
+left
+insert o
+left
+left
+undo
+insert a
+left
+right
+insert q
+left
+right
+del
+undo
+undo
+right
+del
+del
+left
+left
+del
+left
+del
+insert c
+left
+left
+del
+undo
+insert q
+insert j
+insert y
+del
+right
+right
+right
+undo
+insert n
+del
+undo
+del
+left
+insert j
+undo
+del
+left
+right
+del
+insert a
+left
+left
+left
+undo
+left
+insert f
+left
+undo
+left
+left
+left
+right
+right
+del
+insert w
+right
+left
+undo
+undo
+del
+del
+right
+undo
+del
+undo
+right
+left
+right
+right
+insert v
+right
+right
+left
+insert p
+del
+right
+del
+undo
+insert o
+right
+undo
+undo
+left
+undo
+undo
+right
+insert p
+right
+undo
+left
+insert v
+del
+del
+right
+right
+insert f
+del
+del
+del
+del
+insert b
+insert g
+right
+insert v
+right
+del
+left
+del
+right
+insert f
+right
+insert r
+left
+right
+del
+del
+insert r
+insert c
+undo
+del
+undo
+undo
+left
+undo
+right
+del
+del
+del
+right
+left
+del
+insert m
+left
+del
+left
+del
+del
+undo
+insert e
+insert h
+left
+insert u
+insert a
+undo
+undo
+left
+insert u
+undo
+undo
+del
+undo
+right
+left
+left
+right
+insert e
+right
+left
+left
+left
+insert j
+insert a
+del
+right
+del
+undo
+insert h
+right
+undo
+insert y
+undo
+right
+insert s
+insert w
+left
+undo
+right
+right
+insert w
+insert m
+insert l
+left
+undo
+right
+undo
+right
+right
+undo
+right
+insert i
+del
+right
+del
+left
+del
+left
+left
+left
+del
+del
+insert t
+left
+undo
+right
+left
+left
+right
+right
+left
+left
+undo
+left
+del
+right
+insert w
+right
+undo
+left
+del
+insert i
+insert o
+del
+insert s
+insert z
+right
+insert d
+undo
+del
+right
+right
+right
+undo
+insert r
+del
+undo
+right
+right
+insert g
+left
+left
+del
+undo
+insert l
+undo
+insert q
+right
+undo
+insert k
+left
+insert i
+insert k
+del
+undo
+right
+undo
+del
+right
+del
+del
+undo
+insert p
+left
+right
+del
+undo
+insert v
+del
+right
+undo
+undo
+insert d
+undo
+undo
+right
+right
+del
+undo
+del
+right
+del
+undo
+del
+insert f
+left
+undo
+del
+right
+left
+del
+right
+insert c
+left
+right
+undo
+left
+left
+undo
+undo
+right
+left
+insert b
+left
+undo
+insert v
+undo
+left
+undo
+del
+undo
+left
+right
+del
+insert b
+left
+right
+right
+insert s
+insert k
+undo
+left
+undo
+right
+left
+insert v
+undo
+left
+del
+left
+undo
+insert o
+left
+left
+insert u
+undo
+right
+del
+insert i
+right
+insert c
+left
+insert v
+del
+left
+left
+undo
+undo
+undo
+del
+insert u
+insert w
+del
+right
+right
+del
+insert m
+undo
+right
+undo
+right
+left
+left
+undo
+del
+del
+undo
+left
+right
+undo
+insert c
+del
+insert t
+undo
+insert g
+right
+undo
+left
+left
+insert d
+del
+left
+del
+del
+right
+del
+right
+undo
+left
+insert o
+del
+undo
+right
+left
+insert m
+del
+undo
+del
+insert a
+undo
+undo
+insert q
+right
+del
+insert m
+insert v
+undo
+left
+left
+left
+del
+right
+insert r
+undo
+right
+insert w
+undo
+undo
+insert c
+right
+right
+right
+del
+left
+undo
+right
+insert e
+insert v
+insert l
+insert m
+undo
+undo
+insert j
+left
+left
+left
+right
+right
+del
+right
+right
+left
+insert h
+undo
+left
+right
+undo
+right
+left
+undo
+left
+del
+insert o
+right
+left
+undo
+right
+del
+undo
+del
+insert j
+left
+insert a
+right
+del
+undo
+left
+left
+del
+left
+del
+left
+undo
+left
+undo
+insert z
+insert f
+right
+undo
+undo
+insert q
+undo
+right
+right
+right
+left
+left
+undo
+left
+right
+left
+insert v
+del
+del
+del
+undo
+del
+left
+del
+left
+left
+del
+insert y
+undo
+left
+left
+undo
+del
+undo
+left
+insert n
+del
+del
+undo
+right
+undo
+undo
+left
+insert b
+left
+undo
+right
+undo
+insert n
+left
+right
+del
