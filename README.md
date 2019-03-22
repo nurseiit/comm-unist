@@ -20,6 +20,10 @@ Discussions
 
 Announcements
 -------------
+* **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
+```
+ImportError: No module named site
+```
 * **[03-20]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (104-E102).
 * **[03-18]** Grading issues claimed after the class has all been checked and found no error so far. I left a not on your private repo's issue. Please create a private issue if the result of running `driver.pl` does not match the grader's output.
 * **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
