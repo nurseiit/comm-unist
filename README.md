@@ -13,9 +13,20 @@ Course Staffs
   - Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:30~21:30 @106-707-1)
   - Alisheri Anvar (alisher@unist.ac.kr, @alisheri, Thu 19:30~20:30)
   
+Discussions
+-----------
+* [*Closed* (Answered) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
+* [*Open* (In discussion) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues)
 
 Announcements
 -------------
+* **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
+```
+ImportError: No module named site
+```
+* **[03-20]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (104-E102).
+* **[03-18]** Grading issues claimed after the class has all been checked and found no error so far. I left a not on your private repo's issue. Please create a private issue if the result of running `driver.pl` does not match the grader's output.
+* **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
 * **[03-16]** We will discuss the recitation schedule on Monday.
 * **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
 * **[03-11]** Lab 1 (datalab) is out. The deadline is Mar 17 (Sun) 11:59pm.
@@ -119,24 +130,24 @@ Schedule
 |Mar/14(Thu)|          [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> (7:00pm - 8:15pm @ 106-T205)                             |                    |                   |
 |Mar/15(Fri)|                                        |            |                    |
 |Mar/17(Sun)| | |lab1: due 11:59pm |
-|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf) <br/> [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)        |                   | lab2: bomblab out                   |
+|Mar/18(Mon)|       [Machine Prog: Control](/slides/06-machine-control.pdf)         |                   | lab2: bomblab out                   |
 |Mar/19(Tue)|                                        |                    |                    |
-|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)  <br/> Machine Prog: Data           |  bomb lab (tentative)                   | |
-|Mar/21(Thu)|                                        |                    |   |
+|Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
+|Mar/21(Thu)|                                        |  [bomb lab (7:00pm- @ 104-E102)](/recitation/rec2/CSE251_recitation2.pptx)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
 |Mar/24(Sun)| | |  |
-|Mar/25(Mon)|         Machine Prog: Advanced         |                    |                   |
+|Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|           Code Optimization            | attack lab (tentative)                   |    lab2: due 11:59pm                |
-|Mar/28(Thu)|                                        |                    | lab3: attacklab out                    |
-|Mar/29(Fri)|   The Memory Hierarchy (Tentative)     |                    |                    |
-|Apr/01(Mon)|             Cache Memories             |                    |  |
+|Mar/27(Wed)|        Machine Prog: Advanced            |                    |    lab2: due 11:59pm                |
+|Mar/28(Thu)|        Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/29(Fri)|         |                    |                    |
+|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
-|Apr/04(Thu)|                                        |                    |  lab3: due 11:59pm                    |
-|Apr/05(Fri)|                                        |                    |   lab4: cachelab out                 |
-|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |    |
-|Apr/09(Tue)|                                        |                    |   |
+|Apr/04(Thu)|                                        |                    |                      |
+|Apr/05(Fri)|                                        |                    |                   |
+|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |   lab3: due 11:59pm |
+|Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
 |Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
