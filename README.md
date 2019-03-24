@@ -66,9 +66,9 @@ Grading
 
 ### General rule
 
-
-| 5%|Class participation  |
+|   |                     |
 |---|---------------------|
+| 5%|Class participation  |
 |20%|Midterm              |
 |25%|Final                |
 |50%|Labs                 |
@@ -135,8 +135,7 @@ Schedule
 |Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
 |Mar/21(Thu)|                                        |  [bomb lab (7:00pm- @ 104-E102)](/recitation/rec2/CSE251_recitation2.pptx)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
-|Mar/24(Sun)| | |  |
-|Mar/25(Mon)|        Machine Prog: Data         |                    |                   |
+|Mar/25(Mon)|        [Machine Prog: Data](08-machine-data.pdf)         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
 |Mar/27(Wed)|        Machine Prog: Advanced            |                    |    lab2: due 11:59pm                |
 |Mar/28(Thu)|        Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
