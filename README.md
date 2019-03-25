@@ -21,6 +21,9 @@ Discussions
 
 Announcements
 -------------
+* **[03-25]** A clarification on Lab2
+  - The `write` function in `Textedit` takes the name of output file as an argument, not the contents to write.
+  
 * **[03-21]** Lab 2 is posted. Please refer to your submission repository and the calendar for the details.
 
 * **[03-18]** There will be more pre-gradings as some students requested as Follows. The real grader will run at 0:05 3/19.
