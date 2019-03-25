@@ -139,9 +139,9 @@ Schedule
 |Mar/21(Thu)|                 [Trees](/slides/lecture08.pdf)                  |                    | lab2 out           |
 |Mar/22(Fri)|               DROP DATE                |                    |   |
 |Mar/25(Mon)|                                        |                    |                    |
-|Mar/26(Tue)|      Binary Trees and Forests (1)      |                    |                    |
+|Mar/26(Tue)|      [Binary Trees (1)](/slides/lecture09.pdf)      |                    |                    |
 |Mar/27(Wed)|                                        |                    |                    |
-|Mar/28(Thu)|      Binary Trees and Forests (2)      |                    |                    |
+|Mar/28(Thu)|      [Binary Trees (2)](/slides/lecture09.pdf)      |                    |                    |
 |Mar/29(Fri)|                                        |                    |                    |
 |Apr/01(Mon)|                                        |                    |            |
 |Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |                    |
