@@ -21,6 +21,8 @@ Discussions
 
 Announcements
 -------------
+* **[03-26]** Please participate doodle here for the midterm scheduling. The Deadline is tonight (Mar 26 11:59pm).
+  - [https://doodle.com/poll/pbi2zn37qak3wn7v](https://doodle.com/poll/pbi2zn37qak3wn7v)
 * **[03-25]** A clarification on Lab2
   - The `write` function in `Textedit` takes the name of output file as an argument, not the contents to write.
   
