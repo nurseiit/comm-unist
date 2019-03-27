@@ -43,10 +43,18 @@ cd datalab
 - Instruction: [bomblab/README.md](/bomblab/README.md)
 
 
+### lab3: attacklab
+- Out: Mar 28 (Thu)
+- Due: Apr 08 (Wed) 11:59pm
+- Recitation: Apr 1 7:00pm
+- Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
+- Instruction: [attacklab/README.md](/attacklab/README.md)
+
+
+
 ### Notes
 
-- You are expected to be familiar with the concept of `branch` in `git`.
-  - Grader will create and push branches named `grader-<lab_name>`. For example, `grader-lab0`.
-  - Later labs will pushed to either `master` or `deploy-<lab_name>` branch.
+- Grader will check the `master` branch.
+- Grader will create and push branches named `grader-<lab_name>`. For example, `grader-lab0`.
 
 
