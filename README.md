@@ -158,9 +158,9 @@ Schedule
 |Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
-|Apr/15(Mon)|              Midterm Week              |                    |                    |
+|Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
 |Apr/16(Tue)|            Midterm @ TBD, 9:00pm-11:00pm                            |                    |                    |
-|Apr/17(Wed)|              Midterm Week              |                    |                    |
+|Apr/17(Wed)|              Midterm Week (No class)             |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |Apr/22(Mon)|            System Level I/O            |                    | lab4: due 11:59pm     |
