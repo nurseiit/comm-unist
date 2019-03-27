@@ -20,9 +20,8 @@ Discussions
 
 Exams
 -----
-* Midterm on Apr 16 (Tue) 9:00pm-11:00pm.
-  - Relevant Google Form: [https://forms.gle/169EvK7w4VoZczh99](https://forms.gle/169EvK7w4VoZczh99)
-  - If your earlier exam ends at 9:00pm, we'll give you an option to arrive and start a bit later (up to 30min).
+* Midterm on TBD
+  - Relevant Google Form: [https://forms.gle/V9YhW8RKsMFHyLu2A](https://forms.gle/V9YhW8RKsMFHyLu2A)
 
 Announcements
 -------------
