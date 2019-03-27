@@ -29,38 +29,17 @@ Announcements
 
 * **[03-28]** The instructions for the lab 3 (attacklab) has been posted throught the submit repositories.
 * **[03-28]** Lab 2 server has just been closed.
-* **[03-25]** The `get-bomb.sh` file that I initially distributed has a bug. As I've already uploaded a fix, please run `git pull` if you have a problem in executing it.
+
 * **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
 ```
 ImportError: No module named site
 ```
-* **[03-20]** Recitation for the Lab 2 is on Mar 21 (Thu) 7:00pm at (104-E102).
-* **[03-18]** Grading issues claimed after the class has all been checked and found no error so far. I left a not on your private repo's issue. Please create a private issue if the result of running `driver.pl` does not match the grader's output.
-* **[03-18]** Lab 2 (bomlab) is posted and Lab1 grading is finalized (about 4 hours ago.).
-* **[03-16]** We will discuss the recitation schedule on Monday.
-* **[03-16]** Lab 1 (datalab) pre-grading results are pushed (`grader-datalab` branch).
-* **[03-11]** Lab 1 (datalab) is out. The deadline is Mar 17 (Sun) 11:59pm.
+
 * **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
-
-* **[03-06]** lab 0 pre-graded. Use this command to check your grade on your local repository. Or, check the branch `grader-lab0` on Gitlab.
-Note that this grading is not final.
-
-```sh
-git fetch origin
-git checkout -t origin/grader-lab0
-```
 
 * **[03-06]** lab 0 deadline is extended due to the university network issue.
 
-* **[03-04] VPN setup done:**
-
-  For those of you applied ealier, VPN access has been set up. Visit vpn.unist.ac.kr to use VPN.
-  You can use your portal ID/PW. We'll give you one (and only one) more chance to apply during this week.
-  
-* [03-04] Black screen problem on putty? [click](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/10)
-* [03-01] We meet at **106-505-1** on Mar 4 10:30am instead of our regular class room.
 * [02-28] Private questions will be answered only when they really are private. General questions (e.g. clarification of concepts) will not be answered on your repository.
-* [02-28] Lab0 is out. due: Mar 06 11:59pm
 * [02-25] There will be recitations either in the evening or on Friday.
 
 
