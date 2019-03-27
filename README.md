@@ -146,7 +146,7 @@ Schedule
 |Mar/25(Mon)|        [Machine Prog: Data](08-machine-data.pdf)         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
 |Mar/27(Wed)|     [Machine Prog: Data](08-machine-data.pdf) <br/>   [Machine Prog: Advanced](09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
-|Mar/28(Thu)|        Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/28(Thu)|      [Machine Prog: Advanced](09-machine-advanced.pdf) <br/>   Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|         |                    |                    |
 |Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
 |Apr/02(Tue)|                                        |                    | |
@@ -177,10 +177,10 @@ Schedule
 |May/07(Tue)|                                        |                    |                    |
 |May/08(Wed)|     Dynamic Memory Allocation (2)      |                    |                    |
 |May/09(Thu)|                                        |                    |                    |
-|May/10(Fri)|        Network Programming (1)         |                    |  lab6: checkpoint  |
-|May/13(Mon)|        Network Programming (2)         |                    |                    |
+|May/10(Fri)|                |                    |  lab6: checkpoint  |
+|May/13(Mon)|       Network Programming (1)           |                    |                    |
 |May/14(Tue)|                                        |                    |                    |
-|May/15(Wed)|              Concurrency               |                    |                    |
+|May/15(Wed)|         Network Programming (2)                 |                    |                    |
 |May/16(Thu)|                                        |                    |                    |
 |May/17(Fri)|                                        |                    |                    |
 |May/20(Mon)|     SP19 (Recitation or no class)      |                    |                    |
@@ -188,14 +188,14 @@ Schedule
 |May/22(Wed)|     SP19 (Recitation or no class)      |                    |                    |
 |May/23(Thu)|                                        |                    |                    |
 |May/24(Fri)|                                        |                    |                    |
-|May/27(Mon)|          Synchronization (1)           |                    | lab7: proxylab out |
+|May/27(Mon)|           Concurrency            |                    | lab7: proxylab out |
 |May/28(Tue)|                                        |                    | lab6: due 11:59pm  |
-|May/29(Wed)|          Synchronizatiion (2)          |                    |                    |
+|May/29(Wed)|         Synchronization (1)           |                    |                    |
 |May/30(Thu)|                                        |                    |                    |
 |May/31(Fri)|                                        |                    |                    |
-|Jun/03(Mon)|        Thread-level Parallelism        |                    |                    |
+|Jun/03(Mon)|      Synchronizatiion (2)           |                    |                    |
 |Jun/04(Tue)|                                        |                    |                    |
-|Jun/05(Wed)|                  TBA                   |                    | lab7 due 11:59 pm  |
+|Jun/05(Wed)|       Thread-level Parallelism         |                    | lab7 due 11:59 pm  |
 |Jun/06(Thu)|                                        |                    |                    |
 |Jun/07(Fri)|                                        |                    |                    |
 |Jun/10(Mon)|               Final Week               |                    |                    |
