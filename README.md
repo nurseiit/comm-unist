@@ -23,14 +23,8 @@ Announcements
 -------------
 
 
-* **[03-26]** Please participate a survet using google form here for the midterm scheduling. The Deadline is tonight (Mar 26 11:59pm).
-  - [https://forms.gle/rDuTnWxDj6Gj1wUz9](https://forms.gle/rDuTnWxDj6Gj1wUz9)
-
-* **[03-26]** Please participate a survet using google form here for the midterm scheduling. The Deadline is tonight (Mar 26 11:59pm).
-  - [https://forms.gle/rDuTnWxDj6Gj1wUz9](https://forms.gle/rDuTnWxDj6Gj1wUz9)
-
-* **[03-26]** Please participate a survet using google form here for the midterm scheduling. The Deadline is tonight (Mar 26 11:59pm).
-  - [https://forms.gle/rDuTnWxDj6Gj1wUz9](https://forms.gle/rDuTnWxDj6Gj1wUz9)
+* **[03-27]** Please participate a survet using google form here for the midterm scheduling. The Deadline is tonight (Mar 28 10:00am).
+  - [https://forms.gle/VzJCXsC31dtWz5q27](https://forms.gle/VzJCXsC31dtWz5q27)
   
 * **[03-25]** A clarification on Lab2
   - The `write` function in `Textedit` takes the name of output file as an argument, not the contents to write.
