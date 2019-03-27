@@ -18,6 +18,12 @@ Discussions
 * [*Closed* (Answered) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
 * [*Open* (In discussion) Issues](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues)
 
+Exams
+-----
+* Midterm on Apr 16 (Tue) 9:00pm-11:00pm.
+  - Relevant Google Form: [https://forms.gle/169EvK7w4VoZczh99](https://forms.gle/169EvK7w4VoZczh99)
+  - If your earlier exam ends at 9:00pm, we'll give you an option to arrive and start a bit later (up to 30min).
+
 Announcements
 -------------
 
@@ -153,7 +159,7 @@ Schedule
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week              |                    |                    |
-|Apr/16(Tue)|                                        |                    |                    |
+|Apr/16(Tue)|            Midterm @ TBD, 9:00pm-11:00pm                            |                    |                    |
 |Apr/17(Wed)|              Midterm Week              |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
