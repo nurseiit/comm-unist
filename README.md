@@ -126,7 +126,7 @@ Schedule
 |Mar/25(Mon)|        [Machine Prog: Data](08-machine-data.pdf)         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
 |Mar/27(Wed)|     [Machine Prog: Data](08-machine-data.pdf) <br/>   [Machine Prog: Advanced](09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
-|Mar/28(Thu)|      [Machine Prog: Advanced](09-machine-advanced.pdf) <br/>   Code Optimization <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/28(Thu)|      [Machine Prog: Advanced](09-machine-advanced.pdf) <br/>   [Code Optimization](10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|         |                    |                    |
 |Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
 |Apr/02(Tue)|                                        |                    | |
