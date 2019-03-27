@@ -26,7 +26,7 @@ Exams
 
 Announcements
 -------------
-
+* **[03-28]** Lab 2 server has just been closed.
 * **[03-25]** The `get-bomb.sh` file that I initially distributed has a bug. As I've already uploaded a fix, please run `git pull` if you have a problem in executing it.
 * **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
 ```
