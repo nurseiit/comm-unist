@@ -21,7 +21,16 @@ Discussions
 
 Announcements
 -------------
-
+* **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
+  Note that it could take hours for each run to complete.
+  - 9:00
+  - 12:00
+  - 15:00
+  - 18:00
+  - 21:00
+  - 24:00
+  
+  The final grader is running on 00:05 Apr 04.
 
 * **[03-28]** Please participate a survey **(4th)** using google form here for the midterm scheduling. The Deadline is tonight (Mar 28 10:00am).
   - [https://forms.gle/HjEr7wKm5v5YSgV48](https://forms.gle/HjEr7wKm5v5YSgV48)
