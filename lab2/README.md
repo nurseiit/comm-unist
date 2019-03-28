@@ -192,7 +192,7 @@ and the additional helper function.
 
 ## Files to modify
 
-- `Testedit.h`
+- `Textedit.h`
 
 ## Grading criteria
 
@@ -203,8 +203,8 @@ check if submission shows the same result.
 
 Again the relevant test cases are included. Please use these commands.
 ```
-./test.py --tack=textedit --verbose
-./test.py --tack=textedit --verbose --num=10
+./test.py --task=textedit --verbose
+./test.py --task=textedit --verbose --num=10
 ```
 
 Testing script uses the `testTextedit.cc` file that calls the `process` function
