@@ -20,8 +20,9 @@ Discussions
 
 Exams
 -----
-* Midterm on TBD
+* Midterm on ~~4/15 Tue~~ 4/16 Wed 9pm-11pm.
   - Relevant Google Form: [https://forms.gle/V9YhW8RKsMFHyLu2A](https://forms.gle/V9YhW8RKsMFHyLu2A)
+  - If your earlier exam ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
 
 Announcements
 -------------
@@ -140,8 +141,8 @@ Schedule
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
-|Apr/16(Tue)|            Midterm @ TBD, 9:00pm-11:00pm                            |                    |                    |
-|Apr/17(Wed)|              Midterm Week (No class)             |                    |                    |
+|Apr/16(Tue)|                                       |                    |                    |
+|Apr/17(Wed)|      Midterm Week (No class) <br/>         Midterm @ TBD, 9:00pm-11:00pm             |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |Apr/22(Mon)|            System Level I/O            |                    | lab4: due 11:59pm     |
