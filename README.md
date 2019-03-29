@@ -19,6 +19,12 @@ Discussions
 * [*Closed* (Answered) Issues](https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues?scope=all&utf8=%E2%9C%93&state=closed)
 * [*Open* (In discussion) Issues](https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues)
 
+Exams
+-----
+* Midterm on 4/22 Mon 9pm-11pm.
+  - Relevant Google Form: [https://forms.gle/So7m7Lk55AGHFMo7A](https://forms.gle/So7m7Lk55AGHFMo7A)
+  - If your earlier exam/class ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
+
 Announcements
 -------------
 * **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
