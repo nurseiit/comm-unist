@@ -8,165 +8,131 @@
 
 using namespace std;
 
-class Textedit {
-  enum Commands {
-    Left,
-    Right,
-    Insert,
-    Delete,
-    Undo
+enum Command {
+  Insert,
+  Delete,
+  Left,
+  Right,
+  Undo
+};
+
+class State {
+  struct Action {
+    Command command;
+    char arg;
+    Action(Command command = Undo, char arg = '\0')
+        : command(command), arg(arg) {}
   };
 
-  struct State {
-    string left, right;
-    State() {
-      left = right = "";
+ private:
+  string left, right;
+  list<Action> history;
+
+  void doInsert(char arg) {
+    left += arg;
+    history.push_back(Action(Delete));
+  }
+  void doDelete() {
+    if (left.empty()) return;
+    char back = left.back();
+    left.pop_back();
+    history.push_back(Action(Insert, back));
+  }
+  void doLeft() {
+    if (left.empty()) return;
+    char back = left.back();
+    right += back;
+    left.pop_back();
+    history.push_back(Action(Right));
+  }
+  void doRight() {
+    if (right.empty()) return;
+    char back = right.back();
+    left += back;
+    right.pop_back();
+    history.push_back(Action(Left));
+  }
+  void doUndo() {
+    if (history.empty()) return;
+    Action now = history.back();
+    history.pop_back();
+    execute(now.command, now.arg);
+  }
+
+ public:
+  State() {
+    history.clear();
+    left = right = "";
+  }
+  void execute(Command command, char arg = '\0') {
+    switch (command) {
+      case Insert:
+        doInsert(arg);
+        break;
+      case Delete:
+        doDelete();
+        break;
+      case Left:
+        doLeft();
+        break;
+      case Right:
+        doRight();
+        break;
+      case Undo:
+        doUndo();
+        break;
     }
-  };
+  }
+  string toString() {
+    string reversed = right;
+    reverse(reversed.begin(), reversed.end());
+    return left + reversed;
+  }
+};
 
-  string fix(string foo) {
-    int pos = foo.find("-in");
-    string tempo = foo.substr(0, pos + 1) + bar + "." + ending;
-    return tempo;
+class Textedit {
+  Command convert(string command) {
+    if (command == "insert")
+      return Insert;
+    if (command == "del")
+      return Delete;
+    if (command == "left")
+      return Left;
+    if (command == "right")
+      return Right;
+    if (command == "undo")
+      return Undo;
+    throw runtime_error("Unrecognized command: `" + command + "`!");
   }
 
  private:
-  list<State> history;
   State state;
-
-  /*
-   * left:
-   * moves the cursor to the left.
-   * do nothing if the cursor is already at the leftmost
-   */
-  void left() {
-    if (state.left.empty())
-      return;
-    char now = state.left.back();
-    state.left.pop_back();
-    state.right = now + state.right;
-  }
-
-  /*
-   * right:
-   * moves the cursor to the left.
-   * do nothing if the cursor is already at the rightmost
-   */
-  void right() {
-    if (state.right.empty())
-      return;
-    char now = state.right[0];
-    state.right = (state.right.length() > 1 ? state.right.substr(1) : "");
-    state.left += now;
-  }
-  string bar = "output";
-
-  /*
-   * insert:
-   * insert the character before the cursor.
-   */
-  void insert(char now) {
-    state.left += now;
-  }
-
-  /*
-   * del:
-   * delete the character before the cursor.
-   * if the cursor if at the beginning or
-   * the string is empty, do nothing (no runtime error!!)
-   */
-  void del() {
-    if (!state.left.empty())
-      state.left.pop_back();
-  }
-
-  /*
-   * undo:
-   * reverts the last executed command.
-   * To repeat undoing, all executed commands should be kept in the stack.
-   * Note that we don't have "redo" command
-   */
-  void undo() {
-    history.pop_back();
-    state = history.back();
-  }
-
-  /*
-   * execute:
-   * This is an optional helper function.
-   * Implementing this to execute one command by invoking
-   * the individual operation will make your life easier.
-   */
-  void execute(Commands cmd, char arg = '\0') {
-    switch (cmd) {
-      case Insert:
-        insert(arg);
-        save_state();
-        break;
-      case Delete:
-        del();
-        save_state();
-        break;
-      case Left:
-        left();
-        break;
-      case Right:
-        right();
-        break;
-      case Undo:
-        undo();
-        break;
-    }
-  }
-
-  void save_state() {
-    history.push_back(state);
-  }
-
-  void handle_files(string fname_in, string fname_out) {
-    freopen(fix(fname_in).c_str(), "r", stdin);
-    freopen(fname_out.c_str(), "w", stdout);
-  }
-
   void solve() {
-    cin >> state.left;
-    char cmd[20];
-    while (scanf("%s", cmd) != EOF) {
-      string cmd_str = string(cmd);
-      Commands command = convert_command(cmd_str);
+    while (!cin.eof()) {
+      string cmd;
+      cin >> cmd;
+      if (cin.eof()) break;
+      Command command = convert(cmd);
       if (command == Insert) {
-        char arg[1];
-        scanf("%s", arg);
-        execute(command, arg[0]);
+        string arg;
+        cin >> arg;
+        state.execute(command, arg[0]);
       } else {
-        execute(command);
+        state.execute(command);
       }
     }
   }
-
-  Commands convert_command(string cmd) {
-    Commands table[] = {Insert, Delete, Left, Right, Undo};
-    string names[] = {"insert", "del", "left", "right", "undo"};
-    for (int i = 0; i < 5; i++)
-      if (names[i] == cmd)
-        return table[i];
-    throw runtime_error("Unrecognized command: `" + cmd + "`!");
-  }
-  string ending = "txt";
-
   void write() {
-    string result = state.left + state.right;
-    printf("%s", result.c_str());
+    cout << state.toString();
   }
 
  public:
   Textedit() {
-    history.clear();
     state = State();
   }
-
-  void process(string fname_in, string fname_out) {
-    handle_files(fname_in, fname_out);
+  void process(string inFile, string outFile) {
+    freopen(inFile.c_str(), "r", stdin);
+    freopen(outFile.c_str(), "w", stdout);
     solve();
     write();
   }
