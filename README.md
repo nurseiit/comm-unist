@@ -145,8 +145,9 @@ Schedule
 |Apr/17(Wed)|      Midterm Week (No class) <br/>         Midterm @ TBD, 9:00pm-11:00pm             |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            System Level I/O            |                    | lab4: due 11:59pm     |
-|Apr/23(Tue)|                                        |                    |  lab5: tshlab out                  |
+|**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
+|Apr/22(Mon)|            System Level I/O            |                    |  lab5: tshlab out    |
+|Apr/23(Tue)|                                        |                    |                    |
 |Apr/24(Wed)|        Virtual Memory: Concepts        |                    | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
