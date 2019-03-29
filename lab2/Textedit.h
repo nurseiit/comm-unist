@@ -60,7 +60,7 @@ class State {
     if (history.empty()) return;
     Action now = history.back();
     history.pop_back();
-    execute(now.command, now.arg);
+    execute(now.command, now.arg, true);
   }
 
  public:
