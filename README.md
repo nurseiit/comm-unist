@@ -25,6 +25,7 @@ Exams
 
 Announcements
 -------------
+* **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
 * **[03-28]** Lab 3 recitation is on Apr 1 (Mon) 7pm @ 104-E102.
 * **[03-28]** The instructions for the lab 3 (attacklab) has been posted throught the submit repositories.
 * **[03-28]** Lab 2 server has just been closed.
