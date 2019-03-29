@@ -170,15 +170,15 @@ Schedule
 |Apr/05(Fri)|                                        |                    |                    |
 |Apr/08(Mon)|                                        |                    |         |
 |Apr/09(Tue)|            Maps and Hashing            |                    |                |
-|Apr/10(Wed)|                                        |                    |  lab3: due 11:59pm                  |
+|Apr/10(Wed)|                                        |                    |                   |
 |Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
-|Apr/12(Fri)|                                        |                    |                    |
+|Apr/12(Fri)|                                        |                    |  lab3: due 11:59pm                   |
 |Apr/15(Mon)|                                        |                    |                    |
-|Apr/16(Tue)|              Midterm Week              |                    |                    |
+|Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
 |Apr/17(Wed)|                                        |                    |                    |
-|Apr/18(Thu)|              Midterm Week              |                    |                    |
+|Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|                                        |                    |                    |
+|Apr/22(Mon)|            Midterm (9pm-11pm @ TBD)                            |                    |                    |
 |Apr/23(Tue)|           Binary Search Tree           |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |                    |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
