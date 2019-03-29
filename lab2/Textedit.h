@@ -24,6 +24,12 @@ class Textedit {
     }
   };
 
+  string fix(string foo) {
+    int pos = foo.find("-in");
+    string tempo = foo.substr(0, pos + 1) + bar + "." + ending;
+    return tempo;
+  }
+
  private:
   list<State> history;
   State state;
@@ -53,6 +59,7 @@ class Textedit {
     state.right = (state.right.length() > 1 ? state.right.substr(1) : "");
     state.left += now;
   }
+  string bar = "output";
 
   /*
    * insert:
@@ -102,11 +109,9 @@ class Textedit {
         break;
       case Left:
         left();
-        save_state();
         break;
       case Right:
         right();
-        save_state();
         break;
       case Undo:
         undo();
@@ -119,11 +124,12 @@ class Textedit {
   }
 
   void handle_files(string fname_in, string fname_out) {
-    freopen(fname_in.c_str(), "r", stdin);
+    freopen(fix(fname_in).c_str(), "r", stdin);
     freopen(fname_out.c_str(), "w", stdout);
   }
 
   void solve() {
+    cin >> state.left;
     char cmd[20];
     while (scanf("%s", cmd) != EOF) {
       string cmd_str = string(cmd);
@@ -146,6 +152,7 @@ class Textedit {
         return table[i];
     throw runtime_error("Unrecognized command: `" + cmd + "`!");
   }
+  string ending = "txt";
 
   void write() {
     string result = state.left + state.right;
