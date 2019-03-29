@@ -28,29 +28,33 @@ class State {
   string left, right;
   list<Action> history;
 
-  void doInsert(char arg) {
+  void doInsert(char arg, bool isUndo = false) {
     left += arg;
-    history.push_back(Action(Delete));
+    if (!isUndo)
+      history.push_back(Action(Delete));
   }
-  void doDelete() {
+  void doDelete(bool isUndo = false) {
     if (left.empty()) return;
     char back = left.back();
     left.pop_back();
-    history.push_back(Action(Insert, back));
+    if (!isUndo)
+      history.push_back(Action(Insert, back));
   }
-  void doLeft() {
+  void doLeft(bool isUndo = false) {
     if (left.empty()) return;
     char back = left.back();
     right += back;
     left.pop_back();
-    history.push_back(Action(Right));
+    if (!isUndo)
+      history.push_back(Action(Right));
   }
-  void doRight() {
+  void doRight(bool isUndo = false) {
     if (right.empty()) return;
     char back = right.back();
     left += back;
     right.pop_back();
-    history.push_back(Action(Left));
+    if (!isUndo)
+      history.push_back(Action(Left));
   }
   void doUndo() {
     if (history.empty()) return;
@@ -64,19 +68,19 @@ class State {
     history.clear();
     left = right = "";
   }
-  void execute(Command command, char arg = '\0') {
+  void execute(Command command, char arg = '\0', bool isUndo = false) {
     switch (command) {
       case Insert:
-        doInsert(arg);
+        doInsert(arg, isUndo);
         break;
       case Delete:
-        doDelete();
+        doDelete(isUndo);
         break;
       case Left:
-        doLeft();
+        doLeft(isUndo);
         break;
       case Right:
-        doRight();
+        doRight(isUndo);
         break;
       case Undo:
         doUndo();
