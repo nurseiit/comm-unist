@@ -45,7 +45,7 @@ cd datalab
 
 ### lab3: attacklab
 - Out: Mar 28 (Thu)
-- Due: Apr 08 (Wed) 11:59pm
+- Due: Apr 08 (Mon) 11:59pm
 - Recitation: Apr 1 7:00pm
 - Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
 - Instruction: [attacklab/README.md](/attacklab/README.md)
