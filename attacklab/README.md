@@ -3,6 +3,10 @@
 - Assigned: Mar. 28 (Thu), Due: Apr. 08 (Wed)
 - Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
 
+
+**The targets whose ID is smaller than 32 are not working.
+If you have one, please get a new one to work on the lab**
+
 # Introduction
 
 
@@ -121,7 +125,7 @@ You can find all necessary files from the directory.
 
 The server will test your exploit string to make sure it really works, and it will update the Attacklab score- board page indicating that your userid (listed by your target number for anonymity) has completed this phase.
 You can view the scoreboard by pointing your Web browser at
-    http://attack.unicss.org/scoreboard
+    http://attack.unicss.org:4950/scoreboard
     Unlike the Bomb Lab, there is no penalty for making mistakes in this lab. Feel free to fire away at CTARGET and RTARGET with any strings you like.
     IMPORTANT NOTE: You can work on your solution on any Linux machine, but in order to submit your solution, you will need to be running on the `uni06 server`.
      Figure 1 summarizes the five phases of the lab. As can be seen, the first three involve code-injection (CI) attacks on CTARGET, while the last two involve return-oriented-programming (ROP) attacks on RTARGET.
