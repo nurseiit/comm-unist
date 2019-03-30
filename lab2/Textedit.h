@@ -88,8 +88,9 @@ class State {
     }
   }
   string toString() {
-    string reversed = right;
-    reverse(reversed.begin(), reversed.end());
+    string reversed;
+    for (int i = (int)right.size() - 1; i >= 0; i--)
+      reversed += right[i];
     return left + reversed;
   }
 };
