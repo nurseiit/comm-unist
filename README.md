@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[03-30]** **For Lab 3, if you are working with the targets with ID smaller than 32, it doesn't work. Please get a new one. 
 * **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
 * **[03-28]** Lab 3 recitation is on Apr 1 (Mon) 7pm @ 104-E102.
 * **[03-28]** The instructions for the lab 3 (attacklab) has been posted throught the submit repositories.
