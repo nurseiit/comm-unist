@@ -131,12 +131,12 @@ Schedule
 |Mar/27(Wed)|     [Machine Prog: Data](/slides/08-machine-data.pdf) <br/>   [Machine Prog: Advanced](/slides/09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
 |Mar/28(Thu)|      [Machine Prog: Advanced](/slides/09-machine-advanced.pdf) <br/>   [Code Optimization](/slides/10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|         |                    |                    |
-|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ 104-E102)                  |  |
+|Apr/01(Mon)|   [Code Optimization](/slides/10-optimization.pdf) <br/> [The Memory Hierarchy](/slides/11-memory-hierarchy.pdf)             |  attack lab (7:00pm - @ 104-E102)                  |  |
 |Apr/02(Tue)|                                        |                    | |
-|Apr/03(Wed)|                Linking                 |                    |                    |
+|Apr/03(Wed)|                     Cache Memories                   |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
 |Apr/05(Fri)|                                        |                    |                   |
-|Apr/08(Mon)|      ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, tentative)                  |   lab3: due 11:59pm |
+|Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, tentative)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
 |Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ TBD, tentative)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
