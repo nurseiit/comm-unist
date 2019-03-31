@@ -20,12 +20,15 @@ Discussions
 
 Exams
 -----
-* Midterm on TBD
+* Midterm on ~~4/16 Tue~~ 4/17 Wed 9pm-11pm.
   - Relevant Google Form: [https://forms.gle/V9YhW8RKsMFHyLu2A](https://forms.gle/V9YhW8RKsMFHyLu2A)
+  - If your earlier exam ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
 
 Announcements
 -------------
-
+* **[03-30]** **For Lab 3, if you are working with the targets with ID smaller than 32, it doesn't work. Please get a new one. **
+* **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
+* **[03-28]** Lab 3 recitation is on Apr 1 (Mon) 7pm @ 104-E102.
 * **[03-28]** The instructions for the lab 3 (attacklab) has been posted throught the submit repositories.
 * **[03-28]** Lab 2 server has just been closed.
 
@@ -123,28 +126,29 @@ Schedule
 |Mar/20(Wed)|        [Machine Prog: Procedures](/slides/07-machine-procedures.pdf)             |                    | |
 |Mar/21(Thu)|                                        |  [bomb lab (7:00pm- @ 104-E102)](/recitation/rec2/CSE251_recitation2.pptx)                  |   |
 |Mar/22(Fri)|                                        |          |                    |
-|Mar/25(Mon)|        [Machine Prog: Data](08-machine-data.pdf)         |                    |                   |
+|Mar/25(Mon)|        [Machine Prog: Data](/slides/08-machine-data.pdf)         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
-|Mar/27(Wed)|     [Machine Prog: Data](08-machine-data.pdf) <br/>   [Machine Prog: Advanced](09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
-|Mar/28(Thu)|      [Machine Prog: Advanced](09-machine-advanced.pdf) <br/>   [Code Optimization](10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/27(Wed)|     [Machine Prog: Data](/slides/08-machine-data.pdf) <br/>   [Machine Prog: Advanced](/slides/09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
+|Mar/28(Thu)|      [Machine Prog: Advanced](/slides/09-machine-advanced.pdf) <br/>   [Code Optimization](/slides/10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
 |Mar/29(Fri)|         |                    |                    |
-|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ TBD)                  |  |
+|Apr/01(Mon)|   The Memory Hierarchy <br/>      Cache Memories             |  attack lab (7:00pm - @ 104-E102)                  |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                Linking                 |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
 |Apr/05(Fri)|                                        |                    |                   |
-|Apr/08(Mon)|      ECF: Exceptions & Processes       |                    |   lab3: due 11:59pm |
+|Apr/08(Mon)|      ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, tentative)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |                    |                     |
+|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ TBD, tentative)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
-|Apr/16(Tue)|            Midterm @ TBD, 9:00pm-11:00pm                            |                    |                    |
-|Apr/17(Wed)|              Midterm Week (No class)             |                    |                    |
+|Apr/16(Tue)|                                       |                    |                    |
+|Apr/17(Wed)|      Midterm Week (No class) <br/>         Midterm @ TBD, 9:00pm-11:00pm             |                    |                    |
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            System Level I/O            |                    | lab4: due 11:59pm     |
-|Apr/23(Tue)|                                        |                    |  lab5: tshlab out                  |
+|**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
+|Apr/22(Mon)|            System Level I/O            |                    |  lab5: tshlab out    |
+|Apr/23(Tue)|                                        |                    |                    |
 |Apr/24(Wed)|        Virtual Memory: Concepts        |                    | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
