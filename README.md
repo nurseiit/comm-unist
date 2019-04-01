@@ -130,7 +130,7 @@ Schedule
 |Mar/25(Mon)|        [Machine Prog: Data](/slides/08-machine-data.pdf)         |                    |                   |
 |Mar/26(Tue)|                                        |                    |                    |
 |Mar/27(Wed)|     [Machine Prog: Data](/slides/08-machine-data.pdf) <br/>   [Machine Prog: Advanced](/slides/09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
-|Mar/28(Thu)|      [Machine Prog: Advanced](/slides/09-machine-advanced.pdf) <br/>   [Code Optimization](/slides/10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | lab3: attacklab out                    |
+|Mar/28(Thu)|      [Machine Prog: Advanced](/slides/09-machine-advanced.pdf) <br/>   [Code Optimization](/slides/10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | [lab3: attacklab](/recitation/rec3.pptx) out                    |
 |Mar/29(Fri)|         |                    |                    |
 |Apr/01(Mon)|   [Code Optimization](/slides/10-optimization.pdf) <br/> [The Memory Hierarchy](/slides/11-memory-hierarchy.pdf)             |  attack lab (7:00pm - @ 104-E102)                  |  |
 |Apr/02(Tue)|                                        |                    | |
