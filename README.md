@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[04-01]** Lab 4 recitation is on 4/10 (Wed) and a recitation introducing C language is on 4/8 (Mon). Please check the calendar for more detail.
 * **[03-30]** **For Lab 3, if you are working with the targets with ID smaller than 32, it doesn't work. Please get a new one. **
 * **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
 * **[03-28]** Lab 3 recitation is on Apr 1 (Mon) 7pm @ 104-E102.
@@ -136,9 +137,9 @@ Schedule
 |Apr/03(Wed)|                     Cache Memories                   |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
 |Apr/05(Fri)|                                        |                    |                   |
-|Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, tentative)                  |   lab3: due 11:59pm |
+|Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ TBD, tentative)                  |                     |
+|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ TBD, bu @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
