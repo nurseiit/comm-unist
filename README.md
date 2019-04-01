@@ -164,7 +164,7 @@ Schedule
 |Mar/28(Thu)|      [Binary Trees (2)](/slides/lecture09.pdf)      |                    |                    |
 |Mar/29(Fri)|                                        |                    |                    |
 |Apr/01(Mon)|                                        |                    |            |
-|Apr/02(Tue)|     Heaps and Priority Queues (1)      |                    |                    |
+|Apr/02(Tue)|     [Heaps and Priority Queues (1)](/slides/lecture10.pdf)      |                    |                    |
 |Apr/03(Wed)|                                        |                    |  lab2: due 11:59pm                 |
 |Apr/04(Thu)|     Heaps and Priority Queues (2)      |                    |  lab3 out                  |
 |Apr/05(Fri)|                                        |                    |                    |
