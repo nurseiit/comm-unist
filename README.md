@@ -137,9 +137,9 @@ Schedule
 |Apr/03(Wed)|                     Cache Memories                   |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
 |Apr/05(Fri)|                                        |                    |                   |
-|Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm- @ TBD, by @minsu)                  |   lab3: due 11:59pm |
+|Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ TBD, bu @minsu)                  |                     |
+|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ 104-E102, by @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
