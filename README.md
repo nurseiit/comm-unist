@@ -134,7 +134,7 @@ Schedule
 |Mar/29(Fri)|         |                    |                    |
 |Apr/01(Mon)|   [Code Optimization](/slides/10-optimization.pdf) <br/> [The Memory Hierarchy](/slides/11-memory-hierarchy.pdf)             |  attack lab (7:00pm - @ 104-E102)                  |  |
 |Apr/02(Tue)|                                        |                    | |
-|Apr/03(Wed)|                     Cache Memories                   |                    |                    |
+|Apr/03(Wed)|                     [Cache Memories](/slides-12-cache-memories.pdf)                   |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
 |Apr/05(Fri)|                                        |                    |                   |
 |Apr/08(Mon)|     Linking <br/> ECF: Exceptions & Processes       |  C overview (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
