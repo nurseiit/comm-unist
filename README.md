@@ -27,6 +27,13 @@ Exams
 
 Announcements
 -------------
+* **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/4.
+  - 9:00
+  - 12:00
+  - 15:00
+  - 18:00
+  - 21:00
+
 * **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
   Note that it could take hours for each run to complete.
   - 9:00
