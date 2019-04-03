@@ -185,7 +185,7 @@ Schedule
 |Apr/17(Wed)|                                        |                    |                    |
 |Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            Midterm (9pm-11pm @ TBD)                            |                    |                    |
+|Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            |                    |                    |
 |Apr/23(Tue)|           Binary Search Tree           |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |                    |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
