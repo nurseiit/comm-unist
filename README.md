@@ -27,11 +27,10 @@ Exams
 
 Announcements
 -------------
-* **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/4.
+* **[04-04]** Lab 3 deadline is extended.
+* **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/22.
   - 9:00
-  - 12:00
   - 15:00
-  - 18:00
   - 21:00
 
 * **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
@@ -176,16 +175,16 @@ Schedule
 |Apr/04(Thu)|     [Maps and Hashing (1)](/slides/lecture11.pdf)      |                    |  lab3 out                  |
 |Apr/05(Fri)|                                        |                    |                    |
 |Apr/08(Mon)|                                        |                    |         |
-|Apr/09(Tue)|            Maps and Hashing            |                    |                |
+|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf)            |                    |                |
 |Apr/10(Wed)|                                        |                    |                   |
 |Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
-|Apr/12(Fri)|                                        |                    |  lab3: due 11:59pm                   |
+|Apr/12(Fri)|                                        |                    |                     |
 |Apr/15(Mon)|                                        |                    |                    |
 |Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
 |Apr/17(Wed)|                                        |                    |                    |
 |Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            |                    |                    |
+|Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            | lab3: due 11:59pm                   |                    |
 |Apr/23(Tue)|           Binary Search Tree           |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |                    |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
