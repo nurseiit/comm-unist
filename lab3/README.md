@@ -20,6 +20,10 @@ take unreasonably long time. To make your life easier, the lab distribution incl
 [BigInt](https://github.com/faheel/BigInt). As shown in `Mytree.h`, you can declare the values as BigInt
 type in this assignment.
 
+## Files to modify
+
+- `MyTreeImpl.h`
+
 ## Input format
 
 You will be given the level-order list of the tree, which is always complete. Due to the assumption of
