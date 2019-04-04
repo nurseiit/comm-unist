@@ -45,7 +45,16 @@ cd lab1
 cd lab2
 ```
 
+## Lab3: Binary Tree
 
+- Lead TA: Kihwan Kim (kh1875@unist.ac.kr, @kihwan)
+- Instruction: [lab3/README.md](lab3/README.md)
+- Out: Apr 04 (Thu)
+- Due: Apr 22 (Mon) 11:59 pm
+
+```sh
+cd lab3
+```
 ### Notes
 
 - You are expected to be familiar with the concept of `branch` in `git`.
