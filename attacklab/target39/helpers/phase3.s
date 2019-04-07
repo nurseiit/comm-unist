@@ -1,3 +1,2 @@
-movq $0x68e2d99a,%rdi
-pushq $0x401a68
+movq $0x55678160,%rdi /* Move 40 bytes */
 retq
