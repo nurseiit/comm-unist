@@ -24,9 +24,12 @@ Exams
 * Midterm on 4/22 Mon 9pm-11pm.
   - Relevant Google Form: [https://forms.gle/So7m7Lk55AGHFMo7A](https://forms.gle/So7m7Lk55AGHFMo7A)
   - If your earlier exam/class ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
+  - Start late: If you want to join the midterm on 9:30pm, please fill in this form: [https://forms.gle/Emb3NhpM1gHZ1aSv6](https://forms.gle/Emb3NhpM1gHZ1aSv6)
 
 Announcements
 -------------
+* **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
+* **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
 * **[04-04]** Lab 3 deadline is extended.
 * **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/22.
   - 9:00
@@ -175,9 +178,9 @@ Schedule
 |Apr/04(Thu)|     [Maps and Hashing (1)](/slides/lecture11.pdf)      |                    |  lab3 out                  |
 |Apr/05(Fri)|                                        |                    |                    |
 |Apr/08(Mon)|                                        |                    |         |
-|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf)            |                    |                |
+|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf)            |                    |    lab 1 / lab 2 claim deadline            |
 |Apr/10(Wed)|                                        |                    |                   |
-|Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
+|Apr/11(Thu)|      [Ordered Maps and Skip Lists](/slides/lecture12.pdf)       |                    |                    |
 |Apr/12(Fri)|                                        |                    |                     |
 |Apr/15(Mon)|                                        |                    |                    |
 |Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
@@ -186,7 +189,7 @@ Schedule
 |Apr/19(Fri)|                                        |                    |                    |
 |Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            | lab3: due 11:59pm                   |                    |
 |Apr/23(Tue)|           Binary Search Tree           |                    |  lab4 out          |
-|Apr/24(Wed)|                                        |                    |                    |
+|Apr/24(Wed)|                                        |                    |  lab 3 claim deadline                  |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|                                        |                    |            |
