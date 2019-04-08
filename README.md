@@ -177,7 +177,7 @@ Schedule
 |Apr/08(Mon)|                                        |                    |         |
 |Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf)            |                    |                |
 |Apr/10(Wed)|                                        |                    |                   |
-|Apr/11(Thu)|      Ordered Maps and Skip Lists       |                    |                    |
+|Apr/11(Thu)|      [Ordered Maps and Skip Lists](/slides/lecture12.pdf)       |                    |                    |
 |Apr/12(Fri)|                                        |                    |                     |
 |Apr/15(Mon)|                                        |                    |                    |
 |Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
