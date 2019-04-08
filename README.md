@@ -27,6 +27,7 @@ Exams
 
 Announcements
 -------------
+* **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
 * **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
 * **[04-04]** Lab 3 deadline is extended.
 * **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/22.
