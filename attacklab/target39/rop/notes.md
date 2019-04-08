@@ -1,4 +1,4 @@
-`401d1d` is for `5b` to do `popq %rbx`.
+`401B0F` is for `popq %rax`.
 
-`4022b1` is for `48 89 df` to do `movq %rbx %rdi`.
+`401B1C` is for `movq %rax,%rdi`.
 
