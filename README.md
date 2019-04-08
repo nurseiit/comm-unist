@@ -24,6 +24,7 @@ Exams
 * Midterm on 4/22 Mon 9pm-11pm.
   - Relevant Google Form: [https://forms.gle/So7m7Lk55AGHFMo7A](https://forms.gle/So7m7Lk55AGHFMo7A)
   - If your earlier exam/class ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
+  - Start late: If you want to join the midterm on 9:30pm, please fill in this form: [https://forms.gle/Emb3NhpM1gHZ1aSv6](https://forms.gle/Emb3NhpM1gHZ1aSv6)
 
 Announcements
 -------------
