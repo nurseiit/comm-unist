@@ -27,11 +27,9 @@ Exams
 
 Announcements
 -------------
+* **[04-09]** Lab 5 (cachelab) has been posted. Please refer yo your submit repo and the calendar for more detail.
 * **[04-01]** Lab 4 recitation is on 4/10 (Wed) and a recitation introducing C language is on 4/8 (Mon). Please check the calendar for more detail.
-* **[03-30]** **For Lab 3, if you are working with the targets with ID smaller than 32, it doesn't work. Please get a new one. **
 * **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
-* **[03-28]** Lab 3 recitation is on Apr 1 (Mon) 7pm @ 104-E102.
-* **[03-28]** The instructions for the lab 3 (attacklab) has been posted throught the submit repositories.
 * **[03-28]** Lab 2 server has just been closed.
 
 * **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
