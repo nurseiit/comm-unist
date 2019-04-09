@@ -138,7 +138,7 @@ Schedule
 |Apr/05(Fri)|                                        |                    |                   |
 |Apr/08(Mon)|     [Linking](/slides/13-linking.pdf)        |  [C overview](/recitation/c_boot_camp.pptx) <br/> (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     ECF: Signals & Nonlocal Jumps      |  cache lab (7pm - @ 104-E102, by @minsu)                  |                     |
+|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  cache lab (7pm - @ 104-E102, by @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
@@ -147,7 +147,7 @@ Schedule
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
-|Apr/22(Mon)|            System Level I/O            |                    |  lab5: tshlab out    |
+|Apr/22(Mon)|       [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf) <br/>     System Level I/O            |                    |  lab5: tshlab out    |
 |Apr/23(Tue)|                                        |                    |                    |
 |Apr/24(Wed)|        Virtual Memory: Concepts        |                    | |
 |Apr/25(Thu)|                                        |                    |   |
