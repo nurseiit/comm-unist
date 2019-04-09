@@ -38,12 +38,19 @@ class MyTreeImpl : public MyTree {
 
   ifstream cin;
 
+  /*
+   * Opens file for `cin`.
+   */
   void openFile(string inFile) {
     if (cin.is_open())
       cin.close();
     cin.open(inFile);
   }
 
+  /*
+   * Recursively validates the `tree` for correctness.
+   * Throws `runtime_error`.
+   */
   bool verify(int v) {
     if (v >= tree.size()) return false;
     int count = 0;
@@ -58,6 +65,10 @@ class MyTreeImpl : public MyTree {
     return true;
   }
 
+  /*
+   * Recursively evaluates the operations on `tree`.
+   * Throws `runtime_error`.
+   */
   BigInt calculate(int v) {
     if (v >= tree.size()) throw runtime_error("Tree is invalid!");
     if (tree[v].isOperation()) {
@@ -78,13 +89,22 @@ class MyTreeImpl : public MyTree {
     }
   }
 
+  /*
+   * Recursively obtains post-order
+   * traversal of the `tree`.
+   * Usually called from `root`.
+   */
   void build_post(int v) {
     if (v >= tree.size()) return;
     build_post(v + v);
     build_post(v + v + 1);
     post += (post.empty() ? "" : " ") + tree[v].raw;
   }
-
+  /*
+   * Recursively obtains pre-order
+   * traversal of the `tree`.
+   * Usually called from `root`.
+   */
   void build_pre(int v) {
     if (v >= tree.size()) return;
     pre += (pre.empty() ? "" : " ") + tree[v].raw;
@@ -98,11 +118,16 @@ class MyTreeImpl : public MyTree {
 
  public:
   MyTreeImpl() : MyTree() {
+    value.clear();
     tree.clear();
     tree.push_back(Vertex());
     root = 1;
   }
 
+  /*
+   * Loads the tree from file `input_name`.
+   * Throws `runtime_error` if the tree is invalid.
+   */
   void load(string& input_name) {
     openFile(input_name);
     string next;
@@ -116,17 +141,26 @@ class MyTreeImpl : public MyTree {
     build_post(root);
     return post;
   }
+
   string traverse_pre(void) {
     pre = "";
     build_pre(root);
     return pre;
   }
+  /*
+   * Evaluates the expression with the assignment
+   * given in file `assign_file_name`.
+   */
   BigInt eval(string& assign_file_name) {
     openFile(assign_file_name);
+
+    // Read and Save the values.
     string name;
     int val;
     while (cin >> name >> val)
       value.push_back(val);
+
+    // Try to match variables to assignments.
     int index = 0;
     for (auto& vertex : tree) {
       if (vertex.isVariable()) {
@@ -143,6 +177,10 @@ class MyTreeImpl : public MyTree {
       throw runtime_error("Not enough variables to assign!");
     return calculate(root);
   }
+
+  /*
+   * Simplifies the `tree` until it cannot be further simplified.
+   */
   void simplify(void) {
     rebuild(root);
   }
