@@ -18,8 +18,11 @@ struct Vertex {
   }
 
   bool isRawNumber() {
-    for (auto it : raw)
+    if (isOperation() == true) return false;
+    for (auto it : raw) {
+      if (it == '-') continue;
       if ('0' > it || it > '9') return false;
+    }
     return true;
   }
 
@@ -66,6 +69,23 @@ class MyTreeImpl : public MyTree {
   }
 
   /*
+   * Applies `operation` on `left` and `right` variables.
+   * Throws `runtime_error`.
+   */
+  BigInt evaluateBy(string operation, BigInt left, BigInt right) {
+    BigInt result;
+    if (operation == "+")
+      result = left + right;
+    else if (operation == "-")
+      result = left - right;
+    else if (operation == "*")
+      result = left * right;
+    else
+      throw runtime_error("Unknown operation { " + operation + " }!");
+    return result;
+  }
+
+  /*
    * Recursively evaluates the operations on `tree`.
    * Throws `runtime_error`.
    */
@@ -74,15 +94,7 @@ class MyTreeImpl : public MyTree {
     if (tree[v].isOperation()) {
       BigInt left = calculate(v + v);
       BigInt right = calculate(v + v + 1);
-      BigInt result;
-      if (tree[v].raw == "+")
-        result = left + right;
-      else if (tree[v].raw == "-")
-        result = left - right;
-      else if (tree[v].raw == "*")
-        result = left * right;
-      else
-        throw runtime_error("Unknown operation { " + tree[v].raw + " }!");
+      BigInt result = evaluateBy(tree[v].raw, left, right);
       return result;
     } else {
       return tree[v].val;
@@ -96,10 +108,13 @@ class MyTreeImpl : public MyTree {
    */
   void build_post(int v) {
     if (v >= tree.size()) return;
-    build_post(v + v);
-    build_post(v + v + 1);
+    if (tree[v].isRawNumber() == false) {
+      build_post(v + v);
+      build_post(v + v + 1);
+    }
     post += (post.empty() ? "" : " ") + tree[v].raw;
   }
+
   /*
    * Recursively obtains pre-order
    * traversal of the `tree`.
@@ -108,12 +123,27 @@ class MyTreeImpl : public MyTree {
   void build_pre(int v) {
     if (v >= tree.size()) return;
     pre += (pre.empty() ? "" : " ") + tree[v].raw;
-    build_pre(v + v);
-    build_pre(v + v + 1);
+    if (tree[v].isRawNumber() == false) {
+      build_pre(v + v);
+      build_pre(v + v + 1);
+    }
   }
-  // TODO
+
+  /*
+   * Recursively simplifies the `tree`.
+   */
   void rebuild(int v) {
     if (v >= tree.size()) return;
+    if (!tree[v].isOperation()) return;
+    rebuild(v + v);
+    rebuild(v + v + 1);
+    if (v + v + 1 >= tree.size()) return;
+    bool isLeftSimple = tree[v + v].isRawNumber();
+    bool isRightSimple = tree[v + v + 1].isRawNumber();
+    if (isLeftSimple && isRightSimple) {
+      tree[v].val = evaluateBy(tree[v].raw, tree[v + v].val, tree[v + v + 1].val);
+      tree[v].raw = tree[v].val.to_string();
+    }
   }
 
  public:
@@ -147,6 +177,7 @@ class MyTreeImpl : public MyTree {
     build_pre(root);
     return pre;
   }
+
   /*
    * Evaluates the expression with the assignment
    * given in file `assign_file_name`.
