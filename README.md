@@ -131,7 +131,7 @@ Schedule
 |Mar/27(Wed)|     [Machine Prog: Data](/slides/08-machine-data.pdf) <br/>   [Machine Prog: Advanced](/slides/09-machine-advanced.pdf)            |                    |    lab2: due 11:59pm                |
 |Mar/28(Thu)|      [Machine Prog: Advanced](/slides/09-machine-advanced.pdf) <br/>   [Code Optimization](/slides/10-optimization.pdf) <br/> (7:00pm - 8:15pm @ 106-T204)                           |                    | [lab3: attacklab](/recitation/rec3.pptx) out                    |
 |Mar/29(Fri)|         |                    |                    |
-|Apr/01(Mon)|   [Code Optimization](/slides/10-optimization.pdf) <br/> [The Memory Hierarchy](/slides/11-memory-hierarchy.pdf)             |  attack lab (7:00pm - @ 104-E102)                  |  |
+|Apr/01(Mon)|   [Code Optimization](/slides/10-optimization.pdf) <br/> [The Memory Hierarchy](/slides/11-memory-hierarchy.pdf)             |  [attack lab (7:00pm - @ 104-E102)](/recitation/rec4.pdf)                  |  |
 |Apr/02(Tue)|                                        |                    | |
 |Apr/03(Wed)|                     [Cache Memories](/slides/12-cache-memories.pdf)                   |                    |                    |
 |Apr/04(Thu)|                                        |                    |                      |
@@ -149,7 +149,7 @@ Schedule
 |**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
 |Apr/22(Mon)|       [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf) <br/>     System Level I/O            |                    |  lab5: tshlab out    |
 |Apr/23(Tue)|                                        |                    |                    |
-|Apr/24(Wed)|        Virtual Memory: Concepts        |  tshlab (8:30pm - @ TBD by @changmin )                  | |
+|Apr/24(Wed)|        Virtual Memory: Concepts        |  tshlab (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|        Virtual Memory: Systems         |                    | lab5: due 11:59pm                   |
