@@ -138,7 +138,7 @@ Schedule
 |Apr/05(Fri)|                                        |                    |                   |
 |Apr/08(Mon)|     [Linking](/slides/13-linking.pdf)        |  [C overview](/recitation/c_boot_camp.pptx) <br/> (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  cache lab (8:30pm - @ 104-E102, by @minsu)                  |                     |
+|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  [cache lab](/recitation/rec4.pdf) (8:30pm - @ 104-E102, by @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
