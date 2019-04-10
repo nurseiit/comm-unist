@@ -178,9 +178,9 @@ Schedule
 |Apr/04(Thu)|     [Maps and Hashing (1)](/slides/lecture11.pdf)      |                    |  lab3 out                  |
 |Apr/05(Fri)|                                        |                    |                    |
 |Apr/08(Mon)|                                        |                    |         |
-|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf)            |                    |    lab 1 / lab 2 claim deadline            |
+|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf) <br/>[Ordered Maps and Skip Lists](/slides/lecture12.pdf)            |                    |    lab 1 / lab 2 claim deadline            |
 |Apr/10(Wed)|                                        |                    |                   |
-|Apr/11(Thu)|      [Ordered Maps and Skip Lists](/slides/lecture12.pdf)       |                    |                    |
+|Apr/11(Thu)|       [Binary Search Tree](/slides/lecture13.pdf)     |                    |                    |
 |Apr/12(Fri)|                                        |                    |                     |
 |Apr/15(Mon)|                                        |                    |                    |
 |Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
@@ -188,7 +188,7 @@ Schedule
 |Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            | lab3: due 11:59pm                   |                    |
-|Apr/23(Tue)|           Binary Search Tree           |                    |  lab4 out          |
+|Apr/23(Tue)|                      |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |  lab 3 claim deadline                  |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
 |Apr/26(Fri)|                                        |                    |                    |
