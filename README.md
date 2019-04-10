@@ -27,7 +27,7 @@ Exams
 
 Announcements
 -------------
-* **[04-09]** Lab 5 (cachelab) has been posted. Please refer yo your submit repo and the calendar for more detail.
+* **[04-09]** Lab 4 (cachelab) has been posted. Please refer yo your submit repo and the calendar for more detail.
 * **[04-01]** Lab 4 recitation is on 4/10 (Wed) and a recitation introducing C language is on 4/8 (Mon). Please check the calendar for more detail.
 * **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
 * **[03-28]** Lab 2 server has just been closed.
@@ -138,7 +138,7 @@ Schedule
 |Apr/05(Fri)|                                        |                    |                   |
 |Apr/08(Mon)|     [Linking](/slides/13-linking.pdf)        |  [C overview](/recitation/c_boot_camp.pptx) <br/> (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  cache lab (7pm - @ 104-E102, by @minsu)                  |                     |
+|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  cache lab (8:30pm - @ 104-E102, by @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
