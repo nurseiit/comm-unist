@@ -21,6 +21,7 @@ Discussions
 Exams
 -----
 * Midterm on ~~4/16 Tue~~ 4/17 Wed 9pm-11pm.
+  - Coverage: Lecture 2 (bits) - 13 (linking).
   - Relevant Google Form: [https://forms.gle/V9YhW8RKsMFHyLu2A](https://forms.gle/V9YhW8RKsMFHyLu2A)
   - If your earlier exam ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
   - Starting late (9:30pm): [https://forms.gle/Yu8F9Uk3rDTtzoyV9](https://forms.gle/Yu8F9Uk3rDTtzoyV9)
