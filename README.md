@@ -22,7 +22,7 @@ Discussions
 Exams
 -----
 * Midterm
-  - 4/22 Mon 9pm-11pm.
+  - **4/22 Mon 9pm-11pm @ 104-E205.**
   - Coverage: lecture1 - lecture12 (Ordered map and skip list).
   - Relevant Google Form: [https://forms.gle/So7m7Lk55AGHFMo7A](https://forms.gle/So7m7Lk55AGHFMo7A)
   - If your earlier exam/class ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
