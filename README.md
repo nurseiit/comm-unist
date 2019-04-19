@@ -20,18 +20,15 @@ Discussions
 
 Exams
 -----
-* **Midterm on ~~4/16 Tue~~ 4/17 Wed 9pm-11pm @ 104-E205.**
-  - Coverage: Lecture 2 (bits) - 13 (linking).
-  - Relevant Google Form: [https://forms.gle/V9YhW8RKsMFHyLu2A](https://forms.gle/V9YhW8RKsMFHyLu2A)
-  - If your earlier exam ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
-  - Starting late (9:30pm): [https://forms.gle/Yu8F9Uk3rDTtzoyV9](https://forms.gle/Yu8F9Uk3rDTtzoyV9)
 
 Announcements
 -------------
+* **[04-19]** Lab 4 autograding has been started. The first results are up, the will run again at 6am, noon, 6pm everyday by the deadline.
+The final grading run will be on 00:05 Apr 22. There will be no extension of the deadline.
+
 * **[04-09]** Lab 4 (cachelab) has been posted. Please refer yo your submit repo and the calendar for more detail.
+
 * **[04-01]** Lab 4 recitation is on 4/10 (Wed) and a recitation introducing C language is on 4/8 (Mon). Please check the calendar for more detail.
-* **[03-29]** Lab 3 is due on Apr 8 (**Monday**), as the calendar says.
-* **[03-28]** Lab 2 server has just been closed.
 
 * **[03-22]** IF you see this message on `uni server`, please refer to the corresponding issue( https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/28 ).
 ```
