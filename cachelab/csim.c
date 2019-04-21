@@ -78,7 +78,8 @@ void solve(struct arguments arguments) {
   char cmd;
   ull addr;
   int size;
-  while (scanf("%c%llx%d", &cmd, &addr, &size) != EOF) {
+  while (scanf(" %c %llx,%d", &cmd, &addr, &size) != EOF) {
+    printf("%c, %llx, %d\n", cmd, addr, size);
     switch (cmd) {
       case 'I':
         break;
