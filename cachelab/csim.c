@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include "cachelab.h"
 
+typedef unsigned long long ull;
+
 struct arguments {
   int verbose;
   int setBits;
@@ -64,5 +66,29 @@ int main(int argc, char **argv) {
   return 0;
 }
 
+void openFile(char *fileName) {
+  freopen(fileName, "r", stdin);
+}
+
+void accessCache(ull addr) {
+}
+
 void solve(struct arguments arguments) {
+  openFile(arguments.tracefile);
+  char cmd;
+  ull addr;
+  int size;
+  while (scanf("%c%llx%d", &cmd, &addr, &size) != EOF) {
+    switch (cmd) {
+      case 'I':
+        break;
+      case 'M':
+        accessCache(addr);
+      case 'L':
+      case 'S':
+        accessCache(addr);
+        break;
+    }
+  }
+  printSummary(0, 0, 0);
 }
