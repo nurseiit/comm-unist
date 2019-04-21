@@ -81,45 +81,42 @@ Pair getEvictionLine(Set set, int length) {
 Cache accessCache(Cache cache, ull addr, Arguments arguments) {
   int linesPerSet = arguments.linesPerSet;
 
-  int filterIndex = (1 << (arguments.tagBits + 1)) - 1;
-
-  int tag = addr >> (64 - arguments.tagBits);
-  int index = (addr & filterIndex) >> arguments.blockBits;
+  ull tag = addr >> (64 - arguments.tagBits);
+  ull foo = addr << arguments.tagBits;
+  ull index = foo >> (arguments.blockBits + arguments.tagBits);
 
   Set set = cache.sets[index];
 
-  int hasEmpty = 0;
+  int hasEmptyLine = 0;
   int isHit = 0;
 
   for (int i = 0; i < linesPerSet; i++) {
-    if (set.lines[i].valid == 0)
-      hasEmpty = 1;
-    else {
-      if (tag == set.lines[i].tag) {
-        set.lines[i].latest += 1;
-        isHit = 1;
-      }
+    if (set.lines[i].valid == 0) {
+      hasEmptyLine = 1;
+    } else if (tag == set.lines[i].tag) {
+      set.lines[i].latest += 1;
+      isHit = 1;
     }
   }
 
   if (isHit) {
     cache.counter.hit += 1;
-  } else {
-    cache.counter.miss += 1;
+    return cache;
   }
+
+  cache.counter.miss += 1;
 
   Pair evictionLine = getEvictionLine(set, arguments.linesPerSet);
   int first = evictionLine.first;
   int second = evictionLine.second;
 
-  if (hasEmpty) {
+  if (hasEmptyLine) {
     int empty = getEmptyLine(set, arguments.linesPerSet);
     set.lines[empty] = newLine(1, tag, set.lines[second].latest + 1);
   } else {
     cache.counter.eviction += 1;
     set.lines[first] = newLine(1, tag, set.lines[second].latest + 1);
   }
-
   return cache;
 }
 
@@ -136,10 +133,7 @@ void solve(Arguments arguments) {
   int size;
 
   while (scanf(" %c %llx,%d", &cmd, &addr, &size) != EOF) {
-    printf("%c, %llx, %d\n", cmd, addr, size);
     switch (cmd) {
-      case 'I':
-        break;
       case 'M':
         cache = accessCache(cache, addr, arguments);
       case 'L':
