@@ -9,19 +9,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "cachelab.h"
-
-typedef unsigned long long ull;
-
-struct arguments {
-  int verbose;
-  int setBits;
-  int linesPerSet;
-  int blockBits;
-  char *tracefile;
-};
+#include "classes.h"
 
 static int parse_opt(int key, char *arg, struct argp_state *state) {
-  struct arguments *arguments = state->input;
+  Arguments *arguments = state->input;
   switch (key) {
     case 'v':
       arguments->verbose = 1;
@@ -42,11 +33,11 @@ static int parse_opt(int key, char *arg, struct argp_state *state) {
   return 0;
 }
 
-void solve(struct arguments arguments);
+void solve(Arguments arguments);
 
 int main(int argc, char **argv) {
-  struct arguments arguments;
-  // Default values
+  Arguments arguments;
+
   arguments.verbose = 0;
 
   struct argp_option options[] = {
@@ -66,18 +57,25 @@ int main(int argc, char **argv) {
   return 0;
 }
 
-void openFile(char *fileName) {
-  freopen(fileName, "r", stdin);
-}
+/*
+ * Methods
+ */
 
 void accessCache(ull addr) {
 }
 
-void solve(struct arguments arguments) {
-  openFile(arguments.tracefile);
+Cache initizalize(char *fileName, Arguments arguments) {
+  freopen(fileName, "r", stdin);
+  return newCache((1 << arguments.setBits), arguments.linesPerSet);
+}
+
+void solve(Arguments arguments) {
+  Cache cache = initizalize(arguments.tracefile, arguments);
+
   char cmd;
   ull addr;
   int size;
+
   while (scanf(" %c %llx,%d", &cmd, &addr, &size) != EOF) {
     printf("%c, %llx, %d\n", cmd, addr, size);
     switch (cmd) {
@@ -91,5 +89,39 @@ void solve(struct arguments arguments) {
         break;
     }
   }
+  free(cache.sets);
   printSummary(0, 0, 0);
 }
+
+/*
+⠌⡂⡊⡢⠨⡊⡎⢗⠝⢕⠫⢣⠫⡪⠣⡓⡝⡜⣕⢇⢗⣕⢧⡳⡱⣕⢕⢅⢇⢕⢅⢣⠱⡨⢢⢑⢌⠢⡑⢔⠨⡐⡑⠌⠢⡑⠌⡌⡢⡑ 
+⠨⢐⢐⠠⠁⡂⢜⠰⡡⣱⢸⡰⣱⡸⡸⡸⡘⡜⣜⢼⡱⡵⣳⢽⣝⡮⣗⡯⣗⣗⣗⢧⡳⣱⢱⡑⡆⡇⡎⡢⢑⠨⠄⠁⠂⠄⡁⠐⢐⠨⠢⡑⡨⠄⠄ 
+⠈⡀⡂⠐⠄⡊⢆⢯⡺⣪⢷⢝⣞⢞⣝⢮⣣⡳⣕⢗⡽⣝⢮⢗⣗⡽⣳⢽⣳⣳⡳⡯⣞⢵⡣⡣⡇⡇⡕⠔⢀⠄⢂⠱⡠⣅⠠⠈⢀⠨⢈⢰⠨⡐⠄ 
+⠄⠂⠄⢁⠐⠄⢝⢮⡺⡵⣫⢯⡺⡝⡮⡳⡕⣝⢮⢳⢝⡮⡯⣳⡳⡽⡽⣽⣺⢮⡯⣟⣞⢵⢝⡕⡇⢇⠡⠐⠄⢌⠄⡂⡈⢮⢪⠢⢐⢐⢅⡇⣗⢌⠄ 
+⠄⢁⠐⠄⠠⠈⢸⢱⢕⢝⠪⣊⢬⠬⢦⢧⢵⣱⡱⡝⡵⣝⢮⡳⣝⢮⢯⢞⡾⣯⢯⣗⡷⣝⢗⡝⡬⡪⡎⠌⡢⡐⡐⢅⠢⡸⡨⡪⡸⡸⡵⣝⢮⡺⡌ 
+⠄⠐⠈⢀⠠⠈⠠⠣⢁⠂⠃⠐⠄⠌⠄⢢⣅⢕⠹⡺⣪⢮⡳⣝⡮⣯⡺⡽⣽⢽⣻⣞⡽⡮⣻⡺⣪⢯⢝⡼⡴⡺⣜⢮⡺⡜⡮⢮⢳⢝⣞⢮⡳⣝⢮ 
+⠄⠈⡀⠄⡀⠐⠄⠁⠂⡨⠄⠅⠡⠱⡁⡢⠪⣯⣳⣣⢣⢣⣻⣺⣺⢵⣫⢯⢯⣟⣗⣯⢯⢯⣳⢽⢽⢽⢽⢽⢽⢝⡮⣗⣝⢮⣫⢗⡯⣗⣗⢯⢞⡵⡳ 
+⠄⠄⡀⠄⢀⠄⢈⠄⠅⡎⠄⠡⢅⢄⠢⡊⢜⡺⣪⢮⣳⢽⣺⣺⣺⢽⣺⢽⢽⣺⣳⢯⣟⣽⡺⡽⡽⡽⡽⡽⡽⡽⣝⣞⡾⣽⣺⢽⢽⣺⡺⣝⣗⢽⡹ 
+⠄⠄⠄⠠⠄⠠⢐⠠⡣⡱⡱⡱⣢⣣⡳⣝⢵⣫⢾⣝⢾⢽⣺⣺⣺⢽⣺⢽⣝⣗⣯⣟⣾⣺⢽⣝⢾⢝⣽⣺⢽⢽⣺⢮⣻⣺⡺⡽⡽⡮⣯⣳⢵⡳⣝ 
+⠄⠄⠈⢀⠠⠄⡢⡣⣣⢳⡹⣚⢮⡺⣚⢮⢯⣺⢵⣳⢯⣻⣺⣺⣺⢝⣮⣳⣳⢽⣺⣞⣾⣺⣳⢽⣝⢽⡺⣮⣻⢽⣺⢽⣺⢮⢯⢯⢯⣻⡺⡮⣳⢽⣪ 
+⠄⠄⠐⠄⡀⢐⢕⣝⢮⣗⡽⣮⣳⢽⣪⢷⣻⣺⢽⣺⡽⣞⣞⣞⣞⡽⣪⢞⡮⣟⣞⣾⣺⢾⢽⢽⣺⡳⣝⡞⣞⡽⣞⡯⣗⡿⡽⡽⡽⡮⡯⡯⣳⡫⣞ 
+⠄⠄⠄⠂⠄⡎⣺⡪⣟⡮⣟⣾⣺⡽⣞⣟⡾⣽⢽⣳⢯⣟⣞⣞⣮⣻⡪⡯⣺⣳⣳⢗⣯⢯⢿⡽⣞⣽⢵⡫⣗⡽⡵⣫⣗⢯⢯⢯⢯⢯⢯⣫⢗⡽⡵ 
+⠄⠄⠁⠄⠡⡪⡪⣞⣗⡯⣷⣳⣗⡿⡽⡾⣽⣳⢿⡽⣽⣞⣗⣗⢷⢵⢝⢮⣳⡳⡽⣽⣺⢯⡿⣽⢽⣺⣝⢮⡳⣝⢞⡵⡳⣝⢽⢝⡽⣝⡵⣫⢗⡽⡺ 
+⠄⠄⢀⠈⢌⢮⢺⢵⡳⡯⣗⡷⡯⣯⣟⣯⡷⣿⢽⡯⣷⣗⣟⡾⣝⢵⡫⣗⢵⡫⡯⣳⢽⢽⢽⢽⢝⣞⢼⠱⡙⡜⣕⢯⢯⡺⡭⣳⢝⡞⡮⣳⢝⢮⢫ 
+⠄⠄⠄⠄⢸⡸⣝⡵⡯⡯⣗⡿⣽⣳⣻⢾⢽⢯⡯⣟⣗⡷⣫⡾⡵⡝⡮⣳⢝⢮⡫⡮⡳⣹⡪⡏⡗⡕⡕⢅⡣⣕⢽⣹⢵⣫⢯⢮⢳⣹⡹⣪⢳⡱⡱ 
+⠄⠄⠐⠄⢕⡕⣗⢽⢝⣽⡳⡯⣗⡯⣞⡯⡿⡽⣽⡳⡯⡯⣗⡯⣗⡝⡜⡎⡣⡃⡡⡁⢅⠱⡱⡱⡱⡱⡱⣕⢧⣳⢽⣪⢗⡗⣗⢽⢕⡵⡝⣎⢇⢇⢗ 
+⠄⠄⠂⠁⡱⡹⡪⣏⢯⣺⡺⣝⣗⢯⣗⢯⢯⡻⡮⡯⡯⣻⣪⢟⡮⣗⡵⣜⣜⢼⡸⣜⣜⢕⡕⣜⢜⡼⣪⣗⣟⢮⣗⡽⣕⢯⢺⢸⠵⣝⢮⡳⡝⣜⢵ 
+⠄⠄⠄⠂⢕⢹⢪⡳⣝⢞⢮⣳⡳⣝⢮⢯⢏⡯⣏⢯⣫⢗⡽⣝⣞⢷⢽⡺⡮⣗⣟⣞⢮⣗⣟⢮⣗⡯⣗⣗⢗⡽⣪⢺⢪⠳⡑⠡⡹⣜⢞⢮⡫⣪⢪ 
+⠄⠄⠁⠄⠅⠕⡕⡕⡧⡫⡳⡕⣝⢎⢯⡺⣝⢮⡳⣫⢮⡫⡯⣺⡺⣝⣗⢯⣻⣺⣺⡺⣽⡺⡮⣻⢪⡫⡺⡨⢃⢅⢅⢕⠌⠌⡰⡱⣕⢵⡫⣗⢽⡸⡸ 
+⠄⠄⠄⠁⠨⠨⢪⢸⢸⢸⢱⡹⡸⡕⡧⡫⣎⢗⢽⢸⢪⢎⢯⡺⣝⢞⡮⡯⡺⡮⡺⡺⡱⢝⡪⡪⡪⣪⢮⣎⢮⣪⢲⡱⠡⡐⣝⢮⣳⢝⣮⡳⣣⢣⢣ 
+⠄⠄⠈⠄⠈⡈⢆⢣⢣⢳⡱⡝⣎⢗⣝⢽⢜⣝⢎⢎⠊⠊⢃⠋⠎⡓⣙⢊⢣⢣⡣⡥⣳⢝⣞⣗⡯⣗⣟⠮⠳⢑⢡⢡⢑⢕⢵⢯⡺⣝⢮⡺⡪⡪⡪ 
+⠄⠄⠄⠂⠁⡀⠢⡑⡕⡕⡵⡹⣪⡳⣕⢯⡳⡳⣝⢎⣗⣕⢄⢌⢈⠂⠸⣸⠘⠜⢮⢫⠺⢹⠺⢊⢍⢜⢨⠨⢌⠢⡊⢆⢣⢣⢯⡳⣝⢮⡳⡹⡸⡨⢂ 
+⠄⠄⠠⠄⠄⠂⠡⠪⡸⡸⡸⡪⣪⢺⡪⣗⡽⣝⢮⣳⡳⣕⢯⡪⡪⡪⡊⡆⢎⠢⣂⠢⡑⢔⡑⡕⡌⡆⡕⢕⢕⢕⢱⢑⢕⡕⣗⣝⢮⢣⡳⡹⡨⠨⠄ 
+⠄⠄⠄⠄⠂⠁⠈⠌⡂⢇⢇⢇⢇⢇⢯⢺⡪⣗⢯⣺⡪⣗⢽⣪⡳⣕⢕⢕⠕⡕⢜⠜⡜⡆⡇⡇⡇⡇⡇⡇⡇⡎⣲⢱⡣⣏⢮⡪⡎⡇⡇⢕⢌⢈⢂ 
+⠄⠠⠄⠂⠄⡁⠄⠂⡈⡢⡑⡅⡇⡕⡕⢵⢹⡪⣗⢵⣝⢮⢳⡱⣝⢼⡹⣪⡣⡇⣇⢇⢕⢕⢕⢕⢕⢕⢕⢕⢕⡕⡧⡳⡕⡧⡳⡕⡇⡇⡇⢕⢰⢰⢕ 
+⢀⠄⠄⠂⠁⢀⠈⢀⠠⠐⡐⢑⠌⡢⡃⢇⢳⢹⢜⢧⡳⡽⣕⢧⢳⡣⣏⢖⣳⢹⡪⣳⢹⢜⢼⡸⣜⢼⢜⡎⡧⡳⡝⣎⢯⡺⡝⣎⢇⢇⠪⣐⢕⣗⢽ 
+⠐⠄⠠⠄⠐⠄⠠⠄⠄⠂⠐⠠⢑⢐⢌⠪⡘⡌⡎⢮⡚⡮⢮⢳⡣⡳⡵⣹⢜⢵⡹⣜⣕⢏⣗⣝⢮⣳⡳⣝⢽⣹⡪⣗⢽⡪⣏⢮⢪⢢⡣⡳⣝⡮⣟ 
+⢈⠠⠡⠄⠄⠐⠄⠠⠐⠄⠈⠠⠄⡐⢀⢑⢐⢌⠪⡢⡣⢫⢣⢳⡹⢵⢝⢮⣫⡳⣝⢮⢮⡳⣳⢵⣻⣪⣞⣗⢽⣪⢞⢮⡳⣝⢎⢮⡪⣺⡪⣯⣳⢯⣻
+      Hit or miss, I guess they never miss, huh?
+ You got a boyfriend, I bet he doesn't kiss ya (Mwah!)
+*/
