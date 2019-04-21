@@ -52,16 +52,75 @@ int main(int argc, char **argv) {
 
   argp_parse(&argp, argc, argv, 0, 0, &arguments);
 
+  arguments.tagBits = 64 - (arguments.setBits + arguments.blockBits);
   solve(arguments);
 
   return 0;
 }
 
-/*
- * Methods
- */
+int getEmptyLine(Set set, int length) {
+  for (int i = 0; i < length; i++)
+    if (set.lines[i].valid == 0)
+      return i;
+  return -1;
+}
 
-void accessCache(ull addr) {
+Pair getEvictionLine(Set set, int length) {
+  int min = 0;
+  int max = 0;
+
+  for (int i = 0; i < length; i++) {
+    if (set.lines[min].latest > set.lines[i].latest)
+      min = i;
+    if (set.lines[max].latest < set.lines[i].latest)
+      max = i;
+  }
+  return newPair(min, max);
+}
+
+Cache accessCache(Cache cache, ull addr, Arguments arguments) {
+  int linesPerSet = arguments.linesPerSet;
+
+  int filterIndex = (1 << (arguments.tagBits + 1)) - 1;
+
+  int tag = addr >> (64 - arguments.tagBits);
+  int index = (addr & filterIndex) >> arguments.blockBits;
+
+  Set set = cache.sets[index];
+
+  int hasEmpty = 0;
+  int isHit = 0;
+
+  for (int i = 0; i < linesPerSet; i++) {
+    if (set.lines[i].valid == 0)
+      hasEmpty = 1;
+    else {
+      if (tag == set.lines[i].tag) {
+        set.lines[i].latest += 1;
+        isHit = 1;
+      }
+    }
+  }
+
+  if (isHit) {
+    cache.counter.hit += 1;
+  } else {
+    cache.counter.miss += 1;
+  }
+
+  Pair evictionLine = getEvictionLine(set, arguments.linesPerSet);
+  int first = evictionLine.first;
+  int second = evictionLine.second;
+
+  if (hasEmpty) {
+    int empty = getEmptyLine(set, arguments.linesPerSet);
+    set.lines[empty] = newLine(1, tag, set.lines[second].latest + 1);
+  } else {
+    cache.counter.eviction += 1;
+    set.lines[first] = newLine(1, tag, set.lines[second].latest + 1);
+  }
+
+  return cache;
 }
 
 Cache initizalize(char *fileName, Arguments arguments) {
@@ -82,15 +141,17 @@ void solve(Arguments arguments) {
       case 'I':
         break;
       case 'M':
-        accessCache(addr);
+        cache = accessCache(cache, addr, arguments);
       case 'L':
       case 'S':
-        accessCache(addr);
+        cache = accessCache(cache, addr, arguments);
         break;
     }
   }
-  free(cache.sets);
-  printSummary(0, 0, 0);
+
+  Counter counter = cache.counter;
+  printSummary(counter.hit, counter.miss, counter.eviction);
+  return;
 }
 
 /*
