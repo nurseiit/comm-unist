@@ -146,9 +146,9 @@ Schedule
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
-|Apr/22(Mon)|       [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf) <br/>     System Level I/O            |                    |  lab5: tshlab out    |
+|Apr/22(Mon)|       [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf) <br/>     System Level I/O            |                    |  lab5: shlab out    |
 |Apr/23(Tue)|                                        |                    |                    |
-|Apr/24(Wed)|        Virtual Memory: Concepts        |  tshlab (8:30pm - @ 104-E102, by @changmin )                  | |
+|Apr/24(Wed)|        Virtual Memory: Concepts        |  shlab (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|        Virtual Memory: Systems         |                    | lab5: due 11:59pm                   |
