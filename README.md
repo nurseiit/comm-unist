@@ -190,7 +190,7 @@ Schedule
 |Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                            | lab3: due 11:59pm                   |                    |
-|Apr/23(Tue)|                      |                    |  lab4 out          |
+|Apr/23(Tue)|                No class                |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |  lab 3 claim deadline                  |
 |Apr/25(Thu)|               AVL Trees                |                    |                    |
 |Apr/26(Fri)|                                        |                    |                    |
