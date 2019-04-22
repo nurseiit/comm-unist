@@ -30,6 +30,7 @@ Exams
 
 Announcements
 -------------
+* **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
 * **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
 * **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
 * **[04-04]** Lab 3 deadline is extended.
