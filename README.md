@@ -23,6 +23,7 @@ Exams
 
 Announcements
 -------------
+* **[04-22]** Lab 5 has been posted. The grader will start to run on Wed or Thu.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
 * **[04-19]** Lab 4 autograding has been started. The first results are up, the will run again at 6am, noon, 6pm everyday by the deadline.
 The final grading run will be on 00:05 Apr 22. There will be no extension of the deadline.
