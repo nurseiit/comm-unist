@@ -50,6 +50,19 @@ cd datalab
 - Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
 - Instruction: [attacklab/README.md](/attacklab/README.md)
 
+### lab4: cachelab
+- Out:Apr 09 (Wed)
+- Due: Apr 21 (Sun) 11:59pm
+- Recitation: Apr 10 8:30pm
+- Lead TA: Minsu Kang (minsu@unist.ac.kr, @minsu, Mon 20:30~21:30 @106-707-1)
+- Instruction: [cachelab/README.md](/cachelab/README.md)
+
+### lab5: shlab
+- Out:Apr 22 (Mon)
+- Due: May 02 (Thu) 11:59pm
+- Recitation: Apr 24 8:30pm
+- Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
+- Instruction: [shlab/README.md](/shlab/README.md)
 
 
 ### Notes
