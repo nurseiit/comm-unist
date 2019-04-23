@@ -169,12 +169,12 @@ Schedule
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|                                        |                    |            |
 |Apr/30(Tue)|            Red-Black Trees             |                    |   |
-|May/01(Wed)|                                        |                    |    lab4: due 11:59pm                |
-|May/02(Thu)|              Splay Trees               |                    |    lab5 out                |
-|May/03(Fri)|                                        |                    |    lab4 clain deadline                |
-|May/06(Mon)|                                        |                    |                    |
-|May/07(Tue)|       Multiway Search Trees (1)        |                    |                    |
-|May/08(Wed)|                                        |                    |            |
+|May/01(Wed)|                                        |                    |                    |
+|May/02(Thu)|              Splay Trees               |                    |                   |
+|May/03(Fri)|                                        |                    |                   |
+|May/06(Mon)|                                        |                    |    lab4: due 11:59pm                |
+|May/07(Tue)|       Multiway Search Trees (1)        |                    |   lab5 out                  |
+|May/08(Wed)|                                        |                    |   lab4 clain deadline          |
 |May/09(Thu)|       Multiway Search Trees (2)        |                    |  |
 |May/10(Fri)|           Graphs (Tentative)           |                    |                    |
 |May/13(Mon)|                                        |                    |                    |
