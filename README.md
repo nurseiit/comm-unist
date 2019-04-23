@@ -138,7 +138,7 @@ Schedule
 |Apr/05(Fri)|                                        |                    |                   |
 |Apr/08(Mon)|     [Linking](/slides/13-linking.pdf)        |  [C overview](/recitation/c_boot_camp.pptx) <br/> (7pm-9pm @ 104-E102, by @minsu)                  |   lab3: due 11:59pm |
 |Apr/09(Tue)|                                        |                    |  lab4: cachelab out  |
-|Apr/10(Wed)|     [ECF: Exceptions and Processes](/slides/14-ecf-procs.pdf)      |  [cache lab](/recitation/rec4.pdf) (8:30pm - @ 104-E102, by @minsu)                  |                     |
+|Apr/10(Wed)|     [ECF: Exceptions and Processes (1)](/slides/14-ecf-procs.pdf)      |  [cache lab](/recitation/rec4.pdf) (8:30pm - @ 104-E102, by @minsu)                  |                     |
 |Apr/11(Thu)|                                        |                    |                    |
 |Apr/12(Fri)|                                        |                    |                    |
 |Apr/15(Mon)|              Midterm Week (No class)              |                    |                    |
@@ -147,24 +147,24 @@ Schedule
 |Apr/18(Thu)|                                        |                    |                    |
 |Apr/19(Fri)|                                        |                    |                    |
 |**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
-|Apr/22(Mon)|       [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf) <br/>     System Level I/O            |                    |  lab5: shlab out    |
+|Apr/22(Mon)|      [ECF: Exceptions and Processes (2)](/slides/14-ecf-procs.pdf)             |                    |  lab5: shlab out    |
 |Apr/23(Tue)|                                        |                    |                    |
-|Apr/24(Wed)|        Virtual Memory: Concepts        |  shlab (8:30pm - @ 104-E102, by @changmin )                  | |
+|Apr/24(Wed)|      [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf)      |  shlab (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
-|Apr/29(Mon)|        Virtual Memory: Systems         |                    | lab5: due 11:59pm                   |
+|Apr/29(Mon)|         System Level I/O          |                    | lab5: due 11:59pm                   |
 |Apr/30(Tue)|                                        |                    |lab6: malloclab out                    |
-|May/01(Wed)|     Dynamic Memory Allocation (1)      |                    |                    |
+|May/01(Wed)|     Virtual Memory: Concepts <br/>  Virtual Memory: Systems        |                    |                    |
 |May/02(Thu)|                                        |                    |                    |
 |May/03(Fri)|                                        |                    |                    |
 |May/06(Mon)|Children's day (supplemental, no class) |                    |                    |
 |May/07(Tue)|                                        |                    |                    |
-|May/08(Wed)|     Dynamic Memory Allocation (2)      |                    |                    |
+|May/08(Wed)|     Dynamic Memory Allocation (1)      |                    |                    |
 |May/09(Thu)|                                        |                    |                    |
 |May/10(Fri)|                |                    |  lab6: checkpoint  |
-|May/13(Mon)|       Network Programming (1)           |                    |                    |
+|May/13(Mon)|     Dynamic Memory Allocation (2)           |                    |                    |
 |May/14(Tue)|                                        |                    |                    |
-|May/15(Wed)|         Network Programming (2)                 |                    |                    |
+|May/15(Wed)|         Network Programming (1)                 |                    |                    |
 |May/16(Thu)|                                        |                    |                    |
 |May/17(Fri)|                                        |                    |                    |
 |May/20(Mon)|     SP19 (Recitation or no class)      |                    |                    |
@@ -172,12 +172,12 @@ Schedule
 |May/22(Wed)|     SP19 (Recitation or no class)      |                    |                    |
 |May/23(Thu)|                                        |                    |                    |
 |May/24(Fri)|                                        |                    |                    |
-|May/27(Mon)|           Concurrency            |                    | lab7: proxylab out |
+|May/27(Mon)|       Network Programming (2)                  |                    | lab7: proxylab out |
 |May/28(Tue)|                                        |                    | lab6: due 11:59pm  |
-|May/29(Wed)|         Synchronization (1)           |                    |                    |
+|May/29(Wed)|           Concurrency        |                    |                    |
 |May/30(Thu)|                                        |                    |                    |
 |May/31(Fri)|                                        |                    |                    |
-|Jun/03(Mon)|      Synchronizatiion (2)           |                    |                    |
+|Jun/03(Mon)|      Synchronizatiion            |                    |                    |
 |Jun/04(Tue)|                                        |                    |                    |
 |Jun/05(Wed)|       Thread-level Parallelism         |                    | lab7 due 11:59 pm  |
 |Jun/06(Thu)|                                        |                    |                    |
