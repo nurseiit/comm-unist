@@ -21,23 +21,16 @@ Discussions
 
 Exams
 -----
-* Midterm
-  - **4/22 Mon 9pm-11pm @ 104-E205.**
-  - Coverage: lecture1 - lecture12 (Ordered map and skip list).
-  - Relevant Google Form: [https://forms.gle/So7m7Lk55AGHFMo7A](https://forms.gle/So7m7Lk55AGHFMo7A)
-  - If your earlier exam/class ends on or around 9pm, let me know. You can join a bit later and will give you the same amount of time.
-  - Start late: If you want to join the midterm on 9:30pm, please fill in this form: [https://forms.gle/Emb3NhpM1gHZ1aSv6](https://forms.gle/Emb3NhpM1gHZ1aSv6)
+* Final
+  TBA
 
 Announcements
 -------------
+* **[04-23]** Lab 4 is being posted. The deadline is also updated. Pre-grader will start to run on around this weekend.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
 * **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
 * **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
-* **[04-04]** Lab 3 deadline is extended.
-* **[04-04]** Lab 3 is posted. Pre-grader will start to run tomorrow on these times everyday by 4/22.
-  - 9:00
-  - 15:00
-  - 21:00
+
 
 * **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
   Note that it could take hours for each run to complete.
@@ -50,27 +43,6 @@ Announcements
   
   The final grader is running on 00:05 Apr 04.
 
-* **[03-28]** Please participate a survey **(4th)** using google form here for the midterm scheduling. The Deadline is tonight (Mar 28 10:00am).
-  - [https://forms.gle/HjEr7wKm5v5YSgV48](https://forms.gle/HjEr7wKm5v5YSgV48)
-  
-* **[03-25]** A clarification on Lab2
-  - The `write` function in `Textedit` takes the name of output file as an argument, not the contents to write.
-  
-* **[03-21]** Lab 2 is posted. Please refer to your submission repository and the calendar for the details.
-
-* **[03-18]** There will be more pre-gradings as some students requested as Follows. The real grader will run at 0:05 3/19.
-  - Around 3pm 3/18.
-  - Around 6pm 3/18.
-  - Around 9pm 3/18.
-  - Around 11pm 3/18.
-
-* **[03-17]** Lab1 is pre-graded. Please check the `grader-lab1` branch in your submissiong repository. The next scheduled runs are:
-  - Around 8:30am 3/17.
-  - Around 6pm 3/17.
-  - Around 10pm 3/17.
-  - Around the noon 3/18.
-
-* **[03-12]** Lab1 is out. Due is Mar 18 (Mon) 11:59pm.
 
 * **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
 
@@ -199,7 +171,7 @@ Schedule
 |Apr/30(Tue)|            Red-Black Trees             |                    |   |
 |May/01(Wed)|                                        |                    |    lab4: due 11:59pm                |
 |May/02(Thu)|              Splay Trees               |                    |    lab5 out                |
-|May/03(Fri)|                                        |                    |                    |
+|May/03(Fri)|                                        |                    |    lab4 clain deadline                |
 |May/06(Mon)|                                        |                    |                    |
 |May/07(Tue)|       Multiway Search Trees (1)        |                    |                    |
 |May/08(Wed)|                                        |                    |            |
