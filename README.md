@@ -55,6 +55,23 @@ cd lab2
 ```sh
 cd lab3
 ```
+
+## Lab4: Priority Queue
+
+- Lead TA: Hwiyeon Kim (gnldus28@unist.ac.kr, @hwiyeon)
+- Instruction: [lab4/README.md](lab4/README.md)
+- Out: Apr 23 (Tue)
+- Due: May 06 (Mon) 11:59 pm
+
+```sh
+cd lab3
+```
+
+
+
+
+
+
 ### Notes
 
 - You are expected to be familiar with the concept of `branch` in `git`.
