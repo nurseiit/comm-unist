@@ -152,11 +152,11 @@ Schedule
 |Apr/24(Wed)|      [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf)      |  shlab (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
-|Apr/29(Mon)|         System Level I/O          |                    | lab5: due 11:59pm                   |
-|Apr/30(Tue)|                                        |                    |lab6: malloclab out                    |
+|Apr/29(Mon)|         System Level I/O          |                    |                  |
+|Apr/30(Tue)|                                        |                    |                    |
 |May/01(Wed)|     Virtual Memory: Concepts <br/>  Virtual Memory: Systems        |                    |                    |
-|May/02(Thu)|                                        |                    |                    |
-|May/03(Fri)|                                        |                    |                    |
+|May/02(Thu)|                                        |                    |  lab5: due 11:59pm                    |
+|May/03(Fri)|                                        |                    |  lab6: malloclab out                  |
 |May/06(Mon)|Children's day (supplemental, no class) |                    |                    |
 |May/07(Tue)|                                        |                    |                    |
 |May/08(Wed)|     Dynamic Memory Allocation (1)      |                    |                    |
