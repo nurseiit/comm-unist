@@ -150,7 +150,7 @@ Schedule
 |**Apr/21(SUN)**|                                        |                    |  lab4: due 11:59pm                  |
 |Apr/22(Mon)|      [ECF: Exceptions and Processes (2)](/slides/14-ecf-procs.pdf)             |                    |  lab5: shlab out    |
 |Apr/23(Tue)|                                        |                    |                    |
-|Apr/24(Wed)|      [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf)      |  shlab (8:30pm - @ 104-E102, by @changmin )                  | |
+|Apr/24(Wed)|      [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf)      |  [shlab](/recitation/rec5.pdf) (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|         System Level I/O          |                    |                  |
