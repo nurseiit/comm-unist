@@ -49,16 +49,12 @@ int main(int argc, char *argv[]) {
 
   int val, size = 0;
 
-  while (cin >> val) {
+  while (scanf("%d", &val) == 1) {
     tree.upd(val);
     size += 1;
     int index = size / 2 - (size % 2 == 0);
     int med = tree.kth(index);
     printf("%d\n", med);
   }
-  size += 1;
-  int index = size / 2 - (size % 2 == 0);
-  int med = tree.kth(index);
-  printf("%d\n", med);
   return 0;
 }
