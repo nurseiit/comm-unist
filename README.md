@@ -26,23 +26,11 @@ Exams
 
 Announcements
 -------------
+* **[04-24]** Lab 4 grader will run 9am/3pm/9pm, 4/24 - 05/06 and 00:05 05/07.
 * **[04-23]** Lab 4 is being posted. The deadline is also updated. Pre-grader will start to run on around this weekend.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
 * **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
 * **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
-
-
-* **[03-28]** The first pre-grading results are being pushed. Everyday by the deadline, pregrader will start to run on these times.
-  Note that it could take hours for each run to complete.
-  - 9:00
-  - 12:00
-  - 15:00
-  - 18:00
-  - 21:00
-  - 24:00
-  
-  The final grader is running on 00:05 Apr 04.
-
 
 * **[03-09]** Use this repository's issue to ask questions. Any question on private repository or sent through email may not be answered or replied unless the question really is private: containing privacy-sensitive information.
 
