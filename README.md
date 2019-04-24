@@ -153,7 +153,7 @@ Schedule
 |Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                           | | lab3: due 11:59pm                                       |
 |Apr/23(Tue)|                No class                |                    |  lab4 out          |
 |Apr/24(Wed)|                                        |                    |  lab 3 claim deadline                  |
-|Apr/25(Thu)|               AVL Trees                |                    |                    |
+|Apr/25(Thu)|               [AVL Trees](/slides/lecture14.pdf)                |                    |                    |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|                                        |                    |            |
 |Apr/30(Tue)|            Red-Black Trees             |                    |   |
