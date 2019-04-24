@@ -9,136 +9,56 @@
 #include <vector>
 using namespace std;
 
-template <typename T, bool isMax>
-class Rename {
-  struct treap {
-    treap *left, *right;
-    T val;
-    int y;
-    size_t size;
+const int maxn = (1 << 20);
+const int offset = (1 << 19);
 
-    treap(T val, int y, treap *left = NULL, treap *right = NULL)
-        : val(val), y(y), left(left), right(right) {
-      size = 1 + (left ? left->size : 0) + (right ? right->size : 0);
-    }
-  };
-  typedef treap *Treap;
-
-  size_t size(Treap t) {
-    return t ? t->size : 0;
-  }
-
-  void updateSize(Treap &t) {
-    if (t == NULL) return;
-    t->size = size(t->left) + size(t->right) + 1;
-  }
-
-  Treap merge(Treap a, Treap b) {
-    if (a == NULL || b == NULL)
-      return a ? a : b;
-    if (a->y > b->y) {
-      Treap now = merge(a->right, b);
-      return new treap(a->val, a->y, a->left, now);
-    } else {
-      Treap now = merge(a, b->left);
-      return new treap(b->val, b->y, now, b->right);
-    }
-  }
-
-  void split(Treap t, T val, Treap &a, Treap &b) {
-    if (t == NULL)
-      a = b = NULL;
-    else if (t->val > val) {
-      split(t->left, val, a, t->left);
-      b = t;
-      updateSize(b);
-    } else {
-      split(t->right, val, t->right, b);
-      a = t;
-      updateSize(a);
-    }
-  }
-
-  void add(Treap &t, T val) {
-    Treap a, b;
-    split(t, val, a, b);
-    Treap c = new treap(val, rand());
-    t = merge(merge(a, c), b);
-    return;
-  }
-  void show(Treap t) {
-    if (t == NULL) return;
-    show(t->left);
-    cout << (isMax ? -t->val : t->val) << " ";
-    show(t->right);
-  }
-
-  void removeAll(Treap &t, T val) {
-    Treap a, b, c;
-    split(t, val - 1, a, b);
-    split(b, val, c, b);
-    t = merge(a, b);
-    return;
-  }
-
-  T valueAt(Treap t, int index) {
-    while (t) {
-      size_t leftSize = size(t->left);
-      if (leftSize == index) return t->val;
-      t = leftSize > index ? t->left : t->right;
-      if (leftSize < index)
-        index -= leftSize + 1;
-    }
-    return -1;
-  }
-
-  Treap root;
+class Fenwick {
+  int t[maxn];
 
  public:
-  Rename() {
-    root = NULL;
+  void upd(int r, int v = 1) {
+    r += offset;
+    for (; r < maxn; r |= r + 1)
+      t[r] += v;
+  }
+  int get(int r) {
+    r += offset;
+    int res = 0;
+    for (; r >= 0; r = (r & (r + 1)) - 1)
+      res += t[r];
+    return res;
   }
 
-  void add(T val) {
-    add(root, isMax ? -val : val);
-  }
-
-  T valueAt(int index) {
-    return isMax ? -valueAt(root, index) : valueAt(root, index);
-  }
-
-  T top() {
-    return valueAt(0);
-  }
-
-  void removeAll(T val) {
-    removeAll(root, isMax ? -val : val);
-  }
-
-  size_t size() {
-    return size(root);
-  }
-
-  void show() {
-    show(root);
-    puts("");
+  int kth(int k) {
+    int sum = 0, res = 0;
+    for (int i = maxn; i && i + res - 1 < maxn; i >>= 1)
+      if (sum + t[i + res - 1] <= k)
+        sum += t[i + res - 1],
+            res += i;
+    return res - offset;
   }
 };
 
 int main(int argc, char *argv[]) {
   if (argc > 1) {
-    freopen(argv[0], "r", stdin);
-    freopen(argv[1], "w", stdout);
+    freopen(argv[1], "r", stdin);
+    freopen(argv[2], "w", stdout);
   }
-  Rename<int, false> tree;
 
-  int val;
+  Fenwick tree;
+
+  int val, size = 0;
 
   while (cin >> val) {
-    tree.add(val);
-    int index = tree.size() / 2 - (tree.size() % 2 == 0);
-    int med = tree.valueAt(index);
-    cout << med << endl;
+    tree.upd(val);
+    size += 1;
+    int index = size / 2 - (size % 2 == 0);
+    int med = tree.kth(index);
+    printf("%d\n", med);
   }
+  size += 1;
+  int index = size / 2 - (size % 2 == 0);
+  int med = tree.kth(index);
+  printf("%d\n", med);
   return 0;
 }
