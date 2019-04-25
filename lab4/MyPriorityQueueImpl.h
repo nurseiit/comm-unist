@@ -1,21 +1,22 @@
 #pragma once
-#include <queue>
+#include <iostream>
 #include <stdexcept>
 #include <vector>
 #include "MyPriorityQueue.h"
 
 using namespace std;
 
-template <typename T, bool isMax>
+template <typename T, bool isMax, size_t cap>
 class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
-  priority_queue<T> q;
-  T* array;
+  vector<T> array;
+  size_t length;
+  T* front;
 
  public:
   MyPriorityQueueImpl<T, isMax>() : MyPriorityQueue<T, isMax>() {
-    while (!q.empty())
-      q.pop();
-    array = new T[2];
+    array.clear();
+    length = 0;
+    front = new int[1];
   }
 
   /*
@@ -24,7 +25,7 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
    * throws the runtime error if the queue is empty.
    */
   T& top() const {
-    return array[0];
+    return front[0];
   }
 
   /*
@@ -32,7 +33,7 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
    * returns the number of elements in the queue.
    */
   size_t size() const {
-    return q.size();
+    return length;
   }
 
   /*
@@ -40,7 +41,7 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
 	 * returns whether the queue is empty or not.
 	 */
   bool empty() const {
-    return q.empty();
+    return length == 0;
   }
 
   /*
@@ -49,7 +50,7 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
  	 * throws the runtime_error if the queue is full
  	 */
   void push(const T& e) {
-    q.push(isMax ? e : -e);
+    length += 1;
   }
 
   /*
@@ -58,6 +59,6 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
 	 * throws the runtime_error if the queue is empty
 	 */
   void pop() {
-    q.pop();
+    length -= 1;
   }
 };
