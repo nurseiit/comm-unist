@@ -1,5970 +1,399 @@
 
+    #define CATCH_CONFIG_FAST_COMPILE
     #include "catch.hpp"
     #include "MyPriorityQueueImpl.h"
     #include <queue>
     #include <stdexcept>
     #include <iostream>
     using namespace std;
-    TEST_CASE( "test queue with (capacity, len_cmd) = (200,1904)") {
+    TEST_CASE( "test queue with (capacity, len_cmd) = (397,1344)") {
 
     std::priority_queue<int> ref;
-    MyPriorityQueueImpl<int,true> submit;
+    MyPriorityQueueImpl<int,true,397> submit;
     int ret_ref;
     int ret_submit;
 
 //==============================
-    submit.push(3289);
-    ref.push(3289);
+    submit.push(8659);
+    ref.push(8659);
 
 //len_list: 1
 //==============================
 
 
 //==============================
-    submit.push(6927);
-    ref.push(6927);
+    submit.push(5032);
+    ref.push(5032);
 
 //len_list: 2
 //==============================
 
 
 //==============================
-    submit.push(7358);
-    ref.push(7358);
+    submit.push(4891);
+    ref.push(4891);
 
 //len_list: 3
 //==============================
 
 
 //==============================
-    submit.push(4866);
-    ref.push(4866);
+    submit.push(8892);
+    ref.push(8892);
 
 //len_list: 4
 //==============================
 
 
 //==============================
-    submit.push(3310);
-    ref.push(3310);
+    submit.push(3141);
+    ref.push(3141);
 
 //len_list: 5
 //==============================
 
 
 //==============================
-    submit.push(8474);
-    ref.push(8474);
+    submit.push(2827);
+    ref.push(2827);
 
 //len_list: 6
 //==============================
 
 
 //==============================
-    submit.push(6035);
-    ref.push(6035);
+    submit.push(7456);
+    ref.push(7456);
 
 //len_list: 7
 //==============================
 
 
 //==============================
-    submit.push(7438);
-    ref.push(7438);
+    submit.push(8792);
+    ref.push(8792);
 
 //len_list: 8
 //==============================
 
 
 //==============================
-    submit.push(2985);
-    ref.push(2985);
+    submit.push(2943);
+    ref.push(2943);
 
 //len_list: 9
 //==============================
 
 
 //==============================
-    submit.push(3538);
-    ref.push(3538);
+    submit.push(545);
+    ref.push(545);
 
 //len_list: 10
 //==============================
 
 
 //==============================
-    submit.push(9233);
-    ref.push(9233);
+    submit.push(7595);
+    ref.push(7595);
 
 //len_list: 11
 //==============================
 
 
 //==============================
-    submit.push(7914);
-    ref.push(7914);
+    submit.push(9236);
+    ref.push(9236);
 
 //len_list: 12
 //==============================
 
 
 //==============================
-    submit.push(6289);
-    ref.push(6289);
+    submit.push(6252);
+    ref.push(6252);
 
 //len_list: 13
 //==============================
 
 
 //==============================
-    submit.push(6178);
-    ref.push(6178);
+    submit.push(6344);
+    ref.push(6344);
 
 //len_list: 14
 //==============================
 
 
 //==============================
-    submit.push(8249);
-    ref.push(8249);
+    submit.push(410);
+    ref.push(410);
 
 //len_list: 15
 //==============================
 
 
 //==============================
-    submit.push(9991);
-    ref.push(9991);
+    submit.push(9187);
+    ref.push(9187);
 
 //len_list: 16
 //==============================
 
 
 //==============================
-    submit.push(9169);
-    ref.push(9169);
+    submit.push(4550);
+    ref.push(4550);
 
 //len_list: 17
 //==============================
 
 
 //==============================
-    submit.push(1263);
-    ref.push(1263);
+    submit.push(5434);
+    ref.push(5434);
 
 //len_list: 18
 //==============================
 
 
 //==============================
-    submit.push(9010);
-    ref.push(9010);
+    submit.push(2164);
+    ref.push(2164);
 
 //len_list: 19
 //==============================
 
 
 //==============================
-    submit.push(141);
-    ref.push(141);
+    submit.push(8146);
+    ref.push(8146);
 
 //len_list: 20
 //==============================
 
 
 //==============================
-    submit.push(6699);
-    ref.push(6699);
+    submit.push(398);
+    ref.push(398);
 
 //len_list: 21
 //==============================
 
 
 //==============================
-    submit.push(9939);
-    ref.push(9939);
+    submit.push(9555);
+    ref.push(9555);
 
 //len_list: 22
 //==============================
 
 
 //==============================
-    submit.push(5487);
-    ref.push(5487);
+    submit.push(1242);
+    ref.push(1242);
 
 //len_list: 23
 //==============================
 
 
 //==============================
-    submit.push(7237);
-    ref.push(7237);
+    submit.push(4100);
+    ref.push(4100);
 
 //len_list: 24
 //==============================
 
 
 //==============================
-    submit.push(8345);
-    ref.push(8345);
+    submit.push(193);
+    ref.push(193);
 
 //len_list: 25
 //==============================
 
 
 //==============================
-    submit.push(2360);
-    ref.push(2360);
+    submit.push(3501);
+    ref.push(3501);
 
 //len_list: 26
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 26
-//==============================
-
-
-//==============================
-    submit.push(3925);
-    ref.push(3925);
+    submit.push(7050);
+    ref.push(7050);
 
 //len_list: 27
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 2
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 3
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 4
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 5
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 6
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 7
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 8
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 9
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    submit.push(1785);
-    ref.push(1785);
+    submit.push(7608);
+    ref.push(7608);
 
 //len_list: 28
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 10
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 11
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 12
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 13
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 14
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    submit.push(9183);
-    ref.push(9183);
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 15
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 16
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 17
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 18
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 19
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 20
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 21
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 22
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 23
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 24
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 25
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 26
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 27
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 26
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 27
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 26
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 25
-//==============================
-
-
-//==============================
-    submit.push(5979);
-    ref.push(5979);
-
-//len_list: 26
-//==============================
-
-
-//==============================
-    submit.push(499);
-    ref.push(499);
-
-//len_list: 27
-//==============================
-
-
-//==============================
-    submit.push(4644);
-    ref.push(4644);
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 28
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.push(4731);
-    ref.push(4731);
+    submit.push(3277);
+    ref.push(3277);
 
 //len_list: 29
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 29
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(5194);
-    ref.push(5194);
+    submit.push(4334);
+    ref.push(4334);
 
 //len_list: 30
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 30
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 31
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 32
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 33
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 34
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 35
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 36
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(9950);
-    ref.push(9950);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(2267);
-    ref.push(2267);
+    submit.push(7315);
+    ref.push(7315);
 
 //len_list: 31
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 37
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 38
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 39
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(3008);
-    ref.push(3008);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 40
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 41
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(1522);
-    ref.push(1522);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 42
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 43
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 44
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 45
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(5436);
-    ref.push(5436);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 46
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(2361);
-    ref.push(2361);
+    submit.push(6464);
+    ref.push(6464);
 
 //len_list: 32
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 47
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 48
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 49
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 50
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 51
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 52
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 53
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 54
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(495);
-    ref.push(495);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(2174);
-    ref.push(2174);
+    submit.push(78);
+    ref.push(78);
 
 //len_list: 33
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 55
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 56
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 57
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 58
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 59
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 60
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 61
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 62
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(5351);
-    ref.push(5351);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 63
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 64
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 65
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(1339);
-    ref.push(1339);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(3291);
-    ref.push(3291);
+    submit.push(8091);
+    ref.push(8091);
 
 //len_list: 34
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(3091);
-    ref.push(3091);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 66
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(9013);
-    ref.push(9013);
+    submit.push(5230);
+    ref.push(5230);
 
 //len_list: 35
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 67
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 68
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(1094);
-    ref.push(1094);
+    submit.push(2305);
+    ref.push(2305);
 
 //len_list: 36
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 69
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(38);
-    ref.push(38);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 70
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 71
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 72
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 73
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 74
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(2730);
-    ref.push(2730);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 75
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 76
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 77
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 78
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(9499);
-    ref.push(9499);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 79
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 80
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 81
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 82
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 83
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 84
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 85
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 86
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 87
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 88
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 89
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(145);
-    ref.push(145);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 90
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 91
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 92
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 93
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(8605);
-    ref.push(8605);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 94
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 95
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 96
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(7936);
-    ref.push(7936);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 97
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 98
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 99
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 100
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 101
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 102
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 103
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(1683);
-    ref.push(1683);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(4326);
-    ref.push(4326);
+    submit.push(3631);
+    ref.push(3631);
 
 //len_list: 37
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 104
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 105
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 106
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 107
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 108
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 109
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 110
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 111
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 112
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(8762);
-    ref.push(8762);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 113
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 114
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 115
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(1421);
-    ref.push(1421);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(5213);
-    ref.push(5213);
+    submit.push(7562);
+    ref.push(7562);
 
 //len_list: 38
 //==============================
 
 
 //==============================
-    submit.push(2501);
-    ref.push(2501);
+    submit.push(8645);
+    ref.push(8645);
 
 //len_list: 39
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 116
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 117
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(832);
-    ref.push(832);
+    submit.push(3290);
+    ref.push(3290);
 
 //len_list: 40
 //==============================
 
 
 //==============================
-    submit.push(8360);
-    ref.push(8360);
+    submit.push(2655);
+    ref.push(2655);
 
 //len_list: 41
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 118
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.push(9764);
-    ref.push(9764);
+    submit.push(7948);
+    ref.push(7948);
 
 //len_list: 42
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 119
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 120
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 121
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 122
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.push(6825);
-    ref.push(6825);
+    submit.push(3168);
+    ref.push(3168);
 
 //len_list: 43
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 123
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(727);
-    ref.push(727);
+    submit.push(4073);
+    ref.push(4073);
 
 //len_list: 44
 //==============================
 
 
 //==============================
-    submit.push(5354);
-    ref.push(5354);
+    submit.push(676);
+    ref.push(676);
 
 //len_list: 45
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 124
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 125
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 126
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 127
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.push(2002);
-    ref.push(2002);
-
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 128
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 129
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 130
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 131
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.push(8084);
-    ref.push(8084);
-
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 132
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 133
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 45
-//==============================
-
-
-//==============================
-    submit.push(2838);
-    ref.push(2838);
+    submit.push(8087);
+    ref.push(8087);
 
 //len_list: 46
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 134
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 135
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 45
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 136
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 137
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 138
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 139
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(4307);
-    ref.push(4307);
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 140
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 141
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.push(3118);
-    ref.push(3118);
-
-//len_list: 45
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 142
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 143
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.push(2502);
-    ref.push(2502);
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 144
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 145
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 146
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 147
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 148
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 149
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 150
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(1079);
-    ref.push(1079);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 151
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 152
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 153
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 154
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 155
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 156
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.push(6045);
-    ref.push(6045);
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 157
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 158
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 159
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 160
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 161
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(286);
-    ref.push(286);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 162
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 163
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 164
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 165
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 166
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 167
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 168
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 169
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 170
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 171
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 172
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 173
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 174
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 175
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 176
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(1406);
-    ref.push(1406);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 177
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 178
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(7452);
-    ref.push(7452);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 179
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 180
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 181
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 182
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(8591);
-    ref.push(8591);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 183
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 184
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(9217);
-    ref.push(9217);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 185
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 186
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 187
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 188
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(9161);
-    ref.push(9161);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 189
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 190
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 191
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 192
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(639);
-    ref.push(639);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 193
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 194
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 195
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 196
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 197
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(6895);
-    ref.push(6895);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 198
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 199
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 200
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 201
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 202
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(8045);
-    ref.push(8045);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(9195);
-    ref.push(9195);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 203
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(8705);
-    ref.push(8705);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 204
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 205
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 206
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(6125);
-    ref.push(6125);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 207
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 208
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 209
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 210
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 211
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 212
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 213
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.push(7271);
-    ref.push(7271);
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(5553);
-    ref.push(5553);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 214
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 215
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 216
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 217
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 218
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 219
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 220
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 221
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 222
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(8059);
-    ref.push(8059);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 223
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(291);
-    ref.push(291);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(4628);
-    ref.push(4628);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 224
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 225
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 226
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(636);
-    ref.push(636);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 227
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 228
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 229
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 230
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 231
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.push(5035);
-    ref.push(5035);
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(1877);
-    ref.push(1877);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 232
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 233
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 234
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 235
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 236
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(2390);
-    ref.push(2390);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 237
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 238
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.push(666);
-    ref.push(666);
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 239
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 240
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 241
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 28
-//==============================
-
-
-//==============================
-    submit.push(1283);
-    ref.push(1283);
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(528);
-    ref.push(528);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 242
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 243
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(4927);
-    ref.push(4927);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(8785);
-    ref.push(8785);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 244
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(7926);
-    ref.push(7926);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 245
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 246
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 247
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 248
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 249
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(3709);
-    ref.push(3709);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 250
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 251
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 252
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 253
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 254
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 255
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(4329);
-    ref.push(4329);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 256
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(5274);
-    ref.push(5274);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 257
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(1875);
-    ref.push(1875);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(1928);
-    ref.push(1928);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 258
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 259
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 260
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 261
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 262
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 263
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 264
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(8100);
-    ref.push(8100);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(3602);
-    ref.push(3602);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 265
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 266
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 267
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 268
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(4057);
-    ref.push(4057);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(9502);
-    ref.push(9502);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 269
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 270
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 271
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 272
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(3592);
-    ref.push(3592);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 273
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(4060);
-    ref.push(4060);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 274
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 275
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 276
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 277
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 29
-//==============================
-
-
-//==============================
-    submit.push(2750);
-    ref.push(2750);
-
-//len_list: 30
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 278
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 30
-//==============================
-
-
-//==============================
-    submit.push(3000);
-    ref.push(3000);
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(4696);
-    ref.push(4696);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 279
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 280
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 31
-//==============================
-
-
-//==============================
-    submit.push(9161);
-    ref.push(9161);
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 281
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 282
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(3177);
-    ref.push(3177);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 283
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 284
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 285
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 286
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 287
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(3293);
-    ref.push(3293);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 288
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(4542);
-    ref.push(4542);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(442);
-    ref.push(442);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(3727);
-    ref.push(3727);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 289
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 290
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 291
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 292
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 293
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 294
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 295
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 32
-//==============================
-
-
-//==============================
-    submit.push(9043);
-    ref.push(9043);
-
-//len_list: 33
-//==============================
-
-
-//==============================
-    submit.push(9205);
-    ref.push(9205);
-
-//len_list: 34
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 296
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 34
-//==============================
-
-
-//==============================
-    submit.push(9568);
-    ref.push(9568);
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(7955);
-    ref.push(7955);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 297
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 298
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(7864);
-    ref.push(7864);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 299
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(2093);
-    ref.push(2093);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 300
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 301
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 302
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 303
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 304
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 35
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 305
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 35
-//==============================
-
-
-//==============================
-    submit.push(4383);
-    ref.push(4383);
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(4890);
-    ref.push(4890);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 306
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 307
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 308
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 309
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(1463);
-    ref.push(1463);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 310
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 311
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 312
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 36
-//==============================
-
-
-//==============================
-    submit.push(4879);
-    ref.push(4879);
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 313
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 314
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(1306);
-    ref.push(1306);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 315
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.push(9847);
-    ref.push(9847);
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 316
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 317
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 318
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 319
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.push(6664);
-    ref.push(6664);
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 320
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 321
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(7836);
-    ref.push(7836);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 322
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(5411);
-    ref.push(5411);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 323
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 324
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(1475);
-    ref.push(1475);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 325
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 326
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 327
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 328
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.push(8728);
-    ref.push(8728);
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 329
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 330
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 331
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 332
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 333
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(3476);
-    ref.push(3476);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 334
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.push(5276);
-    ref.push(5276);
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 335
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 336
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 337
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 338
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(3964);
-    ref.push(3964);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(8937);
-    ref.push(8937);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 339
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 340
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 341
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 342
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 343
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 344
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 345
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 346
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 347
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 348
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 349
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 350
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 351
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 352
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 353
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 354
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(8555);
-    ref.push(8555);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 355
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 356
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 357
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(1257);
-    ref.push(1257);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 358
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.push(3156);
-    ref.push(3156);
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 359
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 360
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 361
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 362
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(7790);
-    ref.push(7790);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 363
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 364
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.push(7474);
-    ref.push(7474);
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 365
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 366
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 367
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 368
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 369
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 370
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 371
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(2283);
-    ref.push(2283);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 372
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(8347);
-    ref.push(8347);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 373
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 374
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 375
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 376
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(1287);
-    ref.push(1287);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 377
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 378
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 379
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 380
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 381
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 382
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 383
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 384
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 385
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 386
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 387
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 388
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 389
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(1723);
-    ref.push(1723);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 390
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 391
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 392
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 37
-//==============================
-
-
-//==============================
-    submit.push(8678);
-    ref.push(8678);
-
-//len_list: 38
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 393
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 38
-//==============================
-
-
-//==============================
-    submit.push(3873);
-    ref.push(3873);
-
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(1190);
-    ref.push(1190);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 39
-//==============================
+    submit.push(4064);
+    ref.push(4064);
 
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 394
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 395
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 396
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 39
-//==============================
-
-
-//==============================
-    submit.push(6364);
-    ref.push(6364);
-
-//len_list: 40
-//==============================
-
-
-//==============================
-    submit.push(2395);
-    ref.push(2395);
-
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 397
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 398
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 399
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 41
-//==============================
-
-
-//==============================
-    submit.push(6583);
-    ref.push(6583);
-
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 400
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 401
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 402
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 403
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 42
-//==============================
-
-
-//==============================
-    submit.push(1808);
-    ref.push(1808);
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(8582);
-    ref.push(8582);
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 404
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 405
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 406
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 407
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(6795);
-    ref.push(6795);
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(3476);
-    ref.push(3476);
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 43
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 408
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 43
-//==============================
-
-
-//==============================
-    submit.push(20);
-    ref.push(20);
-
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 409
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 410
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 411
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 412
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 44
+//len_list: 47
 //==============================
 
 
 //==============================
-    submit.push(5227);
-    ref.push(5227);
+    submit.push(4507);
+    ref.push(4507);
 
-//len_list: 45
+//len_list: 48
 //==============================
 
 
@@ -5972,401 +401,38 @@
     submit.push(4101);
     ref.push(4101);
 
-//len_list: 46
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 413
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 414
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 415
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 416
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 46
-//==============================
-
-
-//==============================
-    submit.push(8436);
-    ref.push(8436);
-
-//len_list: 47
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 417
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 47
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 418
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 47
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 419
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 47
-//==============================
-
-
-//==============================
-    submit.push(7274);
-    ref.push(7274);
-
-//len_list: 48
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 420
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 48
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 421
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 48
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 422
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 48
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 423
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 48
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 47
-//==============================
-
-
-//==============================
-    submit.push(2562);
-    ref.push(2562);
-
-//len_list: 48
-//==============================
-
-
-//==============================
-    submit.push(5053);
-    ref.push(5053);
-
 //len_list: 49
 //==============================
 
 
 //==============================
-    submit.push(2754);
-    ref.push(2754);
+    submit.push(4452);
+    ref.push(4452);
 
 //len_list: 50
 //==============================
 
 
 //==============================
-    submit.push(8536);
-    ref.push(8536);
+    submit.push(6219);
+    ref.push(6219);
 
 //len_list: 51
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 424
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 51
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 425
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 50
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 49
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 426
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 49
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 427
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 49
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 428
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 49
-//==============================
-
-
-//==============================
-    submit.push(9149);
-    ref.push(9149);
-
-//len_list: 50
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 429
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 50
-//==============================
-
-
-//==============================
-    submit.push(8493);
-    ref.push(8493);
-
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 50
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 430
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 50
-//==============================
-
-
-//==============================
-    submit.push(8489);
-    ref.push(8489);
-
-//len_list: 51
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 431
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 51
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 432
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 51
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 433
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.push(5159);
-    ref.push(5159);
+    submit.push(8442);
+    ref.push(8442);
 
 //len_list: 52
 //==============================
 
 
 //==============================
-    submit.push(6483);
-    ref.push(6483);
+    submit.push(614);
+    ref.push(614);
 
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 434
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 435
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 436
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(1539);
-    ref.push(1539);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(4599);
-    ref.push(4599);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 437
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 438
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 439
-    REQUIRE( ret_ref == ret_submit);
 //len_list: 53
 //==============================
 
@@ -6380,11 +446,8346 @@
 
 
 //==============================
+    submit.push(3368);
+    ref.push(3368);
+
+//len_list: 55
+//==============================
+
+
+//==============================
+    submit.push(7069);
+    ref.push(7069);
+
+//len_list: 56
+//==============================
+
+
+//==============================
+    submit.push(5408);
+    ref.push(5408);
+
+//len_list: 57
+//==============================
+
+
+//==============================
+    submit.push(1542);
+    ref.push(1542);
+
+//len_list: 58
+//==============================
+
+
+//==============================
+    submit.push(9207);
+    ref.push(9207);
+
+//len_list: 59
+//==============================
+
+
+//==============================
+    submit.push(8368);
+    ref.push(8368);
+
+//len_list: 60
+//==============================
+
+
+//==============================
+    submit.push(7437);
+    ref.push(7437);
+
+//len_list: 61
+//==============================
+
+
+//==============================
+    submit.push(6771);
+    ref.push(6771);
+
+//len_list: 62
+//==============================
+
+
+//==============================
+    submit.push(2329);
+    ref.push(2329);
+
+//len_list: 63
+//==============================
+
+
+//==============================
+    submit.push(8952);
+    ref.push(8952);
+
+//len_list: 64
+//==============================
+
+
+//==============================
+    submit.push(2274);
+    ref.push(2274);
+
+//len_list: 65
+//==============================
+
+
+//==============================
+    submit.push(2990);
+    ref.push(2990);
+
+//len_list: 66
+//==============================
+
+
+//==============================
+    submit.push(8791);
+    ref.push(8791);
+
+//len_list: 67
+//==============================
+
+
+//==============================
+    submit.push(2914);
+    ref.push(2914);
+
+//len_list: 68
+//==============================
+
+
+//==============================
+    submit.push(4753);
+    ref.push(4753);
+
+//len_list: 69
+//==============================
+
+
+//==============================
+    submit.push(885);
+    ref.push(885);
+
+//len_list: 70
+//==============================
+
+
+//==============================
+    submit.push(5161);
+    ref.push(5161);
+
+//len_list: 71
+//==============================
+
+
+//==============================
+    submit.push(9625);
+    ref.push(9625);
+
+//len_list: 72
+//==============================
+
+
+//==============================
+    submit.push(8916);
+    ref.push(8916);
+
+//len_list: 73
+//==============================
+
+
+//==============================
+    submit.push(5760);
+    ref.push(5760);
+
+//len_list: 74
+//==============================
+
+
+//==============================
+    submit.push(2810);
+    ref.push(2810);
+
+//len_list: 75
+//==============================
+
+
+//==============================
+    submit.push(4847);
+    ref.push(4847);
+
+//len_list: 76
+//==============================
+
+
+//==============================
+    submit.push(1702);
+    ref.push(1702);
+
+//len_list: 77
+//==============================
+
+
+//==============================
+    submit.push(992);
+    ref.push(992);
+
+//len_list: 78
+//==============================
+
+
+//==============================
+    submit.push(28);
+    ref.push(28);
+
+//len_list: 79
+//==============================
+
+
+//==============================
+    submit.push(6530);
+    ref.push(6530);
+
+//len_list: 80
+//==============================
+
+
+//==============================
+    submit.push(5534);
+    ref.push(5534);
+
+//len_list: 81
+//==============================
+
+
+//==============================
+    submit.push(496);
+    ref.push(496);
+
+//len_list: 82
+//==============================
+
+
+//==============================
+    submit.push(5237);
+    ref.push(5237);
+
+//len_list: 83
+//==============================
+
+
+//==============================
+    submit.push(5488);
+    ref.push(5488);
+
+//len_list: 84
+//==============================
+
+
+//==============================
+    submit.push(2757);
+    ref.push(2757);
+
+//len_list: 85
+//==============================
+
+
+//==============================
+    submit.push(6322);
+    ref.push(6322);
+
+//len_list: 86
+//==============================
+
+
+//==============================
+    submit.push(8039);
+    ref.push(8039);
+
+//len_list: 87
+//==============================
+
+
+//==============================
+    submit.push(8961);
+    ref.push(8961);
+
+//len_list: 88
+//==============================
+
+
+//==============================
+    submit.push(4652);
+    ref.push(4652);
+
+//len_list: 89
+//==============================
+
+
+//==============================
+    submit.push(6869);
+    ref.push(6869);
+
+//len_list: 90
+//==============================
+
+
+//==============================
+    submit.push(8449);
+    ref.push(8449);
+
+//len_list: 91
+//==============================
+
+
+//==============================
+    submit.push(4544);
+    ref.push(4544);
+
+//len_list: 92
+//==============================
+
+
+//==============================
+    submit.push(6035);
+    ref.push(6035);
+
+//len_list: 93
+//==============================
+
+
+//==============================
+    submit.push(3343);
+    ref.push(3343);
+
+//len_list: 94
+//==============================
+
+
+//==============================
+    submit.push(6212);
+    ref.push(6212);
+
+//len_list: 95
+//==============================
+
+
+//==============================
+    submit.push(3649);
+    ref.push(3649);
+
+//len_list: 96
+//==============================
+
+
+//==============================
+    submit.push(8647);
+    ref.push(8647);
+
+//len_list: 97
+//==============================
+
+
+//==============================
+    submit.push(9231);
+    ref.push(9231);
+
+//len_list: 98
+//==============================
+
+
+//==============================
+    submit.push(8885);
+    ref.push(8885);
+
+//len_list: 99
+//==============================
+
+
+//==============================
+    submit.push(5605);
+    ref.push(5605);
+
+//len_list: 100
+//==============================
+
+
+//==============================
+    submit.push(8706);
+    ref.push(8706);
+
+//len_list: 101
+//==============================
+
+
+//==============================
+    submit.push(7056);
+    ref.push(7056);
+
+//len_list: 102
+//==============================
+
+
+//==============================
+    submit.push(6422);
+    ref.push(6422);
+
+//len_list: 103
+//==============================
+
+
+//==============================
+    submit.push(9978);
+    ref.push(9978);
+
+//len_list: 104
+//==============================
+
+
+//==============================
+    submit.push(7155);
+    ref.push(7155);
+
+//len_list: 105
+//==============================
+
+
+//==============================
+    submit.push(4886);
+    ref.push(4886);
+
+//len_list: 106
+//==============================
+
+
+//==============================
+    submit.push(3551);
+    ref.push(3551);
+
+//len_list: 107
+//==============================
+
+
+//==============================
+    submit.push(25);
+    ref.push(25);
+
+//len_list: 108
+//==============================
+
+
+//==============================
+    submit.push(9081);
+    ref.push(9081);
+
+//len_list: 109
+//==============================
+
+
+//==============================
+    submit.push(6566);
+    ref.push(6566);
+
+//len_list: 110
+//==============================
+
+
+//==============================
+    submit.push(8107);
+    ref.push(8107);
+
+//len_list: 111
+//==============================
+
+
+//==============================
+    submit.push(9768);
+    ref.push(9768);
+
+//len_list: 112
+//==============================
+
+
+//==============================
+    submit.push(167);
+    ref.push(167);
+
+//len_list: 113
+//==============================
+
+
+//==============================
+    submit.push(8366);
+    ref.push(8366);
+
+//len_list: 114
+//==============================
+
+
+//==============================
+    submit.push(668);
+    ref.push(668);
+
+//len_list: 115
+//==============================
+
+
+//==============================
+    submit.push(2165);
+    ref.push(2165);
+
+//len_list: 116
+//==============================
+
+
+//==============================
+    submit.push(9670);
+    ref.push(9670);
+
+//len_list: 117
+//==============================
+
+
+//==============================
+    submit.push(8421);
+    ref.push(8421);
+
+//len_list: 118
+//==============================
+
+
+//==============================
+    submit.push(7477);
+    ref.push(7477);
+
+//len_list: 119
+//==============================
+
+
+//==============================
+    submit.push(32);
+    ref.push(32);
+
+//len_list: 120
+//==============================
+
+
+//==============================
+    submit.push(8594);
+    ref.push(8594);
+
+//len_list: 121
+//==============================
+
+
+//==============================
+    submit.push(3829);
+    ref.push(3829);
+
+//len_list: 122
+//==============================
+
+
+//==============================
+    submit.push(965);
+    ref.push(965);
+
+//len_list: 123
+//==============================
+
+
+//==============================
+    submit.push(9071);
+    ref.push(9071);
+
+//len_list: 124
+//==============================
+
+
+//==============================
+    submit.push(19);
+    ref.push(19);
+
+//len_list: 125
+//==============================
+
+
+//==============================
+    submit.push(210);
+    ref.push(210);
+
+//len_list: 126
+//==============================
+
+
+//==============================
+    submit.push(540);
+    ref.push(540);
+
+//len_list: 127
+//==============================
+
+
+//==============================
+    submit.push(5202);
+    ref.push(5202);
+
+//len_list: 128
+//==============================
+
+
+//==============================
+    submit.push(1644);
+    ref.push(1644);
+
+//len_list: 129
+//==============================
+
+
+//==============================
+    submit.push(9037);
+    ref.push(9037);
+
+//len_list: 130
+//==============================
+
+
+//==============================
+    submit.push(7798);
+    ref.push(7798);
+
+//len_list: 131
+//==============================
+
+
+//==============================
+    submit.push(2208);
+    ref.push(2208);
+
+//len_list: 132
+//==============================
+
+
+//==============================
+    submit.push(1619);
+    ref.push(1619);
+
+//len_list: 133
+//==============================
+
+
+//==============================
+    submit.push(4914);
+    ref.push(4914);
+
+//len_list: 134
+//==============================
+
+
+//==============================
+    submit.push(6026);
+    ref.push(6026);
+
+//len_list: 135
+//==============================
+
+
+//==============================
+    submit.push(7274);
+    ref.push(7274);
+
+//len_list: 136
+//==============================
+
+
+//==============================
+    submit.push(6502);
+    ref.push(6502);
+
+//len_list: 137
+//==============================
+
+
+//==============================
+    submit.push(7654);
+    ref.push(7654);
+
+//len_list: 138
+//==============================
+
+
+//==============================
+    submit.push(2332);
+    ref.push(2332);
+
+//len_list: 139
+//==============================
+
+
+//==============================
+    submit.push(5033);
+    ref.push(5033);
+
+//len_list: 140
+//==============================
+
+
+//==============================
+    submit.push(7031);
+    ref.push(7031);
+
+//len_list: 141
+//==============================
+
+
+//==============================
+    submit.push(7001);
+    ref.push(7001);
+
+//len_list: 142
+//==============================
+
+
+//==============================
+    submit.push(4308);
+    ref.push(4308);
+
+//len_list: 143
+//==============================
+
+
+//==============================
+    submit.push(6805);
+    ref.push(6805);
+
+//len_list: 144
+//==============================
+
+
+//==============================
+    submit.push(2714);
+    ref.push(2714);
+
+//len_list: 145
+//==============================
+
+
+//==============================
+    submit.push(6750);
+    ref.push(6750);
+
+//len_list: 146
+//==============================
+
+
+//==============================
+    submit.push(3238);
+    ref.push(3238);
+
+//len_list: 147
+//==============================
+
+
+//==============================
+    submit.push(8246);
+    ref.push(8246);
+
+//len_list: 148
+//==============================
+
+
+//==============================
+    submit.push(9766);
+    ref.push(9766);
+
+//len_list: 149
+//==============================
+
+
+//==============================
+    submit.push(399);
+    ref.push(399);
+
+//len_list: 150
+//==============================
+
+
+//==============================
+    submit.push(6964);
+    ref.push(6964);
+
+//len_list: 151
+//==============================
+
+
+//==============================
+    submit.push(5581);
+    ref.push(5581);
+
+//len_list: 152
+//==============================
+
+
+//==============================
+    submit.push(5342);
+    ref.push(5342);
+
+//len_list: 153
+//==============================
+
+
+//==============================
+    submit.push(8508);
+    ref.push(8508);
+
+//len_list: 154
+//==============================
+
+
+//==============================
+    submit.push(4827);
+    ref.push(4827);
+
+//len_list: 155
+//==============================
+
+
+//==============================
+    submit.push(1395);
+    ref.push(1395);
+
+//len_list: 156
+//==============================
+
+
+//==============================
+    submit.push(8265);
+    ref.push(8265);
+
+//len_list: 157
+//==============================
+
+
+//==============================
+    submit.push(517);
+    ref.push(517);
+
+//len_list: 158
+//==============================
+
+
+//==============================
+    submit.push(7963);
+    ref.push(7963);
+
+//len_list: 159
+//==============================
+
+
+//==============================
+    submit.push(7153);
+    ref.push(7153);
+
+//len_list: 160
+//==============================
+
+
+//==============================
+    submit.push(3380);
+    ref.push(3380);
+
+//len_list: 161
+//==============================
+
+
+//==============================
+    submit.push(3852);
+    ref.push(3852);
+
+//len_list: 162
+//==============================
+
+
+//==============================
+    submit.push(4031);
+    ref.push(4031);
+
+//len_list: 163
+//==============================
+
+
+//==============================
+    submit.push(4240);
+    ref.push(4240);
+
+//len_list: 164
+//==============================
+
+
+//==============================
+    submit.push(3590);
+    ref.push(3590);
+
+//len_list: 165
+//==============================
+
+
+//==============================
+    submit.push(1588);
+    ref.push(1588);
+
+//len_list: 166
+//==============================
+
+
+//==============================
+    submit.push(6465);
+    ref.push(6465);
+
+//len_list: 167
+//==============================
+
+
+//==============================
+    submit.push(1976);
+    ref.push(1976);
+
+//len_list: 168
+//==============================
+
+
+//==============================
+    submit.push(5143);
+    ref.push(5143);
+
+//len_list: 169
+//==============================
+
+
+//==============================
+    submit.push(1868);
+    ref.push(1868);
+
+//len_list: 170
+//==============================
+
+
+//==============================
+    submit.push(1562);
+    ref.push(1562);
+
+//len_list: 171
+//==============================
+
+
+//==============================
+    submit.push(8847);
+    ref.push(8847);
+
+//len_list: 172
+//==============================
+
+
+//==============================
+    submit.push(5641);
+    ref.push(5641);
+
+//len_list: 173
+//==============================
+
+
+//==============================
+    submit.push(9007);
+    ref.push(9007);
+
+//len_list: 174
+//==============================
+
+
+//==============================
+    submit.push(5364);
+    ref.push(5364);
+
+//len_list: 175
+//==============================
+
+
+//==============================
+    submit.push(4504);
+    ref.push(4504);
+
+//len_list: 176
+//==============================
+
+
+//==============================
+    submit.push(5305);
+    ref.push(5305);
+
+//len_list: 177
+//==============================
+
+
+//==============================
+    submit.push(8268);
+    ref.push(8268);
+
+//len_list: 178
+//==============================
+
+
+//==============================
+    submit.push(6719);
+    ref.push(6719);
+
+//len_list: 179
+//==============================
+
+
+//==============================
+    submit.push(1109);
+    ref.push(1109);
+
+//len_list: 180
+//==============================
+
+
+//==============================
+    submit.push(2449);
+    ref.push(2449);
+
+//len_list: 181
+//==============================
+
+
+//==============================
+    submit.push(9737);
+    ref.push(9737);
+
+//len_list: 182
+//==============================
+
+
+//==============================
+    submit.push(6374);
+    ref.push(6374);
+
+//len_list: 183
+//==============================
+
+
+//==============================
+    submit.push(6053);
+    ref.push(6053);
+
+//len_list: 184
+//==============================
+
+
+//==============================
+    submit.push(7182);
+    ref.push(7182);
+
+//len_list: 185
+//==============================
+
+
+//==============================
+    submit.push(8625);
+    ref.push(8625);
+
+//len_list: 186
+//==============================
+
+
+//==============================
+    submit.push(8946);
+    ref.push(8946);
+
+//len_list: 187
+//==============================
+
+
+//==============================
+    submit.push(2282);
+    ref.push(2282);
+
+//len_list: 188
+//==============================
+
+
+//==============================
+    submit.push(4599);
+    ref.push(4599);
+
+//len_list: 189
+//==============================
+
+
+//==============================
+    submit.push(6033);
+    ref.push(6033);
+
+//len_list: 190
+//==============================
+
+
+//==============================
+    submit.push(7063);
+    ref.push(7063);
+
+//len_list: 191
+//==============================
+
+
+//==============================
+    submit.push(8097);
+    ref.push(8097);
+
+//len_list: 192
+//==============================
+
+
+//==============================
+    submit.push(8519);
+    ref.push(8519);
+
+//len_list: 193
+//==============================
+
+
+//==============================
+    submit.push(163);
+    ref.push(163);
+
+//len_list: 194
+//==============================
+
+
+//==============================
+    submit.push(5898);
+    ref.push(5898);
+
+//len_list: 195
+//==============================
+
+
+//==============================
+    submit.push(233);
+    ref.push(233);
+
+//len_list: 196
+//==============================
+
+
+//==============================
+    submit.push(1016);
+    ref.push(1016);
+
+//len_list: 197
+//==============================
+
+
+//==============================
+    submit.push(798);
+    ref.push(798);
+
+//len_list: 198
+//==============================
+
+
+//==============================
+    submit.push(2058);
+    ref.push(2058);
+
+//len_list: 199
+//==============================
+
+
+//==============================
+    submit.push(2190);
+    ref.push(2190);
+
+//len_list: 200
+//==============================
+
+
+//==============================
+    submit.push(8667);
+    ref.push(8667);
+
+//len_list: 201
+//==============================
+
+
+//==============================
+    submit.push(3857);
+    ref.push(3857);
+
+//len_list: 202
+//==============================
+
+
+//==============================
+    submit.push(961);
+    ref.push(961);
+
+//len_list: 203
+//==============================
+
+
+//==============================
+    submit.push(8390);
+    ref.push(8390);
+
+//len_list: 204
+//==============================
+
+
+//==============================
+    submit.push(6530);
+    ref.push(6530);
+
+//len_list: 205
+//==============================
+
+
+//==============================
+    submit.push(4928);
+    ref.push(4928);
+
+//len_list: 206
+//==============================
+
+
+//==============================
+    submit.push(1641);
+    ref.push(1641);
+
+//len_list: 207
+//==============================
+
+
+//==============================
+    submit.push(3066);
+    ref.push(3066);
+
+//len_list: 208
+//==============================
+
+
+//==============================
+    submit.push(6254);
+    ref.push(6254);
+
+//len_list: 209
+//==============================
+
+
+//==============================
+    submit.push(904);
+    ref.push(904);
+
+//len_list: 210
+//==============================
+
+
+//==============================
+    submit.push(7656);
+    ref.push(7656);
+
+//len_list: 211
+//==============================
+
+
+//==============================
+    submit.push(4061);
+    ref.push(4061);
+
+//len_list: 212
+//==============================
+
+
+//==============================
+    submit.push(5959);
+    ref.push(5959);
+
+//len_list: 213
+//==============================
+
+
+//==============================
+    submit.push(7276);
+    ref.push(7276);
+
+//len_list: 214
+//==============================
+
+
+//==============================
+    submit.push(5360);
+    ref.push(5360);
+
+//len_list: 215
+//==============================
+
+
+//==============================
+    submit.push(7494);
+    ref.push(7494);
+
+//len_list: 216
+//==============================
+
+
+//==============================
+    submit.push(5727);
+    ref.push(5727);
+
+//len_list: 217
+//==============================
+
+
+//==============================
+    submit.push(6639);
+    ref.push(6639);
+
+//len_list: 218
+//==============================
+
+
+//==============================
+    submit.push(6312);
+    ref.push(6312);
+
+//len_list: 219
+//==============================
+
+
+//==============================
+    submit.push(4620);
+    ref.push(4620);
+
+//len_list: 220
+//==============================
+
+
+//==============================
+    submit.push(2578);
+    ref.push(2578);
+
+//len_list: 221
+//==============================
+
+
+//==============================
+    submit.push(8852);
+    ref.push(8852);
+
+//len_list: 222
+//==============================
+
+
+//==============================
+    submit.push(8802);
+    ref.push(8802);
+
+//len_list: 223
+//==============================
+
+
+//==============================
+    submit.push(7701);
+    ref.push(7701);
+
+//len_list: 224
+//==============================
+
+
+//==============================
+    submit.push(5951);
+    ref.push(5951);
+
+//len_list: 225
+//==============================
+
+
+//==============================
+    submit.push(6447);
+    ref.push(6447);
+
+//len_list: 226
+//==============================
+
+
+//==============================
+    submit.push(2025);
+    ref.push(2025);
+
+//len_list: 227
+//==============================
+
+
+//==============================
+    submit.push(417);
+    ref.push(417);
+
+//len_list: 228
+//==============================
+
+
+//==============================
+    submit.push(4134);
+    ref.push(4134);
+
+//len_list: 229
+//==============================
+
+
+//==============================
+    submit.push(5851);
+    ref.push(5851);
+
+//len_list: 230
+//==============================
+
+
+//==============================
+    submit.push(4552);
+    ref.push(4552);
+
+//len_list: 231
+//==============================
+
+
+//==============================
+    submit.push(8996);
+    ref.push(8996);
+
+//len_list: 232
+//==============================
+
+
+//==============================
+    submit.push(3317);
+    ref.push(3317);
+
+//len_list: 233
+//==============================
+
+
+//==============================
+    submit.push(5834);
+    ref.push(5834);
+
+//len_list: 234
+//==============================
+
+
+//==============================
+    submit.push(1123);
+    ref.push(1123);
+
+//len_list: 235
+//==============================
+
+
+//==============================
+    submit.push(7918);
+    ref.push(7918);
+
+//len_list: 236
+//==============================
+
+
+//==============================
+    submit.push(5813);
+    ref.push(5813);
+
+//len_list: 237
+//==============================
+
+
+//==============================
+    submit.push(70);
+    ref.push(70);
+
+//len_list: 238
+//==============================
+
+
+//==============================
+    submit.push(8935);
+    ref.push(8935);
+
+//len_list: 239
+//==============================
+
+
+//==============================
+    submit.push(7816);
+    ref.push(7816);
+
+//len_list: 240
+//==============================
+
+
+//==============================
+    submit.push(3354);
+    ref.push(3354);
+
+//len_list: 241
+//==============================
+
+
+//==============================
+    submit.push(482);
+    ref.push(482);
+
+//len_list: 242
+//==============================
+
+
+//==============================
+    submit.push(7442);
+    ref.push(7442);
+
+//len_list: 243
+//==============================
+
+
+//==============================
+    submit.push(8636);
+    ref.push(8636);
+
+//len_list: 244
+//==============================
+
+
+//==============================
+    submit.push(769);
+    ref.push(769);
+
+//len_list: 245
+//==============================
+
+
+//==============================
+    submit.push(8526);
+    ref.push(8526);
+
+//len_list: 246
+//==============================
+
+
+//==============================
+    submit.push(362);
+    ref.push(362);
+
+//len_list: 247
+//==============================
+
+
+//==============================
+    submit.push(5109);
+    ref.push(5109);
+
+//len_list: 248
+//==============================
+
+
+//==============================
+    submit.push(1733);
+    ref.push(1733);
+
+//len_list: 249
+//==============================
+
+
+//==============================
+    submit.push(8798);
+    ref.push(8798);
+
+//len_list: 250
+//==============================
+
+
+//==============================
+    submit.push(8214);
+    ref.push(8214);
+
+//len_list: 251
+//==============================
+
+
+//==============================
+    submit.push(5220);
+    ref.push(5220);
+
+//len_list: 252
+//==============================
+
+
+//==============================
+    submit.push(4241);
+    ref.push(4241);
+
+//len_list: 253
+//==============================
+
+
+//==============================
+    submit.push(5111);
+    ref.push(5111);
+
+//len_list: 254
+//==============================
+
+
+//==============================
+    submit.push(4333);
+    ref.push(4333);
+
+//len_list: 255
+//==============================
+
+
+//==============================
+    submit.push(6404);
+    ref.push(6404);
+
+//len_list: 256
+//==============================
+
+
+//==============================
+    submit.push(814);
+    ref.push(814);
+
+//len_list: 257
+//==============================
+
+
+//==============================
+    submit.push(4753);
+    ref.push(4753);
+
+//len_list: 258
+//==============================
+
+
+//==============================
+    submit.push(1821);
+    ref.push(1821);
+
+//len_list: 259
+//==============================
+
+
+//==============================
+    submit.push(3675);
+    ref.push(3675);
+
+//len_list: 260
+//==============================
+
+
+//==============================
+    submit.push(4732);
+    ref.push(4732);
+
+//len_list: 261
+//==============================
+
+
+//==============================
+    submit.push(2321);
+    ref.push(2321);
+
+//len_list: 262
+//==============================
+
+
+//==============================
+    submit.push(969);
+    ref.push(969);
+
+//len_list: 263
+//==============================
+
+
+//==============================
+    submit.push(674);
+    ref.push(674);
+
+//len_list: 264
+//==============================
+
+
+//==============================
+    submit.push(6903);
+    ref.push(6903);
+
+//len_list: 265
+//==============================
+
+
+//==============================
+    submit.push(5152);
+    ref.push(5152);
+
+//len_list: 266
+//==============================
+
+
+//==============================
+    submit.push(9477);
+    ref.push(9477);
+
+//len_list: 267
+//==============================
+
+
+//==============================
+    submit.push(4031);
+    ref.push(4031);
+
+//len_list: 268
+//==============================
+
+
+//==============================
+    submit.push(4662);
+    ref.push(4662);
+
+//len_list: 269
+//==============================
+
+
+//==============================
+    submit.push(1465);
+    ref.push(1465);
+
+//len_list: 270
+//==============================
+
+
+//==============================
+    submit.push(8401);
+    ref.push(8401);
+
+//len_list: 271
+//==============================
+
+
+//==============================
+    submit.push(3807);
+    ref.push(3807);
+
+//len_list: 272
+//==============================
+
+
+//==============================
+    submit.push(739);
+    ref.push(739);
+
+//len_list: 273
+//==============================
+
+
+//==============================
+    submit.push(9687);
+    ref.push(9687);
+
+//len_list: 274
+//==============================
+
+
+//==============================
+    submit.push(1105);
+    ref.push(1105);
+
+//len_list: 275
+//==============================
+
+
+//==============================
+    submit.push(1267);
+    ref.push(1267);
+
+//len_list: 276
+//==============================
+
+
+//==============================
+    submit.push(8067);
+    ref.push(8067);
+
+//len_list: 277
+//==============================
+
+
+//==============================
+    submit.push(6259);
+    ref.push(6259);
+
+//len_list: 278
+//==============================
+
+
+//==============================
+    submit.push(4830);
+    ref.push(4830);
+
+//len_list: 279
+//==============================
+
+
+//==============================
+    submit.push(8540);
+    ref.push(8540);
+
+//len_list: 280
+//==============================
+
+
+//==============================
+    submit.push(2157);
+    ref.push(2157);
+
+//len_list: 281
+//==============================
+
+
+//==============================
+    submit.push(5431);
+    ref.push(5431);
+
+//len_list: 282
+//==============================
+
+
+//==============================
+    submit.push(6602);
+    ref.push(6602);
+
+//len_list: 283
+//==============================
+
+
+//==============================
+    submit.push(8904);
+    ref.push(8904);
+
+//len_list: 284
+//==============================
+
+
+//==============================
+    submit.push(3122);
+    ref.push(3122);
+
+//len_list: 285
+//==============================
+
+
+//==============================
+    submit.push(4761);
+    ref.push(4761);
+
+//len_list: 286
+//==============================
+
+
+//==============================
+    submit.push(7278);
+    ref.push(7278);
+
+//len_list: 287
+//==============================
+
+
+//==============================
+    submit.push(229);
+    ref.push(229);
+
+//len_list: 288
+//==============================
+
+
+//==============================
+    submit.push(3389);
+    ref.push(3389);
+
+//len_list: 289
+//==============================
+
+
+//==============================
+    submit.push(7062);
+    ref.push(7062);
+
+//len_list: 290
+//==============================
+
+
+//==============================
+    submit.push(2841);
+    ref.push(2841);
+
+//len_list: 291
+//==============================
+
+
+//==============================
+    submit.push(1702);
+    ref.push(1702);
+
+//len_list: 292
+//==============================
+
+
+//==============================
+    submit.push(74);
+    ref.push(74);
+
+//len_list: 293
+//==============================
+
+
+//==============================
+    submit.push(3335);
+    ref.push(3335);
+
+//len_list: 294
+//==============================
+
+
+//==============================
+    submit.push(4837);
+    ref.push(4837);
+
+//len_list: 295
+//==============================
+
+
+//==============================
+    submit.push(5595);
+    ref.push(5595);
+
+//len_list: 296
+//==============================
+
+
+//==============================
+    submit.push(7663);
+    ref.push(7663);
+
+//len_list: 297
+//==============================
+
+
+//==============================
+    submit.push(8087);
+    ref.push(8087);
+
+//len_list: 298
+//==============================
+
+
+//==============================
+    submit.push(1778);
+    ref.push(1778);
+
+//len_list: 299
+//==============================
+
+
+//==============================
+    submit.push(9340);
+    ref.push(9340);
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(288);
+    ref.push(288);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 1
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 2
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 3
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 4
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 5
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 6
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 7
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(9198);
+    ref.push(9198);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 8
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(5322);
+    ref.push(5322);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 9
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(5203);
+    ref.push(5203);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 10
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(2279);
+    ref.push(2279);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 11
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 12
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 13
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(8086);
+    ref.push(8086);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(1689);
+    ref.push(1689);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(1959);
+    ref.push(1959);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 14
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 15
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(2419);
+    ref.push(2419);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 16
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 17
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 18
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 19
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 20
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 21
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 22
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 23
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 24
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6518);
+    ref.push(6518);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 25
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 26
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(733);
+    ref.push(733);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 27
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 28
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(8175);
+    ref.push(8175);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 29
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 30
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 31
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 32
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 33
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 34
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 35
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 36
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 37
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 38
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 39
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(7568);
+    ref.push(7568);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 40
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 41
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(7772);
+    ref.push(7772);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 42
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(5725);
+    ref.push(5725);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(3895);
+    ref.push(3895);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 43
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 44
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 45
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 46
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 47
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 48
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 49
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 50
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 51
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 52
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(1359);
+    ref.push(1359);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 53
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 54
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 55
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 56
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(3126);
+    ref.push(3126);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(6436);
+    ref.push(6436);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 57
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 58
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 59
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 60
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 61
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 62
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 63
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 64
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 65
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 66
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(6183);
+    ref.push(6183);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 67
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(762);
+    ref.push(762);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(2047);
+    ref.push(2047);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 68
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 69
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(6342);
+    ref.push(6342);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 70
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(9524);
+    ref.push(9524);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 71
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 72
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 73
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 74
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 75
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 76
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 77
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 78
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(6824);
+    ref.push(6824);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 79
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 80
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(8174);
+    ref.push(8174);
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 81
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 82
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 83
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(5619);
+    ref.push(5619);
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.push(4415);
+    ref.push(4415);
+
+//len_list: 311
+//==============================
+
+
+//==============================
+    submit.push(9889);
+    ref.push(9889);
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 84
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(6039);
+    ref.push(6039);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(2451);
+    ref.push(2451);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 85
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 86
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 87
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.push(4290);
+    ref.push(4290);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(9300);
+    ref.push(9300);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 88
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 89
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 90
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.push(9244);
+    ref.push(9244);
+
+//len_list: 316
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 91
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 316
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.push(2427);
+    ref.push(2427);
+
+//len_list: 316
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 92
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 93
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 94
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 95
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 96
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 97
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 98
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(2287);
+    ref.push(2287);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 99
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 100
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.push(581);
+    ref.push(581);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 101
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 102
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 103
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(2638);
+    ref.push(2638);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 104
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 105
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.push(3601);
+    ref.push(3601);
+
+//len_list: 316
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 106
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 316
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 107
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 108
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 109
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 110
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 111
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 112
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(6409);
+    ref.push(6409);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 113
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 114
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 115
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 116
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 117
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(3838);
+    ref.push(3838);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 118
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 119
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(8686);
+    ref.push(8686);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 120
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 121
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 122
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(8378);
+    ref.push(8378);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 123
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.push(8520);
+    ref.push(8520);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(8028);
+    ref.push(8028);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 124
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 125
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 126
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 127
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 128
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 129
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 130
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 131
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 132
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 133
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 134
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 135
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 136
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.push(3287);
+    ref.push(3287);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 137
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 138
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 139
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 140
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 141
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 142
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 143
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.push(9576);
+    ref.push(9576);
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.push(2599);
+    ref.push(2599);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 144
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 145
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 146
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 147
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 148
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 313
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 149
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 150
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 151
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 152
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 153
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 154
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 155
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 156
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 157
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.push(7852);
+    ref.push(7852);
+
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 158
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 159
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 160
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 311
+//==============================
+
+
+//==============================
+    submit.push(9156);
+    ref.push(9156);
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 311
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(8804);
+    ref.push(8804);
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 161
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 162
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 163
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 164
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 165
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 166
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 167
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 168
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 169
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 170
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 171
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(1492);
+    ref.push(1492);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6824);
+    ref.push(6824);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 172
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 173
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 174
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(504);
+    ref.push(504);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 175
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 176
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 177
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 178
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 179
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 180
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 181
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 182
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 183
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(2974);
+    ref.push(2974);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 184
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 185
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 186
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 187
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 188
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(9214);
+    ref.push(9214);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 189
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 190
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(742);
+    ref.push(742);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 191
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 192
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 193
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(5492);
+    ref.push(5492);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 194
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 195
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 196
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 197
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 198
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 199
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 200
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(680);
+    ref.push(680);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 201
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6965);
+    ref.push(6965);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 202
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 203
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 204
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 205
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(7846);
+    ref.push(7846);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(5044);
+    ref.push(5044);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 206
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(8114);
+    ref.push(8114);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(7416);
+    ref.push(7416);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 207
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 208
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 209
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 210
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 211
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 212
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6615);
+    ref.push(6615);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 213
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6657);
+    ref.push(6657);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(9105);
+    ref.push(9105);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 214
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 215
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 216
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 217
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 218
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 219
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(9168);
+    ref.push(9168);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 220
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 221
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(4929);
+    ref.push(4929);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 222
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 223
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 224
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(8943);
+    ref.push(8943);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 225
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 226
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(9629);
+    ref.push(9629);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 227
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 228
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 229
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(867);
+    ref.push(867);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(6868);
+    ref.push(6868);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 230
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 231
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 232
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(4565);
+    ref.push(4565);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 233
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 234
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 235
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(7020);
+    ref.push(7020);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 236
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 237
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 238
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 239
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 240
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 241
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 242
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(5106);
+    ref.push(5106);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 243
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(1271);
+    ref.push(1271);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 244
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 245
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 246
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 247
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 248
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(2971);
+    ref.push(2971);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 249
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 250
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(8079);
+    ref.push(8079);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(4086);
+    ref.push(4086);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 251
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 252
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 253
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(4307);
+    ref.push(4307);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(8930);
+    ref.push(8930);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(8132);
+    ref.push(8132);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 254
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 255
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 256
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 257
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 258
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(5552);
+    ref.push(5552);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 259
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 260
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 261
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 262
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 263
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 264
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 265
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 266
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 267
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 268
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 269
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 270
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(3174);
+    ref.push(3174);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(7221);
+    ref.push(7221);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 271
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 272
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 273
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(9912);
+    ref.push(9912);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(5782);
+    ref.push(5782);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 274
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(4010);
+    ref.push(4010);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(6307);
+    ref.push(6307);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(8358);
+    ref.push(8358);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 275
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 276
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(6754);
+    ref.push(6754);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 277
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 278
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(1529);
+    ref.push(1529);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 279
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 280
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 281
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 282
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 283
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 284
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(2512);
+    ref.push(2512);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 285
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(7250);
+    ref.push(7250);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(9848);
+    ref.push(9848);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 286
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 287
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 288
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 289
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(9380);
+    ref.push(9380);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 290
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 291
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 292
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 293
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 294
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 295
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 296
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 297
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 298
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 299
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(7703);
+    ref.push(7703);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 300
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 301
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 302
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 303
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(3943);
+    ref.push(3943);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(8906);
+    ref.push(8906);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(8132);
+    ref.push(8132);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(5001);
+    ref.push(5001);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 304
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(3460);
+    ref.push(3460);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 305
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(137);
+    ref.push(137);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(7957);
+    ref.push(7957);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 306
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 307
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 308
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 309
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 310
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 311
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 312
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 313
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(4999);
+    ref.push(4999);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 314
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 315
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(642);
+    ref.push(642);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(4781);
+    ref.push(4781);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(6324);
+    ref.push(6324);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 316
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 317
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 318
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 319
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 320
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 321
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 322
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 323
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 324
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 325
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 326
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 327
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 328
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(2359);
+    ref.push(2359);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(4146);
+    ref.push(4146);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(6603);
+    ref.push(6603);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 329
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 330
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(7525);
+    ref.push(7525);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 331
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 332
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 333
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 334
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(325);
+    ref.push(325);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 335
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 336
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 337
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 338
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(590);
+    ref.push(590);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 339
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 340
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 341
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 342
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 343
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 344
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 345
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(1491);
+    ref.push(1491);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 346
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 347
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 348
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 349
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(9264);
+    ref.push(9264);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 350
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 351
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 352
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 353
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 354
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(1468);
+    ref.push(1468);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 355
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 356
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(6588);
+    ref.push(6588);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(9723);
+    ref.push(9723);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 357
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 358
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(3403);
+    ref.push(3403);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(7521);
+    ref.push(7521);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 359
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(9484);
+    ref.push(9484);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(4513);
+    ref.push(4513);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 360
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 361
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 362
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6391);
+    ref.push(6391);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 363
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 364
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 365
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 366
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(8794);
+    ref.push(8794);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 367
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 368
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(4890);
+    ref.push(4890);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 369
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6915);
+    ref.push(6915);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(7452);
+    ref.push(7452);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 370
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 371
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(256);
+    ref.push(256);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 372
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 373
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 374
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 375
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 376
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 377
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 378
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 300
+//==============================
+
+
+//==============================
+    submit.push(2982);
+    ref.push(2982);
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 379
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 380
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 381
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 382
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 383
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(4304);
+    ref.push(4304);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 384
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 385
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 386
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 301
+//==============================
+
+
+//==============================
+    submit.push(3575);
+    ref.push(3575);
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 387
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(2764);
+    ref.push(2764);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(480);
+    ref.push(480);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(6191);
+    ref.push(6191);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 388
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 389
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 302
+//==============================
+
+
+//==============================
+    submit.push(7611);
+    ref.push(7611);
+
+//len_list: 303
+//==============================
+
+
+//==============================
+    submit.push(634);
+    ref.push(634);
+
+//len_list: 304
+//==============================
+
+
+//==============================
+    submit.push(1712);
+    ref.push(1712);
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 390
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 391
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 392
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 393
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 394
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 395
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 396
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 397
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 398
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(6263);
+    ref.push(6263);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 399
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 400
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 401
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 402
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 403
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 404
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 405
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(7991);
+    ref.push(7991);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(2059);
+    ref.push(2059);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(7165);
+    ref.push(7165);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(9622);
+    ref.push(9622);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 406
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(4168);
+    ref.push(4168);
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 407
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(1686);
+    ref.push(1686);
+
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 408
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 409
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 410
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(9405);
+    ref.push(9405);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 411
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 412
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 413
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 414
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(5773);
+    ref.push(5773);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 415
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 416
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(3373);
+    ref.push(3373);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 417
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(5268);
+    ref.push(5268);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 418
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 419
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 305
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 420
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 305
+//==============================
+
+
+//==============================
+    submit.push(5192);
+    ref.push(5192);
+
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 421
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 422
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 306
+//==============================
+
+
+//==============================
+    submit.push(2974);
+    ref.push(2974);
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 423
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 424
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(9481);
+    ref.push(9481);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 425
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 426
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 427
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 428
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 429
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 430
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 431
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 432
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 433
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 434
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 307
+//==============================
+
+
+//==============================
+    submit.push(6142);
+    ref.push(6142);
+
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 435
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 436
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 437
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 438
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 439
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 308
+//==============================
+
+
+//==============================
+    submit.push(4471);
+    ref.push(4471);
+
+//len_list: 309
+//==============================
+
+
+//==============================
+    submit.push(9651);
+    ref.push(9651);
+
+//len_list: 310
+//==============================
+
+
+//==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
 //num_require: 440
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 310
 //==============================
 
 
@@ -6393,25 +8794,33 @@
     ret_ref = ref.size();
 //num_require: 441
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 442
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
-//num_require: 442
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
 //num_require: 443
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.push(2522);
+    ref.push(2522);
+
+//len_list: 311
 //==============================
 
 
@@ -6420,24 +8829,16 @@
     ret_ref = ref.top();
 //num_require: 444
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 311
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 445
     REQUIRE( ret_ref == ret_submit);
-//len_list: 53
+//len_list: 311
 //==============================
 
 
@@ -6446,7 +8847,7 @@
     ret_ref = ref.top();
 //num_require: 446
     REQUIRE( ret_ref == ret_submit);
-//len_list: 53
+//len_list: 311
 //==============================
 
 
@@ -6455,15 +8856,7 @@
     ret_ref = ref.top();
 //num_require: 447
     REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 52
+//len_list: 311
 //==============================
 
 
@@ -6472,7 +8865,7 @@
     ret_ref = ref.empty();
 //num_require: 448
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 311
 //==============================
 
 
@@ -6481,7 +8874,7 @@
     ret_ref = ref.size();
 //num_require: 449
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 311
 //==============================
 
 
@@ -6490,15 +8883,7 @@
     ret_ref = ref.size();
 //num_require: 450
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.push(2850);
-    ref.push(2850);
-
-//len_list: 53
+//len_list: 311
 //==============================
 
 
@@ -6506,25 +8891,33 @@
     submit.pop();
     ref.pop();
 
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 451
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 310
 //==============================
 
 
 //==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
+//num_require: 451
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 310
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 452
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 310
+//==============================
+
+
+//==============================
+    submit.push(3119);
+    ref.push(3119);
+
+//len_list: 311
 //==============================
 
 
@@ -6533,73 +8926,57 @@
     ret_ref = ref.empty();
 //num_require: 453
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 311
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    submit.push(247);
+    ref.push(247);
+
+//len_list: 312
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 454
     REQUIRE( ret_ref == ret_submit);
-//len_list: 52
+//len_list: 312
 //==============================
 
 
 //==============================
-    submit.push(2176);
-    ref.push(2176);
+    submit.push(381);
+    ref.push(381);
 
-//len_list: 53
+//len_list: 313
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    submit.push(5747);
+    ref.push(5747);
+
+//len_list: 314
+//==============================
+
+
+//==============================
+    submit.push(9149);
+    ref.push(9149);
+
+//len_list: 315
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 455
     REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.push(566);
-    ref.push(566);
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.push(8470);
-    ref.push(8470);
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(6424);
-    ref.push(6424);
-
-//len_list: 54
+//len_list: 315
 //==============================
 
 
@@ -6608,15 +8985,7 @@
     ret_ref = ref.empty();
 //num_require: 456
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.push(7930);
-    ref.push(7930);
-
-//len_list: 55
+//len_list: 315
 //==============================
 
 
@@ -6625,33 +8994,41 @@
     ret_ref = ref.empty();
 //num_require: 457
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 458
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 315
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 458
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 315
+//==============================
+
+
+//==============================
+    submit.push(1359);
+    ref.push(1359);
+
+//len_list: 316
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 459
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 316
+//==============================
+
+
+//==============================
+    submit.push(2225);
+    ref.push(2225);
+
+//len_list: 317
 //==============================
 
 
@@ -6660,25 +9037,57 @@
     ret_ref = ref.empty();
 //num_require: 460
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 317
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 461
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+    submit.push(7921);
+    ref.push(7921);
+
+//len_list: 318
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 461
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 318
+//==============================
+
+
+//==============================
+    submit.push(744);
+    ref.push(744);
+
+//len_list: 319
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 318
+//==============================
+
+
+//==============================
+    submit.push(6849);
+    ref.push(6849);
+
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 462
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
+//len_list: 319
 //==============================
 
 
@@ -6687,15 +9096,7 @@
     ret_ref = ref.empty();
 //num_require: 463
     REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
+//len_list: 319
 //==============================
 
 
@@ -6704,50 +9105,50 @@
     ret_ref = ref.size();
 //num_require: 464
     REQUIRE( ret_ref == ret_submit);
-//len_list: 53
+//len_list: 319
 //==============================
 
 
 //==============================
-    submit.push(2204);
-    ref.push(2204);
+    submit.push(1679);
+    ref.push(1679);
 
-//len_list: 54
+//len_list: 320
 //==============================
 
 
 //==============================
-    submit.push(7043);
-    ref.push(7043);
-
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 465
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 320
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 466
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+    submit.pop();
+    ref.pop();
+
+//len_list: 319
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 466
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 467
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 319
 //==============================
 
 
@@ -6756,76 +9157,52 @@
     ret_ref = ref.top();
 //num_require: 468
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 319
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 469
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 470
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 319
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
-//num_require: 471
+//num_require: 470
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.push(5392);
-    ref.push(5392);
-
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 472
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 319
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 471
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 472
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 473
     REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    submit.push(6016);
-    ref.push(6016);
-
-//len_list: 56
+//len_list: 319
 //==============================
 
 
@@ -6834,33 +9211,25 @@
     ret_ref = ref.empty();
 //num_require: 474
     REQUIRE( ret_ref == ret_submit);
-//len_list: 56
+//len_list: 319
 //==============================
 
 
 //==============================
-    submit.push(9229);
-    ref.push(9229);
-
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 475
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 476
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
 //==============================
 
 
@@ -6869,7 +9238,7 @@
     ret_ref = ref.size();
 //num_require: 477
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
 //==============================
 
 
@@ -6878,25 +9247,33 @@
     ret_ref = ref.top();
 //num_require: 478
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 479
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 480
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 319
+//==============================
+
+
+//==============================
+    submit.push(4297);
+    ref.push(4297);
+
+//len_list: 320
 //==============================
 
 
@@ -6905,7 +9282,23 @@
     ret_ref = ref.size();
 //num_require: 481
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 320
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 319
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 318
 //==============================
 
 
@@ -6914,32 +9307,24 @@
     ret_ref = ref.empty();
 //num_require: 482
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 318
 //==============================
 
 
 //==============================
-    submit.push(8826);
-    ref.push(8826);
-
-//len_list: 58
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 483
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
+//len_list: 318
+//==============================
+
+
+//==============================
+    submit.push(6209);
+    ref.push(6209);
+
+//len_list: 319
 //==============================
 
 
@@ -6948,15 +9333,7 @@
     ret_ref = ref.size();
 //num_require: 484
     REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    submit.push(3558);
-    ref.push(3558);
-
-//len_list: 58
+//len_list: 319
 //==============================
 
 
@@ -6965,128 +9342,136 @@
     ret_ref = ref.top();
 //num_require: 485
     REQUIRE( ret_ref == ret_submit);
-//len_list: 58
+//len_list: 319
 //==============================
 
 
 //==============================
-    submit.push(7703);
-    ref.push(7703);
+    submit.pop();
+    ref.pop();
 
-//len_list: 59
+//len_list: 318
+//==============================
+
+
+//==============================
+    submit.push(8223);
+    ref.push(8223);
+
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 486
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 487
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 488
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 319
+//==============================
+
+
+//==============================
+    submit.push(2963);
+    ref.push(2963);
+
+//len_list: 320
+//==============================
+
+
+//==============================
+    submit.push(8648);
+    ref.push(8648);
+
+//len_list: 321
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 320
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
-//num_require: 486
+//num_require: 489
     REQUIRE( ret_ref == ret_submit);
-//len_list: 59
+//len_list: 320
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
-//num_require: 487
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 488
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    submit.push(4022);
-    ref.push(4022);
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 489
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
 //num_require: 490
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 320
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
+    submit.push(2583);
+    ref.push(2583);
 
-//len_list: 59
+//len_list: 321
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 491
     REQUIRE( ret_ref == ret_submit);
-//len_list: 59
+//len_list: 321
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 492
     REQUIRE( ret_ref == ret_submit);
-//len_list: 59
+//len_list: 321
 //==============================
 
 
 //==============================
-    submit.push(4914);
-    ref.push(4914);
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 493
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 321
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 494
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 59
+//len_list: 321
 //==============================
 
 
@@ -7095,33 +9480,25 @@
     ret_ref = ref.empty();
 //num_require: 495
     REQUIRE( ret_ref == ret_submit);
-//len_list: 59
+//len_list: 321
 //==============================
 
 
 //==============================
-    submit.push(5715);
-    ref.push(5715);
-
-//len_list: 60
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 496
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 321
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
-//num_require: 496
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
 //num_require: 497
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 321
 //==============================
 
 
@@ -7130,7 +9507,7 @@
     ret_ref = ref.top();
 //num_require: 498
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 321
 //==============================
 
 
@@ -7139,25 +9516,33 @@
     ret_ref = ref.top();
 //num_require: 499
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 500
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 321
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 500
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 321
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 501
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 321
+//==============================
+
+
+//==============================
+    submit.push(3608);
+    ref.push(3608);
+
+//len_list: 322
 //==============================
 
 
@@ -7166,7 +9551,7 @@
     ret_ref = ref.empty();
 //num_require: 502
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 322
 //==============================
 
 
@@ -7175,84 +9560,76 @@
     ret_ref = ref.empty();
 //num_require: 503
     REQUIRE( ret_ref == ret_submit);
-//len_list: 60
+//len_list: 322
 //==============================
 
 
 //==============================
-    submit.push(3082);
-    ref.push(3082);
+    submit.push(160);
+    ref.push(160);
 
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 504
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
+//len_list: 323
 //==============================
 
 
 //==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
-//num_require: 505
+//num_require: 504
     REQUIRE( ret_ref == ret_submit);
-//len_list: 61
+//len_list: 323
 //==============================
 
 
 //==============================
-    submit.push(7267);
-    ref.push(7267);
+    submit.pop();
+    ref.pop();
 
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.push(5867);
-    ref.push(5867);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 506
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 322
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 505
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 322
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 506
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 322
+//==============================
+
+
+//==============================
+    submit.push(4966);
+    ref.push(4966);
+
+//len_list: 323
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 507
     REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 323
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 508
     REQUIRE( ret_ref == ret_submit);
-//len_list: 62
+//len_list: 323
 //==============================
 
 
@@ -7260,16 +9637,24 @@
     submit.pop();
     ref.pop();
 
-//len_list: 61
+//len_list: 322
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 509
     REQUIRE( ret_ref == ret_submit);
-//len_list: 61
+//len_list: 322
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 321
 //==============================
 
 
@@ -7278,57 +9663,33 @@
     ret_ref = ref.size();
 //num_require: 510
     REQUIRE( ret_ref == ret_submit);
-//len_list: 61
+//len_list: 321
 //==============================
 
 
 //==============================
-    submit.push(3791);
-    ref.push(3791);
+    submit.push(2586);
+    ref.push(2586);
 
-//len_list: 62
+//len_list: 322
 //==============================
 
 
 //==============================
-    submit.push(7679);
-    ref.push(7679);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 511
     REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 322
 //==============================
 
 
 //==============================
-    submit.push(1213);
-    ref.push(1213);
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 512
     REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 322
 //==============================
 
 
@@ -7337,31 +9698,23 @@
     ret_ref = ref.size();
 //num_require: 513
     REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 322
 //==============================
 
 
 //==============================
-    submit.push(8984);
-    ref.push(8984);
+    submit.push(2008);
+    ref.push(2008);
 
-//len_list: 64
+//len_list: 323
 //==============================
 
 
 //==============================
-    submit.push(4582);
-    ref.push(4582);
+    submit.push(1894);
+    ref.push(1894);
 
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.push(5564);
-    ref.push(5564);
-
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -7370,16 +9723,16 @@
     ret_ref = ref.size();
 //num_require: 514
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 515
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -7388,7 +9741,7 @@
     ret_ref = ref.empty();
 //num_require: 516
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -7397,7 +9750,7 @@
     ret_ref = ref.empty();
 //num_require: 517
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -7406,94 +9759,94 @@
     ret_ref = ref.empty();
 //num_require: 518
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 519
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 519
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 520
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 521
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 522
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
+    submit.push(191);
+    ref.push(191);
 
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 523
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.push(2530);
-    ref.push(2530);
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 524
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(2213);
-    ref.push(2213);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.push(1641);
-    ref.push(1641);
-
-//len_list: 69
+//len_list: 325
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 522
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.push(3811);
+    ref.push(3811);
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 523
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 524
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 525
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 325
 //==============================
 
 
@@ -7502,15 +9855,24 @@
     ret_ref = ref.size();
 //num_require: 526
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(8106);
-    ref.push(8106);
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 527
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
+//==============================
 
-//len_list: 70
+
+//==============================
+    submit.push(6545);
+    ref.push(6545);
+
+//len_list: 326
 //==============================
 
 
@@ -7518,25 +9880,24 @@
     submit.pop();
     ref.pop();
 
-//len_list: 69
+//len_list: 325
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
-//num_require: 527
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 69
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
 //num_require: 528
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
 //==============================
 
 
@@ -7545,7 +9906,7 @@
     ret_ref = ref.empty();
 //num_require: 529
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 324
 //==============================
 
 
@@ -7554,7 +9915,7 @@
     ret_ref = ref.size();
 //num_require: 530
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 324
 //==============================
 
 
@@ -7563,33 +9924,49 @@
     ret_ref = ref.size();
 //num_require: 531
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(5414);
-    ref.push(5414);
-
-//len_list: 70
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 532
     REQUIRE( ret_ref == ret_submit);
-//len_list: 70
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    submit.push(5270);
+    ref.push(5270);
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 533
     REQUIRE( ret_ref == ret_submit);
-//len_list: 70
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.push(8218);
+    ref.push(8218);
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.push(4843);
+    ref.push(4843);
+
+//len_list: 327
 //==============================
 
 
@@ -7597,15 +9974,7 @@
     submit.pop();
     ref.pop();
 
-//len_list: 69
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 68
+//len_list: 326
 //==============================
 
 
@@ -7614,16 +9983,16 @@
     ret_ref = ref.top();
 //num_require: 534
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 535
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
@@ -7632,25 +10001,25 @@
     ret_ref = ref.size();
 //num_require: 536
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 537
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 538
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
@@ -7659,16 +10028,16 @@
     ret_ref = ref.size();
 //num_require: 539
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 540
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
@@ -7677,16 +10046,31 @@
     ret_ref = ref.top();
 //num_require: 541
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 542
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+    submit.push(1054);
+    ref.push(1054);
+
+//len_list: 327
+//==============================
+
+
+//==============================
+    submit.push(5421);
+    ref.push(5421);
+
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.push(905);
+    ref.push(905);
+
+//len_list: 329
 //==============================
 
 
@@ -7694,25 +10078,58 @@
     submit.pop();
     ref.pop();
 
-//len_list: 67
+//len_list: 328
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 542
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.push(7214);
+    ref.push(7214);
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 543
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 329
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    submit.push(3023);
+    ref.push(3023);
+
+//len_list: 330
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 544
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 330
+//==============================
+
+
+//==============================
+    submit.push(2037);
+    ref.push(2037);
+
+//len_list: 331
 //==============================
 
 
@@ -7721,15 +10138,7 @@
     ret_ref = ref.empty();
 //num_require: 545
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 66
+//len_list: 331
 //==============================
 
 
@@ -7738,34 +10147,34 @@
     ret_ref = ref.empty();
 //num_require: 546
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 547
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 548
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 331
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 547
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 331
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 548
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 331
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 549
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 331
 //==============================
 
 
@@ -7774,69 +10183,117 @@
     ret_ref = ref.size();
 //num_require: 550
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 331
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.push(1198);
+    ref.push(1198);
+
+//len_list: 332
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 331
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 551
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 331
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 552
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 331
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 330
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    submit.push(1503);
+    ref.push(1503);
+
+//len_list: 330
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 553
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 330
+//==============================
+
+
+//==============================
+    submit.push(3266);
+    ref.push(3266);
+
+//len_list: 331
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 330
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 554
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 330
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
-//num_require: 552
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 553
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.push(6456);
-    ref.push(6456);
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 554
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
 //num_require: 555
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 330
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 556
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 330
 //==============================
 
 
@@ -7845,146 +10302,195 @@
     ret_ref = ref.size();
 //num_require: 557
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 330
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    submit.pop();
+    ref.pop();
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 558
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 329
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 559
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 329
 //==============================
 
 
 //==============================
-    submit.push(5121);
-    ref.push(5121);
+    submit.pop();
+    ref.pop();
 
-//len_list: 68
+//len_list: 328
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.pop();
+    ref.pop();
+
+//len_list: 327
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 560
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    submit.pop();
+    ref.pop();
+
+//len_list: 323
+//==============================
+
+
+//==============================
+    submit.push(1123);
+    ref.push(1123);
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 323
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 561
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 323
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    submit.push(2022);
+    ref.push(2022);
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 562
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(6528);
-    ref.push(6528);
-
-//len_list: 69
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 563
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
 //==============================
 
 
 //==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
-//num_require: 563
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 69
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
 //num_require: 564
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 565
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 566
     REQUIRE( ret_ref == ret_submit);
-//len_list: 68
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 567
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 568
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(9690);
-    ref.push(9690);
-
-//len_list: 68
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 569
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
 //==============================
 
 
@@ -7992,25 +10498,24 @@
     submit.pop();
     ref.pop();
 
-//len_list: 67
+//len_list: 323
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
-//num_require: 569
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
 //num_require: 570
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 323
+//==============================
+
+
+//==============================
+    submit.push(4196);
+    ref.push(4196);
+
+//len_list: 324
 //==============================
 
 
@@ -8019,7 +10524,7 @@
     ret_ref = ref.empty();
 //num_require: 571
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 324
 //==============================
 
 
@@ -8028,16 +10533,15 @@
     ret_ref = ref.top();
 //num_require: 572
     REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+//len_list: 324
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 573
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
+    submit.push(6444);
+    ref.push(6444);
+
+//len_list: 325
 //==============================
 
 
@@ -8045,7 +10549,32 @@
     submit.pop();
     ref.pop();
 
-//len_list: 66
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 573
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.push(3851);
+    ref.push(3851);
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.push(5913);
+    ref.push(5913);
+
+//len_list: 326
 //==============================
 
 
@@ -8054,16 +10583,32 @@
     ret_ref = ref.empty();
 //num_require: 574
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.pop();
+    ref.pop();
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 575
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
 //==============================
 
 
@@ -8072,25 +10617,25 @@
     ret_ref = ref.empty();
 //num_require: 576
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 577
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
-//num_require: 577
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
 //num_require: 578
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -8099,25 +10644,7 @@
     ret_ref = ref.empty();
 //num_require: 579
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 580
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 581
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 324
 //==============================
 
 
@@ -8125,7 +10652,57 @@
     submit.pop();
     ref.pop();
 
-//len_list: 65
+//len_list: 323
+//==============================
+
+
+//==============================
+    submit.push(7533);
+    ref.push(7533);
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.push(8659);
+    ref.push(8659);
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 580
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.push(9796);
+    ref.push(9796);
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
+//num_require: 581
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.push(6783);
+    ref.push(6783);
+
+//len_list: 327
 //==============================
 
 
@@ -8134,16 +10711,39 @@
     ret_ref = ref.empty();
 //num_require: 582
     REQUIRE( ret_ref == ret_submit);
-//len_list: 65
+//len_list: 327
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 583
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
+    submit.push(1273);
+    ref.push(1273);
+
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.push(55);
+    ref.push(55);
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    submit.push(9733);
+    ref.push(9733);
+
+//len_list: 330
+//==============================
+
+
+//==============================
+    submit.push(1768);
+    ref.push(1768);
+
+//len_list: 331
 //==============================
 
 
@@ -8151,16 +10751,49 @@
     submit.pop();
     ref.pop();
 
-//len_list: 64
+//len_list: 330
 //==============================
 
 
 //==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 583
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 330
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 584
     REQUIRE( ret_ref == ret_submit);
-//len_list: 64
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 327
 //==============================
 
 
@@ -8169,24 +10802,24 @@
     ret_ref = ref.size();
 //num_require: 585
     REQUIRE( ret_ref == ret_submit);
-//len_list: 64
+//len_list: 327
 //==============================
 
 
 //==============================
-    submit.push(97);
-    ref.push(97);
+    submit.pop();
+    ref.pop();
 
-//len_list: 65
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 586
     REQUIRE( ret_ref == ret_submit);
-//len_list: 65
+//len_list: 326
 //==============================
 
 
@@ -8194,159 +10827,119 @@
     submit.pop();
     ref.pop();
 
-//len_list: 64
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(225);
-    ref.push(225);
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 587
     REQUIRE( ret_ref == ret_submit);
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 588
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 589
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.push(4513);
-    ref.push(4513);
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 590
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.push(569);
-    ref.push(569);
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 591
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 592
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 63
+//len_list: 325
 //==============================
 
 
 //==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
-//num_require: 593
+//num_require: 588
     REQUIRE( ret_ref == ret_submit);
-//len_list: 63
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(3120);
-    ref.push(3120);
-
-//len_list: 64
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 589
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(619);
-    ref.push(619);
+    submit.push(9937);
+    ref.push(9937);
 
-//len_list: 65
+//len_list: 326
 //==============================
 
 
 //==============================
-    submit.push(8918);
-    ref.push(8918);
+    submit.push(9634);
+    ref.push(9634);
 
-//len_list: 66
+//len_list: 327
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 590
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 327
+//==============================
+
+
+//==============================
+    submit.push(8167);
+    ref.push(8167);
+
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 591
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 592
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 593
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.push(2513);
+    ref.push(2513);
+
+//len_list: 329
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 594
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
+//len_list: 328
 //==============================
 
 
@@ -8355,49 +10948,25 @@
     ret_ref = ref.empty();
 //num_require: 595
     REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 596
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.push(6222);
-    ref.push(6222);
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(9732);
-    ref.push(9732);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.push(1313);
-    ref.push(1313);
-
-//len_list: 69
+//len_list: 328
 //==============================
 
 
 //==============================
     ret_submit = submit.empty();
     ret_ref = ref.empty();
+//num_require: 596
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 328
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 597
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 328
 //==============================
 
 
@@ -8406,7 +10975,15 @@
     ret_ref = ref.size();
 //num_require: 598
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 328
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 327
 //==============================
 
 
@@ -8415,25 +10992,25 @@
     ret_ref = ref.size();
 //num_require: 599
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 600
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 327
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
+//num_require: 600
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 327
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 601
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 327
 //==============================
 
 
@@ -8442,25 +11019,16 @@
     ret_ref = ref.size();
 //num_require: 602
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 327
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 603
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 604
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 327
 //==============================
 
 
@@ -8468,42 +11036,83 @@
     submit.pop();
     ref.pop();
 
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.push(8439);
-    ref.push(8439);
-
-//len_list: 69
+//len_list: 326
 //==============================
 
 
 //==============================
     ret_submit = submit.top();
     ret_ref = ref.top();
+//num_require: 604
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.push(6699);
+    ref.push(6699);
+
+//len_list: 327
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 605
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 325
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 606
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 325
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 607
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 323
 //==============================
 
 
@@ -8512,99 +11121,59 @@
     ret_ref = ref.empty();
 //num_require: 608
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 323
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 609
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 323
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.push(7307);
+    ref.push(7307);
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 610
     REQUIRE( ret_ref == ret_submit);
-//len_list: 69
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(8729);
-    ref.push(8729);
-
-//len_list: 70
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 611
     REQUIRE( ret_ref == ret_submit);
-//len_list: 70
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(878);
-    ref.push(878);
+    submit.push(511);
+    ref.push(511);
 
-//len_list: 71
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(4553);
-    ref.push(4553);
-
-//len_list: 72
-//==============================
-
-
-//==============================
-    submit.push(7857);
-    ref.push(7857);
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.push(9666);
-    ref.push(9666);
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.push(2284);
-    ref.push(2284);
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.push(9885);
-    ref.push(9885);
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
 //num_require: 612
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 325
 //==============================
 
 
@@ -8613,16 +11182,40 @@
     ret_ref = ref.size();
 //num_require: 613
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 325
 //==============================
 
 
 //==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.push(8274);
+    ref.push(8274);
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
 //num_require: 614
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.pop();
+    ref.pop();
+
+//len_list: 324
 //==============================
 
 
@@ -8631,7 +11224,7 @@
     ret_ref = ref.empty();
 //num_require: 615
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 324
 //==============================
 
 
@@ -8639,7 +11232,15 @@
     submit.pop();
     ref.pop();
 
-//len_list: 75
+//len_list: 323
+//==============================
+
+
+//==============================
+    submit.push(1129);
+    ref.push(1129);
+
+//len_list: 324
 //==============================
 
 
@@ -8648,7 +11249,7 @@
     ret_ref = ref.top();
 //num_require: 616
     REQUIRE( ret_ref == ret_submit);
-//len_list: 75
+//len_list: 324
 //==============================
 
 
@@ -8657,15 +11258,7 @@
     ret_ref = ref.size();
 //num_require: 617
     REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 74
+//len_list: 324
 //==============================
 
 
@@ -8674,15 +11267,43 @@
     ret_ref = ref.top();
 //num_require: 618
     REQUIRE( ret_ref == ret_submit);
-//len_list: 74
+//len_list: 324
 //==============================
 
 
 //==============================
-    submit.push(4356);
-    ref.push(4356);
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 619
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
+//==============================
 
-//len_list: 75
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 620
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.empty();
+    ret_ref = ref.empty();
+//num_require: 621
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
+//==============================
+
+
+//==============================
+    ret_submit = submit.top();
+    ret_ref = ref.top();
+//num_require: 622
+    REQUIRE( ret_ref == ret_submit);
+//len_list: 324
 //==============================
 
 
@@ -8690,68 +11311,40 @@
     submit.pop();
     ref.pop();
 
-//len_list: 74
+//len_list: 323
+//==============================
+
+
+//==============================
+    submit.push(6281);
+    ref.push(6281);
+
+//len_list: 324
+//==============================
+
+
+//==============================
+    submit.push(9513);
+    ref.push(9513);
+
+//len_list: 325
 //==============================
 
 
 //==============================
     ret_submit = submit.size();
     ret_ref = ref.size();
-//num_require: 619
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 620
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.push(3326);
-    ref.push(3326);
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 621
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 622
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
 //num_require: 623
     REQUIRE( ret_ref == ret_submit);
-//len_list: 75
+//len_list: 325
 //==============================
 
 
 //==============================
-    submit.push(1731);
-    ref.push(1731);
+    submit.push(2750);
+    ref.push(2750);
 
-//len_list: 76
+//len_list: 326
 //==============================
 
 
@@ -8760,7656 +11353,41 @@
     ret_ref = ref.size();
 //num_require: 624
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    submit.pop();
+    ref.pop();
+
+//len_list: 325
+//==============================
+
+
+//==============================
+    submit.push(5475);
+    ref.push(5475);
+
+//len_list: 326
+//==============================
+
+
+//==============================
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 625
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
+//len_list: 326
 //==============================
 
 
 //==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
+    ret_submit = submit.size();
+    ret_ref = ref.size();
 //num_require: 626
     REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 627
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 628
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(8105);
-    ref.push(8105);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 629
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(3539);
-    ref.push(3539);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 630
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 631
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(1633);
-    ref.push(1633);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 632
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 633
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(5344);
-    ref.push(5344);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 634
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 635
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 636
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 637
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(5352);
-    ref.push(5352);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 638
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 639
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 640
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 641
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 642
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(8966);
-    ref.push(8966);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 643
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 644
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 645
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 646
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(8153);
-    ref.push(8153);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 647
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 648
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 649
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(3597);
-    ref.push(3597);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 650
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 651
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(5596);
-    ref.push(5596);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 652
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 653
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(8880);
-    ref.push(8880);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 654
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 655
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 656
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 657
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 658
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(8563);
-    ref.push(8563);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(5397);
-    ref.push(5397);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 659
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 660
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 661
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 662
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(9838);
-    ref.push(9838);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 663
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 664
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(5534);
-    ref.push(5534);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 665
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 666
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(2053);
-    ref.push(2053);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 667
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 668
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 669
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(6859);
-    ref.push(6859);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 670
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 671
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(7453);
-    ref.push(7453);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 672
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 673
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 674
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 675
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 676
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 677
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(8798);
-    ref.push(8798);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 678
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 679
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(3647);
-    ref.push(3647);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 680
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(3258);
-    ref.push(3258);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(6215);
-    ref.push(6215);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(2056);
-    ref.push(2056);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 681
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 682
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 683
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 684
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 685
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(5572);
-    ref.push(5572);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 686
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 687
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 688
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 689
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 690
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 691
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 692
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 693
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 694
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 695
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 696
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 697
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(4208);
-    ref.push(4208);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 698
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 699
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(7239);
-    ref.push(7239);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 700
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 701
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 702
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(3954);
-    ref.push(3954);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 703
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 704
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 705
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(6573);
-    ref.push(6573);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.push(5831);
-    ref.push(5831);
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 706
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 707
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 708
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 709
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 710
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(869);
-    ref.push(869);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 711
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 712
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.push(6797);
-    ref.push(6797);
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.push(4202);
-    ref.push(4202);
-
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 713
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 714
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 715
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 716
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 717
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    submit.push(2914);
-    ref.push(2914);
-
-//len_list: 84
-//==============================
-
-
-//==============================
-    submit.push(8064);
-    ref.push(8064);
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 718
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 719
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.push(5669);
-    ref.push(5669);
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 720
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 721
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 722
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.push(9229);
-    ref.push(9229);
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(7498);
-    ref.push(7498);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 723
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 724
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 725
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(3439);
-    ref.push(3439);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 726
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 727
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 728
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(9992);
-    ref.push(9992);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 729
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(4905);
-    ref.push(4905);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 730
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(535);
-    ref.push(535);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 731
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(8186);
-    ref.push(8186);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 732
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 733
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 734
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(6590);
-    ref.push(6590);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(4491);
-    ref.push(4491);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 735
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 736
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(9134);
-    ref.push(9134);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 737
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 738
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 739
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 740
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 741
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 742
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 743
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 744
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.push(8689);
-    ref.push(8689);
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(5029);
-    ref.push(5029);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 745
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(4490);
-    ref.push(4490);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 746
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 747
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(5235);
-    ref.push(5235);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 748
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 749
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 750
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 751
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 752
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 84
-//==============================
-
-
-//==============================
-    submit.push(6255);
-    ref.push(6255);
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 753
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.push(5212);
-    ref.push(5212);
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(7718);
-    ref.push(7718);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(1547);
-    ref.push(1547);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 754
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.push(1223);
-    ref.push(1223);
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 755
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 756
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.push(1749);
-    ref.push(1749);
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 757
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(6240);
-    ref.push(6240);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(1785);
-    ref.push(1785);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(1476);
-    ref.push(1476);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(541);
-    ref.push(541);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 758
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(669);
-    ref.push(669);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 759
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 760
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 761
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 762
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 763
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 764
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(1180);
-    ref.push(1180);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.push(5389);
-    ref.push(5389);
-
-//len_list: 91
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(5198);
-    ref.push(5198);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 765
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 766
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 767
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 768
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 769
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 770
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(2281);
-    ref.push(2281);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 771
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 772
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 773
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 774
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(5028);
-    ref.push(5028);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 775
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 776
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 777
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 778
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 779
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 780
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(5610);
-    ref.push(5610);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 781
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 782
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 783
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 784
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 785
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 786
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 787
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 788
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 789
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(734);
-    ref.push(734);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 790
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.push(1257);
-    ref.push(1257);
-
-//len_list: 91
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 791
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.push(8315);
-    ref.push(8315);
-
-//len_list: 91
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 792
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 91
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 793
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 91
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 794
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 795
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 796
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(2654);
-    ref.push(2654);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(5560);
-    ref.push(5560);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 797
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(1971);
-    ref.push(1971);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 798
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 799
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.push(2952);
-    ref.push(2952);
-
-//len_list: 91
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 800
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 91
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 801
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 91
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 802
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.push(671);
-    ref.push(671);
-
-//len_list: 90
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 803
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 804
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.push(868);
-    ref.push(868);
-
-//len_list: 89
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 805
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 89
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 88
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 87
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 86
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 806
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 86
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 807
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 808
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 809
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 810
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 811
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 812
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 813
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 814
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    submit.push(7861);
-    ref.push(7861);
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 815
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 816
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 817
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 818
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 819
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 820
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 821
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 822
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 84
-//==============================
-
-
-//==============================
-    submit.push(5108);
-    ref.push(5108);
-
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 823
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 824
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 825
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 826
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 827
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 85
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 828
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 829
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 830
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 831
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 84
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 832
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 833
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 834
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 835
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 836
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 837
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 838
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(3787);
-    ref.push(3787);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 839
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(5285);
-    ref.push(5285);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 840
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 841
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(4007);
-    ref.push(4007);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.push(3033);
-    ref.push(3033);
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 842
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 843
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 844
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.push(80);
-    ref.push(80);
-
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 845
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 846
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 847
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 848
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 849
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 850
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 851
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 852
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 853
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.push(4864);
-    ref.push(4864);
-
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 854
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 855
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 83
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.push(7242);
-    ref.push(7242);
-
-//len_list: 83
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 856
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 857
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 858
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 859
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 860
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(7669);
-    ref.push(7669);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 861
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 862
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 863
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 864
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 865
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 866
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(5411);
-    ref.push(5411);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 867
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 868
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 869
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 870
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 871
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 872
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(856);
-    ref.push(856);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 873
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 874
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 875
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 876
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 877
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.push(7484);
-    ref.push(7484);
-
-//len_list: 82
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 878
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 82
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 879
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 880
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 881
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 882
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 883
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(1499);
-    ref.push(1499);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 884
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 885
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(2547);
-    ref.push(2547);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(9519);
-    ref.push(9519);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(2059);
-    ref.push(2059);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 886
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 887
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 888
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 889
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 890
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 891
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 892
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 893
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 894
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 895
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(4195);
-    ref.push(4195);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(7080);
-    ref.push(7080);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 896
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 897
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 898
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 899
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 900
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 901
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 902
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.push(2243);
-    ref.push(2243);
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 903
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 904
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 905
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 906
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 907
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 908
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 909
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 910
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 911
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.push(3155);
-    ref.push(3155);
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 912
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 913
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 914
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(8722);
-    ref.push(8722);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(2909);
-    ref.push(2909);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 915
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 916
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 917
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(6681);
-    ref.push(6681);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(7217);
-    ref.push(7217);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 918
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 919
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 920
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(947);
-    ref.push(947);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(6904);
-    ref.push(6904);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.push(5323);
-    ref.push(5323);
-
-//len_list: 81
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 921
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 922
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 923
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 924
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 925
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.push(3099);
-    ref.push(3099);
-
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 926
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 927
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 928
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 80
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 929
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 930
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 931
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 932
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 933
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 934
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 935
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(1135);
-    ref.push(1135);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(9096);
-    ref.push(9096);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 936
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 937
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 938
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 939
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 940
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(3992);
-    ref.push(3992);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 941
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 942
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.push(4400);
-    ref.push(4400);
-
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 943
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 944
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 945
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 946
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 947
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 79
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 948
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 949
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 950
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 951
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 952
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 953
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 954
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 955
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 956
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 957
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 958
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 959
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 960
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(9941);
-    ref.push(9941);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 961
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 962
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 963
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 964
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(9475);
-    ref.push(9475);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 965
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.push(9638);
-    ref.push(9638);
-
-//len_list: 78
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 966
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 967
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.push(6254);
-    ref.push(6254);
-
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 968
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 969
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 970
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 77
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 76
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 971
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.push(1258);
-    ref.push(1258);
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 972
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 973
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 974
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 975
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 976
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 977
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 978
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 979
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 72
-//==============================
-
-
-//==============================
-    submit.push(3319);
-    ref.push(3319);
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 980
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.push(8503);
-    ref.push(8503);
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.push(2060);
-    ref.push(2060);
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 981
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 982
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 983
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 984
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 985
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 986
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 987
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 988
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.push(3642);
-    ref.push(3642);
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 989
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 990
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 991
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 992
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.push(4896);
-    ref.push(4896);
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 993
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 994
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.push(2286);
-    ref.push(2286);
-
-//len_list: 75
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 995
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.push(9544);
-    ref.push(9544);
-
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 996
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 997
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 998
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 999
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1000
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1001
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1002
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1003
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1004
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 74
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1005
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 72
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1006
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 72
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1007
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 72
-//==============================
-
-
-//==============================
-    submit.push(7218);
-    ref.push(7218);
-
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1008
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1009
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1010
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1011
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1012
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1013
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1014
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1015
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 73
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 72
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1016
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 72
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 71
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1017
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 71
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 70
-//==============================
-
-
-//==============================
-    submit.push(6292);
-    ref.push(6292);
-
-//len_list: 71
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1018
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 71
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 70
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 69
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1019
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 69
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1020
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(4879);
-    ref.push(4879);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1021
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1022
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1023
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(2467);
-    ref.push(2467);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1024
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1025
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1026
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1027
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1028
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1029
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1030
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1031
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(2606);
-    ref.push(2606);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1032
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.push(4712);
-    ref.push(4712);
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1033
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1034
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.push(868);
-    ref.push(868);
-
-//len_list: 69
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1035
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1036
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1037
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 68
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1038
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1039
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.push(181);
-    ref.push(181);
-
-//len_list: 67
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1040
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 67
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1041
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1042
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1043
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.push(9041);
-    ref.push(9041);
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1044
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1045
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1046
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1047
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1048
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.push(322);
-    ref.push(322);
-
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1049
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1050
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1051
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1052
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.push(7977);
-    ref.push(7977);
-
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.push(5924);
-    ref.push(5924);
-
-//len_list: 66
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1053
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1054
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1055
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1056
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1057
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 65
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1058
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1059
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.push(6254);
-    ref.push(6254);
-
-//len_list: 64
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1060
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1061
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.push(5069);
-    ref.push(5069);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1062
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1063
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.push(1230);
-    ref.push(1230);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1064
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1065
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.push(3997);
-    ref.push(3997);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1066
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.push(1882);
-    ref.push(1882);
-
-//len_list: 63
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1067
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 63
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1068
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1069
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1070
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1071
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 62
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1072
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1073
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1074
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1075
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    submit.push(7119);
-    ref.push(7119);
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1076
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1077
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1078
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1079
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1080
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1081
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1082
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    submit.push(3588);
-    ref.push(3588);
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.push(515);
-    ref.push(515);
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1083
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.push(8222);
-    ref.push(8222);
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1084
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1085
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1086
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1087
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1088
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1089
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1090
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    submit.push(8544);
-    ref.push(8544);
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1091
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.push(107);
-    ref.push(107);
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1092
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.push(170);
-    ref.push(170);
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1093
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1094
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.push(9829);
-    ref.push(9829);
-
-//len_list: 61
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1095
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1096
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1097
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1098
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 60
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 59
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1099
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 59
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 58
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1100
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 58
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1101
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1102
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1103
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1104
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1105
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1106
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1107
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1108
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1109
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1110
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1111
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1112
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    submit.push(2765);
-    ref.push(2765);
-
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1113
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1114
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 57
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 56
-//==============================
-
-
-//==============================
-    submit.push(622);
-    ref.push(622);
-
-//len_list: 57
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 56
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1115
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 56
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1116
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1117
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1118
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1119
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(2233);
-    ref.push(2233);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1120
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1121
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1122
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1123
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1124
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1125
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1126
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1127
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.push(8667);
-    ref.push(8667);
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1128
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 51
-//==============================
-
-
-//==============================
-    submit.push(8210);
-    ref.push(8210);
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1129
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1130
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.push(3783);
-    ref.push(3783);
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1131
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(8598);
-    ref.push(8598);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.push(8444);
-    ref.push(8444);
-
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1132
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1133
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1134
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1135
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1136
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1137
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.push(9116);
-    ref.push(9116);
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(8579);
-    ref.push(8579);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1138
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1139
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1140
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1141
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1142
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1143
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(2082);
-    ref.push(2082);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1144
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1145
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1146
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1147
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1148
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1149
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(1246);
-    ref.push(1246);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1150
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1151
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1152
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1153
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1154
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(9406);
-    ref.push(9406);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1155
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1156
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1157
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1158
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 52
-//==============================
-
-
-//==============================
-    submit.push(6574);
-    ref.push(6574);
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1159
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1160
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1161
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(5661);
-    ref.push(5661);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1162
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1163
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.top();
-    ret_ref = ref.top();
-//num_require: 1164
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1165
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1166
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.pop();
-    ref.pop();
-
-//len_list: 53
-//==============================
-
-
-//==============================
-    submit.push(723);
-    ref.push(723);
-
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.empty();
-    ret_ref = ref.empty();
-//num_require: 1167
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1168
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 54
-//==============================
-
-
-//==============================
-    submit.push(2922);
-    ref.push(2922);
-
-//len_list: 55
-//==============================
-
-
-//==============================
-    ret_submit = submit.size();
-    ret_ref = ref.size();
-//num_require: 1169
-    REQUIRE( ret_ref == ret_submit);
-//len_list: 55
+//len_list: 326
 //==============================
 
 
