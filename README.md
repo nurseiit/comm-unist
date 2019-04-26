@@ -26,6 +26,10 @@ Exams
 
 Announcements
 -------------
+* **[04-26]** Lab 4 needs some manual correction. The skeletone provided has the template declation without
+capacity, `Cap`, which should be fixed. As the abstract class declaration in `MyProrityQueue.h` is updated
+correspondingly, please update your submission alsos to follow the declaration.
+
 * **[04-24]** Lab 4 grader will run 9am/3pm/9pm, 4/24 - 05/06 and 00:05 05/07.
 * **[04-23]** Lab 4 is being posted. The deadline is also updated. Pre-grader will start to run on around this weekend.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
