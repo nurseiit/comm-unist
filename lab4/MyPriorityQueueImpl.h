@@ -35,7 +35,7 @@ class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
   Fenwick tree;
 
  public:
-  MyPriorityQueueImpl<T, isMax>() : MyPriorityQueue<T, isMax>() {
+  MyPriorityQueueImpl<T, isMax, capacity>() : MyPriorityQueue<T, isMax>() {
     length = 0;
     front = new int[1];
     tree = Fenwick();
