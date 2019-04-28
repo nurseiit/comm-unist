@@ -231,8 +231,10 @@ void eval(char *cmdline) {
 
   // Child process
   if (pid == 0) {
+    // Unblock SIGCHILD
     sigUnblock(&set);
     setProcessGroup();
+
     execvp(argv[0], argv);
     printf("%s: Command not found\n", argv[0]);
     exit(0);
@@ -328,21 +330,36 @@ void do_bgfg(char **argv) {
     printf("%s command requires PID or %%jobid argument\n", argv[0]);
     return;
   }
+  struct job_t *job;
+
   if (argv[1][0] == '%') {
     memmove(argv[1], argv[1] + 1, len);
     int jid = atoi(argv[1]);
-    struct job_t *job = getjobjid(jobs, jid);
+    job = getjobjid(jobs, jid);
     if (job == NULL) {
-      printf("%%%d: No such job\n", jid);
+      printf("%%%s: No such job\n", argv[1]);
       return;
     }
-  } else {
+  } else if (isdigit(argv[1][0])) {
     int pid = atoi(argv[1]);
-    struct job_t *job = getjobpid(jobs, pid);
+    job = getjobpid(jobs, pid);
     if (job == NULL) {
       printf("(%d): No such process\n", pid);
       return;
     }
+  } else {
+    printf("%s: argument must be a PID or %%jobid\n", argv[0]);
+    return;
+  }
+  // Continure the process
+  safe_kill(-(job->pid), SIGCONT);
+  // Handle FG/BG cases
+  if (strcmp(argv[0], "fg") == 0) {
+    job->state = FG;
+    waitfg(job->pid);
+  } else {
+    job->state = BG;
+    printf("[%d] (%d) %s", job->jid, job->pid, job->cmdline);
   }
   return;
 }
