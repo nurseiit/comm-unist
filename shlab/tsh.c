@@ -308,6 +308,10 @@ void sigint_handler(int sig) {
  *     foreground job by sending it a SIGTSTP.  
  */
 void sigtstp_handler(int sig) {
+  pid_t pid = fgpid(jobs);
+  struct job_t *job = getjobpid(jobs, pid);
+  printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
+  job->state = ST;
   return;
 }
 
