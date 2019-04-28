@@ -1,3 +1,5 @@
+// #define develop
+
 /* 
  * tsh - A tiny shell program with job control
  * 
@@ -85,6 +87,46 @@ typedef void handler_t(int);
 handler_t *Signal(int signum, handler_t *handler);
 
 /*
+ * Safe System Calls
+ */
+pid_t safe_fork() {
+  pid_t pid = fork();
+  if (pid < 0) {
+    unix_error("Fork error!");
+  }
+  return pid;
+}
+
+void safe_kill(pid_t pid, int sig) {
+#ifdef develop
+  printf("Killing %d\n", pid);
+#endif
+  if (kill(pid, sig) < 0) {
+    unix_error("kill error!");
+  }
+}
+
+void safe_setpgid(pid_t pid, pid_t pgid) {
+  if (setpgid(pid, pgid) < 0)
+    unix_error("setpgid error!");
+}
+
+void safe_sigemptyset(sigset_t *set) {
+  if (sigemptyset(set) < 0)
+    app_error("sigemptyset error!");
+}
+
+void safe_sigaddset(sigset_t *set, int sig) {
+  if (sigaddset(set, sig) < 0)
+    app_error("sigaddset error!");
+}
+
+void safe_sigprocmask(int foo, sigset_t *set, sigset_t *old) {
+  if (sigprocmask(foo, set, old) < 0)
+    app_error("sigprocmask error!");
+}
+
+/*
  * main - The shell's main routine 
  */
 int main(int argc, char **argv) {
@@ -149,6 +191,20 @@ int main(int argc, char **argv) {
   exit(0); /* control never reaches here */
 }
 
+void sigInitSet(sigset_t *set, int sig) {
+  safe_sigemptyset(set);
+  safe_sigaddset(set, sig);
+}
+void sigBlock(sigset_t *set) {
+  safe_sigprocmask(SIG_BLOCK, set, NULL);
+}
+void sigUnblock(sigset_t *set) {
+  safe_sigprocmask(SIG_UNBLOCK, set, NULL);
+}
+void setProcessGroup() {
+  safe_setpgid(0, 0);
+}
+
 /* 
  * eval - Evaluate the command line that the user has just typed in
  * 
@@ -165,15 +221,24 @@ void eval(char *cmdline) {
   int isBG = parseline(cmdline, argv);
   if (builtin_cmd(argv)) return;
 
+  sigset_t set;
+  sigInitSet(&set, SIGCHLD);
+  // Block SIGCHILD
+  sigBlock(&set);
+
   struct job_t *job;
-  pid_t pid = fork();
+  pid_t pid = safe_fork();
+
   // Child process
   if (pid == 0) {
+    sigUnblock(&set);
+    setProcessGroup();
     execvp(argv[0], argv);
     printf("%s: Command not found\n", argv[0]);
     exit(0);
   }
   addjob(jobs, pid, isBG ? BG : FG, cmdline);
+  sigUnblock(&set);
   if (!isBG) {
     waitfg(pid);
   } else {
@@ -247,6 +312,9 @@ int builtin_cmd(char **argv) {
   } else if (strcmp(argv[0], "jobs") == 0) {
     listjobs(jobs);
     return 1;
+  } else if (strcmp(argv[0], "bg") == 0 || strcmp(argv[0], "fg") == 0) {
+    do_bgfg(argv);
+    return 1;
   }
   return 0; /* not a builtin command */
 }
@@ -255,6 +323,27 @@ int builtin_cmd(char **argv) {
  * do_bgfg - Execute the builtin bg and fg commands
  */
 void do_bgfg(char **argv) {
+  int len = argv[1] ? strlen(argv[1]) : 0;
+  if (len == 0) {
+    printf("%s command requires PID or %%jobid argument\n", argv[0]);
+    return;
+  }
+  if (argv[1][0] == '%') {
+    memmove(argv[1], argv[1] + 1, len);
+    int jid = atoi(argv[1]);
+    struct job_t *job = getjobjid(jobs, jid);
+    if (job == NULL) {
+      printf("%%%d: No such job\n", jid);
+      return;
+    }
+  } else {
+    int pid = atoi(argv[1]);
+    struct job_t *job = getjobpid(jobs, pid);
+    if (job == NULL) {
+      printf("(%d): No such process\n", pid);
+      return;
+    }
+  }
   return;
 }
 
@@ -296,6 +385,9 @@ void sigchld_handler(int sig) {
  */
 void sigint_handler(int sig) {
   pid_t pid = fgpid(jobs);
+  if (pid == 0) return;
+  safe_kill(-pid, sig);
+
   struct job_t *job = getjobpid(jobs, pid);
   printf("Job [%d] (%d) terminated by signal 2\n", job->jid, job->pid);
   deletejob(jobs, pid);
@@ -309,6 +401,9 @@ void sigint_handler(int sig) {
  */
 void sigtstp_handler(int sig) {
   pid_t pid = fgpid(jobs);
+  if (pid == 0) return;
+  safe_kill(-pid, sig);
+
   struct job_t *job = getjobpid(jobs, pid);
   printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
   job->state = ST;
