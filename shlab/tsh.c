@@ -295,6 +295,10 @@ void sigchld_handler(int sig) {
  *    to the foreground job.  
  */
 void sigint_handler(int sig) {
+  pid_t pid = fgpid(jobs);
+  struct job_t *job = getjobpid(jobs, pid);
+  printf("Job [%d] (%d) terminated by signal 2\n", job->jid, job->pid);
+  deletejob(jobs, pid);
   return;
 }
 
