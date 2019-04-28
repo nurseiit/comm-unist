@@ -1,10 +1,15 @@
-// #define develop
 
 /* 
  * tsh - A tiny shell program with job control
  * 
- * <Put your name and login ID here>
+ * Solution by:
+ * Nurseiit Abdimomyn
+ * 20172001
+ * nurs[at]unist.ac.kr
  */
+
+// #define develop
+
 #include <ctype.h>
 #include <errno.h>
 #include <signal.h>
