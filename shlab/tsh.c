@@ -205,8 +205,6 @@ int main(int argc, char **argv) {
 void sigInitSet(sigset_t *set) {
   safe_sigemptyset(set);
   safe_sigaddset(set, SIGCHLD);
-  safe_sigaddset(set, SIGINT);
-  safe_sigaddset(set, SIGTSTP);
 }
 void sigBlock(sigset_t *set) {
   safe_sigprocmask(SIG_BLOCK, set, NULL);
@@ -402,10 +400,11 @@ void sigchld_handler(int sig) {
   int status;
   while ((pid = waitpid(-1, &status, WNOHANG | WUNTRACED)) > 0) {
     if (WIFSTOPPED(status)) {
-      sigtstp_handler(SIGTSTP);
+      struct job_t *job = getjobpid(jobs, pid);
+      if (job == NULL) app_error("Can't find the job!");
+      printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
+      job->state = ST;
     } else if (WIFSIGNALED(status)) {
-      pid_t pid = fgpid(jobs);
-      if (pid == 0) return;
       int jid = pid2jid(pid);
       printf("Job [%d] (%d) terminated by signal 2\n", jid, pid);
       deletejob(jobs, pid);
@@ -448,6 +447,7 @@ void sigtstp_handler(int sig) {
   if (pid == 0) return;
 
 #ifdef develop
+  listjobs(jobs);
   puts("handling sigstp");
 #endif
 
