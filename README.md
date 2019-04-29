@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[04-29]** Doing lab 4, regarding the file names for the task 2 and 3, please refer to https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/124.
 * **[04-26]** Lab 4 needs some manual correction. The skeletone provided has the template declation without
 capacity, `Cap`, which should be fixed. As the abstract class declaration in `MyProrityQueue.h` is updated
 correspondingly, please update your submission alsos to follow the declaration.
