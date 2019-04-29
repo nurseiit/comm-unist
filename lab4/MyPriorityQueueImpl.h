@@ -28,13 +28,13 @@ class Fenwick {
 };
 
 template <typename T, bool isMax, size_t capacity>
-class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax> {
+class MyPriorityQueueImpl : public MyPriorityQueue<T, isMax, capacity> {
   size_t length;
   T* front;
   Fenwick tree;
 
  public:
-  MyPriorityQueueImpl<T, isMax, capacity>() : MyPriorityQueue<T, isMax>() {
+  MyPriorityQueueImpl<T, isMax, capacity>() : MyPriorityQueue<T, isMax, capacity>() {
     length = 0;
     front = new int[1];
     tree = Fenwick();
