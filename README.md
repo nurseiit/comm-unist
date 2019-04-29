@@ -23,6 +23,8 @@ Exams
 
 Announcements
 -------------
+* **[04-29]** Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83.
+
 * **[04-24]** Lab 5 grader will run 6am/noon/6pm, 4/24 - 05/02 and 00:05 05/03.
 * **[04-22]** Lab 5 has been posted. The grader will start to run on Wed or Thu.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
@@ -64,6 +66,19 @@ Grading
 |20%|Midterm              |
 |25%|Final                |
 |50%|Labs                 |
+
+
+|      |      |
+|------|------|
+| 5.5% | lab0 |
+| 5.5% | datalab |
+| 5.5% | bomblab |
+| 5.5% | attacklab |
+| 5.5% | cachelab |
+| 5.5% | shlab |
+| 11.5% | malloclab |
+| 5.5% | proxylab |
+
 
 
 - Class participation refers to online/in-class participations, not
@@ -153,7 +168,7 @@ Schedule
 |Apr/24(Wed)|      [ECF: Signals & Nonlocal Jumps](/slides/15-ecf-signals.pdf)      |  [shlab](/recitation/rec5.pdf) (8:30pm - @ 104-E102, by @changmin )                  | |
 |Apr/25(Thu)|                                        |                    |   |
 |Apr/26(Fri)|                                        |                    |                    |
-|Apr/29(Mon)|         System Level I/O          |                    |                  |
+|Apr/29(Mon)|         [System Level I/O](/slides/16-io.pdf)          |                    |                  |
 |Apr/30(Tue)|                                        |                    |                    |
 |May/01(Wed)|     Virtual Memory: Concepts <br/>  Virtual Memory: Systems        |                    |                    |
 |May/02(Thu)|                                        |                    |  lab5: due 11:59pm                    |
