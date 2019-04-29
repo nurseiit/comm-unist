@@ -161,7 +161,7 @@ Schedule
 |Apr/25(Thu)|               [AVL Trees](/slides/lecture14.pdf)                |                    |                    |
 |Apr/26(Fri)|                                        |                    |                    |
 |Apr/29(Mon)|                                        |                    |            |
-|Apr/30(Tue)|            Red-Black Trees             |                    |   |
+|Apr/30(Tue)|            [Red-Black Trees](/slides/lecture15.pdf)             |                    |   |
 |May/01(Wed)|                                        |                    |                    |
 |May/02(Thu)|              Splay Trees               |                    |                   |
 |May/03(Fri)|                                        |                    |                   |
