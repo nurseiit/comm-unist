@@ -23,7 +23,10 @@ Exams
 
 Announcements
 -------------
-* **[04-29]** Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83. The model solution is also available: [midterm.pdf](/midterm.pdf).
+* **[04-29]** Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83. 
+- The model solution is also available: [midterm.pdf](/midterm.pdf).
+- Midterm distribution: [midterm.csv](/midterm.csv)
+- Overall distribution: [overall.csv](/overall.csv)
 
 * **[04-24]** Lab 5 grader will run 6am/noon/6pm, 4/24 - 05/02 and 00:05 05/03.
 * **[04-22]** Lab 5 has been posted. The grader will start to run on Wed or Thu.
