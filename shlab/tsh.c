@@ -137,6 +137,19 @@ void safe_execvp(char *name, char **argv) {
     exit(1);
   }
 }
+/*
+ * Job handler methods
+ */
+void terminate_job(pid_t pid) {
+  int jid = pid2jid(pid);
+  deletejob(jobs, pid);
+  printf("Job [%d] (%d) terminated by signal 2\n", jid, pid);
+}
+void stop_job(pid_t pid) {
+  struct job_t *job = getjobpid(jobs, pid);
+  job->state = ST;
+  printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
+}
 
 /*
  * main - The shell's main routine 
@@ -248,8 +261,8 @@ void eval(char *cmdline) {
   // Child process
   if (pid == 0) {
     // Unblock SIGCHILD
-    sigUnblock(&set);
     setProcessGroup();
+    sigUnblock(&set);
 
     safe_execvp(argv[0], argv);
   }
@@ -403,20 +416,17 @@ void waitfg(pid_t pid) {
 void sigchld_handler(int sig) {
   pid_t pid;
   int status;
+  // Reap zombie children
   while ((pid = waitpid(-1, &status, WNOHANG | WUNTRACED)) > 0) {
-    if (WIFSTOPPED(status)) {
-      struct job_t *job = getjobpid(jobs, pid);
-      if (job == NULL || job->state == ST) continue;
-      printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
-      job->state = ST;
+#ifdef develop
+    printf("From SIGCHLD %d\n", pid);
+#endif
+    if (WIFEXITED(status)) {
+      deletejob(jobs, pid);
     } else if (WIFSIGNALED(status)) {
-      struct job_t *job = getjobpid(jobs, pid);
-      if (job == NULL) continue;
-      int jid = pid2jid(pid);
-      printf("Job [%d] (%d) terminated by signal 2\n", jid, pid);
-      deletejob(jobs, pid);
-    } else if (WIFEXITED(status)) {
-      deletejob(jobs, pid);
+      terminate_job(pid);
+    } else if (WIFSTOPPED(status)) {
+      stop_job(pid);
     }
   }
   return;
@@ -438,9 +448,7 @@ void sigint_handler(int sig) {
 
   safe_kill(-pid, sig);
 
-  struct job_t *job = getjobpid(jobs, pid);
-  printf("Job [%d] (%d) terminated by signal 2\n", job->jid, job->pid);
-  deletejob(jobs, pid);
+  terminate_job(pid);
   return;
 }
 
@@ -460,9 +468,7 @@ void sigtstp_handler(int sig) {
 
   safe_kill(-pid, sig);
 
-  struct job_t *job = getjobpid(jobs, pid);
-  printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
-  job->state = ST;
+  stop_job(pid);
   return;
 }
 
