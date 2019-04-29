@@ -406,10 +406,12 @@ void sigchld_handler(int sig) {
   while ((pid = waitpid(-1, &status, WNOHANG | WUNTRACED)) > 0) {
     if (WIFSTOPPED(status)) {
       struct job_t *job = getjobpid(jobs, pid);
-      if (job == NULL) app_error("Can't find the job!");
+      if (job == NULL || job->state == ST) continue;
       printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
       job->state = ST;
     } else if (WIFSIGNALED(status)) {
+      struct job_t *job = getjobpid(jobs, pid);
+      if (job == NULL) continue;
       int jid = pid2jid(pid);
       printf("Job [%d] (%d) terminated by signal 2\n", jid, pid);
       deletejob(jobs, pid);
