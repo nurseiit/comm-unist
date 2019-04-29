@@ -142,11 +142,13 @@ void safe_execvp(char *name, char **argv) {
  */
 void terminate_job(pid_t pid) {
   int jid = pid2jid(pid);
+  if (jid <= 0) return;
   deletejob(jobs, pid);
   printf("Job [%d] (%d) terminated by signal 2\n", jid, pid);
 }
 void stop_job(pid_t pid) {
   struct job_t *job = getjobpid(jobs, pid);
+  if (job == NULL || job->state == ST) return;
   job->state = ST;
   printf("Job [%d] (%d) stopped by signal 20\n", job->jid, job->pid);
 }
