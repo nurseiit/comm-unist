@@ -64,6 +64,22 @@ cd datalab
 - Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
 - Instruction: [shlab/README.md](/shlab/README.md)
 
+### lab6: malloclab
+- Out: May 08 (Wed)
+- Due: May 28 (Tue) 11:59pm
+- Recitation: TBD
+- Leading TA: Sehoon Kim (sshhee@unist.ac.kr, @sehoon)
+- Instruction: [malloclab/README.md](/malloclab/README.md)
+
+### lab7: proxylablab
+- Out: May 08 (Wed)
+- Due: Jun 05 (Wed) 11:59pm
+- Recitation: TBD
+- Lead TA: Changmin Yi (ulistar93@unist.ac.kr, @changmin)
+- Instruction: [proxylab/README.md](/proxylab/README.md)
+
+
+
 
 ### Notes
 
