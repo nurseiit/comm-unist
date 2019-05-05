@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Копчето за Cast</string>
+    <string name="mr_cast_button_connected">Копче за Cast. Поврзано</string>
+    <string name="mr_cast_button_connecting">Копче за Cast. Се поврзува</string>
+    <string name="mr_cast_button_disconnected">Копче за Cast. Исклучено</string>
+    <string name="mr_chooser_searching">Наоѓање уреди</string>
+    <string name="mr_chooser_title">Емитувај на</string>
+    <string name="mr_controller_album_art">Корица на албум</string>
+    <string name="mr_controller_casting_screen">Екранот се емитува</string>
+    <string name="mr_controller_close_description">Затвори</string>
+    <string name="mr_controller_collapse_group">Собери</string>
+    <string name="mr_controller_disconnect">Исклучи</string>
+    <string name="mr_controller_expand_group">Прошири</string>
+    <string name="mr_controller_no_info_available">Нема достапни информации</string>
+    <string name="mr_controller_no_media_selected">Не се избрани медиуми</string>
+    <string name="mr_controller_pause">Паузирај</string>
+    <string name="mr_controller_play">Репродуцирај</string>
+    <string name="mr_controller_stop">Запри го емитувањето</string>
+    <string name="mr_controller_volume_slider">Лизгач за јачина на звук</string>
+    <string name="mr_system_route_name">Систем</string>
+    <string name="mr_user_route_category_name">Уреди</string>
+</resources>

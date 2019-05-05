@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">විකාශ බොත්තම</string>
+    <string name="mr_cast_button_connected">විකාශ බොත්තම සම්බන්ධ කරන ලදී</string>
+    <string name="mr_cast_button_connecting">විකාශ බොත්තම සම්බන්ධ කරමින්</string>
+    <string name="mr_cast_button_disconnected">විකාශ බොත්තම. විසන්ධි කරන ලදී</string>
+    <string name="mr_chooser_searching">උපාංග සෙවීම</string>
+    <string name="mr_chooser_title">විකාශය</string>
+    <string name="mr_controller_album_art">ඇල්බම කලාව</string>
+    <string name="mr_controller_casting_screen">විකාශ තිරය</string>
+    <string name="mr_controller_close_description">වසන්න</string>
+    <string name="mr_controller_collapse_group">හකුළන්න</string>
+    <string name="mr_controller_disconnect">විසන්ධි කරන්න</string>
+    <string name="mr_controller_expand_group">දිග හරින්න</string>
+    <string name="mr_controller_no_info_available">ලබා ගත හැකි තොරතුරු නොමැත</string>
+    <string name="mr_controller_no_media_selected">මාධ්‍යය තෝරා නැත</string>
+    <string name="mr_controller_pause">විරාම ගන්වන්න</string>
+    <string name="mr_controller_play">ධාවනය කරන්න</string>
+    <string name="mr_controller_stop">විකාශ කිරීම නවත්වන්න</string>
+    <string name="mr_controller_volume_slider">හඬ පරිමා ස්ලයිඩරය</string>
+    <string name="mr_system_route_name">පද්ධතිය</string>
+    <string name="mr_user_route_category_name">උපාංග</string>
+</resources>

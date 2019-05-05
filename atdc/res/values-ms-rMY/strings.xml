@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Butang Hantar</string>
+    <string name="mr_cast_button_connected">Butang hantar. Disambungkan</string>
+    <string name="mr_cast_button_connecting">Butang hantar. Menyambung</string>
+    <string name="mr_cast_button_disconnected">Butang hantar. Sambungan diputuskan</string>
+    <string name="mr_chooser_searching">Mencari peranti</string>
+    <string name="mr_chooser_title">Hantar ke</string>
+    <string name="mr_controller_album_art">Seni album</string>
+    <string name="mr_controller_casting_screen">Menghantar skrin</string>
+    <string name="mr_controller_close_description">Tutup</string>
+    <string name="mr_controller_collapse_group">Runtuhkan</string>
+    <string name="mr_controller_disconnect">Putuskan sambungan</string>
+    <string name="mr_controller_expand_group">Kembangkan</string>
+    <string name="mr_controller_no_info_available">Maklumat tidak tersedia</string>
+    <string name="mr_controller_no_media_selected">Tiada media dipilih</string>
+    <string name="mr_controller_pause">Jeda</string>
+    <string name="mr_controller_play">Main</string>
+    <string name="mr_controller_stop">Berhenti menghantar</string>
+    <string name="mr_controller_volume_slider">Peluncur kelantangan</string>
+    <string name="mr_system_route_name">Sistem</string>
+    <string name="mr_user_route_category_name">Peranti</string>
+</resources>

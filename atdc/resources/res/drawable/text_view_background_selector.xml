@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:exitFadeDuration="@android:integer/config_mediumAnimTime">
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@color/red"/>
+    <item android:state_pressed="true" android:drawable="@color/red"/>
+    <item android:drawable="@color/red"/>
+</selector>

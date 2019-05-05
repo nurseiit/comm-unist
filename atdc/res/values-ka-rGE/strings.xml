@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">ტრანსლირების ღილაკი</string>
+    <string name="mr_cast_button_connected">ტრანსლირების ღილაკი. დაკავშირებული</string>
+    <string name="mr_cast_button_connecting">ტრანსლირების ღილაკი. მიმდინარეობს დაკავშირება</string>
+    <string name="mr_cast_button_disconnected">ტრანსლირების ღილაკი. გათიშული</string>
+    <string name="mr_chooser_searching">მიმდინარეობს მოწყობილობების მოძიება</string>
+    <string name="mr_chooser_title">ტრანსლირებული</string>
+    <string name="mr_controller_album_art">ალბომის გარეკანი</string>
+    <string name="mr_controller_casting_screen">მიმდინარეობს ეკრანის გადაცემა</string>
+    <string name="mr_controller_close_description">დახურვა</string>
+    <string name="mr_controller_collapse_group">ჩაკეცვა</string>
+    <string name="mr_controller_disconnect">კავშირის გაწყვეტა</string>
+    <string name="mr_controller_expand_group">გაშლა</string>
+    <string name="mr_controller_no_info_available">ინფორმაცია არ არის ხელმისაწვდომი</string>
+    <string name="mr_controller_no_media_selected">მედია არჩეული არ არის</string>
+    <string name="mr_controller_pause">პაუზა</string>
+    <string name="mr_controller_play">დაკვრა</string>
+    <string name="mr_controller_stop">ტრანსლირების შეჩერება</string>
+    <string name="mr_controller_volume_slider">ხმის სლაიდერი</string>
+    <string name="mr_system_route_name">სისტემა</string>
+    <string name="mr_user_route_category_name">მოწყობილობები</string>
+</resources>

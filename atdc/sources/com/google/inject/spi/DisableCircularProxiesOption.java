@@ -1,0 +1,25 @@
+package com.google.inject.spi;
+
+import com.google.firebase.analytics.FirebaseAnalytics.Param;
+import com.google.inject.Binder;
+import org.roboguice.shaded.goole.common.base.Preconditions;
+
+public final class DisableCircularProxiesOption implements Element {
+    private final Object source;
+
+    DisableCircularProxiesOption(Object obj) {
+        this.source = Preconditions.checkNotNull(obj, Param.SOURCE);
+    }
+
+    public Object getSource() {
+        return this.source;
+    }
+
+    public void applyTo(Binder binder) {
+        binder.withSource(getSource()).disableCircularProxies();
+    }
+
+    public <T> T acceptVisitor(ElementVisitor<T> elementVisitor) {
+        return elementVisitor.visit(this);
+    }
+}

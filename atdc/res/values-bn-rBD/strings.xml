@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">কাস্ট করার বোতাম</string>
+    <string name="mr_cast_button_connected">কাস্ট করার বোতাম৷ সংযুক্ত হয়েছে</string>
+    <string name="mr_cast_button_connecting">কাস্ট করার বোতাম৷ সংযোগ করা হচ্ছে</string>
+    <string name="mr_cast_button_disconnected">কাস্ট করার বোতাম৷ সংযোগ বিচ্ছিন্ন হয়েছে</string>
+    <string name="mr_chooser_searching">ডিভাইসগুলিকে খোঁজা হচ্ছে</string>
+    <string name="mr_chooser_title">এতে কাস্ট করুন</string>
+    <string name="mr_controller_album_art">অ্যালবাম শৈলি</string>
+    <string name="mr_controller_casting_screen">স্ক্রীন কাস্ট করা হচ্ছে</string>
+    <string name="mr_controller_close_description">বন্ধ করুন</string>
+    <string name="mr_controller_collapse_group">সঙ্কুচিত করুন</string>
+    <string name="mr_controller_disconnect">সংযোগ বিচ্ছিন্ন করুন</string>
+    <string name="mr_controller_expand_group">প্রসারিত করুন</string>
+    <string name="mr_controller_no_info_available">কোনো তথ্য উপলব্ধ নেই</string>
+    <string name="mr_controller_no_media_selected">কোনো মিডিয়া নির্বাচন করা হয়নি</string>
+    <string name="mr_controller_pause">বিরাম দিন</string>
+    <string name="mr_controller_play">চালান</string>
+    <string name="mr_controller_stop">কাস্ট করা বন্ধ করুন</string>
+    <string name="mr_controller_volume_slider">ভলিউম স্লাইডার</string>
+    <string name="mr_system_route_name">সিস্টেম</string>
+    <string name="mr_user_route_category_name">ডিভাইসগুলি</string>
+</resources>

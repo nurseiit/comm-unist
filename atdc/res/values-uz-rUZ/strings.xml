@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Translatsiya tugmasi</string>
+    <string name="mr_cast_button_connected">Translatsiya tugmasi. Ulandi</string>
+    <string name="mr_cast_button_connecting">Translatsiya tugmasi. Ulanmoqda</string>
+    <string name="mr_cast_button_disconnected">Translatsiya tugmasi. Uzildi</string>
+    <string name="mr_chooser_searching">Qurilmalarni topish</string>
+    <string name="mr_chooser_title">Quyidagiga translatsiya qilish:</string>
+    <string name="mr_controller_album_art">Albom muqovasi</string>
+    <string name="mr_controller_casting_screen">Ekranni translatsiya qilish</string>
+    <string name="mr_controller_close_description">Yopish</string>
+    <string name="mr_controller_collapse_group">Yig‘ish</string>
+    <string name="mr_controller_disconnect">Ulanishni uzish</string>
+    <string name="mr_controller_expand_group">Yoyish</string>
+    <string name="mr_controller_no_info_available">Hech qanday ma’lumot yo‘q</string>
+    <string name="mr_controller_no_media_selected">Multimedia tanlamagan</string>
+    <string name="mr_controller_pause">To‘xtatib turish</string>
+    <string name="mr_controller_play">Boshlash</string>
+    <string name="mr_controller_stop">Translatsiyani to‘xtatish</string>
+    <string name="mr_controller_volume_slider">Ovoz balandligi slayderi</string>
+    <string name="mr_system_route_name">Tizim</string>
+    <string name="mr_user_route_category_name">Qurilmalar</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Dugme za prebacivanje</string>
+    <string name="mr_cast_button_connected">Dugme za prebacivanje. Povezan</string>
+    <string name="mr_cast_button_connecting">Dugme za prebacivanje. Povezivanje</string>
+    <string name="mr_cast_button_disconnected">Dugme za prebacivanje. Veza je prekinuta</string>
+    <string name="mr_chooser_searching">Traženje uređaja</string>
+    <string name="mr_chooser_title">Prebacujte na</string>
+    <string name="mr_controller_album_art">Omot albuma</string>
+    <string name="mr_controller_casting_screen">Prebacuje se ekran</string>
+    <string name="mr_controller_close_description">Zatvori</string>
+    <string name="mr_controller_collapse_group">Skupi</string>
+    <string name="mr_controller_disconnect">Prekini vezu</string>
+    <string name="mr_controller_expand_group">Proširi</string>
+    <string name="mr_controller_no_info_available">Nema dostupnih informacija</string>
+    <string name="mr_controller_no_media_selected">Nijedan medij nije odabran</string>
+    <string name="mr_controller_pause">Pauziraj</string>
+    <string name="mr_controller_play">Reproduciraj</string>
+    <string name="mr_controller_stop">Zaustavi prebacivanje</string>
+    <string name="mr_controller_volume_slider">Klizač za jačinu zvuka</string>
+    <string name="mr_system_route_name">Sistem</string>
+    <string name="mr_user_route_category_name">Uređaji</string>
+</resources>
