@@ -113,82 +113,82 @@ Schedule
   course registration is finalized)
   * There are two make up lectures probably on Fridays.
 
-|   Date    |                Lecture                 |     Recitation     |        Lab         |
-|-----------|----------------------------------------|--------------------|--------------------|
-|Feb/25(Mon)|                                        |                    |                    |
-|Feb/26(Tue)|              [Introduction](/slides/lecture01.pdf)              |                    |                    |
-|Feb/27(Wed)|                                        |                    |                    |
-|Feb/28(Thu)|                 [Arrays](/slides/lecture02.pdf)                 |                    |  lab0: gitlab out  |
-|Mar/01(Fri)|                                        |                    |                    |
-|Mar/04(Mon)|                                        |                    |                    |
-|Mar/05(Tue)|   [Linked Lists](/slides/lecture03.pdf)              |                    |           |
-|Mar/06(Wed)|                                        |                    |    |
-|Mar/07(Thu)|           [Stacks and Queues](/slides/lecture04.pdf)            |                    | lab0: due 11:59pm                   |
-|Mar/08(Fri)|  |                    |                    |
-|Mar/11(Mon)|                                        |                    |                    |
-|Mar/12(Tue)|       [Analysis of Algorithms](/slides/lecture05.pdf)       |                    |      lab1 out      |
-|Mar/13(Wed)|                                        |                    |   |
-|Mar/14(Thu)|               [Recursion](/slides/lecture06.pdf)                |                    |                    |
-|Mar/15(Fri)|                                        |                    |                    |
-|Mar/18(Mon)|                                        |                    | lab1: due 11:59pm                   |
-|Mar/19(Tue)|           [List and Iterators](/slides/lecture07.pdf)           |                    |                    |
-|Mar/20(Wed)|                                        |                    |                    |
-|Mar/21(Thu)|                 [Trees](/slides/lecture08.pdf)                  |                    | lab2 out           |
-|Mar/22(Fri)|               DROP DATE                |                    |   |
-|Mar/25(Mon)|                                        |                    |                    |
-|Mar/26(Tue)|      [Binary Trees (1)](/slides/lecture09.pdf)      |                    |                    |
-|Mar/27(Wed)|                                        |                    |                    |
-|Mar/28(Thu)|      [Binary Trees (2)](/slides/lecture09.pdf)      |                    |                    |
-|Mar/29(Fri)|                                        |                    |                    |
-|Apr/01(Mon)|                                        |                    |            |
-|Apr/02(Tue)|     [Heaps and Priority Queue)](/slides/lecture10.pdf)      |                    |                    |
-|Apr/03(Wed)|                                        |                    |  lab2: due 11:59pm                 |
-|Apr/04(Thu)|     [Maps and Hashing (1)](/slides/lecture11.pdf)      |                    |  lab3 out                  |
-|Apr/05(Fri)|                                        |                    |                    |
-|Apr/08(Mon)|                                        |                    |         |
-|Apr/09(Tue)|            [Maps and Hashing (2)](/slides/lecture11.pdf) <br/>[Ordered Maps and Skip Lists](/slides/lecture12.pdf)            |                    |    lab 1 / lab 2 claim deadline            |
-|Apr/10(Wed)|                                        |                    |                   |
-|Apr/11(Thu)|       [Binary Search Tree](/slides/lecture13.pdf)     |                    |                    |
-|Apr/12(Fri)|                                        |                    |                     |
-|Apr/15(Mon)|                                        |                    |                    |
-|Apr/16(Tue)|              Midterm Week (No class)              |                    |                    |
-|Apr/17(Wed)|                                        |                    |                    |
-|Apr/18(Thu)|              Midterm Week (No class)             |                    |                    |
-|Apr/19(Fri)|                                        |                    |                    |
-|Apr/22(Mon)|            Midterm (9pm-11pm @ 104-E205)                           | | lab3: due 11:59pm                                       |
-|Apr/23(Tue)|                No class                |                    |  lab4 out          |
-|Apr/24(Wed)|                                        |                    |  lab 3 claim deadline                  |
-|Apr/25(Thu)|               [AVL Trees](/slides/lecture14.pdf)                |                    |                    |
-|Apr/26(Fri)|                                        |                    |                    |
-|Apr/29(Mon)|                                        |                    |            |
-|Apr/30(Tue)|            [Red-Black Trees](/slides/lecture15.pdf)             |                    |   |
-|May/01(Wed)|                                        |                    |                    |
-|May/02(Thu)|              Splay Trees               |                    |                   |
-|May/03(Fri)|                                        |                    |                   |
-|May/06(Mon)|                                        |                    |    lab4: due 11:59pm                |
-|May/07(Tue)|       Multiway Search Trees (1)        |                    |   lab5 out                  |
-|May/08(Wed)|                                        |                    |   lab4 clain deadline          |
-|May/09(Thu)|       Multiway Search Trees (2)        |                    |  |
-|May/10(Fri)|           Graphs (Tentative)           |                    |                    |
-|May/13(Mon)|                                        |                    |                    |
-|May/14(Tue)|            Graph Traversals            |                    |                    |
-|May/15(Wed)|                                        |                    | lab5: due 11:59pm                   |
-|May/16(Thu)|  Directed Graphs and Graph Algorithms  |                    | lab6 out                   |
-|May/17(Fri)|                                        |                    |                    |
-|May/20(Mon)|                                        |                    |                    |
-|May/21(Tue)|     SP19 (Recitation or no class)      |                    |                    |
-|May/22(Wed)|                                        |                    |                    |
-|May/23(Thu)|     SP19 (Recitation or no class)      |                    |                    |
-|May/24(Fri)|                                        |                    |                    |
-|May/27(Mon)|                                        |                    |                    |
-|May/28(Tue)|             Disjoint Sets              |                    |                    |
-|May/29(Wed)|                                        |                    |   |
-|May/30(Thu)|      Strings and Pattern Matching      |                    |                    |
-|May/31(Fri)|                                        |                    |                    |
-|Jun/03(Mon)|                                        |                    | lab6: due 11:59pm                   |
-|Jun/04(Tue)|                Sorting                 |                    |                    |
-|Jun/05(Wed)|                                        |                    |                    |
-|Jun/06(Thu)|        Memorial day (no class)         |                    |                    |
-|Jun/07(Fri)|                                        |                    |                    |
-|Jun/10(Mon)|               Final Week               |                    |                    |
+|    Date     |                                                 Lecture                                                 | Recitation |             Lab              |
+| ----------- | ------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------- |
+| Feb/25(Mon) |                                                                                                         |            |                              |
+| Feb/26(Tue) | [Introduction](/slides/lecture01.pdf)                                                                   |            |                              |
+| Feb/27(Wed) |                                                                                                         |            |                              |
+| Feb/28(Thu) | [Arrays](/slides/lecture02.pdf)                                                                         |            | lab0: gitlab out             |
+| Mar/01(Fri) |                                                                                                         |            |                              |
+| Mar/04(Mon) |                                                                                                         |            |                              |
+| Mar/05(Tue) | [Linked Lists](/slides/lecture03.pdf)                                                                   |            |                              |
+| Mar/06(Wed) |                                                                                                         |            |                              |
+| Mar/07(Thu) | [Stacks and Queues](/slides/lecture04.pdf)                                                              |            | lab0: due 11:59pm            |
+| Mar/08(Fri) |                                                                                                         |            |                              |
+| Mar/11(Mon) |                                                                                                         |            |                              |
+| Mar/12(Tue) | [Analysis of Algorithms](/slides/lecture05.pdf)                                                         |            | lab1 out                     |
+| Mar/13(Wed) |                                                                                                         |            |                              |
+| Mar/14(Thu) | [Recursion](/slides/lecture06.pdf)                                                                      |            |                              |
+| Mar/15(Fri) |                                                                                                         |            |                              |
+| Mar/18(Mon) |                                                                                                         |            | lab1: due 11:59pm            |
+| Mar/19(Tue) | [List and Iterators](/slides/lecture07.pdf)                                                             |            |                              |
+| Mar/20(Wed) |                                                                                                         |            |                              |
+| Mar/21(Thu) | [Trees](/slides/lecture08.pdf)                                                                          |            | lab2 out                     |
+| Mar/22(Fri) | DROP DATE                                                                                               |            |                              |
+| Mar/25(Mon) |                                                                                                         |            |                              |
+| Mar/26(Tue) | [Binary Trees (1)](/slides/lecture09.pdf)                                                               |            |                              |
+| Mar/27(Wed) |                                                                                                         |            |                              |
+| Mar/28(Thu) | [Binary Trees (2)](/slides/lecture09.pdf)                                                               |            |                              |
+| Mar/29(Fri) |                                                                                                         |            |                              |
+| Apr/01(Mon) |                                                                                                         |            |                              |
+| Apr/02(Tue) | [Heaps and Priority Queue)](/slides/lecture10.pdf)                                                      |            |                              |
+| Apr/03(Wed) |                                                                                                         |            | lab2: due 11:59pm            |
+| Apr/04(Thu) | [Maps and Hashing (1)](/slides/lecture11.pdf)                                                           |            | lab3 out                     |
+| Apr/05(Fri) |                                                                                                         |            |                              |
+| Apr/08(Mon) |                                                                                                         |            |                              |
+| Apr/09(Tue) | [Maps and Hashing (2)](/slides/lecture11.pdf) <br/>[Ordered Maps and Skip Lists](/slides/lecture12.pdf) |            | lab 1 / lab 2 claim deadline |
+| Apr/10(Wed) |                                                                                                         |            |                              |
+| Apr/11(Thu) | [Binary Search Tree](/slides/lecture13.pdf)                                                             |            |                              |
+| Apr/12(Fri) |                                                                                                         |            |                              |
+| Apr/15(Mon) |                                                                                                         |            |                              |
+| Apr/16(Tue) | Midterm Week (No class)                                                                                 |            |                              |
+| Apr/17(Wed) |                                                                                                         |            |                              |
+| Apr/18(Thu) | Midterm Week (No class)                                                                                 |            |                              |
+| Apr/19(Fri) |                                                                                                         |            |                              |
+| Apr/22(Mon) | Midterm (9pm-11pm @ 104-E205)                                                                           |            | lab3: due 11:59pm            |
+| Apr/23(Tue) | No class                                                                                                |            | lab4 out                     |
+| Apr/24(Wed) |                                                                                                         |            | lab 3 claim deadline         |
+| Apr/25(Thu) | [AVL Trees](/slides/lecture14.pdf)                                                                      |            |                              |
+| Apr/26(Fri) |                                                                                                         |            |                              |
+| Apr/29(Mon) |                                                                                                         |            |                              |
+| Apr/30(Tue) | [Red-Black Trees](/slides/lecture15.pdf)                                                                |            |                              |
+| May/01(Wed) |                                                                                                         |            |                              |
+| May/02(Thu) | [Splay Trees](/slides/lecture16.pdf)                                                                                             |            |                              |
+| May/03(Fri) |                                                                                                         |            |                              |
+| May/06(Mon) |                                                                                                         |            | lab4: due 11:59pm            |
+| May/07(Tue) | [Multiway Search Trees (1)](/slides/lecture17.pdf)                                                                               |            | lab5 out                     |
+| May/08(Wed) |                                                                                                         |            | lab4 claim deadline          |
+| May/09(Thu) | [Multiway Search Trees (2)](/slides/lecture17.pdf)                                                                               |            |                              |
+| May/10(Fri) |                                                                                       |            |                              |
+| May/13(Mon) |                                                                                                         |            |                              |
+| May/14(Tue) | [Graph](/slides/lecture18.pdf)                                                                                         |            |                              |
+| May/15(Wed) |                                                                                                         |            | lab5: due 11:59pm            |
+| May/16(Thu) | [Graph Traversals](/slides/lecture19.pdf)                                                                    |            | lab6 out                     |
+| May/17(Fri) |                                                                                                         |            |                              |
+| May/20(Mon) |                                                                                                         |            |                              |
+| May/21(Tue) | SP19 (Recitation or no class)                                                                           |            |                              |
+| May/22(Wed) |                                                                                                         |            |                              |
+| May/23(Thu) | SP19 (Recitation or no class)                                                                           |            |                              |
+| May/24(Fri) |                                                                                                         |            |                              |
+| May/27(Mon) | [Directed Graphs and Graph Algorithms (1) ](/slides/lecture20.pdf) (7pm - 8:15pm @ TBD)                                                                                                        |            |                              |
+| May/28(Tue) | [Directed Graphs and Graph Algorithms (2)](/slides/lecture20.pdf) <br/> [Disjoint Sets](/slides/lecture21.pdf)                                                                                           |            |                              |
+| May/29(Wed) |                                                                                                         |            |                              |
+| May/30(Thu) | [Strings and Pattern Matching](/slides/lecture22.pdf)                                                                            |            |                              |
+| May/31(Fri) |                                                                                                         |            |                              |
+| Jun/03(Mon) |                                                                                                         |            | lab6: due 11:59pm            |
+| Jun/04(Tue) | [Sorting](/slides/lecture23.pdf)                                                                                                 |            |                              |
+| Jun/05(Wed) |                                                                                                         |            |                              |
+| Jun/06(Thu) | Memorial day (no class)                                                                                 |            |                              |
+| Jun/07(Fri) |                                                                                                         |            |                              |
+| Jun/10(Mon) | Final Week                                                                                              |            |                              |
 
