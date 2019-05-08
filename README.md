@@ -23,7 +23,7 @@ Exams
 
 Announcements
 -------------
-* **[05-01]** Makeup class on May 9 (Thu) 7pm-8:15pm.
+* **[05-01]** Makeup class on May 9 (Thu) 7pm-8:15pm @ 104-E102.
 * **[04-29]** Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83. 
 - The model solution is also available: [midterm.pdf](/midterm.pdf).
 - Midterm distribution: [midterm.csv](/midterm.csv)
@@ -180,7 +180,7 @@ Schedule
 | May/06(Mon)     | Children's day (supplemental, no class)                                                                                                               |                                                                                                                |                                              |
 | May/07(Tue)     |                                                                                                                                                       |                                                                                                                |                                              |
 | May/08(Wed)     | [Dynamic Memory Allocation (1)](/slides/18-malloc-basic.pdf)                                                                                          |                                                                                                                |                                              |
-| May/09(Thu)     | [Dynamic Memory Allocation (2)](/slides/19-malloc-advanced.pdf) (7pm-8:18pm @ TBD)                                                                    |                                                                                                                |                                              |
+| May/09(Thu)     | [Dynamic Memory Allocation (2)](/slides/19-malloc-advanced.pdf) (7pm-8:15pm @ 104-E102)                                                                    |                                                                                                                |                                              |
 | May/10(Fri)     |                                                                                                                                                       |                                                                                                                |                                              |
 | May/13(Mon)     | [Network Programming (1)](/slides/20-netprog1.pdf)                                                                                                    |                                                                                                                |                                              |
 | May/14(Tue)     |                                                                                                                                                       | lab6: malloc lab (7pm- @ TBD)                                                                        |                                              |
