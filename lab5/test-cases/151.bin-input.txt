@@ -1,0 +1,16 @@
+search 255
+insert 65280 4608
+search 16772128
+insert 536870912 0
+insert 0 2293792
+insert 0 16776960
+insert 0 8960
+search 32
+remove 536870912
+insert 16843009 327937
+remove 16843019
+remove 16843009
+search -16711679
+insert 16843009 58614
+remove 16843009
+remove 16843019

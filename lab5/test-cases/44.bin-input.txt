@@ -1,0 +1,31 @@
+insert 0 8294
+remove 690563369
+insert 0 8388708
+insert -15532032 2097152
+insert 15400704 238
+insert -218103808 1966080
+insert 127 0
+insert 0 1310720
+insert 6911 16771840
+insert 0 10537
+remove 690563369
+insert 0 1769472
+insert 0 0
+insert 60928 0
+insert 0 6912
+insert 0 0
+search -16777216
+insert 0 1966080
+insert 2130706559 0
+insert 0 223
+remove -469762177
+insert 127 16711680
+insert 60928 0
+insert 503316480 0
+search -14548928
+insert 0 0
+insert 64 0
+insert 0 19
+insert 32 16711913
+search 535560416
+remove 2097152
