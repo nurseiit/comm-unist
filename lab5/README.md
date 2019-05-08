@@ -16,6 +16,10 @@ the parsing and driving part, you don't need to spend time on that part. For eac
 text version is also included.
   - [test-cases/0.bin-input.txt](test-cases/0.bin-input.txt)
 
+The text version for each input is provided for your convenience. That is, the test driver uses
+its binary version (e.g., `0.bin`) instead.
+
+
 - Output format
 Expected output is a sequence of post order traversal results. The driver calls the post order
 traversal function after running each command from the input. The traversal function is also
