@@ -26,13 +26,8 @@ Exams
 
 Announcements
 -------------
-* **[04-29]** Doing lab 4, regarding the file names for the task 2 and 3, please refer to https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/124.
-* **[04-26]** Lab 4 needs some manual correction. The skeletone provided has the template declation without
-capacity, `Cap`, which should be fixed. As the abstract class declaration in `MyProrityQueue.h` is updated
-correspondingly, please update your submission alsos to follow the declaration.
+* **[05-08]** Lab 5 has beend posted. Please check the calandar for the schedule. The scheduling for pre-grading will be poseted by this weekend.
 
-* **[04-24]** Lab 4 grader will run 9am/3pm/9pm, 4/24 - 05/06 and 00:05 05/07.
-* **[04-23]** Lab 4 is being posted. The deadline is also updated. Pre-grader will start to run on around this weekend.
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
 * **[04-08]** Lab 3 FAQ: `[LAB3] Any explanations about "the program ended abnormally"?` >> https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/96
 * **[04-08]** From now on, there also are deadlinines for claiming about your lab gradings. Please refer to the calendar.
