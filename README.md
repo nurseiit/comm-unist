@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[05-10]** Lab 5 grader will run 9am/9pm every day by the deadline and the final one will run at 5/18 00:05am.
 * **[05-10]** Lab 5 deadline has been changed: you have two more days and the new deadline if 5/17 Fri 11:59pm.
 * **[05-08]** Lab 5 has beend posted. Please check the calandar for the schedule. The scheduling for pre-grading will be poseted by this weekend.
 
