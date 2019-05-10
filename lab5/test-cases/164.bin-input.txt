@@ -1,4 +1,0 @@
-insert 0 0
-insert 65535 0
-insert 0 0
-insert 0 0
