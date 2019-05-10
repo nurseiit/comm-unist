@@ -16,9 +16,18 @@ the parsing and driving part, you don't need to spend time on that part. For eac
 text version is also included.
   - [test-cases/0.bin-input.txt](test-cases/0.bin-input.txt)
 
-The text version for each input is provided for your convenience. That is, the test driver uses
-its binary version (e.g., `0.bin`) instead.
+To obtain the text version of the other inputs, please use the attached program `cmd_to_string`.
+For example, this will print the text version of `1.bin`.
 
+```sh
+./cmd_to_string 1.bin
+```
+
+To save it as a text file, you can use *io redirection*, as follows.
+
+```sh
+./cmd_to_string 1.bin > test-cases/1.bin-input.txt
+```
 
 - Output format
 Expected output is a sequence of post order traversal results. The driver calls the post order
