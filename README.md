@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[05-10]** Lab 5 deadline has been changed: you have two more days and the new deadline if 5/17 Fri 11:59pm.
 * **[05-08]** Lab 5 has beend posted. Please check the calandar for the schedule. The scheduling for pre-grading will be poseted by this weekend.
 
 * **[04-22]** Attendance cheating will be considered like regular cheating. i.e., two attendance cheating results in F.
@@ -167,9 +168,10 @@ Schedule
 | May/10(Fri) |                                                                                       |            |                              |
 | May/13(Mon) |                                                                                                         |            |                              |
 | May/14(Tue) | [Graph](/slides/lecture18.pdf)                                                                                         |            |                              |
-| May/15(Wed) |                                                                                                         |            | lab5: due 11:59pm            |
-| May/16(Thu) | [Graph Traversals](/slides/lecture19.pdf)                                                                    |            | lab6 out                     |
-| May/17(Fri) |                                                                                                         |            |                              |
+| May/15(Wed) |                                                                                                         |            |             |
+| May/16(Thu) | [Graph Traversals](/slides/lecture19.pdf)                                                                    |            |                      |
+| May/17(Fri) |                                                                                                         |            |   lab5: due 11:59pm                           |
+| May/18(Sat) |                                                                                                         |            |   lab6 out                           |
 | May/20(Mon) |                                                                                                         |            |                              |
 | May/21(Tue) | SP19 (Recitation or no class)                                                                           |            |                              |
 | May/22(Wed) |                                                                                                         |            |                              |
