@@ -23,6 +23,8 @@ Exams
 
 Announcements
 -------------
+* **[05-11]** Lab 6 grader will run everyday noon, 0512-0522 and 6am/noon/6pm, 0523-0528. The final grader runs 00:05am, 0529.
+Please note that the as the grader uses different performance parameter (due to the difference in machine), the throughput score will be different, but it is intended behavior.
 * **[05-01]** Makeup class on May 9 (Thu) 7pm-8:15pm @ 104-E102.
 * **[04-29]** Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83. 
 - The model solution is also available: [midterm.pdf](/midterm.pdf).
