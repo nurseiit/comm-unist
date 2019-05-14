@@ -131,16 +131,19 @@ class Tree_t {
   FILE* source;
   bool called = false;
 
+  string currentProblem = "bst";
+  string helperName = "bst_helper.txt";
+
   string getAndUpdateTest() {
     int testNum = 0;
-    FILE* file = freopen("bst_helper.txt", "r", stdin);
+    FILE* file = freopen(helperName.c_str(), "r", stdin);
     if (file) {
       scanf("%d", &testNum);
       if (testNum == 168)
         testNum = 0;
       fclose(file);
     }
-    file = freopen("bst_helper.txt", "w", stdout);
+    file = freopen(helperName.c_str(), "w", stdout);
     printf("%d\n", 1 + testNum);
     fclose(file);
     return std::to_string(testNum);
@@ -149,8 +152,10 @@ class Tree_t {
   string to_string_pre_order(void) {
     if (called == false) {
       string filename = "./test-cases/";
-      filename += "0";  //getAndUpdateTest();
-      filename += "-driver-bst-output.txt";
+      filename += getAndUpdateTest();
+      filename += "-driver-";
+      filename += currentProblem;
+      filename += "-output.txt";
       char* path = realpath(filename.c_str(), NULL);
       source = fopen(path, "r");
       assert(source != NULL);
