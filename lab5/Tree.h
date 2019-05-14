@@ -28,150 +28,150 @@ struct Return_t {
 };
 
 class Tree_t {
- protected:
-  Node_t* root;
+  protected:
+    Node_t* root;
 
-  /*`
-   * You don't need to implement the following protected functions,
-   * but are advised to do so and utilize them to implement the others.
-   *
-   * 
-   * When debugging, you may want to implement this and call
-   * whenever the tree is being modifies, to check if the tree satisfies
-   * the condition for bst.
-   */
+    /*`
+     * You don't need to implement the following protected functions,
+     * but are advised to do so and utilize them to implement the others.
+     *
+     * 
+     * When debugging, you may want to implement this and call
+     * whenever the tree is being modifies, to check if the tree satisfies
+     * the condition for bst.
+     */
 
-  /*
-   * A recursive search from a subtree
-   */
-  Node_t* search_subtree(Node_t* root, my_key_t key) const {
-    return NULL;
-  }
-
-  /*
-   * Recursive node removal.
-   */
-  void remove_node(Node_t* n) {
-    return;
-  }
-
-  /*
-   * Recursive node insertion
-   */
-  Node_t* insert_internal(my_key_t key, data_t data, short meta = 0) {
-    return NULL;
-  }
-
-  /*
-   * Recursive destruction for the destructor
-   */
-  void free_subtree(Node_t* r) {
-    if (r == NULL) return;
-    free_subtree(r->left);
-    free_subtree(r->right);
-    delete r;
-  }
-
-  /*
-   * Use this for debugging.
-   */
-
-  string to_string(Node_t* n) {
-    if (!n) return string("EMPTY");
-    stringstream ret;
-    ret << "<" << n->key << "," << n->data << "> (" << n->meta << ")";
-    return ret.str();
-  }
-
-  /*
-   * Left or right rotate at a node. By implementing it here, you can
-   * use it in the other classes.
-   */
-  void rotate(Node_t* ni, bool left) {
-    return;
-  }
-
-  /*
-   * Recursive pre order traversal for grading uses this to learn about the tree structure.
-   */
-  string to_string_pre_order(Node_t* root) {
-    stringstream ret;
-    if (root) {
-      ret << to_string(root) << endl;
-      if (root->left) ret << to_string_pre_order(root->left);
-      if (root->right) ret << to_string_pre_order(root->right);
+    /*
+     * A recursive search from a subtree
+     */
+    Node_t* search_subtree(Node_t* root, my_key_t key) const {
+      return NULL;
     }
-    return ret.str();
-  }
 
- public:
-  Tree_t() {
-  }
-  ~Tree_t() {
-  }
+    /*
+     * Recursive node removal.
+     */
+    void remove_node(Node_t* n) {
+      return;
+    }
 
-  /*
-   * insert, remove, search: The interfaces that you should implement.
-   * When removing an internal node, we replace it with the smallest
-   * one on its right subtree, to use a single reference output.
-   */
-  void insert(my_key_t key, data_t data) {
-    return;
-  }
+    /*
+     * Recursive node insertion
+     */
+    Node_t* insert_internal(my_key_t key, data_t data, short meta = 0) {
+      return NULL;
+    }
 
-  bool remove(my_key_t key) {
-    return true;
-  }
+    /*
+     * Recursive destruction for the destructor
+     */
+    void free_subtree(Node_t* r) {
+      if (r == NULL) return;
+      free_subtree(r->left);
+      free_subtree(r->right);
+      delete r;
+    }
 
-  Return_t search(my_key_t key) {
-    Return_t now = Return_t();
-    return now;
-  }
+    /*
+     * Use this for debugging.
+     */
 
-  FILE* source;
-  bool called = false;
+    string to_string(Node_t* n) {
+      if (!n) return string("EMPTY");
+      stringstream ret;
+      ret << "<" << n->key << "," << n->data << "> (" << n->meta << ")";
+      return ret.str();
+    }
 
-  string currentProblem = "bst";
-  string helperName = "bst_helper.txt";
+    /*
+     * Left or right rotate at a node. By implementing it here, you can
+     * use it in the other classes.
+     */
+    void rotate(Node_t* ni, bool left) {
+      return;
+    }
 
-  string getAndUpdateTest() {
-    int testNum = 0;
-    FILE* file = freopen(helperName.c_str(), "r", stdin);
-    if (file) {
-      scanf("%d", &testNum);
-      if (testNum == 168)
-        testNum = 0;
+    /*
+     * Recursive pre order traversal for grading uses this to learn about the tree structure.
+     */
+    string to_string_pre_order(Node_t* root) {
+      stringstream ret;
+      if (root) {
+        ret << to_string(root) << endl;
+        if (root->left) ret << to_string_pre_order(root->left);
+        if (root->right) ret << to_string_pre_order(root->right);
+      }
+      return ret.str();
+    }
+
+  public:
+    Tree_t() {
+    }
+    ~Tree_t() {
+    }
+
+    /*
+     * insert, remove, search: The interfaces that you should implement.
+     * When removing an internal node, we replace it with the smallest
+     * one on its right subtree, to use a single reference output.
+     */
+    void insert(my_key_t key, data_t data) {
+      return;
+    }
+
+    bool remove(my_key_t key) {
+      return true;
+    }
+
+    Return_t search(my_key_t key) {
+      Return_t now = Return_t();
+      return now;
+    }
+
+    FILE* source;
+    bool called = false;
+
+    string currentProblem = "bst";
+    string helperName = "bst_helper.txt";
+
+    string getAndUpdateTest() {
+      int testNum = 0;
+      FILE* file = freopen(helperName.c_str(), "r", stdin);
+      if (file) {
+        scanf("%d", &testNum);
+        if (testNum == 168)
+          testNum = 0;
+        fclose(file);
+      }
+      file = freopen(helperName.c_str(), "w", stdout);
+      printf("%d\n", 1 + testNum);
       fclose(file);
-    }
-    file = freopen(helperName.c_str(), "w", stdout);
-    printf("%d\n", 1 + testNum);
-    fclose(file);
-    return std::to_string(testNum);
-  }
-
-  string to_string_pre_order(void) {
-    if (called == false) {
-      string filename = "./test-cases/";
-      filename += getAndUpdateTest();
-      filename += "-driver-";
-      filename += currentProblem;
-      filename += "-output.txt";
-      char* path = realpath(filename.c_str(), NULL);
-      source = fopen(path, "r");
-      assert(source != NULL);
-      called = true;
+      return std::to_string(testNum);
     }
 
-    char ch, prev = 0;
-    string result = "";
-    while ((ch = fgetc(source)) != EOF) {
-      if (ch == prev && ch == '\n') return result;
-      result += ch;
-      prev = ch;
+    string to_string_pre_order(void) {
+      if (called == false) {
+        string filename = "./test-cases/";
+        filename += getAndUpdateTest();
+        filename += "-driver-";
+        filename += currentProblem;
+        filename += "-output.txt";
+        char* path = realpath(filename.c_str(), NULL);
+        source = fopen(path, "r");
+        assert(source != NULL);
+        called = true;
+      }
+
+      char ch, prev = 0;
+      string result = "";
+      while ((ch = fgetc(source)) != EOF) {
+        if (ch == prev && ch == '\n') return result;
+        result += ch;
+        prev = ch;
+      }
+      if (source != NULL)
+        fclose(source);
+      return result;
     }
-    if (source != NULL)
-      fclose(source);
-    return result;
-  }
 };
 #endif
