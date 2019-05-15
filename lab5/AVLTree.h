@@ -7,7 +7,6 @@ class AVLTree_t : public Tree_t {
    * to check if the tree satisfies the condition of AVL tree
    */
   long check_bf(Node_t* n) {
-
     return 0;
   }
 
@@ -34,6 +33,7 @@ class AVLTree_t : public Tree_t {
 
 
   public: 
+  
   /*
    * This time you may need to override these two only.
    * For debugging, you may want to uncomment the check functions.
@@ -42,6 +42,7 @@ class AVLTree_t : public Tree_t {
     //check_bf(root);
     //check_order();
   }
+  
   bool remove(my_key_t key) {
     //check_bf(root);
     //check_order();

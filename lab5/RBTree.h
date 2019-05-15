@@ -29,11 +29,9 @@ class RBTree_t : public Tree_t {
    */
   void remove_node(Node_t* n) {
   }
+
   public:
-  RBTree_t() {
-    currentProblem = "rb";
-    helperName = "rb_helper.txt";
-  }
+  
   /*
    * This time you may need to override these two only.
    * For debugging, you may want to uncomment the check functions.
@@ -42,6 +40,7 @@ class RBTree_t : public Tree_t {
     //check_rb(root);
     //check_order();
   }
+  
   bool remove(my_key_t key) {
     //check_rb(root);
     //check_order();

@@ -15,11 +15,17 @@ class SplayTree_t : public Tree_t {
   }
 
   public:
-  SplayTree_t() : Tree_t() {root = nullptr; }
+  
+  SplayTree_t() : Tree_t() {
+    root = nullptr;
+  }
+  
   void insert(my_key_t key, data_t data) {
   }
+  
   Return_t search(my_key_t key) {
   }
+  
   bool remove(my_key_t key) {
   }
 };

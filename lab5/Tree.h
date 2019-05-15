@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+
 using namespace std;
 
 /*
@@ -31,7 +32,7 @@ class Tree_t {
   protected:
     Node_t* root;
 
-    /*`
+    /*
      * You don't need to implement the following protected functions,
      * but are advised to do so and utilize them to implement the others.
      *
@@ -71,10 +72,6 @@ class Tree_t {
       free_subtree(r->right);
       delete r;
     }
-
-    /*
-     * Use this for debugging.
-     */
 
     string to_string(Node_t* n) {
       if (!n) return string("EMPTY");
@@ -128,50 +125,7 @@ class Tree_t {
       return now;
     }
 
-    FILE* source;
-    bool called = false;
-
-    string currentProblem = "bst";
-    string helperName = "bst_helper.txt";
-
-    string getAndUpdateTest() {
-      int testNum = 0;
-      FILE* file = freopen(helperName.c_str(), "r", stdin);
-      if (file) {
-        scanf("%d", &testNum);
-        if (testNum == 168)
-          testNum = 0;
-        fclose(file);
-      }
-      file = freopen(helperName.c_str(), "w", stdout);
-      printf("%d\n", 1 + testNum);
-      fclose(file);
-      return std::to_string(testNum);
-    }
-
     string to_string_pre_order(void) {
-      if (called == false) {
-        string filename = "./test-cases/";
-        filename += getAndUpdateTest();
-        filename += "-driver-";
-        filename += currentProblem;
-        filename += "-output.txt";
-        char* path = realpath(filename.c_str(), NULL);
-        source = fopen(path, "r");
-        assert(source != NULL);
-        called = true;
-      }
-
-      char ch, prev = 0;
-      string result = "";
-      while ((ch = fgetc(source)) != EOF) {
-        if (ch == prev && ch == '\n') return result;
-        result += ch;
-        prev = ch;
-      }
-      if (source != NULL)
-        fclose(source);
-      return result;
     }
 };
 #endif
