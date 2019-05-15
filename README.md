@@ -184,9 +184,9 @@ Schedule
 | May/29(Wed) |                                                                                                         |            |                              |
 | May/30(Thu) | [Strings and Pattern Matching](/slides/lecture22.pdf)                                                                            |            |                              |
 | May/31(Fri) |                                                                                                         |            |                              |
-| Jun/03(Mon) |                                                                                                         |            | lab6: due 11:59pm            |
+| Jun/03(Mon) |                                                                                                         |            |            |
 | Jun/04(Tue) | [Sorting](/slides/lecture23.pdf)                                                                                                 |            |                              |
-| Jun/05(Wed) |                                                                                                         |            |                              |
+| Jun/05(Wed) |                                                                                                         |            |     lab6: due 11:59pm                          |
 | Jun/06(Thu) | Memorial day (no class)                                                                                 |            |                              |
 | Jun/07(Fri) |                                                                                                         |            |                              |
 | Jun/10(Mon) | Final Week                                                                                              |            |                              |
