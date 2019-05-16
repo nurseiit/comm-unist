@@ -38,11 +38,64 @@ class Tree_t {
   protected:
     pNode root;
 
-  string to_string(pNode node);
-  string to_string_pre_order(pNode node);
+    string to_string(pNode node);
+    string to_string_pre_order(pNode node);
+
+    void add(pNode &node, ll key, ll data) {
+      if (node == 0)
+        node = new Node(key, data);
+      else if (key < node->key)
+        add(node->left, key, data);
+      else
+        add(node->right, key, data);
+    }
+
+    pNode find(pNode node, ll key) {
+      if (node == 0)
+        return 0;
+      else if (key < node->key)
+        return find(node->left, key);
+      else
+        return find(node->right, key);
+    }
+
+    pNode leftest(pNode node) {
+      if (node->left == 0)
+        return node;
+      return leftest(node->left);
+    }
+
+    pNode remove(pNode node, ll key) {
+      if (node == 0)
+        return node;
+      if (key < node->key) {
+        node->left = remove(node->left, key);
+      } else if (key > node->key) {
+        node->right = remove(node->right, key);
+      } else {
+        // key matches.
+        if (node->left == 0 || node->right == 0) {
+          // has one or no children.
+          pNode foo = (node->left == 0 ? node->right : node->left);
+          delete node;
+          return foo;
+        } else {
+          // has both children.
+          pNode foo = leftest(node->right);
+          // copy leftest's key / data.
+          node->key = foo->key;
+          node->data = foo->data;
+          // remove leftest.
+          node->right = remove(node->right, foo->key);
+        }
+      }
+      return node;
+    }
+
 
   public:
     Tree_t() {
+      root = 0;
     }
     ~Tree_t() {
     }
@@ -53,17 +106,21 @@ class Tree_t {
      * one on its right subtree, to use a single reference output.
      */
     void insert(ll key, ll data) {
+      add(root, key, data);
     }
 
     /*
-     * Removes the key.
-     * Returns `true` if successful or `false`.
+     * Removes the key / data pair if exists.
      */
-    bool remove(ll key) {
-      return true;
+    void remove(ll key) {
+      root = remove(root, key);
     }
 
-    void search(ll key) {
+    bool search(ll key) {
+      pNode foo = find(root, key);
+      if (foo == 0)
+        return false;
+      return true;
     }
 
     string to_string_pre_order(void) {
