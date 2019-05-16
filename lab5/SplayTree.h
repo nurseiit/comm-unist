@@ -117,6 +117,29 @@ class SplayTree_t : public Tree_t {
     keepParent(node);
   }
 
+  pNode remove(pNode node, ll key) {
+    if (node == 0)
+      return node;
+    if (key < node->key) {
+      node->left = remove(node->left, key);
+    } else if (key > node->key) {
+      node->right = remove(node->right, key);
+    } else {
+      if (node->left == 0 || node->right == 0) {
+        pNode foo = (node->left == 0 ? node->right : node->left);
+        delete node;
+        return foo;
+      } else {
+        pNode foo = leftest(node->right);
+        node->key = foo->key;
+        node->data = foo->data;
+        node->right = remove(node->right, foo->key);
+        return splay(node);
+      }
+    }
+    return node;
+  }
+
   public:
 
   SplayTree_t() : Tree_t() {
@@ -128,18 +151,25 @@ class SplayTree_t : public Tree_t {
   }
 
   void remove(ll key) {
+    root = remove(root, key);
+    /*
     root = find(root, key);
     if (root) {
       setParent(root->left, 0);
       setParent(root->right, 0);
       root = merge(root->left, root->right);
     }
+    */
   }
 
   bool search(ll key) {
-    pNode node = find(root, key);
+    pNode node = Tree_t::find(root, key);
     if (node == 0)
       return false;
-    return node->key == key;
+    if (node->key == key) {
+      find(root, key);
+      return true;
+    }
+    return false;
   }
 };
