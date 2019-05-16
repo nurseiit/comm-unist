@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[05-16]** For Lab 5, please refer to https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/150#note_1072.
 * **[05-16]** An error has been found from lab 5 Splay Tree operation definition, and fixed test cases are being deployed. On deletion, you should splay 
 the parent of the node to really be deleted.
 * **[05-14]** Lab 5 test cases have been fixed, and grader has also set up correctly with new test case set.
