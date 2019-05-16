@@ -29,6 +29,10 @@ def common_test(args, submission):
         if args.num != '' and int(args.num) != i: continue
         inname = os.path.join(td, '%d.bin' % i)
         ref_name = os.path.join(td, '%d-%s-output.txt' % (i,basename))
+        
+        if args.verbose:
+            print('Trying `./%s %s %s`' % (bin_name, inname, out_name))
+
         try: 
             subprocess.check_call(['./' + bin_name, inname, out_name],
                     stdout=sp_out,stderr=subprocess.STDOUT,timeout=30)
