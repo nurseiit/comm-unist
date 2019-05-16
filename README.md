@@ -26,6 +26,8 @@ Exams
 
 Announcements
 -------------
+* **[05-16]** An error has been found from lab 5 Splay Tree operation definition, and fixed test cases are being deployed. On deletion, you should splay 
+the parent of the node to really be deleted.
 * **[05-14]** Lab 5 test cases have been fixed, and grader has also set up correctly with new test case set.
 * **[05-10]** Lab 5 grader will run 9am/9pm every day by the deadline and the final one will run at 5/18 00:05am.
 * **[05-10]** Lab 5 deadline has been changed: you have two more days and the new deadline if 5/17 Fri 11:59pm.
