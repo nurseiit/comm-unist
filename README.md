@@ -177,9 +177,9 @@ Schedule
 | May/17(Fri) |                                                                                                         |            |   lab5: due 11:59pm                           |
 | May/18(Sat) |                                                                                                         |            |   lab6 out                           |
 | May/20(Mon) |                                                                                                         |            |                              |
-| May/21(Tue) | SP19 (Recitation or no class)                                                                           |            |                              |
+| May/21(Tue) | No class                                                                           |            |                              |
 | May/22(Wed) |                                                                                                         |            |                              |
-| May/23(Thu) | SP19 (Recitation or no class)                                                                           |            |                              |
+| May/23(Thu) | No class                                                                           |            |                              |
 | May/24(Fri) |                                                                                                         |            |                              |
 | May/27(Mon) | [Directed Graphs and Graph Algorithms (1) ](/slides/lecture20.pdf) (7pm - 8:15pm @ TBD)                                                                                                        |            |                              |
 | May/28(Tue) | [Directed Graphs and Graph Algorithms (2)](/slides/lecture20.pdf) <br/> [Disjoint Sets](/slides/lecture21.pdf)                                                                                           |            |                              |
