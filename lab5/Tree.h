@@ -46,8 +46,11 @@ class Tree_t {
         node = new Node(key, data);
       else if (key < node->key)
         add(node->left, key, data);
-      else
+      else if (key > node->key)
         add(node->right, key, data);
+      else {
+        node->data = data;
+      }
     }
 
     pNode find(pNode node, ll key) {
