@@ -21,7 +21,9 @@ struct Node {
     }
 
   Node(Node* parent, Node* left, Node* right)
-    : parent(parent), left(left), right(right) {}
+    : parent(parent), left(left), right(right) {
+      meta = 0;
+    }
 };
 
 typedef Node* pNode;
