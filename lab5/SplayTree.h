@@ -1,31 +1,29 @@
 #include "Tree.h"
 
 class SplayTree_t : public Tree_t {
-
-  /*
-   * It should be a good idea to implement separate splay function.
-   */
-  void splay(Node_t* n) {
+  void splay(pNode node) {
   }
 
   /*
-   * check if the splayed on is at the root
+   * Checks if the splayed node is at the root
    */
-  void check_splayed(my_key_t k) {
+  bool isSplayed(ll key) {
+    if (root == 0)
+      return false;
+    return root->key == key;
   }
 
   public:
-  
+
   SplayTree_t() : Tree_t() {
-    root = nullptr;
+    root = 0;
   }
-  
-  void insert(my_key_t key, data_t data) {
-  }
-  
-  Return_t search(my_key_t key) {
-  }
-  
-  bool remove(my_key_t key) {
+
+  void insert(ll key, ll data) {}
+
+  void remove(ll key) {}
+
+  bool search(ll key) {
+    return false;
   }
 };
