@@ -58,8 +58,10 @@ class Tree_t {
         return 0;
       else if (key < node->key)
         return find(node->left, key);
-      else
+      else if (key > node->key)
         return find(node->right, key);
+      else
+        return node;
     }
 
     pNode leftest(pNode node) {
@@ -95,18 +97,28 @@ class Tree_t {
       return node;
     }
 
+    /*
+     * Clean up the subtree of `node`.
+     */
+    void purge(pNode &node) {
+      if (node == 0)
+        return;
+      purge(node->left);
+      purge(node->right);
+      delete node;
+    }
+
 
   public:
     Tree_t() {
       root = 0;
     }
     ~Tree_t() {
+      purge(root);
     }
 
     /*
-     * insert, remove, search: The interfaces that you should implement.
-     * When removing an internal node, we replace it with the smallest
-     * one on its right subtree, to use a single reference output.
+     * Inserts key / data pair or updates if the key is present.
      */
     void insert(ll key, ll data) {
       add(root, key, data);
@@ -119,6 +131,11 @@ class Tree_t {
       root = remove(root, key);
     }
 
+    /*
+     * Searches by key, returns:
+     * `true` if exists,
+     * `false` otherwise.
+     */ 
     bool search(ll key) {
       pNode foo = find(root, key);
       if (foo == 0)
