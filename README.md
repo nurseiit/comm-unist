@@ -26,6 +26,8 @@ Exams
 
 Announcements
 -------------
+* **[05-18]** Task 2 due extension: If you have ealier commit record to the submit repo (showing you have been working on lab2), 
+You are given one more week and the new deadline for Lab5-Task2 is May 24 (Fri) 11:59 pm. Please post an issue in your private repo if you are keep working on it.
 * **[05-16]** For Lab 5, please refer to https://class.unicss.org/cse221-2019-spring/cse221-2019-spring/issues/150#note_1072.
 * **[05-16]** An error has been found from lab 5 Splay Tree operation definition, and fixed test cases are being deployed. On deletion, you should splay 
 the parent of the node to really be deleted.
