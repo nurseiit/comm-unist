@@ -64,13 +64,31 @@ cd lab3
 - Due: May 06 (Mon) 11:59 pm
 
 ```sh
-cd lab3
+cd lab5
 ```
 
+## Lab5: Binary Search Trees
+
+- Lead TA: Seon Ha(seonha@unist.ac.kr, @seon)
+- Instruction: [lab5/README.md](lab5/README.md)
+- Out: May 08 (Wed)
+- Due: May 15 (Mon) 11:59 pm
+
+```sh
+cd lab5
+```
+
+## Lab6: Graph
 
 
+- Leat TA: Nguyen Thanh Nguyen(ntnguyen@unist.ac.kr, @nguyenthanh)
+- Instruction: [lab6/README.md](lab6/README.md)
+- Out: May 18 (Sat)
+- Due: Jun 05 (Wed) 11:59 pm
 
-
+```sh
+cd lab6
+```
 
 ### Notes
 
