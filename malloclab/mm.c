@@ -1,11 +1,7 @@
 /*
- * --------------
- * Naive approach
- * --------------
- * A block is allocated by simply incrementing
- * the brk pointer.  A block is pure payload. There are no headers or
- * footers.  Blocks are never coalesced or reused. Realloc is
- * implemented directly using mm_malloc and mm_free.
+ * --------------------------
+ * Explicit list with structs
+ * --------------------------
  */
 #include <assert.h>
 #include <stdio.h>
@@ -24,7 +20,8 @@ team_t team = {
   /* First member's email address */
   "nurs@unist.ac.kr",
   "",
-  ""};
+  "",
+};
 
 /* ~ Constants and macros ~ */
 
@@ -60,11 +57,38 @@ team_t team = {
 #define NEXT_BLKP(bp) ((char *)(bp) + GET_SIZE(((char *)(bp) - WSIZE)))
 #define PREV_BLKP(bp) ((char *)(bp) - GET_SIZE(((char *)(bp) - DSIZE)))
 
+#define BLK_HDR_SIZE ALIGN(sizeof(Header))
+
+typedef struct header Header;
+
+struct header {
+  size_t size;
+  Header *next;
+  Header *prev;
+};
+
+void *find_fit(size_t size);
+void print_heap();
+void *coalesce(void *ptr);
+
 /* 
  * mm_init - initialize the malloc package.
  */
 int mm_init(void) {
+  Header *p = mem_sbrk(BLK_HDR_SIZE);
+  p->size = BLK_HDR_SIZE;
+  p->next = p;
+  p->prev = p;
   return 0;
+}
+
+void print_heap() {
+  Header *bp = mem_heap_lo();
+  while (bp < (Header *)mem_heap_hi()) {
+    printf("%s block at %p, with size %d.\n",
+        (bp->size & 1) ? "allocated" : "free", bp, (int)(bp->size & ~1));
+    bp = (Header *)((char *)bp + (bp->size & ~1));
+  }
 }
 
 /* 
@@ -72,38 +96,59 @@ int mm_init(void) {
  *     Always allocate a block whose size is a multiple of the alignment.
  */
 void *mm_malloc(size_t size) {
-  int newsize = ALIGN(size + SIZE_T_SIZE);
-  void *p = mem_sbrk(newsize);
-  if (p == (void *)-1)
-    return NULL;
-  else {
-    *(size_t *)p = size;
-    return (void *)((char *)p + SIZE_T_SIZE);
+  int newsize = ALIGN(size + BLK_HDR_SIZE);
+  Header *bp = find_fit(newsize);
+  if (bp == NULL) {
+    bp = mem_sbrk(newsize);
+    if (bp == (void *)-1)
+      return NULL;
+    else {
+      bp->size = newsize | 1;
+    }
+  } else {
+    bp->size |= 1;
+    bp->prev->next = bp->next;
+    bp->next->prev = bp->prev;
   }
+  return (char *)bp + BLK_HDR_SIZE;
+}
+
+void *find_fit(size_t size) {
+  Header *p;
+  for (p = ((Header *)mem_heap_lo())->next;
+      p != mem_heap_lo() && p->size < size;
+      p = p->next);
+  if (p != mem_heap_lo())
+    return p;
+  return NULL;
 }
 
 /*
  * mm_free - Freeing a block does nothing.
  */
 void mm_free(void *ptr) {
+  Header *bp = ptr - BLK_HDR_SIZE,
+         *head = mem_heap_lo();
+  bp->size &= ~1;
+  bp->next = head->next;
+  bp->prev = head;
+  head->next = bp;
+  bp->next->prev = bp;
 }
 
 /*
  * mm_realloc - Implemented simply in terms of mm_malloc and mm_free
  */
 void *mm_realloc(void *ptr, size_t size) {
-  void *oldptr = ptr;
-  void *newptr;
-  size_t copySize;
-
-  newptr = mm_malloc(size);
+  Header *bp = ptr - BLK_HDR_SIZE;
+  void *newptr = mm_malloc(size);
   if (newptr == NULL)
     return NULL;
-  copySize = *(size_t *)((char *)oldptr - SIZE_T_SIZE);
+  size_t copySize = bp->size - BLK_HDR_SIZE;
   if (size < copySize)
     copySize = size;
-  memcpy(newptr, oldptr, copySize);
-  mm_free(oldptr);
+  memcpy(newptr, ptr, copySize);
+  mm_free(ptr);
   return newptr;
 }
 
