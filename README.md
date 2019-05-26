@@ -26,6 +26,7 @@ Exams
 
 Announcements
 -------------
+* **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-18]** Lab 6 has been posted.
 * **[05-18]** Task 2 due extension: If you have ealier commit record to the submit repo (showing you have been working on lab2), 
 You are given one more week and the new deadline for Lab5-Task2 is May 24 (Fri) 11:59 pm. Please post an issue in your private repo if you are keep working on it.
