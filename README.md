@@ -23,6 +23,7 @@ Exams
 
 Announcements
 -------------
+* **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-23]** You may find [this](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/71) note useful in working on Lab 6.
 * **[05-11]** Lab 6 grader will run everyday noon, 0512-0522 and 6am/noon/6pm, 0523-0528. The final grader runs 00:05am, 0529.
 Please note that the as the grader uses different performance parameter (due to the difference in machine), the throughput score will be different, but it is intended behavior.
