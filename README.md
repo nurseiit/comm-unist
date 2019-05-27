@@ -26,6 +26,8 @@ Exams
 
 Announcements
 -------------
+* **[05-27]** Task 2 is updated. You will find one shortest route using Dijkstra Algorithm instead of finding all. Return type for shortest route in FlightMap header and cpp files is changed. The output-dijkstra.txt in test cases and driver-dijkstra.cpp are updated. In case you lost your work due to
+the updates, please contact the professor. You did not lost whatever you have pushed, and I can help you recover your changes.
 * **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-18]** Lab 6 has been posted.
 * **[05-18]** Task 2 due extension: If you have ealier commit record to the submit repo (showing you have been working on lab2), 
