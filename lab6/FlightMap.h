@@ -11,8 +11,6 @@
 
 using namespace std;
 
-typedef vector<list<string>> ListVector;
-
 class FlightMap {
 
   /*
@@ -181,28 +179,25 @@ public:
   /*
    * Calculate the total distance of a route, which is a list of airport names
    * including both the origin and the destination.
-   * Throw an exception if any airport in the route does not exist.
-   * Throw an exception if some edges on the route do not exist.
    *
    * route - a route
    * Return the total distance of the route. 
    * Return 0 if route contains only original vertex. 
-   * Return -1 if the route did not exist
+   * Return -1 if the routes or the airports did not exist.
    */
   double calcRouteDistance(const list<string> route);
 
   /*
    * Find the shortest route between two airports.  If there exist
    * more than one shortest routes, return any one of them.
-   * If there is no route connecting the airports, return an empty list.
-   * Throw an exception if some of the given airports does not exist.
+   * If there is no route connecting the airports or some of the given airports does not exist, return an empty list.
    *
    * airport1 - the name of an airport at the origin
    * airport2 - the name of an airport at the destination
    * Return the shortest route connecting airport1 to airport2;
-   * Return empty vector if no route exists
+   * Return empty list if no route exists.
    */
-  ListVector findShortestRoute(const string &airport1, const string &airport2);
+  list<string> findShortestRoute(const string &airport1, const string &airport2);
 
 
 private:
