@@ -188,7 +188,7 @@ Schedule
 | May/22(Wed) |                                                                                                         |            |                              |
 | May/23(Thu) | No class                                                                           |            |                              |
 | May/24(Fri) |                                                                                                         |            |                              |
-| May/27(Mon) | [Directed Graphs and Graph Algorithms (1) ](/slides/lecture20.pdf) (7pm - 8:15pm @ TBD)                                                                                                        |            |                              |
+| May/27(Mon) | [Directed Graphs and Graph Algorithms (1) ](/slides/lecture20.pdf) (7pm - 8:15pm @ 104-E204)                                                                                                        |            |                              |
 | May/28(Tue) | [Directed Graphs and Graph Algorithms (2)](/slides/lecture20.pdf) <br/> [Disjoint Sets](/slides/lecture21.pdf)                                                                                           |            |                              |
 | May/29(Wed) |                                                                                                         |            |                              |
 | May/30(Thu) | [Strings and Pattern Matching](/slides/lecture22.pdf)                                                                            |            |                              |
