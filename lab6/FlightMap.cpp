@@ -91,7 +91,7 @@ void FlightMap::readFromFile(const string &filename) {
     FlightGraph::Vertex v1 = findOrCreateAirport(*airport_iter1);
     FlightGraph::Vertex v2 = findOrCreateAirport(*airport_iter2);
     if (v1.isOutgoingTo(v2)) {
-      //throw runtime_error("Connection (" + *v1 + " -> " + *v2 + ") is duplicated.");
+      // throw runtime_error("Connection (" + *v1 + " -> " + *v2 + ") is duplicated.");
       continue;
     } else {
       flight_graph.insertDirectedEdge(v1, v2, *dist_iter);
@@ -176,7 +176,7 @@ void FlightMap::removeConnection(const string &airport1, const string &airport2)
     return;
   }
   if (!v1.isOutgoingTo(v2)) {
-      // throw runtime_error(airport1 + " does not connect to " + airport2 + ".");
+    // throw runtime_error(airport1 + " does not connect to " + airport2 + ".");
     return;
   }
   FlightGraph::Edge edge = v1.outgoingEdge(v2);
@@ -353,7 +353,7 @@ double FlightMap::calcRouteDistance(const list<string> route) {
 
 }
 
-// Using Dijkstra Algorithm to find shortest paths
-ListVector FlightMap::findShortestRoute(const string &airport1, const string &airport2) {
+// Using dijkstra to find shortest path
+list<string> FlightMap::findShortestRoute(const string &airport1, const string &airport2) {
 
 }
