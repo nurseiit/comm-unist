@@ -54,7 +54,8 @@ Header* lists[20];
  * mm_init - initialize the malloc package.
  */
 int mm_init(void) {
-  for (int i = 3; i <= GROUPS; i++) {
+  int i;
+  for (i = 3; i <= GROUPS; i++) {
     lists[i] = mem_sbrk(BLK_HDR_SIZE);
     lists[i]->size = BLK_HDR_SIZE;
     lists[i]->next = lists[i];
