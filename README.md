@@ -21,11 +21,10 @@ Discussions
 Exams
 -----
 
-* Final: Jun 7 7pm-10pm.
 
 Announcements
 -------------
-* **[05-27]** Final on Jun 7 7pm-10pm.
+
 * **[05-27]** Lab 6: as the baseline fives you 13/55 points, anyone who tried to do something bug failed will get the minimum of 13 points for fairness.
 * **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-23]** You may find [this](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/71) note useful in working on Lab 6.
