@@ -34,7 +34,7 @@ team_t team = {
 
 #define BLK_HDR_SIZE ALIGN(sizeof(Header))
 
-#define GROUPS 10
+#define GROUPS 13
 
 typedef struct header Header;
 
@@ -140,7 +140,10 @@ void *mm_realloc(void *ptr, size_t size) {
     return ptr;
 
   // Hack
-  size += size;
+  if (size * 3 > 24576 + size)
+    size = 3 * size;
+  else
+    size += 24576;
 
   void *newptr = mm_malloc(size);
   if (newptr == NULL)
