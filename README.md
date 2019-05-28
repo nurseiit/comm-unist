@@ -21,11 +21,12 @@ Discussions
 
 Exams
 -----
-* Final
-  TBA
+
+* Final: Jun 7 7pm-10pm.
 
 Announcements
 -------------
+* **[05-28]** Final on Jun 7 7pm-10pm.
 * **[05-27]** Task 2 is updated. You will find one shortest route using Dijkstra Algorithm instead of finding all. Return type for shortest route in FlightMap header and cpp files is changed. The output-dijkstra.txt in test cases and driver-dijkstra.cpp are updated. In case you lost your work due to
 the updates, please contact the professor. You did not lost whatever you have pushed, and I can help you recover your changes.
 * **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
