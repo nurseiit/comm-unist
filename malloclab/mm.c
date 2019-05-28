@@ -141,13 +141,24 @@ void mm_free(void *ptr) {
  */
 void *mm_realloc(void *ptr, size_t size) {
   Header *bp = ptr - BLK_HDR_SIZE;
+  size_t copySize = bp->size - BLK_HDR_SIZE;
+
+  if (size == 0) {
+    mm_free(ptr);
+    return NULL;
+  }
+
+  if (size < copySize)
+    return ptr;
+
+  size_t oldsize = size < copySize ? size : copySize;
+  size += size;
+
   void *newptr = mm_malloc(size);
   if (newptr == NULL)
     return NULL;
-  size_t copySize = bp->size - BLK_HDR_SIZE;
-  if (size < copySize)
-    copySize = size;
-  memcpy(newptr, ptr, copySize);
+
+  memcpy(newptr, ptr, oldsize);
   mm_free(ptr);
   return newptr;
 }
