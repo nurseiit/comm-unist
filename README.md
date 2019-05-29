@@ -24,8 +24,14 @@ Exams
 
 * Final: Jun 7 7pm-10pm.
 
+* Midterm grade along with the overall status has been posted. Check `grader-overall` branch of your repo. Note that some of you lost some lab score due to cheating, and we are keep working on handling more cases. If you find any mismatch between the individual and overall grading of the lab, please report. The distribution is also posted at [overall.csv](/overall.csv). So far the maximal overall score is 47.5 and the top got 34.83. 
+- The model solution is also available: [midterm.pdf](/midterm.pdf).
+- Midterm distribution: [midterm.csv](/midterm.csv)
+- Overall distribution: [overall.csv](/overall.csv)
+
 Announcements
 -------------
+* **[05-30]** Midterm grading has been posted.
 * **[05-29]** Grader for lab 6 is scheduled to run 9am 6pm everyday by the deadline and the last run will be at 00:05 6/6. Please report through the issue if you find any difference between the result from your test cases and the grader one.
 * **[05-28]** Final on Jun 7 7pm-10pm.
 * **[05-27]** Task 2 is updated. You will find one shortest route using Dijkstra Algorithm instead of finding all. Return type for shortest route in FlightMap header and cpp files is changed. The output-dijkstra.txt in test cases and driver-dijkstra.cpp are updated. In case you lost your work due to
