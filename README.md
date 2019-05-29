@@ -27,6 +27,7 @@ Exams
 
 Announcements
 -------------
+* **[05-29]** The grader for proxylab will run from tomorrow, noon and 9pm. The last run will be at 00:05 6/6.
 * **[05-29]** Please participate the survey for alternative time slot: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
 * **[05-29]** Please check the final schedule.
 * **[05-27]** Lab 6: as the baseline fives you 13/55 points, anyone who tried to do something bug failed will get the minimum of 13 points for fairness.
