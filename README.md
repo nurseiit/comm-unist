@@ -22,10 +22,12 @@ Exams
 -----
 
 * Final: 6/13 (Wed) 7(8)am - 10am @ TBD
+  - Survey for alternative: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
 
 
 Announcements
 -------------
+* **[05-29]** Please participate the survey for alternative time slot: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
 * **[05-29]** Please check the final schedule.
 * **[05-27]** Lab 6: as the baseline fives you 13/55 points, anyone who tried to do something bug failed will get the minimum of 13 points for fairness.
 * **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
