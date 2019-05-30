@@ -31,12 +31,12 @@ Exams
 
 Announcements
 -------------
+* **[05-30]** Midterm claim session is 5pm-8pm on May 30 (Thu) @ 106-601-3. Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-30]** Midterm grading has been posted.
 * **[05-29]** Grader for lab 6 is scheduled to run 9am 6pm everyday by the deadline and the last run will be at 00:05 6/6. Please report through the issue if you find any difference between the result from your test cases and the grader one.
 * **[05-28]** Final on Jun 7 7pm-10pm.
 * **[05-27]** Task 2 is updated. You will find one shortest route using Dijkstra Algorithm instead of finding all. Return type for shortest route in FlightMap header and cpp files is changed. The output-dijkstra.txt in test cases and driver-dijkstra.cpp are updated. In case you lost your work due to
 the updates, please contact the professor. You did not lost whatever you have pushed, and I can help you recover your changes.
-* **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-18]** Lab 6 has been posted.
 * **[05-18]** Task 2 due extension: If you have ealier commit record to the submit repo (showing you have been working on lab2), 
 You are given one more week and the new deadline for Lab5-Task2 is May 24 (Fri) 11:59 pm. Please post an issue in your private repo if you are keep working on it.
