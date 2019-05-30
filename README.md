@@ -27,11 +27,11 @@ Exams
 
 Announcements
 -------------
+* **[05-30]** Midterm claim session is 5pm-8pm on May 30 (Thu) @ 106-601-3. Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-29]** The grader for proxylab will run from tomorrow, noon and 9pm. The last run will be at 00:05 6/6.
 * **[05-29]** Please participate the survey for alternative time slot: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
 * **[05-29]** Please check the final schedule.
 * **[05-27]** Lab 6: as the baseline fives you 13/55 points, anyone who tried to do something bug failed will get the minimum of 13 points for fairness.
-* **[05-27]** Midterm claim session is 5pm-8pm on May 30 (Thu). Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-23]** You may find [this](https://class.unicss.org/cse251-2019-spring/cse251-2019-spring/issues/71) note useful in working on Lab 6.
 * **[05-11]** Lab 6 grader will run everyday noon, 0512-0522 and 6am/noon/6pm, 0523-0528. The final grader runs 00:05am, 0529.
 Please note that the as the grader uses different performance parameter (due to the difference in machine), the throughput score will be different, but it is intended behavior.
