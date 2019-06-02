@@ -27,6 +27,7 @@ Exams
 
 Announcements
 -------------
+* **[06-02]** You cannot claim for anything after the claim session. It's the reason why we have that.
 * **[05-30]** Midterm claim session is 5pm-8pm on May 30 (Thu) @ 106-601-3. Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-29]** The grader for proxylab will run from tomorrow, noon and 9pm. The last run will be at 00:05 6/6.
 * **[05-29]** Please participate the survey for alternative time slot: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
