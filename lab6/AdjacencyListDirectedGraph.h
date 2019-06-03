@@ -62,7 +62,8 @@ class AdjacencyListDirectedGraph {
       EdgeItor origin_inc_edges_pos;  // position in an edge list in inc_edges_collection
       EdgeItor dest_inc_edges_pos;    // position in an edge list in inc_edges_collection
 
-      EdgeObject(const Vertex& v, const Vertex& w, E _elt) : origin_vertex(v), dest_vertex(w), elt(_elt) {} // pos origin_inc_edges_pos, and dest_inc_edges_pos are initially "NULL".
+      EdgeObject(const Vertex& v, const Vertex& w, E _elt)
+        : origin_vertex(v), dest_vertex(w), elt(_elt) {} // pos origin_inc_edges_pos, and dest_inc_edges_pos are initially "NULL".
     };
 
     VertexObjectList vertex_collection;
@@ -93,14 +94,14 @@ class AdjacencyListDirectedGraph {
        * Return the element stored at this vertex.
        */
       V& operator*() const {
-
+        return v_obj->elt;
       }
 
       /*
        * Return a list of edges incident to this vertex.
        */
       EdgeList incidentEdges() const {
-
+        
       }
 
       /*
@@ -111,8 +112,7 @@ class AdjacencyListDirectedGraph {
        * v - the given vertex
        */
       bool isAdjacentTo(const Vertex& v) const {
-
-
+        
       }
 
       /*
@@ -149,7 +149,7 @@ class AdjacencyListDirectedGraph {
        * Return true if this vertex is the same as the given vertex
        */
       bool operator==(const Vertex& v) const {
-
+        return v_obj->pos == v.v_obj->pos;
       }
 
       /*
@@ -181,7 +181,7 @@ class AdjacencyListDirectedGraph {
        * Return the element stored at this edge.
        */
       E& operator*() const {
-
+        return e_obj->elt;
       }
 
       /*
@@ -190,7 +190,10 @@ class AdjacencyListDirectedGraph {
        * The second element of the vertex list is the vertex of the destination.
        */
       VertexList endVertices() const {
-
+        VertexList ends;
+        ends.push_back(origin());
+        ends.push_back(dest());
+        return ends;
       }
 
       /*
@@ -203,7 +206,11 @@ class AdjacencyListDirectedGraph {
        * Return the other vertex of this edge
        */
       Vertex opposite(const Vertex& v) const {
-
+        Vertex origin = origin();
+        Vertex dest = dest();
+        if (v != origin && v != dest)
+          throw runtime_error("Edge doesn't have the vertex you're looking for!");
+        return v == origin ? dest : origin;
       }
 
       /*
@@ -215,7 +222,10 @@ class AdjacencyListDirectedGraph {
        * Return true if the given edge is adjacent to this edge.
        */
       bool isAdjacentTo(const Edge& edge) const {
-
+        bool share = false;
+        share |= (origin() == edge.origin() || origin() == edge.dest());
+        share |= (dest() == edge.dest() || dest() == edge.dest());
+        return share;
       }
 
       /*
@@ -226,21 +236,21 @@ class AdjacencyListDirectedGraph {
        * Return true if the given vertex is incident to this edge.
        */
       bool isIncidentOn(const Vertex& v) const {
-
+        return v == origin() || v == dest();
       }
 
       /*
        * Return the vertex at the origin of this edge.
        */
       Vertex origin() const {
-
+        return e_obj->origin_vertex;
       }
 
       /*
        * Return the vertex at the destination of this edge.
        */
       Vertex dest() const {
-
+        return e_obj->dest_vertex;
       }
 
       /*
@@ -248,7 +258,7 @@ class AdjacencyListDirectedGraph {
        * In this class, it should always return true.
        */
       bool isDirected() const {
-
+        return true;
       }
 
       /*
@@ -258,7 +268,7 @@ class AdjacencyListDirectedGraph {
        * Return true if this edge is the same as the given edge.
        */
       bool operator==(const Edge& edge) const {
-
+        return e_obj->pos == edge.e_obj->pos;
       }
 
       /*
@@ -293,7 +303,7 @@ class AdjacencyListDirectedGraph {
      * Return the newly created vertex.
      */
     Vertex insertVertex(const V& x) {
-
+      vertex_collection.push_back(x);
     }
 
     /*
