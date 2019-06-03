@@ -21,7 +21,7 @@ Discussions
 Exams
 -----
 
-* Final: 6/13 (Wed) 7(8)am - 10am @ TBD
+* Final: 6/13 (**Thu**) 7(8)am - 10am @ TBD
   - Survey for alternative: https://docs.google.com/spreadsheets/d/1Dz0t_kBlO_9qnRCDcGgoWHcGyXcXCJwbBhXcpxfXU3Q/edit?usp=sharing
 
 
