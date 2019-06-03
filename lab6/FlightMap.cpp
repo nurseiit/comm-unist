@@ -14,7 +14,7 @@ FlightMap::FlightGraph::Vertex FlightMap::findOrCreateAirport(const string &airp
   try {
     return airport_db.at(airport);
   } catch (const out_of_range &e) {
-	  return (airport_db[airport] = flight_graph.insertVertex(airport));
+    return (airport_db[airport] = flight_graph.insertVertex(airport));
   }
 }
 
@@ -184,29 +184,29 @@ void FlightMap::removeConnection(const string &airport1, const string &airport2)
 }
 
 list<string> FlightMap::printAirports() {
-	list<string> aps;
-	FlightGraph::VertexList vlist = flight_graph.vertices();
-	for (FlightGraph::VertexItor iter = vlist.begin(); iter != vlist.end(); ++iter) {
-		aps.push_back(**iter);
-	}
-	return aps;
+  list<string> aps;
+  FlightGraph::VertexList vlist = flight_graph.vertices();
+  for (FlightGraph::VertexItor iter = vlist.begin(); iter != vlist.end(); ++iter) {
+    aps.push_back(**iter);
+  }
+  return aps;
 }
 
 map<string, list<string>> FlightMap::printOutgoingConnections() {
-	map<string, list<string>> adjlist;
+  map<string, list<string>> adjlist;
 
-	FlightGraph::VertexList vlist = flight_graph.vertices();
-	for (FlightGraph::VertexItor iter = vlist.begin(); iter != vlist.end(); ++iter) {
-		adjlist[**iter] = {};
+  FlightGraph::VertexList vlist = flight_graph.vertices();
+  for (FlightGraph::VertexItor iter = vlist.begin(); iter != vlist.end(); ++iter) {
+    adjlist[**iter] = {};
 
-		FlightGraph::EdgeList elist = iter->outgoingEdges();
-		if (elist.empty()) continue;
+    FlightGraph::EdgeList elist = iter->outgoingEdges();
+    if (elist.empty()) continue;
 
-		for (FlightGraph::EdgeItor eter = elist.begin(); eter != elist.end(); ++eter) {
-			adjlist[**iter].push_back(*(eter->dest()) + " " + to_string(int(**eter)) + " ");
-		}
-	}
-	return adjlist;
+    for (FlightGraph::EdgeItor eter = elist.begin(); eter != elist.end(); ++eter) {
+      adjlist[**iter].push_back(*(eter->dest()) + " " + to_string(int(**eter)) + " ");
+    }
+  }
+  return adjlist;
 }
 
 void FlightMap::printFlightMap() {

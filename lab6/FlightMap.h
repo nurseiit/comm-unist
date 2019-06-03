@@ -67,7 +67,7 @@ class FlightMap {
    */
   void printConnection(const FlightGraph::Edge &edge);
 
-public:
+  public:
 
   /*
    * Check whether an airport exists in the airport database.
@@ -200,7 +200,7 @@ public:
   list<string> findShortestRoute(const string &airport1, const string &airport2);
 
 
-private:
+  private:
 
   // -------------------------------------------------------------------------
   // You can declare any number of private member functions below.

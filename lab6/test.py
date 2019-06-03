@@ -13,16 +13,16 @@ def common_test(args, submission):
     bin_name = submission.split('.')[0] + '.bin'
     out_name = submission.split('.')[0] + '.out'
     basename = submission.split('.')[0]
-    
+
     if(args.asan): asan = '-fsanitize=address'
     else: asan = ''
-    
+
     if not args.summarize: print('prepare to start')
     comments = ''
     try:
         subprocess.check_call(
-                ('g++ -std=c++11 -O2 -Wall %s FlightMap.cpp %s -o %s'%(asan,submission,bin_name)).split(),
-                stdout=sp_out,stderr=subprocess.STDOUT)
+            ('g++ -std=c++11 -O2 -Wall %s FlightMap.cpp %s -o %s'%(asan,submission,bin_name)).split(),
+            stdout=sp_out,stderr=subprocess.STDOUT)
         has_bin = True
     except subprocess.CalledProcessError:
         comments += 'failed to compile the submission\n'
@@ -40,7 +40,7 @@ def common_test(args, submission):
         refdij_name = os.path.join(td, '%d-output-dijkstra.txt' % (i))
         try: 
             subprocess.check_call(['./' + bin_name, graph_name, rm_airname, rm_conname, out_name, dij_name, ref_name, refdij_name],
-                    stdout=sp_out,stderr=subprocess.STDOUT,timeout=30)
+                                  stdout=sp_out,stderr=subprocess.STDOUT,timeout=30)
         except subprocess.CalledProcessError:
             comments += '(%d): the program ended abnormally\n' % i
             continue
@@ -66,7 +66,7 @@ def common_test(args, submission):
                 print('stop after %d successes' % success)
                 debug_name = submission.split('.')[0] + '.txt'
                 subprocess.check_call(['./' + bin_name, graph_name, rm_airname, rm_conname, debug_name, dij_name, refdij_name],
-                    stdout=sp_out,stderr=subprocess.STDOUT,timeout=30)
+                                      stdout=sp_out,stderr=subprocess.STDOUT,timeout=30)
                 return
         if result:
             success += 1
@@ -84,18 +84,18 @@ if __name__ == '__main__':
     tasks = ['graph', 'dijkstra']
     p = argparse.ArgumentParser()
     p.add_argument('--task',
-            type=str,default='',
-            help='The name of the task to test (%s)'%(str(tasks)))
+                   type=str,default='',
+                   help='The name of the task to test (%s)'%(str(tasks)))
     p.add_argument('--verbose',
-            action='store_true',
-            help='show more log')
+                   action='store_true',
+                   help='show more log')
     p.add_argument('--num',
-            type=str,default='',
-            help='run only one of the cases')
+                   type=str,default='',
+                   help='run only one of the cases')
     p.add_argument('--summarize',
-            action='store_true',help='print the summary only for grading')
+                   action='store_true',help='print the summary only for grading')
     p.add_argument('--asan',
-        action='store_true')
+                   action='store_true')
 
     args = p.parse_args(sys.argv[1:])
 
