@@ -256,6 +256,10 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
     return v_obj != v.v_obj;
   }
 
+  bool operator<(const Vertex &v) const {
+    return v_obj->elt < v.v_obj->elt;
+  }
+
   /*
    * Declare friend to AdjacencyListDirectedGraph so that
    * AdjacencyListDirectedGraph can access to the private
