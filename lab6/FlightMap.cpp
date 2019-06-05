@@ -351,7 +351,7 @@ void FlightMap::printConnectionInfo(const string &airport1, const string &airpor
 // Calculate route distance
 double FlightMap::calcRouteDistance(const list<string> route) {
   if (route.empty())
-    return -1;
+    return 0;
   double len = 0;
   auto prev = route.begin(), next = route.begin();
   next++;
