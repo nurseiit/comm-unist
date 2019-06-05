@@ -350,10 +350,71 @@ void FlightMap::printConnectionInfo(const string &airport1, const string &airpor
 
 // Calculate route distance
 double FlightMap::calcRouteDistance(const list<string> route) {
-
+  if (route.empty())
+    return -1;
+  double len = 0;
+  auto prev = route.begin(), next = route.begin();
+  next++;
+  while (next != route.end()) {
+    try {
+      FlightGraph::Vertex from = findOrCreateAirport(*prev);
+      FlightGraph::Vertex to = findOrCreateAirport(*next);
+      FlightGraph::Edge edge = from.outgoingEdge(to);
+      len += *edge;
+    } catch (runtime_error &e) {
+      return -1;
+    }
+    next++;
+    prev++;
+  }
+  return len;
 }
 
 // Using dijkstra to find shortest path
 list<string> FlightMap::findShortestRoute(const string &airport1, const string &airport2) {
+  auto from = findOrCreateAirport(airport1);
+  auto to = findOrCreateAirport(airport2);
+  
+  auto vertices = flight_graph.vertices();
 
+  map<string, double> dp;
+
+  for (auto it : vertices)
+    dp[*it] = (it == from ? 0 : INT_MAX);
+  
+  map<double, FlightGraph::Vertex> q;
+  map<string, string> parent;
+  q.insert({0, from});
+
+  while (!q.empty()) {
+    auto vertex = q.begin()->second;
+    double cur_dp = q.begin()->first;
+    q.erase(q.begin());
+    if (cur_dp > dp[*vertex])
+      continue;
+    auto edges = vertex.outgoingEdges();
+    for (auto it : edges) {
+      auto dest = it.dest();
+      double len = *it;
+      if (dp[*vertex] + len < dp[*dest]) {
+        dp[*dest] = dp[*vertex] + len;
+        parent[*dest] = *vertex;
+        q.insert({dp[*dest], dest});
+      }
+    }
+  }
+  if (dp[*to] == INT_MAX)
+    return {};
+
+  list<string> path;
+  string cur = *to;
+  do {
+    path.push_front(cur);
+    if (parent.count(cur) > 0)
+      cur = parent[cur];
+    else
+      return {};
+  } while (cur != *from);
+  cerr << "At least found something -- " << dp[*to] << endl;
+  return path;
 }
