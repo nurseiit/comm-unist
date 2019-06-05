@@ -208,7 +208,7 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * v - the given vertex
    */
   bool isOutgoingTo(const Vertex& v) const {
-    auto edges = incidentEdges();
+    auto edges = outgoingEdges();
     for (auto it : edges)
       if (it.isSameAs(*this, v))
         return true;
@@ -234,7 +234,7 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * Return the set of all directed edges connecting this vertex to any vertex.
    */
   EdgeList outgoingEdges() const {
-    EdgeList edges = incidentEdges();
+    auto edges = incidentEdges();
     EdgeList filtered;
     for (auto it : edges)
       if (it.origin() == *this)
@@ -249,11 +249,11 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * Return true if this vertex is the same as the given vertex
    */
   bool operator==(const Vertex& v) const {
-    return v_obj->pos == v.v_obj->pos;
+    return v_obj == v.v_obj;
   }
 
   bool operator!=(const Vertex& v) const {
-    return v_obj->pos != v.v_obj->pos;
+    return v_obj != v.v_obj;
   }
 
   /*
@@ -377,7 +377,7 @@ class AdjacencyListDirectedGraph<V, E> :: Edge {
    * Return true if this edge is the same as the given edge.
    */
   bool operator==(const Edge& edge) const {
-    return e_obj->pos == edge.e_obj->pos;
+    return e_obj == edge.e_obj;
   }
 
   /*
