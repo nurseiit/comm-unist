@@ -350,7 +350,8 @@ void FlightMap::printConnectionInfo(const string &airport1, const string &airpor
 
 // Calculate route distance
 double FlightMap::calcRouteDistance(const list<string> route) {
-  if (route.empty())
+  assert(route.size() > 1);
+  if (*route.begin() == route.back())
     return 0;
   double len = 0;
   auto prev = route.begin(), next = route.begin();
@@ -362,7 +363,7 @@ double FlightMap::calcRouteDistance(const list<string> route) {
       FlightGraph::Edge edge = from.outgoingEdge(to);
       len += *edge;
     } catch (runtime_error &e) {
-      return 0;
+      return -1;
     }
     next++;
     prev++;
@@ -380,7 +381,7 @@ list<string> FlightMap::findShortestRoute(const string &airport1, const string &
   map<string, double> dp;
 
   for (auto it : vertices)
-    dp[*it] = INT_MAX;
+    dp[*it] = -1;
   dp[*from] = 0;
   
   priority_queue<pair<double, FlightGraph::Vertex>> q;
@@ -391,20 +392,20 @@ list<string> FlightMap::findShortestRoute(const string &airport1, const string &
     auto vertex = q.top().second;
     double cur_dp = -q.top().first;
     q.pop();
-    if (cur_dp > dp[*vertex])
+    if (cur_dp > dp[*vertex] && dp[*vertex] != -1)
       continue;
     auto edges = vertex.outgoingEdges();
     for (auto it : edges) {
       auto dest = it.dest();
       double len = *it;
-      if (dp[*vertex] + len < dp[*dest]) {
+      if (dp[*dest] == -1 || dp[*vertex] + len < dp[*dest]) {
         dp[*dest] = dp[*vertex] + len;
         parent[*dest] = *vertex;
         q.push({-dp[*dest], dest});
       }
     }
   }
-  if (dp[*to] == INT_MAX)
+  if (dp[*to] == -1)
     return {};
 
   list<string> path;
