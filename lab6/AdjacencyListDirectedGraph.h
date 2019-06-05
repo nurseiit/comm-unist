@@ -12,8 +12,6 @@ class AdjacencyListDirectedGraph {
 
   public:
 
-    // Define public data types of Vertex and Edge and the associated iterators.
-
     class Vertex;
     class Edge;
 
@@ -25,9 +23,6 @@ class AdjacencyListDirectedGraph {
     typedef typename EdgeList::const_iterator EdgeConstItor;  
 
   private:
-
-    // Define private data types of VertexObject and EdgeObject and the associated iterators.
-    // The type of IncidenceEdgesList and its iterator are defined as well.
 
     struct VertexObject;
     struct EdgeObject;
@@ -47,33 +42,38 @@ class AdjacencyListDirectedGraph {
   public:
 
     /*
-     * Return the list of vertices in this graph.
+     * Returns the list of vertices of this graph.
      */
     VertexList vertices() {
-      VertexList result;
+      VertexList converted;
       for (auto &it : vertex_collection)
-        result.push_back(Vertex(*this, &it));
-      return result;
+        converted.push_back(Vertex(&it));
+      return converted;
     }
 
     /*
-     * Return the list of edges in this graph.
+     * Returns the list of edges of this graph.
      */
     EdgeList edges() {
+      EdgeList converted;
+      for (auto &it : edge_collection)
+        converted.push_back(Edge(&it));
+      return converted;
     }
 
     /*
-     * Add a new vertex to this graph.
+     * Adds a new vertex to this graph.
      *
      * x - the element to be stored in the new vertex.
-     * Return the newly created vertex.
+     * Returns the newly created vertex.
      */
     Vertex insertVertex(const V& x) {
-      VertexObject v_obj = VertexObject(x);
-      v_obj.pos = vertex_collection.end();
-      vertex_collection.push_back(v_obj);
-
-      return Vertex(*this, &v_obj);
+      VertexObject vertexObj = VertexObject(x);
+      auto it_v = vertex_collection.insert(vertex_collection.end(), vertexObj);
+      (*it_v).pos = it_v;
+      auto it_e = inc_edges_collection.insert(inc_edges_collection.end(), EdgeList());
+      (*it_v).inc_edges_pos = it_e;
+      return Vertex(&(*it_v));
     }
 
     /*
@@ -86,10 +86,20 @@ class AdjacencyListDirectedGraph {
      * Return the newly created edge.
      */
     Edge insertDirectedEdge(const Vertex& from, const Vertex& to, E x) {
-      EdgeObject e_obj = EdgeObject(from, to, x);
-      e_obj.pos = edge_collection.end();
-      edge_collection.push_back(e_obj);
-      return Edge(&e_obj);
+      auto it_e = edge_collection.insert(edge_collection.end(), EdgeObject(from, to, x));
+      (*it_e).pos = it_e;
+      
+      auto it_from = (*((from.v_obj)->inc_edges_pos)).insert(
+          (*((from.v_obj)->inc_edges_pos)).end(),
+          Edge(&(*it_e)));
+      
+      auto it_to = (*((to.v_obj)->inc_edges_pos)).insert(
+          (*((to.v_obj)->inc_edges_pos)).end(),
+          Edge(&(*it_e)));
+      
+      (*it_e).origin_inc_edges_pos = it_from;
+      (*it_e).dest_inc_edges_pos = it_to;
+      return Edge(&(*it_e));
     }
 
     /*
@@ -99,16 +109,11 @@ class AdjacencyListDirectedGraph {
      * v - a vertex
      */
     void eraseVertex(const Vertex& v) {
-      auto pos = v.v_obj->pos;
-      vertex_collection.erase(pos);
-      EdgeList toRemove;
-      for (auto &it : edge_collection) {
-        Edge edge = Edge(&it);
-        if (edge.isIncidentOn(v))
-          toRemove.push_back(edge);
-      }
-      for (auto &it : toRemove)
+      auto edges = v.incidentEdges();
+      for (auto it : edges)
         eraseEdge(it);
+      inc_edges_collection.erase((v.v_obj)->inc_edges_pos);
+      vertex_collection.erase((v.v_obj)->pos);
     }
 
     /*
@@ -117,7 +122,9 @@ class AdjacencyListDirectedGraph {
      * e - an edge
      */
     void eraseEdge(const Edge& e) {
-      edge_collection.erase(e.e_obj->pos);
+      (*((e.origin().v_obj)->inc_edges_pos)).erase((e.e_obj)->origin_inc_edges_pos);
+      (*((e.dest().v_obj)->inc_edges_pos)).erase((e.e_obj)->dest_inc_edges_pos);
+      edge_collection.erase((e.e_obj)->pos);
     }
 
 };
@@ -146,29 +153,24 @@ struct AdjacencyListDirectedGraph<V, E> :: EdgeObject {
   EdgeItor origin_inc_edges_pos;  // position in an edge list in inc_edges_collection
   EdgeItor dest_inc_edges_pos;    // position in an edge list in inc_edges_collection
 
+  // pos origin_inc_edges_pos, and dest_inc_edges_pos are initially "NULL"
   EdgeObject(const Vertex& from, const Vertex& to, E elt)
-    : elt(elt), from(from), to(to) {} // pos origin_inc_edges_pos, and dest_inc_edges_pos are initially "NULL".
+    : elt(elt), from(from), to(to) {} 
 };
 
 template<typename V, typename E>
 class AdjacencyListDirectedGraph<V, E>::Vertex {
 
   VertexObject *v_obj;
-  AdjacencyListDirectedGraph *parent;
 
   public:
-
-  Vertex() {
-    parent = NULL;
-  }
 
   /*
    * The constructor of Vertex. This subsumes the default constructor.
    *
    * v - a pointer to a VertexObject
    */
-  Vertex(AdjacencyListDirectedGraph &parent,
-      VertexObject* v = NULL) : v_obj(v), parent(&parent) {}
+  Vertex(VertexObject* v = NULL) : v_obj(v) {}
 
 
   /*
@@ -182,13 +184,7 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * Return a list of edges incident to this vertex.
    */
   EdgeList incidentEdges() const {
-    EdgeList result;
-    for (auto &it : parent->edge_collection) {
-      Edge edge = Edge(&it);
-      if (edge.isIncidentOn(*this))
-        result.push_back(edge);
-    }
-    return result;
+    return *(v_obj->inc_edges_pos);
   }
 
   /*
@@ -199,10 +195,9 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * v - the given vertex
    */
   bool isAdjacentTo(const Vertex& v) const {
-    for (auto it : parent->edge_collection)
-      if (it.from == *this && it.to == v)
-        return true;
-      else if (it.from == v && it.to == *this)
+    auto edges = incidentEdges();
+    for (auto it : edges)
+      if (it.isIncidentOn(v))
         return true;
     return false;
   }
@@ -213,11 +208,11 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * v - the given vertex
    */
   bool isOutgoingTo(const Vertex& v) const {
-    for (auto it : parent->edge_collection)
-      if (it.from == *this && it.to == v)
+    auto edges = incidentEdges();
+    for (auto it : edges)
+      if (it.isSameAs(*this, v))
         return true;
     return false;
-
   }
 
   /*
@@ -228,21 +223,23 @@ class AdjacencyListDirectedGraph<V, E>::Vertex {
    * Return the directed edge connecting this vertex to the given vertex.
    */
   Edge outgoingEdge(const Vertex& v) const {
-    for (auto &it : parent->edge_collection)
-      if (it.from == *this && it.to == v)
-        return Edge(&it);
-    throw runtime_error("Edge doesn't exist!");
+    auto edges = incidentEdges();
+    for (auto it : edges)
+      if (it.isSameAs(*this, v))
+        return it;
+    throw runtime_error("Outgoing edge not found!");
   }
 
   /*
    * Return the set of all directed edges connecting this vertex to any vertex.
    */
   EdgeList outgoingEdges() const {
-    EdgeList result;
-    for (auto &it : parent->edge_collection)
-      if (it.from == *this)
-        result.push_back(Edge(&it));
-    return result;
+    EdgeList edges = incidentEdges();
+    EdgeList filtered;
+    for (auto it : edges)
+      if (it.origin() == *this)
+        filtered.push_back(it);
+    return filtered;
   }
 
   /*
@@ -334,6 +331,10 @@ class AdjacencyListDirectedGraph<V, E> :: Edge {
     share |= (origin() == edge.origin() || origin() == edge.dest());
     share |= (dest() == edge.origin() || dest() == edge.dest());
     return share;
+  }
+
+  bool isSameAs(const Vertex &from, const Vertex &to) {
+    return origin() == from && dest() == to;
   }
 
   /*
