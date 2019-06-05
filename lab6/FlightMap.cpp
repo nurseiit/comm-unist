@@ -362,7 +362,7 @@ double FlightMap::calcRouteDistance(const list<string> route) {
       FlightGraph::Edge edge = from.outgoingEdge(to);
       len += *edge;
     } catch (runtime_error &e) {
-      return -1;
+      return 0;
     }
     next++;
     prev++;
@@ -380,16 +380,17 @@ list<string> FlightMap::findShortestRoute(const string &airport1, const string &
   map<string, double> dp;
 
   for (auto it : vertices)
-    dp[*it] = (it == from ? 0 : INT_MAX);
+    dp[*it] = INT_MAX;
+  dp[*from] = 0;
   
-  map<double, FlightGraph::Vertex> q;
+  priority_queue<pair<double, FlightGraph::Vertex>> q;
   map<string, string> parent;
-  q.insert({0, from});
+  q.push({0, from});
 
   while (!q.empty()) {
-    auto vertex = q.begin()->second;
-    double cur_dp = q.begin()->first;
-    q.erase(q.begin());
+    auto vertex = q.top().second;
+    double cur_dp = -q.top().first;
+    q.pop();
     if (cur_dp > dp[*vertex])
       continue;
     auto edges = vertex.outgoingEdges();
@@ -399,7 +400,7 @@ list<string> FlightMap::findShortestRoute(const string &airport1, const string &
       if (dp[*vertex] + len < dp[*dest]) {
         dp[*dest] = dp[*vertex] + len;
         parent[*dest] = *vertex;
-        q.insert({dp[*dest], dest});
+        q.push({-dp[*dest], dest});
       }
     }
   }
@@ -415,6 +416,6 @@ list<string> FlightMap::findShortestRoute(const string &airport1, const string &
     else
       return {};
   } while (cur != *from);
-  cerr << "At least found something -- " << dp[*to] << endl;
+  path.push_front(*from);
   return path;
 }
