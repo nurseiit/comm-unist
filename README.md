@@ -31,6 +31,7 @@ Exams
 
 Announcements
 -------------
+* **[06-07]** All remaining claims on labs will be handled on or after 6/10 (Mon), and also the grading of the final exam.
 * **[06-02]** You cannot claim for anything after the claim session. It's the reason why we have that.
 * **[05-30]** Midterm claim session is 5pm-8pm on May 30 (Thu) @ 106-601-3. Please email me to make another appointment if you cannot use this seesion due to official schedules (e.g., other class).
 * **[05-30]** Midterm grading has been posted.
