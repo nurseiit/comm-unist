@@ -1,6 +1,13 @@
 CSE221: Data Structures, Spring 2019
 =======================================
 
+- Final exam scores have been posted with the overall score at this moment.
+  - [Final model solution](/final.pdf)
+  - [Final exam distribution](/final-dist.csv)
+  - [Overall distribution](/overall-dist.csv)
+- Letter grades will be posted with these scores and updated after these claims:
+  - 6/25(Tue)  3pm - 5pm @ 106-601-3
+  - 6/27(Thu) 11am - 1pm @ 106-601-3
 
 Course Staffs
 -------------
