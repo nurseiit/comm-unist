@@ -1,5 +1,11 @@
+# Intro to AI Programming II
+
+:rocket: My repo for (Intro to) AI Programming 2 Course at UNIST, Fall 2018
 
 ## To get GPIO Emulator work on your machine (Not valid Anymore!)
+
+**Upd: from Spring 2019, Course Syllabus does not have anything to do with hardware or Raspberry at all.**
+
 1. Your machine should run either OSX or Linux, it probably won't run on Windows
 2. You should have an installed **tkinter** library on python3. You can install it on Linux via:
 ```
