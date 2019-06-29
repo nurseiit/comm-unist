@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">کاسٹ کرنے کا بٹن</string>
+    <string name="mr_cast_button_connected">کاسٹ کرنے کا بٹن۔ منسلک ہے</string>
+    <string name="mr_cast_button_connecting">کاسٹ کرنے کا بٹن۔ منسلک ہو رہا ہے</string>
+    <string name="mr_cast_button_disconnected">کاسٹ کرنے کا بٹن۔ غیر منسلک ہے</string>
+    <string name="mr_chooser_searching">آلات تلاش ہو رہے ہیں</string>
+    <string name="mr_chooser_title">اس میں کاسٹ کریں</string>
+    <string name="mr_controller_album_art">البم آرٹ</string>
+    <string name="mr_controller_casting_screen">سکرین کاسٹ ہو رہی ہے</string>
+    <string name="mr_controller_close_description">بند کریں</string>
+    <string name="mr_controller_collapse_group">سکیڑیں</string>
+    <string name="mr_controller_disconnect">غیر منسلک کریں</string>
+    <string name="mr_controller_expand_group">پھیلائیں</string>
+    <string name="mr_controller_no_info_available">کوئی معلومات دستیاب نہیں</string>
+    <string name="mr_controller_no_media_selected">کوئی میڈیا منتخب نہیں ہے</string>
+    <string name="mr_controller_pause">موقوف کریں</string>
+    <string name="mr_controller_play">چلائیں</string>
+    <string name="mr_controller_stop">کاسٹ کرنا بند کریں</string>
+    <string name="mr_controller_volume_slider">والیوم سلائیڈر</string>
+    <string name="mr_system_route_name">سسٹم</string>
+    <string name="mr_user_route_category_name">آلات</string>
+</resources>

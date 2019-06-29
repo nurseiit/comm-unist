@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/RelativeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progressBar1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:layout_centerHorizontal="true" style="?android:progressBarStyleLarge" />
+    <ImageView android:id="@id/change_iamge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/time_icon" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="30.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/content_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/content_time" android:layout_above="@id/attend_state_check" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:gravity="center_horizontal" android:id="@id/attend_state_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attend_loading" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/relativeLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <ImageButton android:textSize="30.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attend_ok_button" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="70.0dip" android:src="@drawable/button" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/attend_ok_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/attend_title" android:layout_alignTop="@id/attend_ok_button" android:layout_alignBottom="@id/attend_ok_button" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/infomation_group" android:background="@drawable/attend_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:layout_above="@id/relativeLayout2">
+        <ImageView android:id="@id/prof_photo" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="100.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="5.0dip" android:src="@drawable/symbol_unist" android:layout_weight="3.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="7.0">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip">
+                <TextView android:textStyle="bold" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_subject" />
+                <TextView android:textSize="16.0sp" android:id="@id/subject_lecture_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="강의명" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip">
+                <TextView android:textStyle="bold" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_room" />
+                <TextView android:textSize="16.0sp" android:id="@id/subject_lecture_room" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="강의실" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip">
+                <TextView android:textStyle="bold" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_datetime" />
+                <TextView android:textSize="16.0sp" android:id="@id/subject_lecture_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="강의시간" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textStyle="bold" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_professor" />
+                <TextView android:textSize="16.0sp" android:id="@id/subject_lecture_pro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:hint="교수명" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

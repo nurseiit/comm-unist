@@ -1,0 +1,616 @@
+05-08 10:36:42.980 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:42.983 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:45.990 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:45.998 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:46.000 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:46.000 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:36:46.002 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:46.005 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:49.012 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:49.021 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:49.024 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:49.024 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:36:49.025 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:49.028 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:51.050 13212 13212 I LoginActivity: https://attend.unist.ac.kr/atdc/login_access?{pass=Aktl7891011%40, idno=nurs, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa}
+05-08 10:36:51.213 13212 13212 I &&&&&&&&&111111111  : : School of Elec.l & Computer Engineering
+05-08 10:36:51.219 13212 13212 E LoginActivity: https://attend.unist.ac.kr/atdc/reg_idno?{app=unistAtdc, plat=android, device=APA91bHDMkywp5avMaAEiMGrhzwL2ZHqsm0l4BGrTqsiB4EWrPq4i5pC9FjxZMnJJ5NWRwrVB9UISXxJswFf_qFA5mwVAssJh2s_M76ZNYeMc_wnvZD6EmKMGUSibStMRDBLVjUKdmwL, idno=20172001}
+05-08 10:36:51.260 13212 13212 I Timeline: Timeline: Activity_launch_request time:13886874 intent:Intent { flg=0x4000000 cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.common.MainActivity (has extras) }
+05-08 10:36:51.308 13212 13212 D ApplicationLoaders: ignored Vulkan layer search path /data/app/com.android.chrome-2/lib/arm64:/data/app/com.android.chrome-2/base.apk!/lib/arm64-v8a for namespace 0x7f89ffb160
+05-08 10:36:51.308 13212 13212 W ResourceType: No package identifier when getting name for resource number 0x00000000
+05-08 10:36:51.314 13212 13212 I WebViewFactory: Loading com.android.chrome version 72.0.3626.121 (code 362612152)
+05-08 10:36:51.493 13212 13212 I cr_LibraryLoader: Time to load native libraries: 5 ms (timestamps 7103-7108)
+05-08 10:36:51.521 13212 13212 W ResourceType: No package identifier when getting name for resource number 0x00000000
+05-08 10:36:51.546 13212 13212 I chromium: [INFO:library_loader_hooks.cc(42)] Chromium logging enabled: level = 0, default verbosity = 0
+05-08 10:36:51.546 13212 13212 I cr_LibraryLoader: Expected native library version number "72.0.3626.121", actual native library version number "72.0.3626.121"
+05-08 10:36:51.550 13212 13424 W System  : ClassLoader referenced unknown path:
+05-08 10:36:51.551 13212 13424 D ApplicationLoaders: ignored Vulkan layer search path /data/app/com.android.chrome-2/lib/arm64:/data/app/com.android.chrome-2/base.apk!/lib/arm64-v8a for namespace 0x7f89ffb1d0
+05-08 10:36:51.614 13212 13212 I cr_BrowserStartup: Initializing chromium process, singleProcess=true
+05-08 10:36:51.622 13212 13212 W ResourceType: Failure getting entry for 0x7f120538 (t=17 e=1336) (error -2147483647)
+05-08 10:36:52.044 13212 13212 D EgretLoader: EgretLoader(Context context)
+05-08 10:36:52.048 13212 13212 D EgretLoader: The context is not activity
+05-08 10:36:52.049 13212 13212 D MainActivity: iddi = 1
+05-08 10:36:52.059 13212 13212 I Timeline: Timeline: Activity_launch_request time:13887674 intent:Intent { flg=0x10040000 cmp=kr.ac.unist.atdc/com.gun0912.tedpermission.TedPermissionActivity (has extras) }
+05-08 10:36:52.101 13212 13444 E libEGL  : validate_display:99 error 3008 (EGL_BAD_DISPLAY)
+05-08 10:36:52.173 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:52.186 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:52.190 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:52.190 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:36:52.191 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:52.195 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:52.205 13212 13233 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:36:52.217 13212 13212 D BeaconManager: Unbinding
+05-08 10:36:52.237 13212 13212 W ContentCatcher: Failed to notify a WebView
+05-08 10:36:52.248 13212 13444 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-08 10:36:52.248 13212 13444 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-08 10:36:52.260 13212 13444 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-08 10:36:52.260 13212 13444 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-08 10:36:52.264 13212 13444 W VideoCapabilities: Unrecognized profile 2130706433 for video/avc
+05-08 10:36:52.264 13212 13444 W VideoCapabilities: Unrecognized profile 2130706434 for video/avc
+05-08 10:36:52.272 13212 13444 W VideoCapabilities: Unsupported mime video/divx
+05-08 10:36:52.274 13212 13444 W VideoCapabilities: Unsupported mime video/divx4
+05-08 10:36:52.280 13212 13444 W VideoCapabilities: Unsupported mime video/mp4v-esdp
+05-08 10:36:52.286 13212 13444 W VideoCapabilities: Unsupported mime video/mp4v-esdp
+05-08 10:36:52.298 13212 13444 W Utils   : could not parse long range '35-34'
+05-08 10:36:52.311 13212 13444 I VideoCapabilities: Unsupported profile 4 for video/mp4v-es
+05-08 10:36:52.446 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:36:52.452 13212 13212 I BeaconService: stop monitoring received
+05-08 10:36:52.453 13212 13212 I BeaconService: unbinding
+05-08 10:36:52.458 13212 13422 W cr_CrashFileManager: /data/user/0/kr.ac.unist.atdc/cache/WebView/Crash Reports does not exist or is not a directory
+05-08 10:36:52.459 13212 13212 V TedPermission: permissionResult(): null
+05-08 10:36:52.581 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:36:52.722 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:36:53.216 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:53.221 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:53.222 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:54.990 13212 13469 I Timeline: Timeline: Activity_launch_request time:13890605 intent:Intent { cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.student.AttendActivity (has extras) }
+05-08 10:36:55.035 13212 13212 D roboguice.RoboGuice: Using annotation database(s).
+05-08 10:36:55.036 13212 13212 D roboguice.RoboGuice: Using annotation database(s) : [, roboguice]
+05-08 10:36:55.039 13212 13212 D roboguice.RoboGuice: Time spent loading annotation databases : 3
+05-08 10:36:55.154 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@7984968
+05-08 10:36:55.155 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@a52181
+05-08 10:36:55.233 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_info?{date=20190508103655, idno=20172001}
+05-08 10:36:55.253 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@c6bf59d
+05-08 10:36:55.253 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@33b9a12
+05-08 10:36:55.478 13212 13212 I BeaconService: start monitoring received
+05-08 10:36:55.479 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:55.482 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:55.491 13212 13272 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:36:55.858 13212 13212 D AttendActivity: {"result":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"camp":"1","psco":"10000028","data":{"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"BC6914991362A3DDCB8C8D68A8383C07"},"state":"T","ssid":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"atrs":"50002288","date":"20190508103655","msg":"Y :  정상 완료","idno":"20172001","yyse":"2019090","sjco":"CSE25101"}
+05-08 10:36:55.859 13212 13212 I 11111 data  : : {"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"BC6914991362A3DDCB8C8D68A8383C07"}
+05-08 10:36:55.860 13212 13212 I 22222 authkey  : : 57499������������������
+05-08 10:36:55.860 13212 13212 I 33333 firstEncode  : : 57499UNIST
+05-08 10:36:55.862 13212 13212 I 44444 secondEncode  : : C6EC72DDC011A62E7C2E72514E620798
+05-08 10:36:56.504 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:56.510 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:56.512 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:56.520 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:56.524 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:56.531 13212 13467 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:36:56.551 13212 13478 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:36:57.547 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:57.552 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:57.555 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:57.565 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:57.569 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:57.575 13212 13467 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:36:57.594 13212 13479 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:36:58.116 13212 13244 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:58.126 13212 13480 D GoPlusBeaconApp: entered region.  starting ranging
+05-08 10:36:58.127 13212 13212 I BeaconService: start ranging received
+05-08 10:36:58.128 13212 13212 I BeaconService: Already ranging that region -- will replace existing region.
+05-08 10:36:58.586 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:58.591 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:58.595 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:58.603 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:58.608 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:58.617 13212 13467 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:36:58.632 13212 13481 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:36:59.464 13212 13217 I art     : Do partial code cache collection, code=59KB, data=60KB
+05-08 10:36:59.465 13212 13217 I art     : After code cache collection, code=58KB, data=60KB
+05-08 10:36:59.465 13212 13217 I art     : Increasing code cache capacity to 256KB
+05-08 10:36:59.628 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:36:59.635 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:36:59.637 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:36:59.645 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:36:59.649 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:01.657 13212 13212 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+05-08 10:37:01.659 13212 13482 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:01.667 13212 13212 D AttendActivity: MAC_CHECK_RUN = 0
+05-08 10:37:01.667 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:02.655 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:02.660 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:37:02.662 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:02.662 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:37:02.663 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:37:02.665 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:04.675 13212 13212 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+05-08 10:37:04.676 13212 13495 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:04.681 13212 13212 D AttendActivity: MAC_CHECK_RUN = 1
+05-08 10:37:04.681 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:05.672 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:05.677 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:37:05.679 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:05.679 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:37:05.680 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:37:05.682 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:07.687 13212 13212 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+05-08 10:37:07.693 13212 13497 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:07.696 13212 13212 D AttendActivity: MAC_CHECK_RUN = 2
+05-08 10:37:07.696 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:08.688 13212 13212 D MonitorState: We are newly outside the region because the lastSeenTime of 1557279418116 was 10572 seconds ago, and that is over the expiration duration of  10000
+05-08 10:37:08.688 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:08.695 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:08.698 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:37:08.700 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:08.700 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:37:08.701 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:37:08.704 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:37:10.712 13212 13212 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+05-08 10:37:10.717 13212 13212 D AttendActivity: MAC_CHECK_RUN = 3
+05-08 10:37:10.717 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:10.719 13212 13499 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:10.746 13212 13501 I SSID :  : keduroam
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:7f:05:c2
+05-08 10:37:10.746 13212 13501 I SSID :  : WUNIST_AAA
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:7f:05:c0
+05-08 10:37:10.746 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:7f:05:c3
+05-08 10:37:10.746 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:81:08:03
+05-08 10:37:10.746 13212 13501 I SSID :  : keduroam
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:81:04:02
+05-08 10:37:10.746 13212 13501 I SSID :  : keduroam
+05-08 10:37:10.746 13212 13501 I BSSID : : 38:20:56:85:ac:c2
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:81:04:03
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:85:ac:c3
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_AAA
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:81:04:00
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_AAA
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:7e:d9:e0
+05-08 10:37:10.747 13212 13501 I SSID :  : keduroam
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:7e:d9:e2
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_AAA
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:81:08:00
+05-08 10:37:10.747 13212 13501 I SSID :  : keduroam
+05-08 10:37:10.747 13212 13501 I BSSID : : 38:20:56:81:08:02
+05-08 10:37:10.747 13212 13501 I SSID :  : WUNIST_AAA
+05-08 10:37:10.748 13212 13501 I BSSID : : 38:20:56:85:ac:c0
+05-08 10:37:10.748 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.748 13212 13501 I BSSID : : 38:20:56:7e:d9:e3
+05-08 10:37:10.748 13212 13501 I SSID :  : WUNIST_GUEST
+05-08 10:37:10.748 13212 13501 I BSSID : : 38:20:56:86:a9:e3
+05-08 10:37:10.748 13212 13501 I SSID :  : e102-2.4G
+05-08 10:37:10.748 13212 13501 I BSSID : : 00:1c:85:0f:07:94
+05-08 10:37:10.761 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_chk?{idno=20172001, check=1, mac=001c850f0794, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa, date=20190508103710, psco=10000028, sjco=CSE25101, auth=C6EC72DDC011A62E7C2E72514E620798}
+05-08 10:37:10.844 13212 13212 E sucdata : {"message":" Attendance  ,15","result":[{":B1":"O"}],"check":"1","psco":"10000028","state":"Y","mac":"001c850f0794","uuid":"00000000-74ce-f7ea-ffff-ffffac6999fa","date":"20190508103710","msg":"Y : Attendance  ,15","idno":"20172001","auth":"57499","sjco":"CSE25101"}
+05-08 10:37:11.725 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@f9db5be
+05-08 10:37:11.725 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: Sending callbacks to 1 clients
+05-08 10:37:11.725 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: Finished sending callbacks to registered clients
+05-08 10:37:11.726 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:11.739 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:11.739 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:11.760 13212 13511 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:12.745 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:12.750 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:12.750 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:12.768 13212 13522 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:13.764 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:13.771 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:13.771 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:13.784 13212 13523 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:14.523 13212 13212 D BeaconManager: Unbinding
+05-08 10:37:14.534 13212 13212 I BeaconService: stop monitoring received
+05-08 10:37:14.534 13212 13212 I BeaconService: Adjusted scanStopTime to be Wed May 08 10:37:11 GMT+09:00 2019
+05-08 10:37:14.771 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:14.775 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:43.070 13212 13469 I Timeline: Timeline: Activity_launch_request time:13938685 intent:Intent { cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.student.AttendActivity (has extras) }
+05-08 10:37:43.126 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@bc57034
+05-08 10:37:43.126 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@778ce5d
+05-08 10:37:43.141 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_info?{date=20190508103743, idno=20172001}
+05-08 10:37:43.148 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@304b491
+05-08 10:37:43.148 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@12b3ff6
+05-08 10:37:43.231 13212 13212 D AttendActivity: {"result":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"camp":"1","psco":"10000028","data":{"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"384E241F8EB135CC8D36CCA020AA14EC"},"state":"T","ssid":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"atrs":"50002288","date":"20190508103743","msg":"Y :  정상 완료","idno":"20172001","yyse":"2019090","sjco":"CSE25101"}
+05-08 10:37:43.231 13212 13212 I 11111 data  : : {"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"384E241F8EB135CC8D36CCA020AA14EC"}
+05-08 10:37:43.232 13212 13212 I 22222 authkey  : : 40635������������������
+05-08 10:37:43.232 13212 13212 I 33333 firstEncode  : : 40635UNIST
+05-08 10:37:43.233 13212 13212 I 44444 secondEncode  : : DFCF1B2C30AA3754D8478EBDA726DEBD
+05-08 10:37:43.237 13212 13212 I BeaconService: start monitoring received
+05-08 10:37:43.237 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:43.237 13212 13212 I BeaconService: Adjusted scanStopTime to be Wed May 08 10:37:11 GMT+09:00 2019
+05-08 10:37:44.238 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:44.243 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:44.243 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:44.249 13212 13576 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:45.244 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:45.249 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:45.249 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:45.255 13212 13578 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:46.250 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:46.255 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:46.255 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:46.258 13212 13579 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:47.256 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:47.261 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:47.261 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:47.265 13212 13580 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:48.261 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:48.265 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:48.266 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:48.271 13212 13581 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:49.267 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:49.271 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:49.272 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:49.276 13212 13582 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:50.272 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:50.277 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:50.277 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:50.283 13212 13583 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:51.277 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:51.281 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:51.282 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:51.286 13212 13584 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:52.282 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:52.286 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:52.286 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:52.291 13212 13586 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:52.595 13212 13212 D AttendActivity: MAC_CHECK_RUN = 0
+05-08 10:37:52.596 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:53.287 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:53.291 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:53.291 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:53.297 13212 13587 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:54.292 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:54.296 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:54.296 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:54.303 13212 13588 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:54.597 13212 13212 D AttendActivity: MAC_CHECK_RUN = 1
+05-08 10:37:54.597 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:55.301 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:55.305 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:55.306 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:55.310 13212 13590 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:56.307 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:56.311 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:56.312 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:56.316 13212 13591 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:56.597 13212 13212 D AttendActivity: MAC_CHECK_RUN = 2
+05-08 10:37:56.597 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:57.312 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:57.317 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:57.317 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:57.321 13212 13592 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:58.318 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:58.323 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:58.323 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:58.328 13212 13593 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:37:58.598 13212 13212 D AttendActivity: MAC_CHECK_RUN = 3
+05-08 10:37:58.598 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:37:58.610 13212 13594 I SSID :  : keduroam
+05-08 10:37:58.611 13212 13594 I BSSID : : 38:20:56:7f:05:c2
+05-08 10:37:58.611 13212 13594 I SSID :  : WUNIST_AAA
+05-08 10:37:58.611 13212 13594 I BSSID : : 38:20:56:7f:05:c0
+05-08 10:37:58.611 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.611 13212 13594 I BSSID : : 38:20:56:7f:05:c3
+05-08 10:37:58.613 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.613 13212 13594 I BSSID : : 38:20:56:81:08:03
+05-08 10:37:58.614 13212 13594 I SSID :  : keduroam
+05-08 10:37:58.614 13212 13594 I BSSID : : 38:20:56:81:04:02
+05-08 10:37:58.614 13212 13594 I SSID :  : keduroam
+05-08 10:37:58.614 13212 13594 I BSSID : : 38:20:56:85:ac:c2
+05-08 10:37:58.615 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.615 13212 13594 I BSSID : : 38:20:56:81:04:03
+05-08 10:37:58.615 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.615 13212 13594 I BSSID : : 38:20:56:85:ac:c3
+05-08 10:37:58.615 13212 13594 I SSID :  : WUNIST_AAA
+05-08 10:37:58.615 13212 13594 I BSSID : : 38:20:56:81:04:00
+05-08 10:37:58.616 13212 13594 I SSID :  : WUNIST_AAA
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:7e:d9:e0
+05-08 10:37:58.616 13212 13594 I SSID :  : keduroam
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:7e:d9:e2
+05-08 10:37:58.616 13212 13594 I SSID :  : WUNIST_AAA
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:81:08:00
+05-08 10:37:58.616 13212 13594 I SSID :  : keduroam
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:81:08:02
+05-08 10:37:58.616 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:7e:d9:e3
+05-08 10:37:58.616 13212 13594 I SSID :  : WUNIST_GUEST
+05-08 10:37:58.616 13212 13594 I BSSID : : 38:20:56:86:a9:e3
+05-08 10:37:58.616 13212 13594 I SSID :  : e102-2.4G
+05-08 10:37:58.616 13212 13594 I BSSID : : 00:1c:85:0f:07:94
+05-08 10:37:58.629 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_chk?{idno=20172001, check=1, mac=001c850f0794, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa, date=20190508103758, psco=10000028, sjco=CSE25101, auth=DFCF1B2C30AA3754D8478EBDA726DEBD}
+05-08 10:37:58.668 13212 13212 E sucdata : {"message":" Attendance","result":[{":B1":"O"}],"check":"1","psco":"10000028","state":"Y","mac":"001c850f0794","uuid":"00000000-74ce-f7ea-ffff-ffffac6999fa","date":"20190508103758","msg":"Y : Attendance","idno":"20172001","auth":"40635","sjco":"CSE25101"}
+05-08 10:37:59.340 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:37:59.344 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:59.345 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:37:59.360 13212 13597 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:00.359 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:00.365 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:00.365 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:00.381 13212 13598 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:01.379 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:01.385 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:01.386 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:01.400 13212 13599 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:02.386 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:02.391 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:02.391 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:02.395 13212 13600 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:03.369 13212 13212 D BeaconManager: Unbinding
+05-08 10:38:03.380 13212 13212 I BeaconService: stop monitoring received
+05-08 10:38:03.380 13212 13212 I BeaconService: Adjusted scanStopTime to be Wed May 08 10:37:11 GMT+09:00 2019
+05-08 10:38:03.396 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:03.398 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:38:30.772 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@48d928b
+05-08 10:38:30.772 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@56fef68
+05-08 10:38:31.643 13212 13212 E LoginActivity: https://attend.unist.ac.kr/atdc/compare_version?{plat=Android, name=전자출결, code=19}
+05-08 10:38:31.996 13212 13212 W ContentCatcher: Failed to notify a WebView
+05-08 10:38:38.875 13212 13212 W IInputConnectionWrapper: finishComposingText on inactive InputConnection
+05-08 10:38:43.297 13212 13212 I LoginActivity: https://attend.unist.ac.kr/atdc/login_access?{pass=naruto%21, idno=amantemirlan00, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa}
+05-08 10:38:43.389 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@80a11b8
+05-08 10:38:43.389 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@9ffcb91
+05-08 10:38:47.783 13212 13212 I LoginActivity: https://attend.unist.ac.kr/atdc/login_access?{pass=naruto123%21, idno=amantemirlan00, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa}
+05-08 10:38:47.889 13212 13212 I &&&&&&&&&111111111  : : School of Elec.l & Computer Engineering
+05-08 10:38:47.890 13212 13212 E LoginActivity: https://attend.unist.ac.kr/atdc/reg_idno?{app=unistAtdc, plat=android, device=APA91bHDMkywp5avMaAEiMGrhzwL2ZHqsm0l4BGrTqsiB4EWrPq4i5pC9FjxZMnJJ5NWRwrVB9UISXxJswFf_qFA5mwVAssJh2s_M76ZNYeMc_wnvZD6EmKMGUSibStMRDBLVjUKdmwL, idno=20172006}
+05-08 10:38:48.333 13212 13212 I Timeline: Timeline: Activity_launch_request time:14003948 intent:Intent { flg=0x4000000 cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.common.MainActivity (has extras) }
+05-08 10:38:48.379 13212 13212 D EgretLoader: EgretLoader(Context context)
+05-08 10:38:48.380 13212 13212 D EgretLoader: The context is not activity
+05-08 10:38:48.380 13212 13212 D MainActivity: iddi = 1
+05-08 10:38:48.385 13212 13212 I Timeline: Timeline: Activity_launch_request time:14004000 intent:Intent { flg=0x10040000 cmp=kr.ac.unist.atdc/com.gun0912.tedpermission.TedPermissionActivity (has extras) }
+05-08 10:38:48.479 13212 13212 W ContentCatcher: Failed to notify a WebView
+05-08 10:38:48.531 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:38:48.539 13212 13726 I GcmIntentService: Working... 1/5 @ 61367114
+05-08 10:38:48.593 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:38:48.607 13212 13212 V TedPermission: permissionResult(): null
+05-08 10:38:48.722 13212 13212 E         :  shouldOverrideUrlLoading
+05-08 10:38:49.047 13212 13467 D BluetoothAdapter: onBluetoothServiceUp: android.bluetooth.IBluetooth$Stub$Proxy@e9c50d8
+05-08 10:38:49.540 13212 13726 I GcmIntentService: Working... 2/5 @ 61368115
+05-08 10:38:49.767 13212 13469 I Timeline: Timeline: Activity_launch_request time:14005382 intent:Intent { cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.student.AttendActivity (has extras) }
+05-08 10:38:49.815 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@c2862f0
+05-08 10:38:49.815 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@f77069
+05-08 10:38:49.832 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_info?{date=20190508103849, idno=20172006}
+05-08 10:38:49.842 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@b07f8dd
+05-08 10:38:49.842 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@8267c52
+05-08 10:38:49.978 13212 13212 I BeaconService: start monitoring received
+05-08 10:38:49.980 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:49.981 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:49.984 13212 13467 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:38:50.110 13212 13212 D AttendActivity: {"result":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"camp":"1","psco":"10000028","data":{"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"0D05B4AADBBBA9119A5518AFAAA52EDD"},"state":"T","ssid":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"atrs":"50002288","date":"20190508103849","msg":"Y :  정상 완료","idno":"20172006","yyse":"2019090","sjco":"CSE25101"}
+05-08 10:38:50.110 13212 13212 I 11111 data  : : {"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"0D05B4AADBBBA9119A5518AFAAA52EDD"}
+05-08 10:38:50.112 13212 13212 I 22222 authkey  : : 19814������������������
+05-08 10:38:50.112 13212 13212 I 33333 firstEncode  : : 19814UNIST
+05-08 10:38:50.115 13212 13212 I 44444 secondEncode  : : C7BDDE962455EB6BF446054E3C2D3229
+05-08 10:38:50.541 13212 13726 I GcmIntentService: Working... 3/5 @ 61369116
+05-08 10:38:50.997 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:51.003 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:51.006 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:51.013 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:51.018 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:51.024 13212 13272 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:38:51.037 13212 13807 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:51.541 13212 13726 I GcmIntentService: Working... 4/5 @ 61370116
+05-08 10:38:52.034 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:52.040 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:52.041 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:52.047 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:52.051 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:52.058 13212 13272 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:38:52.075 13212 13808 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:52.542 13212 13726 I GcmIntentService: Working... 5/5 @ 61371117
+05-08 10:38:53.069 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:53.076 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:53.079 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:53.086 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:53.090 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:53.097 13212 13272 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:38:53.113 13212 13809 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:53.542 13212 13726 I GcmIntentService: Completed work @ 61372117
+05-08 10:38:53.543 13212 13726 D GcmIntentService: 20172006were registered in Attendance System.
+05-08 10:38:53.580 13212 13726 I GcmIntentService: Received: Bundle[{google.delivered_priority=normal, google.sent_time=1557279528776, google.ttl=1800, google.original_priority=normal, msg=20172006were registered in Attendance System., tag=msg, from=506720925871, type=text, google.message_id=0:1557279528787447%7e607574f9fd7ecd, android.support.content.wakelockid=1}]
+05-08 10:38:53.971 13212 13212 D AttendActivity: MAC_CHECK_RUN = 0
+05-08 10:38:53.971 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:38:54.156 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:54.178 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:54.182 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:54.190 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:54.193 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:54.200 13212 13272 D BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6 mClientIf=0
+05-08 10:38:54.238 13212 13815 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:54.719 13212 13672 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:54.733 13212 13822 D GoPlusBeaconApp: entered region.  starting ranging
+05-08 10:38:54.733 13212 13212 I BeaconService: start ranging received
+05-08 10:38:54.733 13212 13212 I BeaconService: Already ranging that region -- will replace existing region.
+05-08 10:38:55.224 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:55.231 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:55.233 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:55.241 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:55.246 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:57.251 13212 13212 I Choreographer: Skipped 121 frames!  The application may be doing too much work on its main thread.
+05-08 10:38:57.262 13212 13212 D AttendActivity: MAC_CHECK_RUN = 1
+05-08 10:38:57.262 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:38:57.266 13212 13824 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:38:58.252 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:38:58.259 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:38:58.261 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:38:58.261 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:38:58.262 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:38:58.265 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:39:00.274 13212 13212 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+05-08 10:39:00.278 13212 13845 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:00.290 13212 13212 D AttendActivity: MAC_CHECK_RUN = 2
+05-08 10:39:00.290 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:01.273 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:01.280 13212 13212 D BluetoothAdapter: stopLeScan()
+05-08 10:39:01.281 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:39:01.281 13212 13212 D BluetoothLeScanner: could not find callback wrapper
+05-08 10:39:01.283 13212 13212 D BluetoothAdapter: startLeScan(): null
+05-08 10:39:01.285 13212 13212 D BluetoothAdapter: isLeEnabled(): ON
+05-08 10:39:03.289 13212 13212 I Choreographer: Skipped 121 frames!  The application may be doing too much work on its main thread.
+05-08 10:39:03.296 13212 13847 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:03.301 13212 13212 D AttendActivity: MAC_CHECK_RUN = 3
+05-08 10:39:03.301 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:03.322 13212 13848 I SSID :  : keduroam
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:7f:05:c2
+05-08 10:39:03.322 13212 13848 I SSID :  : WUNIST_AAA
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:7f:05:c0
+05-08 10:39:03.322 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:7f:05:c3
+05-08 10:39:03.322 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:81:08:03
+05-08 10:39:03.322 13212 13848 I SSID :  : keduroam
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:81:04:02
+05-08 10:39:03.322 13212 13848 I SSID :  : keduroam
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:85:ac:c2
+05-08 10:39:03.322 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.322 13212 13848 I BSSID : : 38:20:56:81:04:03
+05-08 10:39:03.323 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:85:ac:c3
+05-08 10:39:03.323 13212 13848 I SSID :  : WUNIST_AAA
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:81:04:00
+05-08 10:39:03.323 13212 13848 I SSID :  : WUNIST_AAA
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:7e:d9:e0
+05-08 10:39:03.323 13212 13848 I SSID :  : keduroam
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:7e:d9:e2
+05-08 10:39:03.323 13212 13848 I SSID :  : WUNIST_AAA
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:81:08:00
+05-08 10:39:03.323 13212 13848 I SSID :  : keduroam
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:81:08:02
+05-08 10:39:03.323 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.323 13212 13848 I BSSID : : 38:20:56:7e:d9:e3
+05-08 10:39:03.324 13212 13848 I SSID :  : WUNIST_GUEST
+05-08 10:39:03.324 13212 13848 I BSSID : : 38:20:56:86:a9:e3
+05-08 10:39:03.324 13212 13848 I SSID :  : e102-2.4G
+05-08 10:39:03.324 13212 13848 I BSSID : : 00:1c:85:0f:07:94
+05-08 10:39:03.335 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_chk?{idno=20172006, check=1, mac=001c850f0794, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa, date=20190508103903, psco=10000028, sjco=CSE25101, auth=C7BDDE962455EB6BF446054E3C2D3229}
+05-08 10:39:03.372 13212 13212 E sucdata : {"message":" No data , 5","result":[null],"check":"1","psco":"10000028","state":"N","mac":"001c850f0794","uuid":"00000000-74ce-f7ea-ffff-ffffac6999fa","date":"20190508103903","msg":"N : No data , 5","idno":"20172006","auth":"19814","sjco":"CSE25101"}
+05-08 10:39:04.109 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: android.bluetooth.IBluetooth$Stub$Proxy@e9c50d8
+05-08 10:39:04.109 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: Sending callbacks to 1 clients
+05-08 10:39:04.109 13212 13272 D BluetoothAdapter: onBluetoothServiceDown: Finished sending callbacks to registered clients
+05-08 10:39:04.294 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:04.299 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:04.299 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:04.301 13212 13212 D BeaconManager: Unbinding
+05-08 10:39:04.314 13212 13212 I BeaconService: stop monitoring received
+05-08 10:39:04.314 13212 13212 I BeaconService: Adjusted scanStopTime to be Wed May 08 10:39:04 GMT+09:00 2019
+05-08 10:39:05.130 13212 13469 I Timeline: Timeline: Activity_launch_request time:14020744 intent:Intent { cmp=kr.ac.unist.atdc/com.lotecs.attendcheck.student.AttendActivity (has extras) }
+05-08 10:39:05.171 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@53ad12a
+05-08 10:39:05.172 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@6420b1b
+05-08 10:39:05.188 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_info?{date=20190508103905, idno=20172006}
+05-08 10:39:05.194 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@f314bfc
+05-08 10:39:05.194 13212 13212 V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@e0c5285
+05-08 10:39:05.284 13212 13212 D AttendActivity: {"result":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"camp":"1","psco":"10000028","data":{"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"4DED65E2E52ACD6F52ABAAECAB209155"},"state":"T","ssid":[{"SSID":"부착단말기","구분":"3","패스워드":"PASS","MSC":"10.16.10.228"},{"SSID":"e102-2.4G","구분":"1","MSC":"001c850f0794"},{"SSID":"f7a3e806-f5bb-43f8-ba87-0783669ebeb1","구분":"2","MSC":"54^1"}],"atrs":"50002288","date":"20190508103905","msg":"Y :  정상 완료","idno":"20172006","yyse":"2019090","sjco":"CSE25101"}
+05-08 10:39:05.285 13212 13212 I 11111 data  : : {"idx":null,"yyse":"2019090","camp":"1","psco":"10000028","sjco":"CSE25101","sjnm":"시스템 프로그래밍","prco":"10357,10357","prnm":"Hyungon Moon,Hyungon Moon","pont":"        3.00000","hour":"103000","date":"10:30~11:45","cnt":"0","time":null,"rmco":"50002288","rmnm":"104-E102","path":null,"type":"0","key":null,"keyTime":null,"authKey":"4DED65E2E52ACD6F52ABAAECAB209155"}
+05-08 10:39:05.285 13212 13212 I 22222 authkey  : : 80921������������������
+05-08 10:39:05.285 13212 13212 I 33333 firstEncode  : : 80921UNIST
+05-08 10:39:05.286 13212 13212 I 44444 secondEncode  : : 1D5F8310165428B9CE15A38F14920579
+05-08 10:39:05.293 13212 13212 I BeaconService: start monitoring received
+05-08 10:39:05.315 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:05.320 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:05.320 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:05.356 13212 13870 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:06.321 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:06.327 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:06.327 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:06.330 13212 13871 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:07.328 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:07.333 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:07.333 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:07.338 13212 13872 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:08.334 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:08.339 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:08.339 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:08.344 13212 13873 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:09.340 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:09.345 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:09.345 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:09.353 13212 13874 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:09.415 13212 13212 D AttendActivity: MAC_CHECK_RUN = 0
+05-08 10:39:09.415 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:10.346 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:10.350 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:10.350 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:10.356 13212 13881 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:11.351 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:11.359 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:11.359 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:11.362 13212 13882 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:11.417 13212 13212 D AttendActivity: MAC_CHECK_RUN = 1
+05-08 10:39:11.417 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:12.360 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:12.364 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:12.365 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:12.370 13212 13883 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:13.366 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:13.374 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:13.374 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:13.381 13212 13884 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:13.418 13212 13212 D AttendActivity: MAC_CHECK_RUN = 2
+05-08 10:39:13.418 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:14.374 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:14.380 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:14.380 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:14.384 13212 13885 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:15.381 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:15.385 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:15.386 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:15.390 13212 13887 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:15.419 13212 13212 D AttendActivity: MAC_CHECK_RUN = 3
+05-08 10:39:15.419 13212 13212 D AttendActivity: goplusBeacons = 0
+05-08 10:39:15.436 13212 13888 I SSID :  : keduroam
+05-08 10:39:15.436 13212 13888 I BSSID : : 38:20:56:7f:05:c2
+05-08 10:39:15.436 13212 13888 I SSID :  : WUNIST_AAA
+05-08 10:39:15.436 13212 13888 I BSSID : : 38:20:56:7f:05:c0
+05-08 10:39:15.436 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:7f:05:c3
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:08:03
+05-08 10:39:15.437 13212 13888 I SSID :  : keduroam
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:04:02
+05-08 10:39:15.437 13212 13888 I SSID :  : keduroam
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:85:ac:c2
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:04:03
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:85:ac:c3
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_AAA
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:04:00
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_AAA
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:7e:d9:e0
+05-08 10:39:15.437 13212 13888 I SSID :  : keduroam
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:7e:d9:e2
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_AAA
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:08:00
+05-08 10:39:15.437 13212 13888 I SSID :  : keduroam
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:81:08:02
+05-08 10:39:15.437 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.437 13212 13888 I BSSID : : 38:20:56:7e:d9:e3
+05-08 10:39:15.438 13212 13888 I SSID :  : WUNIST_GUEST
+05-08 10:39:15.438 13212 13888 I BSSID : : 38:20:56:86:a9:e3
+05-08 10:39:15.438 13212 13888 I SSID :  : e102-2.4G
+05-08 10:39:15.438 13212 13888 I BSSID : : 00:1c:85:0f:07:94
+05-08 10:39:15.451 13212 13212 E AttendActivity: https://attend.unist.ac.kr/atdc/atdc_chk?{idno=20172006, check=1, mac=001c850f0794, uuid=00000000-74ce-f7ea-ffff-ffffac6999fa, date=20190508103915, psco=10000028, sjco=CSE25101, auth=1D5F8310165428B9CE15A38F14920579}
+05-08 10:39:15.490 13212 13212 E sucdata : {"message":" Attendance","result":[{":B1":"O"}],"check":"1","psco":"10000028","state":"Y","mac":"001c850f0794","uuid":"00000000-74ce-f7ea-ffff-ffffac6999fa","date":"20190508103915","msg":"Y : Attendance","idno":"20172006","auth":"80921","sjco":"CSE25101"}
+05-08 10:39:16.396 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:16.401 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:16.401 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:16.417 13212 13892 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:17.415 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:17.420 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:17.421 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:17.437 13212 13894 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:18.435 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:18.441 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:18.441 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:18.455 13212 13895 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:19.442 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:19.446 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:19.446 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:19.450 13212 13902 D AttendActivity: 0개 didRangeBeaconsInRegion
+05-08 10:39:19.808 13212 13212 D BeaconManager: Unbinding
+05-08 10:39:19.821 13212 13212 I BeaconService: stop monitoring received
+05-08 10:39:19.821 13212 13212 I BeaconService: Adjusted scanStopTime to be Wed May 08 10:39:04 GMT+09:00 2019
+05-08 10:39:20.447 13212 13212 D Callback: attempting callback via intent: ComponentInfo{kr.ac.unist.atdc/org.altbeacon.beacon.BeaconIntentProcessor}
+05-08 10:39:20.451 13212 13212 W BeaconService: Bluetooth is disabled.  Cannot scan for beacons.
+05-08 10:39:24.975 13212 13212 W ContentCatcher: Failed to notify a WebView

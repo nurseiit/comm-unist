@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">ടാപ്പുചെയ്യുക</string>
+    <string name="mr_cast_button_connected">കാസ്റ്റ് ബട്ടൺ. കണക്റ്റുചെയ്തു</string>
+    <string name="mr_cast_button_connecting">കാസ്റ്റ് ബട്ടൺ. കണക്‌റ്റുചെയ്യുന്നു</string>
+    <string name="mr_cast_button_disconnected">കാസ്റ്റ് ബട്ടൺ. വിച്ഛേദിച്ചു</string>
+    <string name="mr_chooser_searching">ഉപകരണങ്ങൾ കണ്ടെത്തുന്നു</string>
+    <string name="mr_chooser_title">ഇതിലേക്ക് കാസ്റ്റുചെയ്യുക</string>
+    <string name="mr_controller_album_art">ആൽബം ആർട്ട്</string>
+    <string name="mr_controller_casting_screen">സ്‌ക്രീൻ കാസ്റ്റുചെയ്യുന്നു</string>
+    <string name="mr_controller_close_description">അടയ്‌ക്കുക</string>
+    <string name="mr_controller_collapse_group">ചുരുക്കുക</string>
+    <string name="mr_controller_disconnect">വിച്ഛേദിക്കുക</string>
+    <string name="mr_controller_expand_group">വികസിപ്പിക്കുക</string>
+    <string name="mr_controller_no_info_available">വിവരങ്ങളൊന്നും ലഭ്യമല്ല</string>
+    <string name="mr_controller_no_media_selected">മീഡിയയൊന്നും തിരഞ്ഞെടുത്തിട്ടില്ല</string>
+    <string name="mr_controller_pause">തൽക്കാലം നിർത്തൂ</string>
+    <string name="mr_controller_play">പ്ലേ ചെയ്യുക</string>
+    <string name="mr_controller_stop">കാസ്റ്റുചെയ്യൽ നിർത്തുക</string>
+    <string name="mr_controller_volume_slider">വോളിയം സ്ലൈഡർ</string>
+    <string name="mr_system_route_name">സിസ്റ്റം</string>
+    <string name="mr_user_route_category_name">ഉപകരണങ്ങൾ</string>
+</resources>

@@ -1,0 +1,257 @@
+package com.google.android.gms.internal;
+
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+import android.support.annotation.Nullable;
+import com.google.android.gms.common.internal.safeparcel.zza;
+import com.google.android.gms.common.internal.safeparcel.zzd;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+@zzzn
+public final class zzaae extends zza {
+    public static final Creator<zzaae> CREATOR = new zzaag();
+    public final ApplicationInfo applicationInfo;
+    public final int versionCode;
+    public final boolean zzMe;
+    @Nullable
+    public final PackageInfo zzSA;
+    public final String zzSB;
+    public final String zzSC;
+    public final String zzSD;
+    public final Bundle zzSE;
+    public final int zzSF;
+    public final Bundle zzSG;
+    public final boolean zzSH;
+    public final int zzSI;
+    public final int zzSJ;
+    public final String zzSK;
+    public final long zzSL;
+    public final String zzSM;
+    @Nullable
+    public final List<String> zzSN;
+    public final List<String> zzSO;
+    public final long zzSP;
+    public final String zzSQ;
+    public final float zzSR;
+    public final int zzSS;
+    public final int zzST;
+    public final boolean zzSU;
+    public final boolean zzSV;
+    public final String zzSW;
+    public final boolean zzSX;
+    public final String zzSY;
+    public final int zzSZ;
+    @Nullable
+    public final Bundle zzSy;
+    public final zzir zzSz;
+    public final Bundle zzTa;
+    public final String zzTb;
+    public final boolean zzTc;
+    public final Bundle zzTd;
+    @Nullable
+    public final String zzTe;
+    @Nullable
+    public final String zzTf;
+    @Nullable
+    public final String zzTg;
+    public final boolean zzTh;
+    public final String zzTi;
+    public final List<String> zzTj;
+    private String zzvQ;
+    public final String zzvR;
+    public final zzaje zzvT;
+    public final zziv zzvX;
+    public final zzon zzwj;
+    @Nullable
+    public final zzky zzwl;
+    public final List<Integer> zzwn;
+    public final List<String> zzwq;
+    public final float zzxR;
+
+    zzaae(int i, Bundle bundle, zzir zzir, zziv zziv, String str, ApplicationInfo applicationInfo, PackageInfo packageInfo, String str2, String str3, String str4, zzaje zzaje, Bundle bundle2, int i2, List<String> list, Bundle bundle3, boolean z, int i3, int i4, float f, String str5, long j, String str6, List<String> list2, String str7, zzon zzon, List<String> list3, long j2, String str8, float f2, boolean z2, int i5, int i6, boolean z3, boolean z4, String str9, String str10, boolean z5, int i7, Bundle bundle4, String str11, zzky zzky, boolean z6, Bundle bundle5, String str12, String str13, String str14, boolean z7, List<Integer> list4, String str15, List<String> list5) {
+        this.versionCode = i;
+        this.zzSy = bundle;
+        this.zzSz = zzir;
+        this.zzvX = zziv;
+        this.zzvR = str;
+        this.applicationInfo = applicationInfo;
+        this.zzSA = packageInfo;
+        this.zzSB = str2;
+        this.zzSC = str3;
+        this.zzSD = str4;
+        this.zzvT = zzaje;
+        this.zzSE = bundle2;
+        this.zzSF = i2;
+        this.zzwq = list;
+        this.zzSO = list3 == null ? Collections.emptyList() : Collections.unmodifiableList(list3);
+        this.zzSG = bundle3;
+        this.zzSH = z;
+        this.zzSI = i3;
+        this.zzSJ = i4;
+        this.zzxR = f;
+        this.zzSK = str5;
+        this.zzSL = j;
+        this.zzSM = str6;
+        this.zzSN = list2 == null ? Collections.emptyList() : Collections.unmodifiableList(list2);
+        this.zzvQ = str7;
+        this.zzwj = zzon;
+        this.zzSP = j2;
+        this.zzSQ = str8;
+        this.zzSR = f2;
+        this.zzSX = z2;
+        this.zzSS = i5;
+        this.zzST = i6;
+        this.zzSU = z3;
+        this.zzSV = z4;
+        this.zzSW = str9;
+        this.zzSY = str10;
+        this.zzMe = z5;
+        this.zzSZ = i7;
+        this.zzTa = bundle4;
+        this.zzTb = str11;
+        this.zzwl = zzky;
+        this.zzTc = z6;
+        this.zzTd = bundle5;
+        this.zzTe = str12;
+        this.zzTf = str13;
+        this.zzTg = str14;
+        this.zzTh = z7;
+        this.zzwn = list4;
+        this.zzTi = str15;
+        this.zzTj = list5;
+    }
+
+    private zzaae(@Nullable Bundle bundle, zzir zzir, zziv zziv, String str, ApplicationInfo applicationInfo, @Nullable PackageInfo packageInfo, String str2, String str3, String str4, zzaje zzaje, Bundle bundle2, int i, List<String> list, List<String> list2, Bundle bundle3, boolean z, int i2, int i3, float f, String str5, long j, String str6, @Nullable List<String> list3, String str7, zzon zzon, long j2, String str8, float f2, boolean z2, int i4, int i5, boolean z3, boolean z4, String str9, String str10, boolean z5, int i6, Bundle bundle4, String str11, @Nullable zzky zzky, boolean z6, Bundle bundle5, String str12, String str13, String str14, boolean z7, List<Integer> list4, String str15, List<String> list5) {
+        this(23, bundle, zzir, zziv, str, applicationInfo, packageInfo, str2, str3, str4, zzaje, bundle2, i, list, bundle3, z, i2, i3, f, str5, j, str6, list3, str7, zzon, list2, j2, str8, f2, z2, i4, i5, z3, z4, str9, str10, z5, i6, bundle4, str11, zzky, z6, bundle5, str12, str13, str14, z7, list4, str15, list5);
+    }
+
+    public zzaae(zzaaf zzaaf, long j, String str, String str2, String str3) {
+        zzaaf zzaaf2 = zzaaf;
+        Bundle bundle = zzaaf2.zzSy;
+        zzir zzir = zzaaf2.zzSz;
+        zziv zziv = zzaaf2.zzvX;
+        String str4 = zzaaf2.zzvR;
+        ApplicationInfo applicationInfo = zzaaf2.applicationInfo;
+        PackageInfo packageInfo = zzaaf2.zzSA;
+        String str5 = (String) zzaji.zza(zzaaf2.zzTl, (Object) "");
+        String str6 = zzaaf2.zzSC;
+        String str7 = zzaaf2.zzSD;
+        zzaje zzaje = zzaaf2.zzvT;
+        Bundle bundle2 = zzaaf2.zzSE;
+        int i = zzaaf2.zzSF;
+        List list = zzaaf2.zzwq;
+        List list2 = zzaaf2.zzSO;
+        Bundle bundle3 = zzaaf2.zzSG;
+        boolean z = zzaaf2.zzSH;
+        int i2 = zzaaf2.zzSI;
+        int i3 = zzaaf2.zzSJ;
+        float f = zzaaf2.zzxR;
+        List list3 = list2;
+        String str8 = zzaaf2.zzSK;
+        long j2 = zzaaf2.zzSL;
+        String str9 = zzaaf2.zzSM;
+        list2 = zzaaf2.zzSN;
+        String str10 = str9;
+        String str11 = zzaaf2.zzvQ;
+        zzon zzon = zzaaf2.zzwj;
+        String str12 = zzaaf2.zzSQ;
+        float f2 = zzaaf2.zzSR;
+        boolean z2 = zzaaf2.zzSX;
+        int i4 = zzaaf2.zzSS;
+        int i5 = zzaaf2.zzST;
+        boolean z3 = zzaaf2.zzSU;
+        List list4 = list2;
+        boolean z4 = zzaaf2.zzSV;
+        List list5 = list;
+        Bundle bundle4 = bundle2;
+        int i6 = i;
+        String str13 = (String) zzaji.zza(zzaaf2.zzTk, "", 1, TimeUnit.SECONDS);
+        str9 = zzaaf2.zzSY;
+        boolean z5 = zzaaf2.zzMe;
+        int i7 = zzaaf2.zzSZ;
+        Bundle bundle5 = zzaaf2.zzTa;
+        String str14 = zzaaf2.zzTb;
+        String str15 = str9;
+        zzky zzky = zzaaf2.zzwl;
+        boolean z6 = zzaaf2.zzTc;
+        Bundle bundle6 = zzaaf2.zzTd;
+        boolean z7 = zzaaf2.zzTh;
+        List list6 = zzaaf2.zzwn;
+        str9 = zzaaf2.zzTi;
+        List list7 = zzaaf2.zzTj;
+        Bundle bundle7 = bundle5;
+        int i8 = i7;
+        boolean z8 = z5;
+        list2 = list3;
+        String str16 = str9;
+        boolean z9 = z;
+        int i9 = i2;
+        int i10 = i3;
+        float f3 = f;
+        String str17 = str8;
+        String str18 = str10;
+        Bundle bundle8 = bundle3;
+        long j3 = j;
+        this(bundle, zzir, zziv, str4, applicationInfo, packageInfo, str5, str6, str7, zzaje, bundle4, i6, list5, list2, bundle8, z9, i9, i10, f3, str17, j2, str18, list4, str11, zzon, j3, str12, f2, z2, i4, i5, z3, z4, str13, str15, z8, i8, bundle7, str14, zzky, z6, bundle6, str, str2, str3, z7, list6, str16, list7);
+    }
+
+    public final void writeToParcel(Parcel parcel, int i) {
+        int zze = zzd.zze(parcel);
+        zzd.zzc(parcel, 1, this.versionCode);
+        zzd.zza(parcel, 2, this.zzSy, false);
+        zzd.zza(parcel, 3, this.zzSz, i, false);
+        zzd.zza(parcel, 4, this.zzvX, i, false);
+        zzd.zza(parcel, 5, this.zzvR, false);
+        zzd.zza(parcel, 6, this.applicationInfo, i, false);
+        zzd.zza(parcel, 7, this.zzSA, i, false);
+        zzd.zza(parcel, 8, this.zzSB, false);
+        zzd.zza(parcel, 9, this.zzSC, false);
+        zzd.zza(parcel, 10, this.zzSD, false);
+        zzd.zza(parcel, 11, this.zzvT, i, false);
+        zzd.zza(parcel, 12, this.zzSE, false);
+        zzd.zzc(parcel, 13, this.zzSF);
+        zzd.zzb(parcel, 14, this.zzwq, false);
+        zzd.zza(parcel, 15, this.zzSG, false);
+        zzd.zza(parcel, 16, this.zzSH);
+        zzd.zzc(parcel, 18, this.zzSI);
+        zzd.zzc(parcel, 19, this.zzSJ);
+        zzd.zza(parcel, 20, this.zzxR);
+        zzd.zza(parcel, 21, this.zzSK, false);
+        zzd.zza(parcel, 25, this.zzSL);
+        zzd.zza(parcel, 26, this.zzSM, false);
+        zzd.zzb(parcel, 27, this.zzSN, false);
+        zzd.zza(parcel, 28, this.zzvQ, false);
+        zzd.zza(parcel, 29, this.zzwj, i, false);
+        zzd.zzb(parcel, 30, this.zzSO, false);
+        zzd.zza(parcel, 31, this.zzSP);
+        zzd.zza(parcel, 33, this.zzSQ, false);
+        zzd.zza(parcel, 34, this.zzSR);
+        zzd.zzc(parcel, 35, this.zzSS);
+        zzd.zzc(parcel, 36, this.zzST);
+        zzd.zza(parcel, 37, this.zzSU);
+        zzd.zza(parcel, 38, this.zzSV);
+        zzd.zza(parcel, 39, this.zzSW, false);
+        zzd.zza(parcel, 40, this.zzSX);
+        zzd.zza(parcel, 41, this.zzSY, false);
+        zzd.zza(parcel, 42, this.zzMe);
+        zzd.zzc(parcel, 43, this.zzSZ);
+        zzd.zza(parcel, 44, this.zzTa, false);
+        zzd.zza(parcel, 45, this.zzTb, false);
+        zzd.zza(parcel, 46, this.zzwl, i, false);
+        zzd.zza(parcel, 47, this.zzTc);
+        zzd.zza(parcel, 48, this.zzTd, false);
+        zzd.zza(parcel, 49, this.zzTe, false);
+        zzd.zza(parcel, 50, this.zzTf, false);
+        zzd.zza(parcel, 51, this.zzTg, false);
+        zzd.zza(parcel, 52, this.zzTh);
+        zzd.zza(parcel, 53, this.zzwn, false);
+        zzd.zza(parcel, 54, this.zzTi, false);
+        zzd.zzb(parcel, 55, this.zzTj, false);
+        zzd.zzI(parcel, zze);
+    }
+}

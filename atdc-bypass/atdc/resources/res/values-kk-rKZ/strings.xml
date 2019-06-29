@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Трансляциялау түймесі</string>
+    <string name="mr_cast_button_connected">\"Трансляциялау\" түймесі. Қосылды</string>
+    <string name="mr_cast_button_connecting">\"Трансляциялау\" түймесі. Қосылуда</string>
+    <string name="mr_cast_button_disconnected">\"Трансляциялау\" түймесі. Ажыратулы</string>
+    <string name="mr_chooser_searching">Құрылғыларды табу</string>
+    <string name="mr_chooser_title">Келесіге трансляциялау</string>
+    <string name="mr_controller_album_art">Альбом шебері</string>
+    <string name="mr_controller_casting_screen">Экранды трансляциялау</string>
+    <string name="mr_controller_close_description">Жабу</string>
+    <string name="mr_controller_collapse_group">Жию</string>
+    <string name="mr_controller_disconnect">Ажырату</string>
+    <string name="mr_controller_expand_group">Жаю</string>
+    <string name="mr_controller_no_info_available">Қол жетімді ақпарат жоқ</string>
+    <string name="mr_controller_no_media_selected">Ешбір тасушы таңдалмаған</string>
+    <string name="mr_controller_pause">Кідірту</string>
+    <string name="mr_controller_play">Ойнату</string>
+    <string name="mr_controller_stop">Трансляциялауды тоқтату</string>
+    <string name="mr_controller_volume_slider">Дыбыс деңгейінің жүгірткісі</string>
+    <string name="mr_system_route_name">Жүйе</string>
+    <string name="mr_user_route_category_name">Құрылғылар</string>
+</resources>

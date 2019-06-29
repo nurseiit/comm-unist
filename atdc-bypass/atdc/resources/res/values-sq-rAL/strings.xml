@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Butoni i transmetimit</string>
+    <string name="mr_cast_button_connected">Butoni i transmetimit. Je i lidhur</string>
+    <string name="mr_cast_button_connecting">Butoni i transmetimit. Po lidhet</string>
+    <string name="mr_cast_button_disconnected">Butoni i transmetimit. Je i shkëputur</string>
+    <string name="mr_chooser_searching">Gjetja e pajisjeve</string>
+    <string name="mr_chooser_title">Transmeto te</string>
+    <string name="mr_controller_album_art">Kopertina e albumit</string>
+    <string name="mr_controller_casting_screen">Po transmeton ekranin</string>
+    <string name="mr_controller_close_description">Mbyll</string>
+    <string name="mr_controller_collapse_group">Palose</string>
+    <string name="mr_controller_disconnect">Shkëpute</string>
+    <string name="mr_controller_expand_group">Zgjeroje</string>
+    <string name="mr_controller_no_info_available">Nuk jepet asnjë informacion</string>
+    <string name="mr_controller_no_media_selected">Nuk u zgjodh asnjë media</string>
+    <string name="mr_controller_pause">Pauzë</string>
+    <string name="mr_controller_play">Luaj</string>
+    <string name="mr_controller_stop">Ndalo transmetimin</string>
+    <string name="mr_controller_volume_slider">Rrëshqitësi i volumit</string>
+    <string name="mr_system_route_name">Sistemi</string>
+    <string name="mr_user_route_category_name">Pajisjet</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Igorri botoia</string>
+    <string name="mr_cast_button_connected">Igortzeko botoia. Konektatuta</string>
+    <string name="mr_cast_button_connecting">Igortzeko botoia. Konektatzen</string>
+    <string name="mr_cast_button_disconnected">Igortzeko botoia. Deskonektatuta</string>
+    <string name="mr_chooser_searching">Gailuak bilatzen</string>
+    <string name="mr_chooser_title">Igorri hona</string>
+    <string name="mr_controller_album_art">Albumaren azala</string>
+    <string name="mr_controller_casting_screen">Pantaila igortzen</string>
+    <string name="mr_controller_close_description">Itxi</string>
+    <string name="mr_controller_collapse_group">Tolestu</string>
+    <string name="mr_controller_disconnect">Deskonektatu</string>
+    <string name="mr_controller_expand_group">Zabaldu</string>
+    <string name="mr_controller_no_info_available">Ez dago informaziorik</string>
+    <string name="mr_controller_no_media_selected">Ez da hautatu multimedia-edukirik</string>
+    <string name="mr_controller_pause">Pausatu</string>
+    <string name="mr_controller_play">Erreproduzitu</string>
+    <string name="mr_controller_stop">Utzi igortzeari</string>
+    <string name="mr_controller_volume_slider">Bolumenaren graduatzailea</string>
+    <string name="mr_system_route_name">Sistema</string>
+    <string name="mr_user_route_category_name">Gailuak</string>
+</resources>

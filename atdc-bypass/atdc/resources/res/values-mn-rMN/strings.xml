@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mr_button_content_description">Дамжуулах товчлуур</string>
+    <string name="mr_cast_button_connected">Дамжуулах товчлуур. Холбогдсон</string>
+    <string name="mr_cast_button_connecting">Дамжуулах товчлуур. Холбож байна</string>
+    <string name="mr_cast_button_disconnected">Дамжуулах товчлуур. Салсан</string>
+    <string name="mr_chooser_searching">Төхөөрөмж хайж байна</string>
+    <string name="mr_chooser_title">Дамжуулах</string>
+    <string name="mr_controller_album_art">Цомгийн зураг</string>
+    <string name="mr_controller_casting_screen">Дэлгэцийг дамжуулж байна</string>
+    <string name="mr_controller_close_description">Хаах</string>
+    <string name="mr_controller_collapse_group">Хураах</string>
+    <string name="mr_controller_disconnect">Салгах</string>
+    <string name="mr_controller_expand_group">Дэлгэх</string>
+    <string name="mr_controller_no_info_available">Мэдээлэл байхгүй байна</string>
+    <string name="mr_controller_no_media_selected">Ямар ч медиа сонгоогүй</string>
+    <string name="mr_controller_pause">Түр зогсоох</string>
+    <string name="mr_controller_play">Тоглуулах</string>
+    <string name="mr_controller_stop">Дамжуулахыг зогсоох</string>
+    <string name="mr_controller_volume_slider">Дууны түвшин тааруулагч</string>
+    <string name="mr_system_route_name">Систем</string>
+    <string name="mr_user_route_category_name">Төхөөрөмжүүд</string>
+</resources>
