@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\title{CSE232 Assignment 3} 
+\author{Nurseiit Abdimomyn -- 20172001}
+\date{11/12/2018}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  \item
+    Consider a graph with $5$ edges in total: \newline
+    $e_1 = ab, e_2 = ac, e_3 = ad, e_4 = bc, e_5 = bd$ \newline
+    where the vertices set is $\{a, b, c, d\}.$
+  \item
+    No solution.
+    \begin{itemize}
+      \item[\textbf{Proof 1.}]
+        For any vertex $x$ from a graph of $4$ vertices to have a degree of $3$,
+        the vertex $x$ should have an adjacent edge with the other $(3)$ vertices.
+        By the definition of this problem, we should find such $3$ vertices with
+        all having degrees of $3$. That's why, every one of those $3$ vertices
+        should have an adjacent edge with the other $3$, including the one we need
+        to have the degree to equal $2$. Which in turn means that this $(4th)$
+        vertex should also have a degree of $3$. q.e.d.
+      \item[\textbf{Proof 2.}]
+        Consider the sum of the degrees of a graph $G$:
+        $\sum\limits_{v \in V(G)} deg(v) = k$ \newline
+        One can prove that $k$ is always even, because each edge in $E(G)$ 
+        will contribute to the degree of two different vertices
+        - therefore, $k$ should be exactly two times the number of edges on $G$.
+        \newline Now, because $deg(a) + deg(b) + deg(c) + deg(d) = 11$ is $odd$, 
+        such a graph can not be constructed.
+  \end{itemize}
+  \item
+    Suppose $C_n$ is a cycle of length $n$. Now, assume
+    that we were to color the vertices of this graph to either $black$ or $white$.
+    By definition, such a graph is $bipartite$ if there exists such a coloring
+    in which any adjacent vertices have different colors. For $n$ is $odd$
+    such a coloring is impossible. Because if we color each second vertex in the 
+    chain to $black$, we end up coloring the last vertex to $white$ and as the
+    first vertex is also $white$, where in a cycle last and first vertices are
+    adjacent, it is clear that cycle of $odd$ length is not $bipartite$. By the
+    same manner one could prove that cycle of $even$ length $is$ a $bipartite$ graph.
+  \item
+    We need to prove that that: \newline
+    \centerline{$\sum\limits_{k = 1}^{n} 3k^2-3k+1 = n^3$ whenever $n \geq 1$.}
+    \newline
+    \begin{itemize}
+      \item
+        for $n = 1$: $3*1^2 - 3*1 + 1 = 1^3$ holds.
+      \item
+        for $n > 1$: \newline
+        Assume that $\sum\limits_{k = 1}^{n} 3k^2-3k+1 = n^3$ holds,
+        \newline
+        then it should follow that $(n+1)^3 = \sum\limits_{k = 1}^{n+1} 3k^2-3k+1$.
+        \newline
+        Indeed, \newline
+        \centerline{$(n+1)^3 = 3(n+1)^2 - 3(n+1) + 1 + n^3$} \newline
+        \centerline{$ = 3(n^2+2n+1) - 3n - 3 + 1 + n^3$} \newline
+        \centerline{$n^3+3n^2+3n+1 = (n+1)^3$} q.e.d.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
