@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\title{CSE232 Assignment 4} 
+\author{Nurseiit Abdimomyn -- 20172001}
+\date{27/12/2018}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  \item
+    $a = 6, b = 2, c = 3$. So, $6 | (2 * 3), 6 \nmid 2, 6 \nmid 3$.
+  \item
+    Because $7$ and $123$ are coprime, we have by Euler's Theorem:
+    \newline
+    $\phi (7) = 6$ and $123^{456} \equiv 123^{456 \mod \phi(7)}$ $(\mod 7)$.
+    \newline
+    So, $123^{456} \equiv 123^{456 \mod 6} \equiv 123^0 \equiv 1$ $(\mod 7)$.
+    
+  \item
+    It's sufficient to check for $6$ congruent clasess. \newline
+    For $n \equiv 0, 0^2 \mod 6 \equiv 0 \neq 2$. $(\mod 6)$\newline
+    For $n \equiv 1, 1^2 \mod 6 \equiv 1 \neq 2$. $(\mod 6)$\newline
+    For $n \equiv 2, 2^2 \mod 6 \equiv 4 \neq 2$. $(\mod 6)$\newline
+    For $n \equiv 3, 3^2 \mod 6 \equiv 3 \neq 2$. $(\mod 6)$\newline
+    For $n \equiv 4, 4^2 \mod 6 \equiv 4 \neq 2$. $(\mod 6)$\newline
+    For $n \equiv 5, 5^2 \mod 6 \equiv 1 \neq 2$. $(\mod 6)$\newline
+  \item
+    The strongly connected components are: \newline
+    $\{i\}$ \newline
+    $\{a, b, c\}$ \newline
+    $\{d, e, g, h\}$ \newline
+    $\{f\}$ \newline
+  \item
+    \begin{itemize}
+      \item [(a) ]
+        Has an Euler path because it has exactly two vertices with odd degree. $\{d, f\}$
+      \item [(b) ]
+        Doesn't have Euler circuit -- not all vertices have even degree.
+      \item [(c) ]
+        It has a Hamilton Path as: $\{a, b, e, f, g, c, d\}$
+      \item [(d) ]
+        By Dirac's Theorem we know that in a graph with $3 \leq n$ vertices, if each vertex has $n/2 \leq deg(v)$, \newline
+        then the graph has a Hamilton circuit. \newline
+        However, this theorem is not neccessary but it is sufficient. \newline
+        A quick manual check gives us that this graph doesn't have a Hamilton circuit.      
+    \end{itemize}
+    \item
+      We know that every graph that doesn't have a cycle of odd length is bipartite. \newline
+      All trees are acyclic so we might say that they have a cycle of length $0$ which is even. \newline
+      Thus, all trees are bipartite.
+\end{enumerate}
+
+\end{document}
