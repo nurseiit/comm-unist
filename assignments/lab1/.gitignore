@@ -1,0 +1,5 @@
+*.swp
+lab1
+.test.cpp
+random-test
+random-asan
