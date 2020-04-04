@@ -1,0 +1,1 @@
+Found the stack offset for the receive_input method, but it's protected. So, instead I found the offset for the main and overwrote it's return address to call get_a_shell()

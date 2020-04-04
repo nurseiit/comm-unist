@@ -1,0 +1,214 @@
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  142
+handlebar_c  20
+completewheel_a  63
+frame_a  56
+chain_b  71
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  134
+handlebar_c  67
+frame_b  64
+chain_a  62
+tire_a  128
+wheel_a  128
+
+HONOURABLE
+ORDER FOR coolbike,1 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+completewheel_a  22
+frame_a  22
+chain_b  22
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  86
+handlebar_c  43
+frame_b  43
+chain_a  43
+tire_a  86
+wheel_a  86
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  160
+handlebar_c  80
+frame_b  80
+chain_a  80
+tire_a  160
+wheel_a  160
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  136
+handlebar_c  68
+frame_b  68
+chain_a  68
+tire_a  136
+wheel_a  136
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  196
+handlebar_c  98
+frame_b  98
+chain_a  98
+tire_a  196
+wheel_a  196
+
+HONOURABLE
+ORDER FOR coolbike,8 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+completewheel_a  29
+frame_a  29
+chain_b  29
+
+HONOURABLE
+ORDER FOR coolbike,21 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  154
+handlebar_c  77
+completewheel_a  77
+frame_a  77
+chain_b  77
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  142
+handlebar_c  71
+completewheel_a  71
+frame_a  71
+chain_b  71
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  198
+handlebar_c  99
+completewheel_a  99
+frame_a  99
+chain_b  99
+
+HONOURABLE
+ORDER FOR boringbike,10 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  128
+handlebar_c  64
+completewheel_a  64
+frame_a  64
+chain_b  64
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  138
+handlebar_c  69
+frame_b  69
+chain_a  69
+tire_a  138
+wheel_a  138
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  168
+handlebar_c  84
+frame_b  84
+chain_a  84
+tire_a  168
+wheel_a  168
+
+HONOURABLE
+ORDER FOR coolbike,2 IS COMPLETED
+
+HONOURABLE
+ORDER FOR coolbike,20 IS COMPLETED
+
+HONOURABLE
+ORDER FOR boringbike,2 IS COMPLETED
+
+HONOURABLE
+ORDER FOR coolbike,34 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  84
+handlebar_c  42
+
+HONOURABLE
+ORDER FOR coolbike,22 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  114
+handlebar_c  57
+completewheel_a  57
+
+HONOURABLE
+ORDER FOR coolbike,15 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  174
+handlebar_c  87
+completewheel_a  87
+frame_a  87
+chain_b  87
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  50
+handlebar_c  25
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  58
+handlebar_c  29
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  190
+handlebar_c  95
+completewheel_a  95
+frame_a  95
+chain_b  95
+
+HONOURABLE
+ORDER FOR coolbike,17 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  92
+handlebar_c  46
+frame_b  46
+chain_a  46
+tire_a  92
+wheel_a  92
+
+HONOURABLE
+ORDER FOR coolbike,3 IS COMPLETED
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  116
+handlebar_c  58
+frame_b  58
+chain_a  58
+tire_a  116
+wheel_a  116
+
+NOT HONOURABLE
+BUYING PARTS FROM SUPPLIERS:
+rubberhandle_a  198
+handlebar_c  99
+completewheel_a  99
+frame_a  99
+chain_b  99
+

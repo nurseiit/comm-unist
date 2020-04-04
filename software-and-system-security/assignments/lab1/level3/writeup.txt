@@ -1,0 +1,7 @@
+Quick analysis of the disassembly showed that the input asks for 5 integers and does the following math:
+
+result = a * 0 + b * 1 + c * 2 + d * 3 + e * 4.
+
+The result is found to be 305419896 in decimal.
+
+So setting b = 305419896, a = c = d = e = 0 is enough to unlock the flag.

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\title{CSE232 Assignment #1} 
+\author{Nurseiit Abdimomyn -- 20172001}
+\date{09/10/2018}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  \item 
+      \begin{enumerate}
+        \item ${A = \{ x^2 | x \in \mathbb{N} \land x \le 5 \}}$ 
+        \item ${B = \{ (x, y) | x, y \in \mathbb{N} \land (x + y) < 3 \}}$
+      \end{enumerate}
+  \item 
+      \begin{enumerate}
+        \item ${A = \{ 1 \}, B = \{ 1, 1 \}}$
+              \linebreak It is true that ${A \subseteq B}$ and ${B \subseteq A}$. Thus, $A = B$.
+        \item ${A = \{ 1, 2 \}, B = \{ 2, 1 \}}$
+              \linebreak It is true that ${A \subseteq B}$ and ${B \subseteq A}$. Thus, $A = B$.
+        \item ${A = \{ 1, 2 \}, B = (1, 2)}$
+              \linebreak Obviously ${A \neq B}$ because ${A}$ is a set. Whereas, $B$ is not.
+      \end{enumerate}
+  \item 
+      Prove that ${\mathcal P \left({ A \cup B }\right) = \mathcal P \left({A}\right) \cup \mathcal P \left({B}\right)}$
+      \newline \newline
+      Suppose ${A = \{ x | x \in A \land x \notin B  \}}$ and the size of it is $n$. Moreover, let's say that the size of the set $B$ is $m$. Then it is obvious that the size of the set ${A \cup B}$ should equal $n+m$.
+      \newline
+      Now, as the size of powerset of a set is always 2 to the power the size of that set, we can see that ${\mathcal P \left({ A \cup B }\right)}$ has $2^{(n+m)}$ elements. While, ${\mathcal P \left({A}\right) \cup \mathcal P \left({B}\right)}$ has at most $2^{n} + 2^{m}$ elements. Hence, the equation is not always true.
+  \item
+  \item ${A \times B = B \times A}$ is true if one of the following is satisfied.
+    \begin{enumerate}
+      \item $A = B$
+      \item $A = \emptyset$ or $B = \emptyset$
+    \end{enumerate}
+  \item
+    $(p \land (q \oplus r)) \lor (q \land (p \oplus r)) \lor (r \land (q \oplus p))$
+  \item
+    \begin{enumerate}
+      \item
+        Please refer to the table above.
+        \begin{table}[]
+          \begin{tabular}{l|l|l|l|l|l|l|l}
+          $p$ & $q$ & $p \land \neg q$ & $\neg p \land q$ & $p \lor q$ &  $\neg p \lor \neg q$ & $(p \land \neg q) \lor (\neg p \land q)$ & $(p \lor q) \land (\neg p \land \neg q)$ \\ \hline
+          $T$ & $T$ & $F$ & $F$ & $T$ & $F$ & $F$ & $F$ \\ \hline
+          $T$ & $F$ & $T$ & $F$ & $T$ & $T$ & $T$ & $T$ \\ \hline
+          $F$ & $T$ & $F$ & $T$ & $T$ & $T$ & $T$ & $T$ \\ \hline
+          $F$ & $F$ & $F$ & $F$ & $F$ & $T$ & $F$ & $F$ 
+          \end{tabular}
+        \end{table}
+      \item
+        $(p \land \neg q) \lor (\neg p \land q) \equiv (p \lor q) \land (\neg p \lor \neg q)$
+        \newline Distributive [1]:
+        $(p \land \neg q) \lor (\neg p \land q) \equiv (\neg p \lor (p \land \neg q)) \land (q \lor (p \land \neg q)) \equiv$
+        \newline Distributive [2]:
+        $((\neg p \lor p) \land (\neg p \lor \neg q)) \land ((q \lor p) \land (q \lor \neg q)) \equiv$
+        $(\neg p \lor \neg q) \land (p \lor q)$ \newline q.e.d.
+    \end{enumerate}
+  \item
+    $\forall x \forall y \exists z (P(x, z) \land P(y, z) \lor P(x, y))$
+    \newline
+    as $\forall x P(x, x) \equiv True$, thus $\forall x \forall y \exists z (P(x, z) \land P(y, z))$ is sufficient for this problem.
+  \item
+    $\neg \forall x \forall y (P(x, y) \lor Q(x, y)) \equiv \exists x \exists y \neg (P(x, t) \lor Q(x, y))$
+    \newline Via De Morgan's law it's $\equiv \exists x \exists y (\neg P(x, y) \land \neg Q(x, y))$
+\end{enumerate}
+
+
+\end{document}
+

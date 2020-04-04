@@ -1,0 +1,13 @@
+0x00000001
+0x0000000d
+0x00000005
+0x00000002
+0x00000001
+0x00000003
+0x00000008
+
+Found at "obj.keys".
+
+Further observing the disassembly reveals a bubble sort algorithm on "obj.keys".
+
+Finally, comparison of the input with sorted "obj.keys".

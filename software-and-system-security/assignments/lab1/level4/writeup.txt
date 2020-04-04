@@ -1,0 +1,13 @@
+Inside "sym.password" it checks for the length of the input should be 16.
+
+Also, strtoul of the beginning of that string should equal 31337.
+
+First string is: "31337qwertyuiopl"
+
+Then it asks for 5 integers (a, b, c, d, e) and does the following math (or similar):
+
+result = a + d + e
+
+And the expected result is "1457664".
+
+So setting a = 1457664, b = c = d = e = 0 was enough to unlock the flag.

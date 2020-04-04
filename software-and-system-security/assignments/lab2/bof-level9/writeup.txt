@@ -1,0 +1,3 @@
+After thoroughly examining the executable I found that the at the 124th position of the stack frame it reads the value, subtracts 4 and reads the value of the resulting address. THen jumps to that address.
+
+So I wrote a python program to handle these cases. [lol.py]

@@ -1,0 +1,17 @@
+It has something to do with the functions called memfrob and add_a_space.
+
+They perform:
+1. xor all elements with 42 (yes, the magic number).
+2. add 0x20 (32 in decimal) to all elements.
+
+So I need to understand the logic behind the last lines to get which part of the string '>:3hhn<' found in '.rodata' section.
+
+However, in "cmp" near the end of "password" method it checks the value of "0x68333a3e" which is only the four letter of the above string in little endian.
+
+So I wrote a helper program here (a.py) with 'undo_add_a_space' and 'undo_memfrob' functions.
+
+After applying those two functions I've got a string "409b" which when converted to decimals (0x409) is "16539".
+
+Then applied the functions again on a string of the decimal I got.
+
+Finally, I have got the answer to be ";<?93".

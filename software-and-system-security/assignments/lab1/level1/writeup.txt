@@ -1,0 +1,1 @@
+Examining the disassembled main function revealed that the password was 0x128600 in hex which is 1213952 in decimal.

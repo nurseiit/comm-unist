@@ -1,0 +1,5 @@
+This level was the easiest of all:
+
+I examined the method "check" and discovered that it checks that if the input number divides some constant evenly (without a remainder).
+
+That way I entered 1 as "x mod 1" is always 0 for any x.

@@ -1,0 +1,3 @@
+The stack offset found to be 36 using De Bruijn pattern.
+
+While smashing the stack I passed the address of the get_a_shell() method.

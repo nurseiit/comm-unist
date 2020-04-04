@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\title{CSE232 Assignment 2} 
+\author{Nurseiit Abdimomyn -- 20172001}
+\date{10/01/2018}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  \item
+    $(p \to q) \to (\neg q \to \neg p) \equiv \neg (p \to q) \lor (\neg q \to \neg p) \equiv$
+    \newline
+    $\neg (\neg p \lor q) \lor (q \lor \neg p) \equiv (p \land \neg q) \lor (q \lor \neg p) \equiv$
+    \newline
+    $((p \land \neg q) \lor q) \lor ((p \land \neg q) \lor \neg p) \equiv$
+    \newline
+    $((p \lor q) \land (q \lor \neg q)) \lor ((p \lor \neg p) \land (\neg q \lor \neg p)) \equiv$
+    \newline
+    $(p \lor \neg p) \lor (q \lor \neg q) \equiv T$
+  \item
+    $\exists x \forall y (xy < 0 \to x < y)$ where the domain for $x, y$ is $\mathbb{R}$
+    \newline
+    Let's find a counterexample:
+    \newline
+    Let $y = -1$ and by the definition we have $xy < 0$. So, $-x < 0$ which is the same as $x > 0$. Thus $y < x$, which is a contradiction. Q.E.D.
+  \item
+    Let $n$ be an integer.  Prove or disprove the following:  If $3n$ is odd, then $n$ is odd.
+    \newline
+    $f(3n) \to f(n)$ where $f(x)$ is $T$ for $x$ is odd. $F$ otherwise.
+    \newline \newline
+    Proof by a contrapositive:
+    \newline
+    $\neg f(n) \to \neg f(3n)$
+    \newline
+    Let's define $n = 2k$, then it's clear that $3n = 6k$. Which is also even, as $6k = 2*(3k)$ Q.E.D.
+  \item
+    $f(x) = f(y) \to x = y;$ \newline
+    $g(x) = g(y) \to x = y;$ \newline
+    So is true for $f(g(x)) = f(g(y)) \to g(x) = g(y) \to x = y;$ \newline
+    Q.E.D
+  \item
+    $\forall n \in \mathbb{Z} (\ceil{n/2} + \floor{n/2} = n)$ \newline
+    Let's consider the cases when $n$ is even and $n$ is odd. \newline \newline
+    For $n$ is $even$: It is obvious even without proving that the equation above holds in this particular case. \newline
+    For $n$ is $odd$: let's take $n = 2k + 1$, then $n/2 = k + 1/2$; \newline
+    So, $\floor{k + 1/2} = k$ and $\ceil{k + 1/2} = k + 1$. \newline
+    Thus, $\ceil{k + 1/2} + \floor{k + 1/2} = k + k + 1 = 2*k + 1$ which by our definition is equal to $n$. \newline Q.E.D.
+  \item
+    When finding how many integers from $1$ to $n$ are divisible by some integer $k$, one can prove that $\floor{n/k}$ is the answer. \newline \newline
+    So by applying Inclusion-Exclusion Principle here we can see that the number of integers from $1$ to $1000$ which are divisible by either $4$ or $9$ is nothing but: \newline
+    $\floor[\Big]{\dfrac{1000}{4}} + \floor[\Big]{\dfrac{1000}{9}} - \floor[\Big]{\dfrac{1000}{4*9}} = 250 + 111 - 27 = 334$
+  \item
+    Via the Inclusion-Exclusion Principle the answer will be as follows: \newline
+    $\floor[\Big]{\dfrac{1000}{4}} + \floor[\Big]{\dfrac{1000}{6}} - \floor[\Big]{\dfrac{1000}{x}}$ where $x = LCM(4, 6) = 12;$ \newline \newline
+    So, $250 + 166 - 83 = 333$.
+  \item
+    Below is the general solution for the problem to the number of two-to-one functions from set with $2n$ elements to the set with $n$ elements.
+    \newline
+    Let's first count the total number of combinations where we can arrange $2n$ elements into $n$ pairs. \newline
+    We begin by picking an arbitrary number first and we'll have $(2n - 1)$ choices to choose the second one. Then, we choose arbitrary number again and have $(2n - 3)$ choices left to choose its pair. Continue until we have chosen all $n$ pairs and have $(2n - 1) * (2n - 3) * ... * 1$ possible ways in total.
+    \newline Next we have to match these $n$ pairs from the first set with exactly one element from the second $(\{a, b, c\})$ set. Thus, we'll have to deal with every permutation of it, which will multiply our answer by $n!$ (factorial of $n$).
+    \newline Finally, we have $((2n-1) * (2n - 3) * ... * 1) * n!$ as an answer. Which when multiplied by $2^n$ yields to $(2n)!$. Thus, can be simplified as $\dfrac{(2n)!}{2^n}$.
+    \newline So the final answer will be $n = 3$; $\dfrac{(2*3)!}{2^3} = 90.$
+  \item
+    Let's first define the squares in which we can't place any cities as an $invalid$ place; And as $valid$ where we can.
+    \begin{enumerate}
+      \item
+        \begin{enumerate}
+          \item First we begin by considering the corners of the grid: \newline
+            If we place a capital city on one of them, as we'll have $4$ invalid places (neighbouring squares and itself) we'll have $(n^2 - 4)$ valid places left. Also, don't forget that we have $4$ corners total. Thus, add $4 * (n^2 - 4)$ to the answer.
+          \item Next, we have on each side of the grid $(n - 2)$ edges that aren't corners. If we are to place a capital city on one of them, we'll have $(n^2 - 6)$ possible valid places. Again, do not forget that we have $4$ such edges which in total add $4 * (n^2 - 6) * (n - 2)$ to the final answer.
+          \item Finally, we have inner squares that are neither corners nor the edges of the grid. If we are to place a capital city on one of them, we'll have $(n^2 - 9)$ valid places for an ordinary city. As we have $(n-2)^2$ of such squares, we add $(n-2)^2 * (n^2-9)$ to the answer.
+        \end{enumerate}
+        So, in total we get: \newline
+        $4*(n^2-4) + 4*(n^2 - 6)*(n-2) + (n - 2)^2 * (n^2-9)$ for $n > 2$
+        \newline as the answer to this problem.
+      \item This problem is very much similar to the previous (a) one. The only difference is that when we place the first ordinary city and count the possible ways to place the second, we'll have counted the same combinations twice. Thus, the answer to this problem is one half of the previous one's: \newline
+        $\dfrac{4*(n^2-4) + 4*(n^2 - 6)*(n-2) + (n - 2)^2 * (n^2-9)}{2}$ \newline 
+        for $n > 2$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

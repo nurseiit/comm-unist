@@ -1,0 +1,9 @@
+0,-,boringbike
+1,left,SA05
+2,left,completewheel_a
+2,right,SA06
+3,left,frame_a
+3,right,chain_b
+1,right,SA04
+2,right,handlebar_c
+2,left,rubberhandle_a

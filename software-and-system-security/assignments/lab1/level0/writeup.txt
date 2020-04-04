@@ -1,0 +1,1 @@
+I used "radare2" and doing "iz" was enough.

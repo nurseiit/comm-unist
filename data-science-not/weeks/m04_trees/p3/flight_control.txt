@@ -1,0 +1,36 @@
+KK8987,short
+KK8988,national
+KK8989,long
+AZ1017,long
+KK7677,long
+OP4543,short
+AZ1010,national
+OP3445,short
+AZ1011,short
+AZ1012,national
+flight,land
+flight,land
+KK8756,long
+AZ1211,short
+flight,land
+weather,rain start
+flight,land
+KK8989,sick passenger
+flight,land
+flight,land
+OP7856,short
+weather,rain stop
+OP0102,long
+flight,land
+OP0203,short
+OP0102,fuel low
+flight,land
+flight,land
+weather,rain start
+AZ7876,long
+AZ1265,long
+KK0305,national
+flight,land
+flight,land
+weather,rain stop
+flight,land

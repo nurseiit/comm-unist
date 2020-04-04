@@ -1,0 +1,3 @@
+This time we could only override 1 least signif. byte of the EBP. I had to manually define an ENV variable to make the alignment easier to handle.
+
+Every progress is in the lol.py file.

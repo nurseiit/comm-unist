@@ -1,0 +1,9 @@
+frame_a,fra,20,80000
+frame_b,frb,5,60000
+chain_a,cha,7,7800
+chain_b,chb,5,12300
+tire_a,tia,8,10000
+wheel_a,wha,8,9500
+completewheel_a,cwa,13,14500
+handlebar_c,hac,56,18900
+rubberhandle_a,rha,8,4000

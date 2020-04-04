@@ -1,0 +1,3 @@
+Using the De Bruijn pattern the offset is found to be 56 taking into account that the exec is 64 bit.
+
+Then passing the return address to get_shell was enough.

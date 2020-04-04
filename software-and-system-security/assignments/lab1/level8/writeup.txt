@@ -1,0 +1,25 @@
+The lucky number is generated randomly as below:
+```
+	srand(time(NULL));
+	int lucky_number = rand() % 20 + 15;
+```
+
+Examining the "password" method allowed to generate a simple emulator in python:
+
+```python
+if __name__ == '__main__':
+    keys = 3
+    words = 4
+    for i in range(LUCKY_NUMBER):
+        a = words
+        tmp = a
+        a = keys
+        a += words
+        words = a
+        a = tmp
+        keys = a
+    print(words)
+```
+
+I've got 31 as a lucky number. Then using the helper above, I was able to
+calculate the key as 12752043.

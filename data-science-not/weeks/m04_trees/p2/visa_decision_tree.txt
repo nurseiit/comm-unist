@@ -1,0 +1,11 @@
+0,-,Are you older than 18?
+1,left,Are you going to work in Italy?
+2,left,Do you have a job in Italy?
+3,right,Visa granted - type: jobseeker - 6 months
+3,left,Visa granted - type: professional - 3 years
+2,right,Are you going to study in Italy?
+3,left,Visa granted: student - 3 years
+3,right,Visa DENIED
+1,right,Is one of your parents of Italian nationality?
+2,right,Visa DENIED
+2,left,Visa granted - type: family - unlimited

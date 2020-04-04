@@ -1,0 +1,11 @@
+0,-,coolbike
+1,left,SA03
+2,left,SA01
+3,left,frame_b
+3,right,chain_a
+2,right,SA02
+3,left,tire_a
+3,right,wheel_a
+1,right,SA04
+2,right,handlebar_c
+2,left,rubberhandle_a

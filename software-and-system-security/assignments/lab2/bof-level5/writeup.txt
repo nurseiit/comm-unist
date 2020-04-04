@@ -1,0 +1,3 @@
+This time I could only overwrite ebp. So I pointed to the memory in the first part of my input where I put the address of get_a_shell().
+
+Though the trouble was to find the right combination of environment variables which affected the stack frame.

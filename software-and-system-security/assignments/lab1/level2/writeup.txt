@@ -1,0 +1,4 @@
+Examining the main revealed that another function is called to verify the input.
+Upon looking for that "sym.calculate" function, revealed that the math is X * Y + Z = W where W = 1094861636.
+
+Thus, setting X = 1094861636, Y = 1 and Z = 0 unlocked the flag.

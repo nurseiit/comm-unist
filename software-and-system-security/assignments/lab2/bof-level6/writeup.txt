@@ -1,0 +1,5 @@
+
+To clear up the local environment vars both in gdb and shell.
+```sh
+env -i PWD="/home/student/lab2/bof-level6" SHELL="/bin/bash" SHLVL=0 gdb /home/student/lab2/bof-level6/bof-level6
+```

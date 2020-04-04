@@ -1,0 +1,15 @@
+String length is 8.
+
+And there's a loop.
+
+Near the end it checks for "5385876381" with each digit xor-ed with 1.
+
+But that's "4294967290" and is too long.
+
+Notice that before checking it does snprintf, so if we pass a certain negative value, it will convert to our desired value.
+
+But unsigned "4294967290" to singed is "-6".
+
+We can add 0s after "-" to get "-0000006".
+
+Which unblocks the flag.

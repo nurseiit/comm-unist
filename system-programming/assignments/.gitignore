@@ -1,0 +1,10 @@
+*.swp
+
+*/btest
+*/fshow
+*/ishow
+*/check.sh
+
+.vscode/
+
+*.DS_Store
