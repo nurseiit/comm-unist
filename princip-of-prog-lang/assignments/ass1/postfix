@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+
+import sys
+from parser import parse_program
+from interpreter import run
+import logging
+
+## set up a logger
+logger = logging.getLogger("postfix")
+rootLogger = logging.getLogger()
+FORMAT = logging.Formatter('%(levelname)-8s %(name)-15s %(message)s')
+rootLogger.setLevel(logging.INFO)
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(FORMAT)
+rootLogger.addHandler(consoleHandler)
+
+if len(sys.argv) < 1:
+    sys.stderr.write('Syntax: postfix program s0 s1 ...\n')
+    sys.exit(1)
+
+try:
+    prog, inputs = sys.argv[1], [int(n) for n in sys.argv[2:]]
+    print(run(prog, inputs))
+except ValueError as e:
+    sys.stderr.write('Arguments must be integers\n')
+    sys.exit(1)
