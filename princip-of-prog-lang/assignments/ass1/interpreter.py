@@ -5,26 +5,21 @@ import logging
 logger = logging.getLogger("interpreter")
 
 
-class Irreducible(Exception):
-    pass
-
-
 class Postfix:
     def __init__(self):
-        # todo
-        self.command = 'sub add mul div rem'.split()
+        self.commands = 'sub add mul div rem lt pop swap sel nget exec'.split()
 
     def run(self, prog, inputs):
         cmd_seq, stack = self.IF(prog, inputs)
-        logger.info('initial config: <{}, {}>'.format(cmd_seq, stack))
+        logger.info(f'initial config: <{cmd_seq}, {stack}>')
 
         while len(cmd_seq) > 0:
             try:
                 self.execute(cmd_seq, stack)
-                logger.info('config: <{}, {}>'.format(cmd_seq, stack))
-            except Irreducible:
+                logger.info(f'config: <{cmd_seq}, {stack}>')
+            except Exception:
                 break
-        logger.info('final config: <{}, {}>'.format(cmd_seq, stack))
+        logger.info(f'final config: <{cmd_seq}, {stack}>')
 
         return self.OF(cmd_seq, stack)
 
