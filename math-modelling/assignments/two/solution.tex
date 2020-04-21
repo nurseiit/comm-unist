@@ -1,0 +1,96 @@
+% \documentclass[11pt]{article}
+\documentclass[12pt,a4paper,oneside,draft]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\title{MTH 361, Homework Assignment 2} 
+\author{Nurseiit Abdimomyn -- 20172001}
+\date{21/04/2020}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  \item
+    \begin{itemize}
+      \item
+        Find the adjacent matrix of network (a).
+        \newline
+        \newline
+        $A = \begin{pmatrix}
+              0&1&0&0&1\\
+              0&0&1&0&0\\
+              1&0&0&0&1\\
+              0&1&1&0&0\\
+              0&0&0&0&0\\
+            \end{pmatrix}$
+        \newline
+      \item
+        Find the incident matrix of network (b).
+        \newline
+        \newline
+        $B = \begin{pmatrix}
+              1&0&1&0&0\\
+              0&1&1&0&0\\
+              0&0&0&1&0\\
+              0&1&1&1&1\\
+            \end{pmatrix}$
+        \newline
+      \item
+        Find the adjacent matrix for the network generated when we project
+        the network (b) into its black vertices.
+        \newline
+        \newline
+        $A' = \begin{pmatrix}
+              0&0&1&0&0\\
+              0&0&1&1&1\\
+              1&1&0&1&1\\
+              0&1&1&0&1\\
+              0&1&1&1&0\\
+            \end{pmatrix}$
+        \newline
+    \end{itemize}
+  \item
+    \begin{itemize}
+      \item
+        A 3-regular graph must have an even number of nodes.
+        \begin{proof}
+          By Handshaking lemma we have sum of all degrees: $$\sum_{v \in V} deg(v) = 2 * |E|$$
+          and by the defition of regular graphs, 3-regular graph has sum of all degrees
+          $$\sum_{v \in V} deg(v) = 3 * |V|.$$
+          Thus, we have $$3 * |V| = 2 * |E|$$ which implies that $|V| = 2 * k$ for some $k$.
+        \end{proof}
+      \item
+        The average degree of a tree is strictly less than 2.
+        \begin{proof}
+          Via Handshaking lemma, the average degree of a graph is as follows:
+            $$c = \frac{1}{|V|} * \sum_{v \in V} deg(v) = \frac{2 * |E|}{|V|}.$$
+          By defition, the following holds true for all trees: $$|E| = |V| - 1.$$
+          Thus, by substituting $|V|$:
+            $$c = \frac{2 * (|V| - 1)}{|V|} = 2 - \frac{1}{|V|} < 2$$
+        \end{proof}
+    \end{itemize}
+  \item
+    Consider a network which is simple (it contains no multiedges or self-edges)
+    and consists of $n$ nodes in a single component.
+    \newline
+    (i) What is the maximum possible number of edges it could have?
+    \newline
+    (ii) What is the minimum possible edges if could have?
+    \newline
+    Explain how you give the answer by providing the corresponding figures of networks.
+    \begin{itemize}
+      \item [(a) ]
+        Lorem ipsum...      
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
