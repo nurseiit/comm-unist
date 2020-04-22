@@ -8,6 +8,8 @@
 \usepackage{hyperref}
 \usepackage[latin1]{inputenc}
 \usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
@@ -91,10 +93,41 @@
       \item [(i) ]
         One could draw an edge between every of the $n$ nodes of the graph to
         form a \textit{complete graph} with $|E| = \frac{n * (n - 1)}{2}$.
-        \newline ToDo draw graph
+        \newline
+        \begin{center}
+          \begin{tikzpicture}
+            [scale=.5,auto=left,every node/.style={circle,draw=black}]
+
+            \node (n4) at (10, 6) {1};
+            \node (n5) at (12, 8) {2};
+            \node (n6) at (14, 6) {3};
+            \node (n7) at (12, 4) {4};
+
+            \foreach \from/\to in {n4/n5,n4/n6,n4/n7,n5/n6,n5/n7,n6/n7}
+              \draw (\from) -- (\to);
+
+          \end{tikzpicture}
+          $$|E| = \frac{4 * (4 - 1)}{2} = 6.$$
+        \end{center}
       \item [(ii) ]
         One could form a \textit{tree graph} with $n$ nodes to get $|E| = n - 1$.
-        \newline ToDo draw tree
+        \newline
+        \begin{center}
+          \begin{tikzpicture}[level distance=1.5cm,
+            level 1/.style={sibling distance=3cm},
+            level 2/.style={sibling distance=1.5cm}, every node/.style={circle,draw=black}]
+            \node {1}
+              child {node {2}
+                child {node {4}}
+                child {node {5}}
+              }
+              child {node {3}
+              child {node {6}}
+                child {node {7}}
+              };
+          \end{tikzpicture}
+          $$|E| = 7 - 1 = 6.$$
+        \end{center}
     \end{itemize}
   \item
     \begin{itemize}
@@ -165,7 +198,26 @@
       While 2-core is a maximal subset of vertices s.t. each one's connected to at least
       $2$ others in the subset.
       \newline
-      ToDo draw.
+      \begin{center}
+        \begin{tikzpicture}
+          [scale=.5,every node/.style={circle,draw=black}]
+          \node (n1) at (1,6) {};
+          \node (n2) at (3,8) {};
+          \node (n3) at (5,6) {};
+          \node (n8) at (3,4) {};
+
+          \node (n4) at (10, 6) {};
+          \node (n5) at (12, 8) {};
+          \node (n6) at (14, 6) {};
+          \node (n7) at (12, 4) {};
+
+          \foreach \from/\to in {n1/n2,n1/n8,n8/n3,n2/n3,n3/n4,n4/n5,n4/n6,n4/n7,n5/n6,n5/n7,n6/n7}
+            \draw (\from) -- (\to);
+
+        \end{tikzpicture}
+        \newline
+        One 2-core, 2-component (left) and one 3-core, 2-component (right).
+      \end{center}
     \item
       Show that the edge connectivity of nodes A and B in the network is 2.
       \begin{proof}
