@@ -154,6 +154,31 @@
         Which for all $n \neq 0$ it's true that $c < 6.$
       \end{proof}
     \end{itemize}
+    \item
+      What is the difference between a 2-component and a 2-core?
+      Draw a small network that has one 2-core but two 2-components.
+      \newline
+      \newline
+      2-component is a maximal subset of vertices s.t. each one's reachable from each others
+      by at least $2$ \textit{vertex-independent} paths.
+      \newline
+      While 2-core is a maximal subset of vertices s.t. each one's connected to at least
+      $2$ others in the subset.
+      \newline
+      ToDo draw.
+    \item
+      Show that the edge connectivity of nodes A and B in the network is 2.
+      \begin{proof}
+        First, we can see that there are not any \textit{edge cut size} less than $2$ in a given graph.
+        Thus, there must be \textit{at least} $2$ edge-independent paths between two vertices $A$ and $B$.
+        So, $2 \leq \text{edge connectivity}$.
+        \newline
+        Let's assume there to be exactly $2$ edge-independent paths from $A$ to $B$. Which'd simply mean
+        that \textit{at least} we'd have to remove \textit{one} edge from each of the paths for $A$ and $B$
+        to disconnect. This implies that edge cut size of the graph is \textit{at least} $2$.
+        So, $2 \geq \text{edge connectivity}$.
+          $$2 \leq \text{edge connectivity} \leq 2 \implies \text{edge connectivity} = 2.$$
+      \end{proof}
 \end{enumerate}
 
 \end{document}
