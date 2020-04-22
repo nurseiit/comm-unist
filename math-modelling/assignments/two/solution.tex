@@ -73,7 +73,7 @@
         \begin{proof}
           Via Handshaking lemma, the average degree of a graph is as follows:
             $$c = \frac{1}{|V|} * \sum_{v \in V} deg(v) = \frac{2 * |E|}{|V|}.$$
-          By defition, the following holds true for all trees: $$|E| = |V| - 1.$$
+          By definition, the following holds true for all trees: $$|E| = |V| - 1.$$
           Thus, by substituting $|V|$:
             $$c = \frac{2 * (|V| - 1)}{|V|} = 2 - \frac{1}{|V|} < 2$$
         \end{proof}
@@ -88,8 +88,71 @@
     \newline
     Explain how you give the answer by providing the corresponding figures of networks.
     \begin{itemize}
-      \item [(a) ]
-        Lorem ipsum...      
+      \item [(i) ]
+        One could draw an edge between every of the $n$ nodes of the graph to
+        form a \textit{complete graph} with $|E| = \frac{n * (n - 1)}{2}$.
+        \newline ToDo draw graph
+      \item [(ii) ]
+        One could form a \textit{tree graph} with $n$ nodes to get $|E| = n - 1$.
+        \newline ToDo draw tree
+    \end{itemize}
+  \item
+    \begin{itemize}
+      \item [(i) ] How do $n$, $m$, and $f$ change when we add a single vertex to such a network 
+      along with a single edge attaching it to an existing vertex?
+      \newline
+        $$n \implies n + 1; m \implies m + 1; f \implies f;$$
+      One can't form any "face" with $1$ new edge and $1$ new node only.
+      \newline
+      \newline
+      \item [(ii) ] How do $n$, $m$, and $f$ change when we add a single edge between two existing vertices
+      (or a self-edge attached to just one vertex), in such a way as to maintain planarity of the network?
+      \newline
+        $$n \implies n; m \implies m + 1; f \implies f + 1;$$
+      By adding an edge while maintaining planarity of the graph we will bound a new area and form a new "face".
+      \newline
+      \newline
+      \item [(iii) ] What are the values of $n$, $m$, and $f$ for a network with a single vertex and no edges?
+        $$n \implies 1; m \implies 0; f \implies 1;$$
+      With no "faces" except the outer one.
+      \newline
+      \newline
+      \item [(iv) ] Hence by induction prove a general relation between n, m, and f for all
+      connected planar networks.
+      \newline
+      \newline
+      Let's prove Euler's identity for planar graphs as $n - m + f = 2$, where
+      $n = |V|, m = |E|, f = |\textit{faces}|$.
+      \newline
+      (1.) Basic step of induction is given in (iii):
+        $$n \implies 1; m \implies 0; f \implies 1;$$
+        $$\text{so, } n - m + f = 1 - 0 + 1 = 2; \square$$
+      \newline
+      (2.) Induction step is given in (i) and (ii) by assuming $n - m + f = 2$ is \textit{true}:
+        $$\text{(i): } n \implies n + 1; m \implies m + 1; f \implies f;$$
+        $$\text{so, } (n + 1) - (m + 1) + f = n - m + f = 2;$$
+        $$\text{(ii): } n \implies n; m \implies m + 1; f \implies f + 1;$$
+        $$\text{so, } n - (m + 1) + (f + 1) = n - m + f = 2; \square$$
+      \newline
+      \item [(v) ] Now suppose that our network is simple. Show that the mean degree $c$ of a simple,
+      connected, planar network is strictly less than \textit{six}.
+      \newline
+      \begin{proof}
+        By Handshaking lemma, we know that mean degree is
+          $$c = \frac{1}{|V|} * \sum_{v \in V} deg(v) = \frac{2 * |E|}{|V|} = \frac{2 * m}{n},$$
+        and we proved $n - m + f = 2$ in (iv).
+        \newline
+        Similar to Handshaking lemma, we know for sum of degress of all faces:
+          $$\sum_{i} deg(f_i) = 2 * |E| = 2 * m.$$
+        From there, because our graphs are all simple, the smallest possible degree of a face
+        would be $3$, so:
+          $$\sum_{i} 3 \leq \sum_{i} deg(f_i) \implies 3 * f \leq 2 * m.$$
+        Thus, by solving for $f$ in $n - m + f = 2 \implies f = 2 + m - n$ we get:
+          $$3 * f \leq 2 * m \implies 3 * (2 + m - n) \leq 2 * m \implies m \leq 3*n - 6.$$
+        Further, by substituting the above to the equation for mean degree $c$:
+          $$c = \frac{2 * m}{n} \leq \frac{2*(3*n - 6)}{n} \implies c \leq 6 - \frac{12}{n}.$$
+        Which for all $n \neq 0$ it's true that $c < 6.$
+      \end{proof}
     \end{itemize}
 \end{enumerate}
 
