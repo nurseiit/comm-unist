@@ -114,36 +114,42 @@ class Procedure:
 
     def evaluate(self, exp):
         print('# eval', exp)
+
         if self._is_const(exp):
             return exp
+
         elif self._is_atom(exp):
             return self._env[exp]
-        elif exp == 'pair':
-            _fst = self.evaluate(exp[1])
-            _snd = self.evaluate(exp[2])
-            return tuple(_fst, _snd)
+
         elif self._is_atom(exp[0]):
             if exp[0] == 'prim':
                 op = exp[1]
                 args = exp[2:]
                 return self._prim(op, *args)
+
             elif exp[0] == 'sym':
                 return exp[1]
+
             elif exp[0] == 'error':
                 raise ValueError(exp[1])
+
             elif exp[0] == 'if':
                 _cond = self.evaluate(exp[1])
                 if _cond is True or _cond is False:
                     return self.evaluate(exp[2 if _cond else 3])
                 else:
                     raise ValueError('nonbool-in-if-test')
+
             elif exp[0] == 'pair':
-                print(exp)
                 _fst = Procedure()
                 _snd = Procedure()
                 fst = _fst.evaluate(exp[1])
                 snd = _snd.evaluate(exp[2])
-                return tuple([fst, snd])
+                result = [fst]
+                if snd != '#u':
+                    result = [fst, snd]
+                return result
+
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
                 args = exp[1:]
@@ -154,6 +160,8 @@ class Procedure:
         return isinstance(exp, str)
 
     def _is_const(self, exp):
+        if isinstance(exp, tuple):
+            return True
         return exp == '#u' or isinstance(exp, int) or isinstance(exp, float)
 
 

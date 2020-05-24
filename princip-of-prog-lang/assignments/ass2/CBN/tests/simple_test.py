@@ -100,3 +100,11 @@ def test_if_cond():
 def test_pair():
     assert P(parse('(flk () (prim fst (pair (+ 1 2) (* 3 4))))'))([]) == 3
     assert P(parse('(flk () (prim snd (pair (+ 1 2) (* 3 4))))'))([]) == 12
+    # assert P(parse('(flk () (pair 8 (pair 2 (pair 1 #u))))'))([]) == [8, 2, 1]
+    assert P(parse('(flk () (prim fst (pair 8 (pair 2 (pair 1 #u)))))'))([]) == 8
+    # assert P(parse('(flk () (prim snd (pair 8 (pair 2 (pair 1 #u)))))'))(
+    # []) == [2, 1]
+    assert P(parse('(flk () (prim fst (prim snd (pair 8 (pair 2 (pair 1 #u))))))'))(
+        []) == 2
+    # assert P(parse('(flk () (prim snd (prim snd (pair 8 (pair 2 (pair 1 #u))))))'))(
+    # []) == 'error'
