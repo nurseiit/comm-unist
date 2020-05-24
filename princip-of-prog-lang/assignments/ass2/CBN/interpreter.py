@@ -1,22 +1,36 @@
+import operator as op
+
+
+class Environment:
+    def __init__(self):
+        vars = {'+': op.add}
+
+        self.vars = vars
+
+    def update(self, _vars):
+        self.vars.update(_vars)
+
+    def __getitem__(self, var):
+        return self.vars[var]
+
+
 class InterpreterCBN:
     def __init__(self):
-        self._env = {}
+        self._env = Environment()
 
     def interpret(self, exp, env):
         print('# intr', exp, env)
 
         # save flk arguments
-        args = exp[1]
-        n = len(args)
-        for i in range(n):
-            self._env[args[i]] = env[i]
+        self._env.update(zip(exp[1], env))
         return self._evaluate(exp[2])
 
     def _evaluate(self, exp):
         print('# eval', exp)
         if self._is_atom(exp):
-            return exp
-        return 420
+            return self._env[exp]
+        elif self._is_atom(exp[0]):
+            return exp[0]
 
     def _is_atom(self, exp):
         # atoms are simple strings
