@@ -114,6 +114,12 @@ class InterpreterCBN:
                 return self.prim(op, *args)
             elif exp[0] == 'sym':
                 return exp[1]
+            elif exp[0] == 'error':
+                raise ValueError(exp[1])
+            elif exp[0] == 'if':
+                _cond = self._evaluate(exp[1])
+                if _cond is True or _cond is False:
+                    return self._evaluate(exp[2 if _cond else 3])
 
     def _is_atom(self, exp):
         # atoms are simple strings
