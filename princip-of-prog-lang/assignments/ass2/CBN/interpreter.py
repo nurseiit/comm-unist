@@ -120,6 +120,8 @@ class InterpreterCBN:
                 _cond = self._evaluate(exp[1])
                 if _cond is True or _cond is False:
                     return self._evaluate(exp[2 if _cond else 3])
+                else:
+                    raise ValueError('nonbool-in-if-test')
 
     def _is_atom(self, exp):
         # atoms are simple strings
