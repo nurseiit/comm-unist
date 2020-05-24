@@ -35,7 +35,7 @@ class Primitive:
         def is_proc(x): return callable(x)
 
         # todo: may be list as well?
-        def is_pair(x): return isinstance(x, tuple)
+        def is_pair(x): return isinstance(x, Pair)
 
         def sym_eq(foo, bar):
             if not is_sym(foo) or not is_sym(bar):
@@ -108,6 +108,9 @@ class Environment:
     def update(self, _vars):
         self.vars.update(_vars)
 
+    def _set(self, foo, bar):
+        self.vars[foo] = bar
+
     def __getitem__(self, var):
         return self.vars[var]
 
@@ -136,7 +139,7 @@ class Procedure:
         elif self._is_atom(exp):
             if not exp in self._env.vars:
                 raise ValueError('unbound-variable')
-            return self._env[exp]
+            return self.evaluate(self._env[exp])
 
         elif self._is_atom(exp[0]):
             if exp[0] == 'prim':
@@ -183,7 +186,7 @@ class Procedure:
                 if not isinstance(fn, Lambda):
                     raise ValueError('nonprocedural-rator')
                 _env = self._env
-                _env.update(zip(fn._vars, exp[2:]))
+                _env._set(fn._vars[0], exp[2])
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 

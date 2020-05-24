@@ -1,5 +1,6 @@
 from parser import parse
 from interpreter import P
+import pytest
 
 
 def test_app_lam():
@@ -11,8 +12,8 @@ def test_main_args():
 
 
 '''
-    #u −−−> unit FLK
-    #t −−−> true FLK
+    # u −−−> unit FLK
+    # t −−−> true FLK
     23 −−−> 23 FLK
     (sym captain) −−−> captain 
 '''
@@ -110,9 +111,36 @@ def test_pair():
     # []) == 'error'
 
 
-def test_lam_app():
+def test_basic_lam_app():
     assert P(parse('(flk () (lam x (prim * x x)))'))([]) == 'procedure'
     assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25
     assert P(parse('(flk () (app 3 5))'))([]) == 'nonprocedural-rator'
     assert P(parse('(flk () (app not #t))'))([]) == 'unbound-variable'
     assert P(parse('(flk () (app (app (lam n (lam x (prim - x n))) 5) 8))'))([]) == 3
+
+
+def test_complex_lam_app():
+    assert P(parse(
+        '(flk () (app (lam f (app f 5)) (app (lam n (lam x (prim - x n))) 1)))'))([]) == 4
+    assert P(parse('(flk () (app (lam n (lam x (prim - x n))) 1))')
+             )([]) == 'procedure'
+
+    assert P(
+        parse('(flk () (app (lam f (app f 5)) (lam n (lam x (prim - x n)))))'))([]) == 'procedure'
+
+    assert P(parse(
+        '(flk () (app (app (lam f (app f 5)) (lam n (lam x (prim - x n)))) 8))'))([]) == 3
+
+    with pytest.raises(Exception):
+        assert P(parse('(flk () (app (lam x (app x x)) (lam x (app x x))))'))([])
+
+
+def test_nonstrict():
+    assert P(parse('(flk () (app (lam x 3) (prim / 1 0)))'))([]) == 3
+    assert P(parse('(flk () (app (lam x (prim + x 3)) (prim / 1 0)))')
+             )([]) == 'divide-by-zero'
+    assert P(parse(
+        '(flk () (app (lam x 3) (app (lam x (app x x)) (lam x (app x x)))))'))([]) == 3
+    with pytest.raises(Exception):
+        assert P(parse(
+            '(flk () (app (lam x (prim + x 3)) (app (lam x (app x x)) (lam x (app x x)))))'))([])
