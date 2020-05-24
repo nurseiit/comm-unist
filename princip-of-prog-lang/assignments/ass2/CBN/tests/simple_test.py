@@ -113,3 +113,6 @@ def test_pair():
 def test_lam_app():
     assert P(parse('(flk () (lam x (prim * x x)))'))([]) == 'procedure'
     assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25
+    assert P(parse('(flk () (app 3 5))'))([]) == 'nonprocedural-rator'
+    assert P(parse('(flk () (app not #t))'))([]) == 'unbound-variable'
+    # assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25

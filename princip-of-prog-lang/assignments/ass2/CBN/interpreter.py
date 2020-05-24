@@ -134,6 +134,8 @@ class Procedure:
             return exp
 
         elif self._is_atom(exp):
+            if not exp in self._env.vars:
+                raise ValueError('unbound-variable')
             return self._env[exp]
 
         elif self._is_atom(exp[0]):
@@ -178,6 +180,8 @@ class Procedure:
 
             elif exp[0] == 'app':
                 fn = self.evaluate(exp[1])
+                if not isinstance(fn, Lambda):
+                    raise ValueError('nonprocedural-rator')
                 _env = self._env
                 _env.update(zip(fn._vars, exp[2:]))
                 app = Procedure(_env, fn._exp)
