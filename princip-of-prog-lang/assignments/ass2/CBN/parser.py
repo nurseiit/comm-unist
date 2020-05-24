@@ -1,61 +1,50 @@
 import re
-import logging
-
-logger = logging.getLogger("parser")
 
 
-TOKEN_REGEX = re.compile(
-    r'\s*(-?\d+|\w+|\(|\)|\+|(flk|lam|app|prim)(\b|$))')
+def parse(src):
+    exp, rest = _partition_exps(src)
+    if rest:
+        raise ValueError("Unexpected token '%s'" % rest)
+    elif exp[0] == "(":
+        end = _close_paren(exp)
+        return [parse(e) for e in _split_to_exps(exp[1:end])]
+    else:
+        try:
+            return int(exp)
+        except:
+            return exp
 
-def parse(exp):
-    tokens = tokenize(exp)
-    token = next(tokens)
-    if token != '(':
-        raise ValueError('NOT A FLK PROGRAM')
-    token = next(tokens)
-    if token != 'flk':
-        raise ValueError('NOT A FLK PROGRAM')
-    body = parse_param_and_body(tokens, next(tokens))
-    body.insert(0, token)
-    # logger.debug('body: {}'.format(body))
-    return body
 
-def parse_param_and_body(tokens, token):
-    level = 1
+def _split_to_exps(src):
+    rest = src.strip()
+    exps = []
+    while rest:
+        exp, rest = _partition_exps(rest)
+        exps.append(exp)
+    return exps
 
-    def parse_exp(token, result):
-        nonlocal level
-        if token == '(':
-            level += 1
-            # parse formal params
-            result.append(parse_exp(next(tokens), []))
-            # parse body
-            return parse_exp(next(tokens), result)
-        if token == ')':
-            level -= level
-            return result
-        if token[0] in '-0123456789':
-            result.append(int(token))
-            return parse_exp(next(tokens), result)
-        if token != 'END':
-            result.append(token)
-            return parse_exp(next(tokens), result)
-        else:
-            raise ValueError('LEXICAL_ERROR')
 
-    result = parse_exp(token, [])
-    if level == 0:
-        return result
+def _partition_exps(src):
+    src = src.strip()
+    if src[0] == "(":
+        last = _close_paren(src)
+        return src[:last + 1], src[last + 1:]
+    else:
+        match = re.match(r"^[^\s)']+", src)
+        end = match.end()
+        atom = src[:end]
+        return atom, src[end:]
 
-    raise ValueError('LEXICAL_ERROR')
 
-def tokenize(source):
-    start = 0
-    while start < len(source):
-        m = TOKEN_REGEX.match(source, start)
-        # logger.debug('m: {}'.format(m))
-        if m is None:
-            raise ValueError('LEXICAL_ERROR')
-        yield m.group(0).strip()
-        start = m.end()
-    yield 'END'
+def _close_paren(src):
+    pos = 0
+    cnt = 1
+    while cnt > 0:
+        pos += 1
+        if len(src) == pos:
+            raise ValueError("Parentheses aren't balanced!")
+        if src[pos] == '(':
+            cnt += 1
+        if src[pos] == ')':
+            cnt -= 1
+    return pos

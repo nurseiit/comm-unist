@@ -5,7 +5,7 @@ import logging
 from parser import parse
 from interpreter import P
 
-## set up a logger
+# set up a logger
 logger = logging.getLogger("flk")
 rootLogger = logging.getLogger()
 FORMAT = logging.Formatter('%(levelname)-8s %(message)s')
@@ -27,5 +27,5 @@ try:
     logger.debug('inputs: {}'.format(inputs))
     print(P(parse(prog))(inputs))
 except ValueError as e:
-    sys.stderr.write(e)
+    sys.stderr.write(str(e))
     sys.exit(1)
