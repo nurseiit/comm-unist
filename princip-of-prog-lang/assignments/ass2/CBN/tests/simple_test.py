@@ -115,4 +115,4 @@ def test_lam_app():
     assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25
     assert P(parse('(flk () (app 3 5))'))([]) == 'nonprocedural-rator'
     assert P(parse('(flk () (app not #t))'))([]) == 'unbound-variable'
-    # assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25
+    assert P(parse('(flk () (app (app (lam n (lam x (prim - x n))) 5) 8))'))([]) == 3
