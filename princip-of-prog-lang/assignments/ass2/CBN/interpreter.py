@@ -41,6 +41,13 @@ class Primitive:
                                   '>', '>=', 'sym=?',
                                   'and', 'or', 'bool=?']
 
+        self.only_int = ['+', '-', '*',
+                         '/', '%', '=',
+                         '!=', '<', '<=',
+                         '>', '>=']
+
+        self.only_bool = ['not', 'and', 'or', 'bool=?']
+
     def __call__(self, op, *args):
         fn = self.primitives[op]
         # check for argc
@@ -51,7 +58,24 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
+
+        self._validate(op, *args)
+
         return fn(*args)
+
+    def _validate(self, op, *args):
+        # check all args
+        for arg in args:
+            if op == 'sym=?' and not isinstance(arg, str):
+                raise ValueError('not-a-symbol')
+            if op in self.only_bool and arg is not True and arg is not False:
+                raise ValueError('not-a-boolean')
+            if op in self.only_int and (not isinstance(arg, int) or arg is True or arg is False):
+                raise ValueError('not-an-integer')
+
+        if op == '/' or op == '%':
+            if args[1] == 0:
+                raise ValueError('divide-by-zero')
 
 
 class Environment:
