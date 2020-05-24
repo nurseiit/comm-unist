@@ -1,6 +1,59 @@
 import operator as op
 
 
+class Primitive:
+    def __init__(self):
+        not_eq = lambda *x: not op.eq(*x)
+        def fst(x): return x[0]
+        def snd(x): return x[1]
+        def is_unit(x): return x == '#u'
+        def is_bool(x): return isinstance(x, bool)
+        def is_int(x): return isinstance(x, int)
+        def is_sym(x): return x != '#u' and isinstance(x, str)
+
+        # todo: may be only functions not all callables?
+        def is_proc(x): return callable(x)
+
+        # todo: may be list as well?
+        def is_pair(x): return isinstance(x, tuple)
+
+        self.primitives = {'+': op.add, '-': op.sub,
+                           '*': op.mul, '/': op.truediv,
+                           '%': op.mod, '=': op.eq,
+                           '!=': not_eq, '<': op.lt,
+                           '<=': op.le, '>': op.gt,
+                           '>=': op.ge, 'sym=?': op.eq,
+                           'fst': fst, 'snd': snd,
+                           'unit?': is_unit, 'bool?': is_bool,
+                           'int?': is_int, 'sym?': is_sym,
+                           'not': op.not_, 'and': op.and_,
+                           'or': op.or_, 'bool=?': op.eq,
+                           'proc?': is_proc, 'pair?': is_pair, }
+
+        self.primitives_unary = ['fst', 'snd',
+                                 'unit?', 'bool?',
+                                 'int?', 'sym?', 'not',
+                                 'proc?', 'pair?']
+
+        self.primitives_binary = ['+', '-', '*',
+                                  '/', '%', '=',
+                                  '!=', '<', '<=',
+                                  '>', '>=', 'sym=?',
+                                  'and', 'or', 'bool=?']
+
+    def __call__(self, op, *args):
+        fn = self.primitives[op]
+        # check for argc
+        argc = len(args)
+        if argc > 2 or argc < 1:
+            raise ValueError('wrong-number-of-args')
+        elif argc == 1 and op not in self.primitives_unary:
+            raise ValueError('wrong-number-of-args')
+        elif argc == 2 and op not in self.primitives_binary:
+            raise ValueError('wrong-number-of-args')
+        return fn(*args)
+
+
 class Environment:
     def __init__(self):
         self.vars = {}
@@ -15,37 +68,7 @@ class Environment:
 class InterpreterCBN:
     def __init__(self):
         self._env = Environment()
-
-        not_eq = lambda *x: not op.eq(*x)
-        def fst(x): return x[0]
-        def snd(x): return x[1]
-        def is_unit(x): return x == '#u'
-        def is_bool(x): return isinstance(x, bool)
-        def is_int(x): return isinstance(x, int)
-        def is_sym(x): return x != '#u' and isinstance(x, str)
-        # todo: proc? & pair?
-
-        self.primitives = {'+': op.add, '-': op.sub,
-                           '*': op.mul, '/': op.truediv,
-                           '%': op.mod, '=': op.eq,
-                           '!=': not_eq, '<': op.lt,
-                           '<=': op.le, '>': op.gt,
-                           '>=': op.ge, 'sym=?': op.eq,
-                           'fst': fst, 'snd': snd,
-                           'unit?': is_unit, 'bool?': is_bool,
-                           'int?': is_int, 'sym?': is_sym,
-                           'not': op.not_, 'and': op.and_,
-                           'or': op.or_, 'bool=?': op.eq, }
-
-        self.primitives_unary = ['fst', 'snd',
-                                 'unit?', 'bool?',
-                                 'int?', 'sym?', 'not']
-
-        self.primitives_binary = ['+', '-', '*',
-                                  '/', '%', '=',
-                                  '!=', '<', '<=',
-                                  '>', '>=', 'sym=?',
-                                  'and', 'or', 'bool=?']
+        self.prim = Primitive()
 
     def interpret(self, exp, env):
         print('# intr', exp, env)
@@ -64,19 +87,7 @@ class InterpreterCBN:
             if exp[0] == 'prim':
                 op = exp[1]
                 args = exp[2:]
-                return self._prim(op, *args)
-
-    def _prim(self, op, *args):
-        fn = self.primitives[op]
-        # check for argc
-        argc = len(args)
-        if argc > 2 or argc < 1:
-            raise ValueError('wrong-number-of-args')
-        elif argc == 1 and op not in self.primitives_unary:
-            raise ValueError('wrong-number-of-args')
-        elif argc == 2 and op not in self.primitives_binary:
-            raise ValueError('wrong-number-of-args')
-        return fn(*args)
+                return self.prim(op, *args)
 
     def _is_atom(self, exp):
         # atoms are simple strings
