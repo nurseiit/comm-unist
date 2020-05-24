@@ -83,3 +83,20 @@ def test_if_cond():
     assert P(parse('(flk () (if (prim < 8 7) (prim + 2 3) (prim * 2 3)))'))([]) == 6
     assert P(parse('(flk () (if (prim - 8 7) (prim + 2 3) (prim * 2 3)))')
              )([]) == 'nonbool-in-if-test'
+
+
+'''
+    (prim fst (pair (+ 1 2) (* 3 4))) −−−→ 3 FLK
+    (prim snd (pair (+ 1 2) (* 3 4))) −−−→ 12
+
+    (pair 8 (pair 2 (pair 1 #u))) −−−→ 8, 2, 1 FLK
+    (prim fst (pair 8 (pair 2 (pair 1 #u)))) −−−→ 8 FLK
+    (prim snd (pair 8 (pair 2 (pair 1 #u)))) −−−→ 2, 1 FLK
+    (prim fst (prim snd (pair 8 (pair 2 (pair 1 #u))))) −−−→ 2 FLK
+    (prim snd (prim fst (pair 8 (pair 2 (pair 1 #u))))) −−−→ error:not-a-pair
+'''
+
+
+def test_pair():
+    assert P(parse('(flk () (prim fst (pair (+ 1 2) (* 3 4))))'))([]) == 3
+    assert P(parse('(flk () (prim snd (pair (+ 1 2) (* 3 4))))'))([]) == 12

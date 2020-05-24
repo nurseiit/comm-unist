@@ -4,8 +4,17 @@ import operator as op
 class Primitive:
     def __init__(self):
         not_eq = lambda *x: not op.eq(*x)
-        def fst(x): return x[0]
-        def snd(x): return x[1]
+
+        def fst(exp):
+            scope = Procedure()
+            res = scope.evaluate(exp)
+            return res[0]
+
+        def snd(exp):
+            scope = Procedure()
+            res = scope.evaluate(exp)
+            return res[1]
+
         def is_unit(x): return x == '#u'
         def is_bool(x): return isinstance(x, bool)
         def is_int(x): return isinstance(
@@ -100,53 +109,67 @@ class Environment:
 
 class Procedure:
     def __init__(self):
-        pass
-
-
-class InterpreterCBN:
-    def __init__(self):
         self._env = Environment()
-        self.prim = Primitive()
+        self._prim = Primitive()
 
-    def interpret(self, exp, env):
-        print('# intr', exp, env)
-
-        # save flk arguments
-        self._env.update(zip(exp[1], env))
-        try:
-            result = self._evaluate(exp[2])
-        except ValueError as e:
-            result = str(e)
-        return result
-
-    def _evaluate(self, exp):
-        # print('# eval', exp)
+    def evaluate(self, exp):
+        print('# eval', exp)
         if self._is_const(exp):
             return exp
         elif self._is_atom(exp):
             return self._env[exp]
+        elif exp == 'pair':
+            _fst = self.evaluate(exp[1])
+            _snd = self.evaluate(exp[2])
+            return tuple(_fst, _snd)
         elif self._is_atom(exp[0]):
             if exp[0] == 'prim':
                 op = exp[1]
                 args = exp[2:]
-                return self.prim(op, *args)
+                return self._prim(op, *args)
             elif exp[0] == 'sym':
                 return exp[1]
             elif exp[0] == 'error':
                 raise ValueError(exp[1])
             elif exp[0] == 'if':
-                _cond = self._evaluate(exp[1])
+                _cond = self.evaluate(exp[1])
                 if _cond is True or _cond is False:
-                    return self._evaluate(exp[2 if _cond else 3])
+                    return self.evaluate(exp[2 if _cond else 3])
                 else:
                     raise ValueError('nonbool-in-if-test')
+            elif exp[0] == 'pair':
+                print(exp)
+                _fst = Procedure()
+                _snd = Procedure()
+                fst = _fst.evaluate(exp[1])
+                snd = _snd.evaluate(exp[2])
+                return tuple([fst, snd])
+            elif exp[0] in self._prim.primitives:
+                op = exp[0]
+                args = exp[1:]
+                return self._prim(op, *args)
 
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)
 
     def _is_const(self, exp):
-        return exp == '#u' or isinstance(exp, int) or isinstance(exp, float) or isinstance(exp, bool)
+        return exp == '#u' or isinstance(exp, int) or isinstance(exp, float)
+
+
+class InterpreterCBN:
+    def interpret(self, exp, env):
+        print('# intr', exp, env)
+
+        root = Procedure()
+
+        # save flk arguments
+        root._env.update(zip(exp[1], env))
+        try:
+            result = root.evaluate(exp[2])
+        except ValueError as e:
+            result = str(e)
+        return result
 
 
 def P(exp):
