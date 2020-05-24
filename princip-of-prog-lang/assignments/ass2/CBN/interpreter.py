@@ -1,6 +1,11 @@
 import operator as op
 
 
+class Pair:
+    def __init__(self, val):
+        self.val = val
+
+
 class Primitive:
     def __init__(self):
         not_eq = lambda *x: not op.eq(*x)
@@ -8,12 +13,16 @@ class Primitive:
         def fst(exp):
             scope = Procedure()
             res = scope.evaluate(exp)
-            return res[0]
+            if not isinstance(res, Pair):
+                raise ValueError('not-a-pair')
+            return res.val[0]
 
         def snd(exp):
             scope = Procedure()
             res = scope.evaluate(exp)
-            return res[1]
+            if not isinstance(res, Pair):
+                raise ValueError('not-a-pair')
+            return res.val[1]
 
         def is_unit(x): return x == '#u'
         def is_bool(x): return isinstance(x, bool)
@@ -29,13 +38,9 @@ class Primitive:
         def is_pair(x): return isinstance(x, tuple)
 
         def sym_eq(foo, bar):
-            if not isinstance(foo, list) or not isinstance(bar, list):
+            if not is_sym(foo) or not is_sym(bar):
                 raise ValueError('not-a-symbol')
-            if foo[0] != 'sym' or bar[0] != 'sym':
-                raise ValueError('not-a-symbol')
-            if not is_sym(foo[1]) or not is_sym(bar[1]):
-                raise ValueError('not-a-symbol')
-            return foo[1] == bar[1]
+            return foo == bar
 
         self.primitives = {'+': op.add, '-': op.sub,
                            '*': op.mul, '/': op.floordiv,
@@ -107,15 +112,25 @@ class Environment:
         return self.vars[var]
 
 
+class Lambda:
+    def __init__(self, vars, exp):
+        self._exp = exp
+        self._vars = vars
+
+    def __str__(self):
+        return 'procedure'
+
+
 class Procedure:
-    def __init__(self):
-        self._env = Environment()
+    def __init__(self, env=None, exp=None):
+        self._env = Environment() if env is None else env
         self._prim = Primitive()
+        self._exp = [] if exp is None else exp
 
     def evaluate(self, exp):
-        print('# eval', exp)
+        # print('# eval', exp)
 
-        if self._is_const(exp):
+        if self._is_const(exp) or isinstance(exp, Lambda) or isinstance(exp, Pair):
             return exp
 
         elif self._is_atom(exp):
@@ -125,6 +140,8 @@ class Procedure:
             if exp[0] == 'prim':
                 op = exp[1]
                 args = exp[2:]
+                for i in range(len(args)):
+                    args[i] = self.evaluate(args[i])
                 return self._prim(op, *args)
 
             elif exp[0] == 'sym':
@@ -148,12 +165,23 @@ class Procedure:
                 result = [fst]
                 if snd != '#u':
                     result = [fst, snd]
-                return result
+                return Pair(result)
 
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
                 args = exp[1:]
                 return self._prim(op, *args)
+
+            elif exp[0] == 'lam':
+                vars = exp[1:2]
+                return Lambda(vars, exp[2])
+
+            elif exp[0] == 'app':
+                fn = self.evaluate(exp[1])
+                _env = self._env
+                _env.update(zip(fn._vars, exp[2:]))
+                app = Procedure(_env, fn._exp)
+                return app.evaluate(app._exp)
 
     def _is_atom(self, exp):
         # atoms are simple strings
@@ -167,7 +195,7 @@ class Procedure:
 
 class InterpreterCBN:
     def interpret(self, exp, env):
-        print('# intr', exp, env)
+        # print('# intr', exp, env)
 
         root = Procedure()
 
@@ -175,6 +203,8 @@ class InterpreterCBN:
         root._env.update(zip(exp[1], env))
         try:
             result = root.evaluate(exp[2])
+            if isinstance(result, Lambda):
+                result = str(result)
         except ValueError as e:
             result = str(e)
         return result

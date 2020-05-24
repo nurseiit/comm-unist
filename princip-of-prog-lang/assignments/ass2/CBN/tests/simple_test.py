@@ -2,12 +2,12 @@ from parser import parse
 from interpreter import P
 
 
-# def test_app_lam():
-#     assert P(parse('(flk () (app (lam x (prim + x 1)) 2))'))([]) == 3
+def test_app_lam():
+    assert P(parse('(flk () (app (lam x (prim + x 1)) 2))'))([]) == 3
 
 
-# def test_main_args():
-#     assert P(parse('(flk (y) (app (lam x (prim + x y)) 2))'))([3]) == 5
+def test_main_args():
+    assert P(parse('(flk (y) (app (lam x (prim + x y)) 2))'))([3]) == 5
 
 
 '''
@@ -108,3 +108,8 @@ def test_pair():
         []) == 2
     # assert P(parse('(flk () (prim snd (prim snd (pair 8 (pair 2 (pair 1 #u))))))'))(
     # []) == 'error'
+
+
+def test_lam_app():
+    assert P(parse('(flk () (lam x (prim * x x)))'))([]) == 'procedure'
+    assert P(parse('(flk () (app (lam x (prim * x x)) 5))'))([]) == 25
