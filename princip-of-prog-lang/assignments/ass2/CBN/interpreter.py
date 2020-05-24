@@ -18,7 +18,7 @@ class Primitive:
         def is_pair(x): return isinstance(x, tuple)
 
         self.primitives = {'+': op.add, '-': op.sub,
-                           '*': op.mul, '/': op.truediv,
+                           '*': op.mul, '/': op.floordiv,
                            '%': op.mod, '=': op.eq,
                            '!=': not_eq, '<': op.lt,
                            '<=': op.le, '>': op.gt,
@@ -88,6 +88,8 @@ class InterpreterCBN:
                 op = exp[1]
                 args = exp[2:]
                 return self.prim(op, *args)
+            elif exp[0] == 'sym':
+                return exp[1]
 
     def _is_atom(self, exp):
         # atoms are simple strings
@@ -100,3 +102,9 @@ class InterpreterCBN:
 def P(exp):
     cbn = InterpreterCBN()
     return lambda env: cbn.interpret(exp, env)
+
+
+'''
+From 6.1:
+    Keyword = {app,error,flk,if,pair,prim,lam,rec,sym}
+'''
