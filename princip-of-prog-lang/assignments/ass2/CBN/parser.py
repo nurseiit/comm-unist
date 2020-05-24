@@ -12,6 +12,10 @@ def parse(src):
         try:
             return int(exp)
         except:
+            if exp == '#t':
+                return True
+            elif exp == '#f':
+                return False
             return exp
 
 
