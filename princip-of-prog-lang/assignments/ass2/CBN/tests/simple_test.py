@@ -56,6 +56,8 @@ def test_prim():
     (prim not 1) −−−→ error:not-a-boolean FLK
     (prim + #t 1) −−−→ error:not-an-integer FLK
     (prim / 1 0) −−−→ error:divide-by-zero
+
+    (error index-out-of-range) −−−→ error:index-out-of-range
 '''
 
 
@@ -65,3 +67,19 @@ def test_errors():
     assert P(parse('(flk () (prim not 1))'))([]) == 'not-a-boolean'
     assert P(parse('(flk () (prim + #t 1))'))([]) == 'not-an-integer'
     assert P(parse('(flk () (prim / 1 0))'))([]) == 'divide-by-zero'
+    assert P(parse('(flk () (error index-out-of-range))')
+             )([]) == 'index-out-of-range'
+
+
+'''
+    (if (prim > 8 7) (prim + 2 3) (prim * 2 3)) −−−→ 5 FLK
+    (if (prim < 8 7) (prim + 2 3) (prim * 2 3)) −−−→ 6 FLK
+    (if (prim - 8 7) (prim + 2 3) (prim * 2 3)) −−−→ error:nonbool-in-if-test
+'''
+
+
+def test_if_cond():
+    assert P(parse('(flk () (if (prim > 8 7) (prim + 2 3) (prim * 2 3)))'))([]) == 5
+    assert P(parse('(flk () (if (prim < 8 7) (prim + 2 3) (prim * 2 3)))'))([]) == 6
+    assert P(parse('(flk () (if (prim - 8 7) (prim + 2 3) (prim * 2 3)))')
+             )([]) == 'nonbool-in-if-test'
