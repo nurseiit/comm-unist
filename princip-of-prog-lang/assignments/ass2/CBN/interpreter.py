@@ -37,16 +37,15 @@ class InterpreterCBN:
                            'not': op.not_, 'and': op.and_,
                            'or': op.or_, 'bool=?': op.eq, }
 
-        self.primitives_valid_argc = {
-            '+': 2, '-': 2, '*': 2,
-            '/': 2, '%': 2, '=': 2,
-            '!=': 2, '<': 2, '<=': 2,
-            '>': 2, '>=': 2, 'sym=?': 2,
-            'fst': 1, 'snd': 1,
-            'unit?': 1, 'bool?': 1,
-            'int?': 1, 'sym?': 1,
-            'not': 1, 'and': 2, 'or': 2,
-            'bool=?': 2, }
+        self.primitives_unary = ['fst', 'snd',
+                                 'unit?', 'bool?',
+                                 'int?', 'sym?', 'not']
+
+        self.primitives_binary = ['+', '-', '*',
+                                  '/', '%', '=',
+                                  '!=', '<', '<=',
+                                  '>', '>=', 'sym=?',
+                                  'and', 'or', 'bool=?']
 
     def interpret(self, exp, env):
         print('# intr', exp, env)
@@ -71,7 +70,11 @@ class InterpreterCBN:
         fn = self.primitives[op]
         # check for argc
         argc = len(args)
-        if argc != self.primitives_valid_argc[op]:
+        if argc > 2 or argc < 1:
+            raise ValueError('wrong-number-of-args')
+        elif argc == 1 and op not in self.primitives_unary:
+            raise ValueError('wrong-number-of-args')
+        elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
         return fn(*args)
 
@@ -80,8 +83,7 @@ class InterpreterCBN:
         return isinstance(exp, str)
 
     def _is_const(self, exp):
-        # may be need to support #u, #f, #t later
-        return exp == '#u' or isinstance(exp, int) or isinstance(exp, float)
+        return exp == '#u' or isinstance(exp, int) or isinstance(exp, float) or isinstance(exp, bool)
 
 
 def P(exp):
