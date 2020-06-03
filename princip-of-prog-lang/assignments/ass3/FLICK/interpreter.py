@@ -186,7 +186,8 @@ class Procedure:
                 if not isinstance(fn, Lambda):
                     raise ValueError('nonprocedural-rator')
                 _env = self._env
-                _env._set(fn._vars[0], exp[2])
+                cbv = Procedure(_env)
+                _env._set(fn._vars[0], cbv.evaluate(exp[2]))
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 

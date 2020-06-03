@@ -134,21 +134,26 @@ def test_complex_lam_app():
     with pytest.raises(Exception):
         assert P(parse('(flick () (app (lam x (app x x)) (lam x (app x x))))'))([])
 
+    assert P(parse(
+        '(flick (n) (app (lam f (prim + (app f n) (app f 5))) (lam x (prim * (prim + 1 2) x))))'))([4]) == 27
 
-def test_nonstrict():
-    assert P(parse('(flick () (app (lam x 3) (prim / 1 0)))'))([]) == 3
+
+def test_strict():
+    assert P(parse('(flick () (app (lam x 3) (prim / 1 0)))')
+             )([]) == 'divide-by-zero'
     assert P(parse('(flick () (app (lam x (prim + x 3)) (prim / 1 0)))')
              )([]) == 'divide-by-zero'
-    assert P(parse(
-        '(flick () (app (lam x 3) (app (lam x (app x x)) (lam x (app x x)))))'))([]) == 3
     with pytest.raises(Exception):
-        assert P(parse(
+        P(parse(
+            '(flick () (app (lam x 3) (app (lam x (app x x)) (lam x (app x x)))))'))([]) == 3
+    with pytest.raises(Exception):
+        P(parse(
             '(flick () (app (lam x (prim + x 3)) (app (lam x (app x x)) (lam x (app x x)))))'))([])
 
 
 def test_cbv():
-    with pytest.raises(Exception):
-        P(parse('(flick () (app (lam x 2) (prim / 1 0)))'))([])
+    assert P(parse('(flick () (app (lam x 2) (prim / 1 0)))')
+             )([]) == 'divide-by-zero'
     with pytest.raises(Exception):
         P(parse('(flick () (app (lam x 3) (app (lam a (app a a)) (lam a (app a a)))))'))(
-            []) == 3
+            [])
