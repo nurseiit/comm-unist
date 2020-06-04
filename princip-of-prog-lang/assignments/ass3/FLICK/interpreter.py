@@ -64,6 +64,12 @@ class Primitive:
                 raise ValueError('not-a-cell')
             return cell.val
 
+        def assign_cell(cell, val):
+            if not isinstance(cell, Cell):
+                raise ValueError('not-a-cell')
+            cell.val = val
+            return '#u'
+
         self.primitives = {'+': op.add, '-': op.sub,
                            '*': op.mul, '/': op.floordiv,
                            '%': op.mod, '=': op.eq,
@@ -75,7 +81,8 @@ class Primitive:
                            'int?': is_int, 'sym?': is_sym,
                            'not': op.not_, 'and': op.and_,
                            'or': op.or_, 'bool=?': op.eq,
-                           'proc?': is_proc, 'pair?': is_pair, '^': fetch_cell, }
+                           'proc?': is_proc, 'pair?': is_pair,
+                           '^': fetch_cell, ':=': assign_cell, }
 
         self.primitives_unary = ['fst', 'snd',
                                  'unit?', 'bool?',
@@ -86,7 +93,8 @@ class Primitive:
                                   '/', '%', '=',
                                   '!=', '<', '<=',
                                   '>', '>=', 'sym=?',
-                                  'and', 'or', 'bool=?']
+                                  'and', 'or',
+                                  'bool=?', ':=', ]
 
         self.only_int = ['+', '-', '*',
                          '/', '%', '=',
