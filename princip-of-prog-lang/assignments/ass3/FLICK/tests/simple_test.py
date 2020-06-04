@@ -157,3 +157,5 @@ def test_cbv():
     with pytest.raises(Exception):
         P(parse('(flick () (app (lam x 3) (app (lam a (app a a)) (lam a (app a a)))))'))(
             [])
+    assert P(parse('(flick () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
+             )([]) == 'divide-by-zero'
