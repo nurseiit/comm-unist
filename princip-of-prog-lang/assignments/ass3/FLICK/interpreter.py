@@ -17,7 +17,8 @@ class Pair:
         while len(pp.val) == 2:
             result.append(pp.val[0])
             if not isinstance(pp.val[1], Pair):
-                return 'not-a-pair'
+                result.append(pp.val[1])
+                return result
             pp = pp.val[1]
         result.append(pp.val[0])
         return result
@@ -75,6 +76,8 @@ class Primitive:
                 raise ValueError('not-a-cell')
             return foo is bar
 
+        def is_cell(x): return isinstance(x, Cell)
+
         self.primitives = {'+': op.add, '-': op.sub,
                            '*': op.mul, '/': op.floordiv,
                            '%': op.mod, '=': op.eq,
@@ -88,12 +91,13 @@ class Primitive:
                            'or': op.or_, 'bool=?': op.eq,
                            'proc?': is_proc, 'pair?': is_pair,
                            '^': fetch_cell, ':=': assign_cell,
-                           'cell=?': cell_isequal, }
+                           'cell=?': cell_isequal, 'cell?': is_cell, }
 
         self.primitives_unary = ['fst', 'snd',
                                  'unit?', 'bool?',
                                  'int?', 'sym?', 'not',
-                                 'proc?', 'pair?', '^']
+                                 'proc?', 'pair?', '^',
+                                 'cell?', ]
 
         self.primitives_binary = ['+', '-', '*',
                                   '/', '%', '=',

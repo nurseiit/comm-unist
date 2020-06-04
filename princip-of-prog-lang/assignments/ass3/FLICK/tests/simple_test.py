@@ -205,3 +205,8 @@ def test_cell_isequal():
 
     assert P(parse(
         '(flick () (app (lam x (app (lam y (app (lam z (pair (prim cell=? x x) (pair (prim cell=? x y) (pair (prim cell=? x z) #u)))) x)) (cell 1))) (cell 1)))'))([]) == [True, False, True]
+
+
+def test_is_cell():
+    assert P(parse('(flk () (pair (prim cell? 0) (prim cell? (cell 0))))'))(
+        []) == [False, True]
