@@ -185,8 +185,8 @@ class Procedure:
                     raise ValueError('nonbool-in-if-test')
 
             elif exp[0] == 'pair':
-                _fst = Procedure()
-                _snd = Procedure()
+                _fst = Procedure(self._env)
+                _snd = Procedure(self._env)
                 fst = _fst.evaluate(exp[1])
                 snd = _snd.evaluate(exp[2])
                 result = [fst]

@@ -193,4 +193,7 @@ def test_prim_cell_op():
 
 
 def test_cell_assign():
-    pass
+    assert P(parse(
+        '(flick () (app (lam x (pair (prim ^ x) (pair (prim ^ x) #u))) (cell (+ 1 2))))'))([]) == [3, 3]
+    # assert P(parse(
+    # '(flick () (app (lam c (pair (prim ^ c) (pair (prim ^ c) (pair (prim ^ c) #u))) (cell (+ 1 2))))'))([]) == [3, 3, 3]
