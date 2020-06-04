@@ -49,10 +49,9 @@ class Primitive:
 
         def is_sym(x): return x != '#u' and isinstance(x, str)
 
-        # todo: may be only functions not all callables?
+        # todo: may be only Procedure / Lambda not all callables?
         def is_proc(x): return callable(x)
 
-        # todo: may be list as well?
         def is_pair(x): return isinstance(x, Pair)
 
         def sym_eq(foo, bar):
@@ -124,9 +123,8 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
-
+        # validate types
         self._validate(op, *args)
-
         return fn(*args)
 
     def _validate(self, op, *args):
@@ -136,7 +134,6 @@ class Primitive:
                 raise ValueError('not-a-boolean')
             if op in self.only_int and (not isinstance(arg, int) or arg is True or arg is False):
                 raise ValueError('not-an-integer')
-
         if op == '/' or op == '%':
             if args[1] == 0:
                 raise ValueError('divide-by-zero')
@@ -252,9 +249,10 @@ class InterpreterFLICK:
 
         root = Procedure()
 
-        # save flk arguments
         if (len(exp[1]) != len(env)):
             return 'wrong-number-of-args'
+
+        # save flick arguments
         root._env.update(zip(exp[1], env))
         try:
             result = root.evaluate(exp[2])
@@ -272,9 +270,3 @@ class InterpreterFLICK:
 def P(exp):
     flick = InterpreterFLICK()
     return lambda env: flick.interpret(exp, env)
-
-
-'''
-From 6.1:
-    Keyword = {app,error,flk,if,pair,prim,lam,rec,sym}
-'''
