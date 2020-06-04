@@ -5,6 +5,17 @@ class Pair:
     def __init__(self, val):
         self.val = val
 
+    def to_list(self):
+        pp = self
+        result = []
+        while len(pp.val) == 2:
+            result.append(pp.val[0])
+            if not isinstance(pp.val[1], Pair):
+                return 'error'
+            pp = pp.val[1]
+        result.append(pp.val[0])
+        return result
+
 
 class Primitive:
     def __init__(self):
@@ -213,6 +224,8 @@ class InterpreterFLICK:
             result = root.evaluate(exp[2])
             if isinstance(result, Lambda):
                 result = str(result)
+            if isinstance(result, Pair):
+                result = result.to_list()
         except ValueError as e:
             result = str(e)
         return result
