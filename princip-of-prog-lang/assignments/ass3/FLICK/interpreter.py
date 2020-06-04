@@ -70,6 +70,11 @@ class Primitive:
             cell.val = val
             return '#u'
 
+        def cell_isequal(foo, bar):
+            if not isinstance(foo, Cell) or not isinstance(bar, Cell):
+                raise ValueError('not-a-cell')
+            return foo is bar
+
         self.primitives = {'+': op.add, '-': op.sub,
                            '*': op.mul, '/': op.floordiv,
                            '%': op.mod, '=': op.eq,
@@ -82,7 +87,8 @@ class Primitive:
                            'not': op.not_, 'and': op.and_,
                            'or': op.or_, 'bool=?': op.eq,
                            'proc?': is_proc, 'pair?': is_pair,
-                           '^': fetch_cell, ':=': assign_cell, }
+                           '^': fetch_cell, ':=': assign_cell,
+                           'cell=?': cell_isequal, }
 
         self.primitives_unary = ['fst', 'snd',
                                  'unit?', 'bool?',
@@ -94,7 +100,8 @@ class Primitive:
                                   '!=', '<', '<=',
                                   '>', '>=', 'sym=?',
                                   'and', 'or',
-                                  'bool=?', ':=', ]
+                                  'bool=?', ':=',
+                                  'cell=?', ]
 
         self.only_int = ['+', '-', '*',
                          '/', '%', '=',

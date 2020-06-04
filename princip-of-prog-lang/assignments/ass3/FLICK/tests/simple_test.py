@@ -197,3 +197,11 @@ def test_cell_assign():
         '(flick () (app (lam x (pair (prim ^ x) (pair (prim ^ x) #u))) (cell (+ 1 2))))'))([]) == [3, 3]
     assert P(parse(
         '(flick () (app (lam x (pair (prim ^ x) (pair (prim := x 4) (pair (prim ^ x) #u)))) (cell (+ 1 2))))'))([]) == [3, '#u', 4]
+
+
+def test_cell_isequal():
+    assert P(parse(
+        '(flick () (app (lam x (app (lam y (app (lam z (pair (prim ^ x) (pair (prim ^ y) (pair (prim ^ z) #u)))) x)) (cell 2))) (cell 1)))'))([]) == [1, 2, 1]
+
+    assert P(parse(
+        '(flick () (app (lam x (app (lam y (app (lam z (pair (prim cell=? x x) (pair (prim cell=? x y) (pair (prim cell=? x z) #u)))) x)) (cell 1))) (cell 1)))'))([]) == [True, False, True]
