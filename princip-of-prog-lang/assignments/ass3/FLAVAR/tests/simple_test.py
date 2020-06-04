@@ -250,3 +250,9 @@ def test_fl_sugaring_list():
 
     assert P(
         parse('(flavar () (list (@+ 1 2) (@= 3 4) (pair 4 5) (sym end)))'))([]) == [3, False, [4, 5], 'end']
+
+
+def test_fl_sugaring_quote():
+    assert P(parse('(flavar () (quote (1 (#t three) (four 5 six))))'))(
+        []) == [1, [True, 'three'], ['four', 5, 'six']] == P(parse(
+            '(flavar () (list 1 (list #t (sym three)) (list (sym four) 5 (sym six))))'))([])

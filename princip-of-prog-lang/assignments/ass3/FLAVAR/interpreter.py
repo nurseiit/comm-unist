@@ -267,6 +267,18 @@ class Procedure:
                     args[i] = self.evaluate(args[i])
                 return List(args)
 
+            elif exp[0] == 'quote':
+                def buildList(args):
+                    result = []
+                    for arg in args:
+                        if isinstance(arg, list):
+                            result.append(buildList(arg))
+                        else:
+                            result.append(arg)
+                    return List(result)
+
+                return buildList(exp[1])
+
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)
