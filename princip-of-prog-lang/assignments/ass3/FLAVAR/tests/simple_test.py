@@ -236,3 +236,17 @@ def test_fl_sugaring_prim():
     assert P(parse('(flavar () (@/ 1 0))'))([]) == 'divide-by-zero'
     assert P(parse('(flavar () (error index-out-of-range))')
              )([]) == 'index-out-of-range'
+
+
+def test_fl_sugaring_list():
+    assert P(
+        parse('(flavar () (list (@+ 1 2) (@= 3 4) (@+ 4 5) (sym end)))'))([]) == [3, False, 9, 'end']
+
+    assert P(
+        parse('(flavar () (list 8 2 1))'))([]) == [8, 2, 1]
+
+    assert P(parse(
+        '(flavar () (list 1 (list #t (sym three)) (list (sym four) 5 (sym six))))'))([]) == [1, [True, 'three'], ['four', 5, 'six']]
+
+    assert P(
+        parse('(flavar () (list (@+ 1 2) (@= 3 4) (pair 4 5) (sym end)))'))([]) == [3, False, [4, 5], 'end']

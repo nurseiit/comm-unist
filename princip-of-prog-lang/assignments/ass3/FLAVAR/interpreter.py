@@ -7,11 +7,22 @@ class Cell:
         self.id = f'{id(self)}$'
 
 
+class List:
+    def __init__(self, val):
+        self.val = val
+
+    def expand(self):
+        for i in range(len(self.val)):
+            if isinstance(self.val[i], List) or isinstance(self.val[i], Pair):
+                self.val[i] = self.val[i].expand()
+        return self.val
+
+
 class Pair:
     def __init__(self, val):
         self.val = val
 
-    def to_list(self):
+    def expand(self):
         pp = self
         result = []
         while len(pp.val) == 2:
@@ -171,7 +182,9 @@ class Procedure:
     def evaluate(self, exp):
         # print('# eval', exp)
 
-        if self._is_const(exp) or isinstance(exp, Lambda) or isinstance(exp, Pair) or isinstance(exp, Cell):
+        if (self._is_const(exp) or isinstance(exp, Lambda)
+            or isinstance(exp, Pair) or isinstance(exp, Cell)
+                or isinstance(exp, List)):
             return exp
 
         elif self._is_atom(exp):
@@ -248,6 +261,12 @@ class Procedure:
                 _exp = Procedure(self._env)
                 return Cell(_exp.evaluate(exp[1]))
 
+            elif exp[0] == 'list':
+                args = exp[1:]
+                for i in range(len(args)):
+                    args[i] = self.evaluate(args[i])
+                return List(args)
+
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)
@@ -276,7 +295,9 @@ class InterpreterFLAVAR:
             if isinstance(result, Cell):
                 result = [result.id, result.val]
             if isinstance(result, Pair):
-                result = result.to_list()
+                result = result.expand()
+            if isinstance(result, List):
+                result = result.expand()
         except ValueError as e:
             result = str(e)
         return result
