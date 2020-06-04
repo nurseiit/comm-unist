@@ -163,3 +163,18 @@ def test_cbv():
             [])
     assert P(parse('(flick () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
              )([]) == 'divide-by-zero'
+
+
+def test_begin():
+    # ['app', ['lam', 'acct', ['app', ['lam', 'old', ['begin', ['app', ['app', 'deposit!', 17], 'acct'], ['prim', '-', ['app', 'balance', 'acct'], 'old']]], ['app', 'balance', 'acct']]], ['app', 'make-account', 100]]
+    pass
+
+
+def test_cell():
+    [_a, _b] = P(parse('(flick () (cell (+ 1 2)))'))([])
+    assert isinstance(_a, str) and _a[-1] == '$'
+    assert _b == 3
+
+    [_c, _d] = P(parse('(flick () (cell (+ 5 10)))'))([])
+    assert isinstance(_c, str) and _c[-1] == '$' and _c != _a
+    assert _d == 15

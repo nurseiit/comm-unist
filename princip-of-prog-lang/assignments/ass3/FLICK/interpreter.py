@@ -1,6 +1,12 @@
 import operator as op
 
 
+class Cell:
+    def __init__(self, val):
+        self.val = val
+        self.id = f'{id(self)}$'
+
+
 class Pair:
     def __init__(self, val):
         self.val = val
@@ -11,7 +17,7 @@ class Pair:
         while len(pp.val) == 2:
             result.append(pp.val[0])
             if not isinstance(pp.val[1], Pair):
-                return 'error'
+                return 'not-a-pair'
             pp = pp.val[1]
         result.append(pp.val[0])
         return result
@@ -202,6 +208,10 @@ class Procedure:
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 
+            elif exp[0] == 'cell':
+                _exp = Procedure(self._env)
+                return Cell(_exp.evaluate(exp[1]))
+
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)
@@ -224,6 +234,8 @@ class InterpreterFLICK:
             result = root.evaluate(exp[2])
             if isinstance(result, Lambda):
                 result = str(result)
+            if isinstance(result, Cell):
+                result = [result.id, result.val]
             if isinstance(result, Pair):
                 result = result.to_list()
         except ValueError as e:
