@@ -178,3 +178,14 @@ def test_cell():
     [_c, _d] = P(parse('(flick () (cell (+ 5 10)))'))([])
     assert isinstance(_c, str) and _c[-1] == '$' and _c != _a
     assert _d == 15
+
+
+'''
+    (prim ^ (cell (+ 1 2))) −−−−→ 3 FLICK
+    (prim ^ (+ 1 2)) −−−−→ error:not-a-cell
+'''
+
+
+def test_prim_cell_op():
+    assert P(parse('(flick () (prim ^ (cell (+ 1 2))))'))([]) == 3
+    assert P(parse('(flick () (prim ^ (+ 1 2)))'))([]) == 'not-a-cell'
