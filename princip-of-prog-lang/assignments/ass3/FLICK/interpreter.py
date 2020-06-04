@@ -253,6 +253,8 @@ class InterpreterFLICK:
         root = Procedure()
 
         # save flk arguments
+        if (len(exp[1]) != len(env)):
+            return 'wrong-number-of-args'
         root._env.update(zip(exp[1], env))
         try:
             result = root.evaluate(exp[2])

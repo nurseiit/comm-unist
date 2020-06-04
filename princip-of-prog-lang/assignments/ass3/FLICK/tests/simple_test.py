@@ -9,6 +9,10 @@ def test_app_lam():
 
 def test_main_args():
     assert P(parse('(flick (y) (app (lam x (prim + x y)) 2))'))([3]) == 5
+    assert P(parse('(flick (y) (app (lam x (prim + x y)) 2))')
+             )([3, 5]) == 'wrong-number-of-args'
+    assert P(parse('(flick (y, z) (app (lam x (prim + x y)) 2))')
+             )([3]) == 'wrong-number-of-args'
 
 
 '''
