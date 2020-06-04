@@ -189,3 +189,8 @@ def test_cell():
 def test_prim_cell_op():
     assert P(parse('(flick () (prim ^ (cell (+ 1 2))))'))([]) == 3
     assert P(parse('(flick () (prim ^ (+ 1 2)))'))([]) == 'not-a-cell'
+    assert P(parse('(flick () (app (lam x (prim ^ x)) (cell (+ 1 2))))'))([]) == 3
+
+
+def test_cell_assign():
+    pass

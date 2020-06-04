@@ -155,7 +155,7 @@ class Procedure:
     def evaluate(self, exp):
         # print('# eval', exp)
 
-        if self._is_const(exp) or isinstance(exp, Lambda) or isinstance(exp, Pair):
+        if self._is_const(exp) or isinstance(exp, Lambda) or isinstance(exp, Pair) or isinstance(exp, Cell):
             return exp
 
         elif self._is_atom(exp):
