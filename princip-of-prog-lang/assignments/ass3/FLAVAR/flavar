@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import sys
+import logging
+from parser import parse
+from interpreter import P
+
+# set up a logger
+logger = logging.getLogger("flavar")
+rootLogger = logging.getLogger()
+FORMAT = logging.Formatter('%(levelname)-8s %(message)s')
+rootLogger.setLevel(logging.INFO)
+
+# use the following if you want to lower the logging level to DEBUG.
+# rootLogger.setLevel(logging.DEBUG)
+
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(FORMAT)
+rootLogger.addHandler(consoleHandler)
+
+if len(sys.argv) < 1:
+    sys.stderr.write('Syntax: flavar program s0 s1 ...\n')
+    sys.exit(1)
+
+try:
+    prog, inputs = sys.argv[1], [int(n) for n in sys.argv[2:]]
+    logger.debug('inputs: {}'.format(inputs))
+    print(P(parse(prog))(inputs))
+except ValueError as e:
+    sys.stderr.write(str(e))
+    sys.exit(1)
