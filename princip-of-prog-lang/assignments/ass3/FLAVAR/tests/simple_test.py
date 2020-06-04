@@ -216,3 +216,23 @@ def test_cell_isequal():
 def test_is_cell():
     assert P(parse('(flavar () (pair (prim cell? 0) (prim cell? (cell 0))))'))(
         []) == [False, True]
+
+
+def test_fl_sugaring_prim():
+    assert P(parse('(flavar () (@not #t))'))([]) == False
+    assert P(parse('(flavar () (@int? 1))'))([]) == True
+    assert P(parse('(flavar () (@int? #t))'))([]) == False
+    assert P(parse('(flavar () (@+ 1 2))'))([]) == 3
+    assert P(parse('(flavar () (@/ 17 5))'))([]) == 3
+    assert P(parse('(flavar () (@% 17 5))'))([]) == 2
+    assert P(parse('(flavar () (@sym=? (sym captain) (sym captain)))'))(
+        []) == True
+    assert P(parse('(flavar () (@sym=? (sym captain) (sym abstraction)))'))(
+        []) == False
+    assert P(parse('(flavar () (@+ 1))'))([]) == 'wrong-number-of-args'
+    assert P(parse('(flavar () (@+ 1 2 3))'))([]) == 'wrong-number-of-args'
+    assert P(parse('(flavar () (@not 1))'))([]) == 'not-a-boolean'
+    assert P(parse('(flavar () (@+ #t 1))'))([]) == 'not-an-integer'
+    assert P(parse('(flavar () (@/ 1 0))'))([]) == 'divide-by-zero'
+    assert P(parse('(flavar () (error index-out-of-range))')
+             )([]) == 'index-out-of-range'

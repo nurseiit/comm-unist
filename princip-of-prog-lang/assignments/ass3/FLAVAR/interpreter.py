@@ -187,6 +187,13 @@ class Procedure:
                     args[i] = self.evaluate(args[i])
                 return self._prim(op, *args)
 
+            elif exp[0][0] == '@':
+                op = exp[0][1:]
+                args = exp[1:]
+                for i in range(len(args)):
+                    args[i] = self.evaluate(args[i])
+                return self._prim(op, *args)
+
             elif exp[0] == 'sym':
                 return exp[1]
 
