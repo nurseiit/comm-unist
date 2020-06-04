@@ -170,8 +170,8 @@ def test_cbv():
 
 
 def test_begin():
-    # ['app', ['lam', 'acct', ['app', ['lam', 'old', ['begin', ['app', ['app', 'deposit!', 17], 'acct'], ['prim', '-', ['app', 'balance', 'acct'], 'old']]], ['app', 'balance', 'acct']]], ['app', 'make-account', 100]]
-    pass
+    assert P(parse(
+        '(flick () (app (lam c (begin (prim := c (prim + 1 (prim ^ c))) (prim ^ c))) (cell 3)))'))([]) == 4
 
 
 def test_cell():

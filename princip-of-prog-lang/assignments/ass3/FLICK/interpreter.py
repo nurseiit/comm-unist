@@ -229,6 +229,14 @@ class Procedure:
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 
+            elif exp[0] == 'begin':
+                e1 = exp[1]
+                e2 = exp[2]
+                _first = Procedure(self._env)
+                _first.evaluate(e1)
+                _second = _first.evaluate(e2)
+                return _second
+
             elif exp[0] == 'cell':
                 _exp = Procedure(self._env)
                 return Cell(_exp.evaluate(exp[1]))
