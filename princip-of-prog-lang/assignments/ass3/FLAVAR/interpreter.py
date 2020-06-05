@@ -276,8 +276,14 @@ class Procedure:
                         else:
                             result.append(arg)
                     return List(result)
-
                 return buildList(exp[1])
+
+            elif exp[0] == 'cond':
+                for cond in exp[1:]:
+                    _test, _then = cond[0], cond[1]
+                    if _test == 'else' or self.evaluate(_test) == True:
+                        return self.evaluate(_then)
+                raise ValueError('no-else-in-cond')
 
     def _is_atom(self, exp):
         # atoms are simple strings

@@ -256,3 +256,11 @@ def test_fl_sugaring_quote():
     assert P(parse('(flavar () (quote (1 (#t three) (four 5 six))))'))(
         []) == [1, [True, 'three'], ['four', 5, 'six']] == P(parse(
             '(flavar () (list 1 (list #t (sym three)) (list (sym four) 5 (sym six))))'))([])
+
+
+def test_fl_sugaring_cond():
+    assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 100))'))([]) == 'A'
+    assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 89))'))([]) == 'B'
+    assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 70))'))([]) == 'C'
+    assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 65))'))([]) == 'D'
+    assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 10))'))([]) == 'F'
