@@ -299,6 +299,16 @@ class Procedure:
                         return True
                 return False
 
+            elif exp[0] == 'let':
+                _vars, _exp = exp[1], exp[2]
+                env = Environment()
+                env.update(self._env.vars)
+                for _var in _vars:
+                    _name, _value = _var[0], self.evaluate(_var[1])
+                    env._set(_name, _value)
+                procedure = Procedure(env)
+                return procedure.evaluate(_exp)
+
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)

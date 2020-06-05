@@ -275,3 +275,10 @@ def test_fl_sugaring_scand_scor():
     assert P(parse('(flavar () (scor (@< 1 2) (@/ 3 0)) )'))([]) == True
     assert P(parse('(flavar () (scor (@= 1 2) (@/ 3 0) (@< 4 5)))')
              )([]) == 'divide-by-zero'
+
+
+def test_fl_sugaring_let():
+    assert P(parse(
+        '(flavar () (let ((a (@* 4 5)) (b (@+ 3 4))) (@/ (@+ a b) (@- a b))))'))([]) == 2
+    assert P(parse(
+        '(flavar () (let ((a 1)) (@* (let ((a 20) (b (@+ a 300))) (@- b a)) a)))'))([]) == 281
