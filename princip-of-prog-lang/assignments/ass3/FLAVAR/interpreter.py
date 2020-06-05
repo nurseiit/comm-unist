@@ -165,9 +165,10 @@ class Environment:
 
 
 class Lambda:
-    def __init__(self, vars, exp):
+    def __init__(self, vars, exp, rec_name=None):
         self._exp = exp
         self._vars = vars
+        self.rec_name = rec_name
 
     def __str__(self):
         return 'procedure'
@@ -239,13 +240,22 @@ class Procedure:
                 vars = exp[1:2]
                 return Lambda(vars, exp[2])
 
+            elif exp[0] == 'rec':
+                _name = exp[1]
+                _lam = exp[2]
+                return Lambda(_lam[1:2], _lam[2], _name)
+
             elif exp[0] == 'app':
                 fn = self.evaluate(exp[1])
                 if not isinstance(fn, Lambda):
                     raise ValueError('nonprocedural-rator')
                 _env = self._env
                 cbv = Procedure(_env)
-                _env._set(fn._vars[0], cbv.evaluate(exp[2]))
+                _val = cbv.evaluate(exp[2])
+                _env._set(fn._vars[0], _val)
+                # recursive lam
+                if fn.rec_name != None:
+                    _env._set(fn.rec_name, fn)
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 
@@ -308,6 +318,8 @@ class Procedure:
                     env._set(_name, _value)
                 procedure = Procedure(env)
                 return procedure.evaluate(_exp)
+        else:
+            return exp
 
     def _is_atom(self, exp):
         # atoms are simple strings
