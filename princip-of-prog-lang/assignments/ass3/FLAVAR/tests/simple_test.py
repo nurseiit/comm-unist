@@ -264,3 +264,14 @@ def test_fl_sugaring_cond():
     assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 70))'))([]) == 'C'
     assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 65))'))([]) == 'D'
     assert P(parse('(flavar () (app (lam grade (cond ((@>= grade 90) (sym A)) ((@>= grade 80) (sym B)) ((@>= grade 70) (sym C)) ((@>= grade 60) (sym D)) (else (sym F)))) 10))'))([]) == 'F'
+
+
+def test_fl_sugaring_scand_scor():
+    assert P(parse('(flavar () (scand (@= 1 2) (@/ 3 0) (@< 4 5)))'))([]) == False
+    assert P(parse('(flavar () (scand (@/ 3 0) (@= 1 2) (@< 4 5)))')
+             )([]) == 'divide-by-zero'
+    assert P(parse('(flavar () (@or (@< 1 2) (@/ 3 0)))')
+             )([]) == 'divide-by-zero'
+    assert P(parse('(flavar () (scor (@< 1 2) (@/ 3 0)) )'))([]) == True
+    assert P(parse('(flavar () (scor (@= 1 2) (@/ 3 0) (@< 4 5)))')
+             )([]) == 'divide-by-zero'

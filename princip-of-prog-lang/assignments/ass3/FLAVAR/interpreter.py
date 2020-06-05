@@ -285,6 +285,20 @@ class Procedure:
                         return self.evaluate(_then)
                 raise ValueError('no-else-in-cond')
 
+            elif exp[0] == 'scand':
+                args = exp[1:]
+                for arg in args:
+                    if not self.evaluate(arg):
+                        return False
+                return True
+
+            elif exp[0] == 'scor':
+                args = exp[1:]
+                for arg in args:
+                    if self.evaluate(arg):
+                        return True
+                return False
+
     def _is_atom(self, exp):
         # atoms are simple strings
         return isinstance(exp, str)
