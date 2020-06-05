@@ -291,3 +291,7 @@ def test_fl_sugaring_let():
         '(flavar () (let ((a (@* 4 5)) (b (@+ 3 4))) (@/ (@+ a b) (@- a b))))'))([]) == 2
     assert P(parse(
         '(flavar () (let ((a 1)) (@* (let ((a 20) (b (@+ a 300))) (@- b a)) a)))'))([]) == 281
+
+
+def test_fl_sugaring_abs():
+    assert P(parse('(flavar () ((abs (a b c) (@* a (@+ b c))) 2 3 4))'))([]) == 14
