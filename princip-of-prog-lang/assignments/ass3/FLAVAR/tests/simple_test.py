@@ -307,3 +307,9 @@ def test_flavar_cbv():
         '(flavar () (let ((a 0) (f (abs (x) (+ x x)))) (f (begin (set! a (+ a 1)) a))))'))([]) == 2
     assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
              )([]) == 'divide-by-zero'
+
+    # this should return 36 under CBL
+    assert P(parse('(flavar () (let ((a 0)) (let ((f (abs (x) (begin (set! a 17) (+ x x))))) (f (begin (set! a (+ a 1)) a)))))'))([]) == 2
+
+    assert P(parse(
+        '(flavar () (let ((x 1)) (let ((test (abs (a) (begin (set! x 20) (+ a x))))) (test x))))'))([]) == 21
