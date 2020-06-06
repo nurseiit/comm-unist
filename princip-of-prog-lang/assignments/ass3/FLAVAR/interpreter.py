@@ -319,6 +319,12 @@ class Procedure:
                 procedure = Procedure(env)
                 return procedure.evaluate(_exp)
 
+            elif exp[0] == 'set!':
+                _name, _exp = exp[1], exp[2]
+                _value = self.evaluate(_exp)
+                self._env._set(_name, _value)
+                return '#u'
+
         elif isinstance(exp, list) and len(exp[0]) > 0 and exp[0][0] == 'abs':
             _vars, _exp, _values = exp[0][1], exp[0][2], exp[1:]
             env = Environment()
