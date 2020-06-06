@@ -234,6 +234,8 @@ class Procedure:
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
                 args = exp[1:]
+                for i in range(len(args)):
+                    args[i] = self.evaluate(args[i])
                 return self._prim(op, *args)
 
             elif exp[0] == 'lam':
@@ -324,6 +326,14 @@ class Procedure:
                 _value = self.evaluate(_exp)
                 self._env._set(_name, _value)
                 return '#u'
+
+            elif exp[0] == 'abs':
+                vars = exp[1]
+                return Lambda(vars, exp[2])
+
+            else:
+                exp.insert(0, 'app')
+                return self.evaluate(exp)
 
         elif isinstance(exp, list) and len(exp[0]) > 0 and exp[0][0] == 'abs':
             _vars, _exp, _values = exp[0][1], exp[0][2], exp[1:]

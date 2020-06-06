@@ -300,3 +300,10 @@ def test_fl_sugaring_abs():
 def test_flavar_set():
     assert P(parse('(flavar () (let ((a 3)) (list a (set! a 4) a)))'))(
         []) == [3, '#u', 4]
+
+
+def test_flavar_cbv():
+    assert P(parse(
+        '(flavar () (let ((a 0) (f (abs (x) (+ x x)))) (f (begin (set! a (+ a 1)) a))))'))([]) == 2
+    assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
+             )([]) == 'divide-by-zero'
