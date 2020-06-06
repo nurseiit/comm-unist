@@ -213,6 +213,8 @@ class Procedure:
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
                 args = exp[1:]
+                for i in range(len(args)):
+                    args[i] = self.evaluate(args[i])
                 return self._prim(op, *args)
 
             elif exp[0] == 'lam':
