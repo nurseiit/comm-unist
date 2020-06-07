@@ -19,13 +19,14 @@ class List:
 
 
 class Pair:
-    def __init__(self, val):
+    def __init__(self, val, scope=None):
         self.val = val
+        self.scope = Procedure() if scope is None else scope
 
     def _expand_helper(self):
         pp = self
         result = []
-        _scope = Procedure()
+        _scope = self.scope
         while len(pp.val) == 2:
             result.append(_scope.evaluate(pp.val[0]))
             pp.val[1] = _scope.evaluate(pp.val[1])
@@ -230,13 +231,8 @@ class Procedure:
                     raise ValueError('nonbool-in-if-test')
 
             elif exp[0] == 'pair':
-                _fst = Procedure(self._env)
-                _snd = Procedure(self._env)
-                # fst = _fst.evaluate(exp[1])
-                # snd = _snd.evaluate(exp[2])
-                # result = [fst, snd]
                 result = [exp[1], exp[2]]
-                return Pair(result)
+                return Pair(result, scope=self)
 
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
@@ -337,12 +333,11 @@ class Procedure:
                 return self.evaluate(exp)
 
         elif isinstance(exp, list) and len(exp[0]) > 0 and exp[0][0] == 'abs':
-            # todo CBN
             _vars, _exp, _values = exp[0][1], exp[0][2], exp[1:]
             env = Environment()
             env.update(self._env.vars)
             for _name, _value in zip(_vars, _values):
-                _value = self.evaluate(_value)
+                _value = _value
                 env._set(_name, _value)
             procedure = Procedure(env)
             return procedure.evaluate(_exp)

@@ -165,8 +165,8 @@ def test_cbn():
              )([]) == 2
     assert P(parse('(flavar () (app (lam x 3) (app (lam a (app a a)) (lam a (app a a)))))'))(
         []) == 3
-    # assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
-    #          )([]) == 5
+    assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
+             )([]) == 5
 
 
 def test_begin():
@@ -294,5 +294,5 @@ def test_flavar_set():
 def test_flavar_cbn():
     assert P(parse(
         '(flavar () (let ((a 0) (f (abs (x) (+ x x)))) (f (begin (set! a (+ a 1)) a))))'))([]) == 3
-    # assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
-    #          )([]) == 3
+    assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
+             )([]) == 3
