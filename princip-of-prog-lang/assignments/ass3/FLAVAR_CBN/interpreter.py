@@ -25,13 +25,15 @@ class Pair:
     def _expand_helper(self):
         pp = self
         result = []
+        _scope = Procedure()
         while len(pp.val) == 2:
-            result.append(pp.val[0])
+            result.append(_scope.evaluate(pp.val[0]))
+            pp.val[1] = _scope.evaluate(pp.val[1])
             if not isinstance(pp.val[1], Pair):
                 result.append(pp.val[1])
                 return result
             pp = pp.val[1]
-        result.append(pp.val[0])
+        result.append(_scope.evaluate(pp.val[0]))
         return result
 
     def expand(self):
@@ -50,14 +52,14 @@ class Primitive:
             res = scope.evaluate(exp)
             if not isinstance(res, Pair):
                 raise ValueError('not-a-pair')
-            return res.val[0]
+            return scope.evaluate(res.val[0])
 
         def snd(exp):
             scope = Procedure()
             res = scope.evaluate(exp)
             if not isinstance(res, Pair):
                 raise ValueError('not-a-pair')
-            return res.val[1]
+            return scope.evaluate(res.val[1])
 
         def is_unit(x): return x == '#u'
         def is_bool(x): return isinstance(x, bool)
@@ -230,9 +232,10 @@ class Procedure:
             elif exp[0] == 'pair':
                 _fst = Procedure(self._env)
                 _snd = Procedure(self._env)
-                fst = _fst.evaluate(exp[1])
-                snd = _snd.evaluate(exp[2])
-                result = [fst, snd]
+                # fst = _fst.evaluate(exp[1])
+                # snd = _snd.evaluate(exp[2])
+                # result = [fst, snd]
+                result = [exp[1], exp[2]]
                 return Pair(result)
 
             elif exp[0] in self._prim.primitives:
