@@ -158,6 +158,9 @@ def test_rec():
 
 
 def test_strict():
+    assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
+             )([]) == 'divide-by-zero'
+
     assert P(parse('(flavar () (app (lam x 3) (prim / 1 0)))')
              )([]) == 'divide-by-zero'
     assert P(parse('(flavar () (app (lam x (prim + x 3)) (prim / 1 0)))')
