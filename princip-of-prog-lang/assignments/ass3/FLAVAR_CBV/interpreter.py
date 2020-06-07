@@ -22,7 +22,7 @@ class Pair:
     def __init__(self, val):
         self.val = val
 
-    def expand(self):
+    def _expand_helper(self):
         pp = self
         result = []
         while len(pp.val) == 2:
@@ -32,6 +32,12 @@ class Pair:
                 return result
             pp = pp.val[1]
         result.append(pp.val[0])
+        return result
+
+    def expand(self):
+        result = self._expand_helper()
+        if len(result) > 0 and result[-1] == '#u':
+            result = result[:-1]
         return result
 
 
@@ -226,10 +232,7 @@ class Procedure:
                 _snd = Procedure(self._env)
                 fst = _fst.evaluate(exp[1])
                 snd = _snd.evaluate(exp[2])
-                result = [fst]
-                if snd != '#u':
-                    result = [fst, snd]
-                return Pair(result)
+                return Pair([fst, snd])
 
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
