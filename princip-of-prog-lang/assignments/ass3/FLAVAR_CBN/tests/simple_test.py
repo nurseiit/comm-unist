@@ -149,6 +149,7 @@ def test_complex_lam_app():
 
 
 def test_nonstrict():
+    assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))'))([]) == 5
     assert P(parse('(flavar () (app (lam x 3) (prim / 1 0)))')
              )([]) == 3
     assert P(parse('(flavar () (app (lam x (prim + x 3)) (prim / 1 0)))')
@@ -296,3 +297,15 @@ def test_flavar_cbn():
         '(flavar () (let ((a 0) (f (abs (x) (+ x x)))) (f (begin (set! a (+ a 1)) a))))'))([]) == 3
     assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
              )([]) == 3
+
+    assert P(parse('(flavar () (let ((a (/ 1 0))) 3))'))([]) == 3
+
+
+'''
+# todo tests
+
+(fl (a b) (pair (even? sum) (odd? prod))
+(def sum (+ a b))
+(def prod (* a b))
+(def (even? x) (if (= x 0) #t (odd? (- x 1)))) (def (odd? y) (if (= y 0) #f (even? (- y 1)))))
+'''

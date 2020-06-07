@@ -174,6 +174,11 @@ class Environment:
         return self.vars[var]
 
 
+class CBN:
+    def __init__(self, env, exp):
+        self._exp, self._env = exp, env
+
+
 class Lambda:
     def __init__(self, vars, exp):
         self._exp = exp
@@ -196,6 +201,10 @@ class Procedure:
             or isinstance(exp, Pair) or isinstance(exp, Cell)
                 or isinstance(exp, List)):
             return exp
+
+        elif isinstance(exp, CBN):
+            _scope = Procedure(exp._env)
+            return _scope.evaluate(exp._exp)
 
         elif self._is_atom(exp):
             if not exp in self._env.vars:
@@ -313,7 +322,7 @@ class Procedure:
                 env = Environment()
                 env.update(self._env.vars)
                 for _var in _vars:
-                    _name, _value = _var[0], self.evaluate(_var[1])
+                    _name, _value = _var[0], CBN(self._env, _var[1])
                     env._set(_name, _value)
                 procedure = Procedure(env)
                 return procedure.evaluate(_exp)
