@@ -153,39 +153,22 @@ def test_complex_lam_app():
         '(flavar (n) (app (lam f (prim + (app f n) (app f 5))) (lam x (prim * (prim + 1 2) x))))'))([4]) == 27
 
 
-def test_rec():
-    assert P(parse('(flavar () (app (rec fact (lam n (if (prim = n 0) 1 (prim * n (app fact (prim - n 1)))))) 5))'))([]) == 120
-    assert P(parse(
-        '(flavar () (rec fact (lam n (if (prim = n 0) 1 (prim * n (app fact (prim - n 1)))))))'))([]) == 'procedure'
-
-    # assert P(parse('(flavar (x ns) (app (rec scale (lam ys (if (prim unit? ys) ys (pair (prim * x (prim fst ys)) (app scale (prim snd ys)))))) ns))')
-    #          )([3, [7, 2, 5]]) == [21, 6, 15]
-
-
-def test_strict():
+def test_nonstrict():
     assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
-             )([]) == 'divide-by-zero'
+             )([]) == 5
 
     assert P(parse('(flavar () (app (lam x 3) (prim / 1 0)))')
-             )([]) == 'divide-by-zero'
+             )([]) == 3
+
     assert P(parse('(flavar () (app (lam x (prim + x 3)) (prim / 1 0)))')
              )([]) == 'divide-by-zero'
-    with pytest.raises(Exception):
-        P(parse(
-            '(flavar () (app (lam x 3) (app (lam x (app x x)) (lam x (app x x)))))'))([]) == 3
+
+    assert P(parse(
+        '(flavar () (app (lam x 3) (app (lam x (app x x)) (lam x (app x x)))))'))([]) == 3
+
     with pytest.raises(Exception):
         P(parse(
             '(flavar () (app (lam x (prim + x 3)) (app (lam x (app x x)) (lam x (app x x)))))'))([])
-
-
-def test_cbv():
-    assert P(parse('(flavar () (app (lam x 2) (prim / 1 0)))')
-             )([]) == 'divide-by-zero'
-    with pytest.raises(Exception):
-        P(parse('(flavar () (app (lam x 3) (app (lam a (app a a)) (lam a (app a a)))))'))(
-            [])
-    assert P(parse('(flavar () (prim snd (pair (prim / 1 0) (prim + 2 3))))')
-             )([]) == 'divide-by-zero'
 
 
 def test_begin():
@@ -310,14 +293,13 @@ def test_flavar_set():
         []) == [3, '#u', 4]
 
 
-def test_flavar_cbv():
+def test_flavar_cbl():
     assert P(parse(
         '(flavar () (let ((a 0) (f (abs (x) (+ x x)))) (f (begin (set! a (+ a 1)) a))))'))([]) == 2
     assert P(parse('(flavar () ((abs (x) 3) (/ 1 0)))')
-             )([]) == 'divide-by-zero'
+             )([]) == 3
 
-    # this should return 36 under CBL
-    assert P(parse('(flavar () (let ((a 0)) (let ((f (abs (x) (begin (set! a 17) (+ x x))))) (f (begin (set! a (+ a 1)) a)))))'))([]) == 2
+    assert P(parse('(flavar () (let ((a 0)) (let ((f (abs (x) (begin (set! a 17) (+ x x))))) (f (begin (set! a (+ a 1)) a)))))'))([]) == 36
 
-    assert P(parse(
-        '(flavar () (let ((x 1)) (let ((test (abs (a) (begin (set! x 20) (+ a x))))) (test x))))'))([]) == 21
+    # assert P(parse(
+    #     '(flavar () (let ((x 1)) (let ((test (abs (a) (begin (set! x 20) (+ a x))))) (test x))))'))([]) == 21

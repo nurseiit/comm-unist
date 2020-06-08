@@ -19,19 +19,22 @@ class List:
 
 
 class Pair:
-    def __init__(self, val):
+    def __init__(self, val, scope=None):
         self.val = val
+        self.scope = Procedure() if scope is None else scope
 
     def _expand_helper(self):
         pp = self
         result = []
+        _scope = self.scope
         while len(pp.val) == 2:
-            result.append(pp.val[0])
+            result.append(_scope.evaluate(pp.val[0]))
+            pp.val[1] = _scope.evaluate(pp.val[1])
             if not isinstance(pp.val[1], Pair):
                 result.append(pp.val[1])
                 return result
             pp = pp.val[1]
-        result.append(pp.val[0])
+        result.append(_scope.evaluate(pp.val[0]))
         return result
 
     def expand(self):
@@ -50,14 +53,14 @@ class Primitive:
             res = scope.evaluate(exp)
             if not isinstance(res, Pair):
                 raise ValueError('not-a-pair')
-            return res.val[0]
+            return scope.evaluate(res.val[0])
 
         def snd(exp):
             scope = Procedure()
             res = scope.evaluate(exp)
             if not isinstance(res, Pair):
                 raise ValueError('not-a-pair')
-            return res.val[1]
+            return scope.evaluate(res.val[1])
 
         def is_unit(x): return x == '#u'
         def is_bool(x): return isinstance(x, bool)
@@ -84,7 +87,8 @@ class Primitive:
         def assign_cell(cell, val):
             if not isinstance(cell, Cell):
                 raise ValueError('not-a-cell')
-            cell.val = val
+            scope = Procedure()
+            cell.val = scope.evaluate(val)
             return '#u'
 
         def cell_isequal(foo, bar):
@@ -170,11 +174,15 @@ class Environment:
         return self.vars[var]
 
 
+class CBN:
+    def __init__(self, env, exp):
+        self._exp, self._env = exp, env
+
+
 class Lambda:
-    def __init__(self, vars, exp, rec_name=None):
+    def __init__(self, vars, exp):
         self._exp = exp
         self._vars = vars
-        self.rec_name = rec_name
 
     def __str__(self):
         return 'procedure'
@@ -193,6 +201,10 @@ class Procedure:
             or isinstance(exp, Pair) or isinstance(exp, Cell)
                 or isinstance(exp, List)):
             return exp
+
+        elif isinstance(exp, CBN):
+            _scope = Procedure(exp._env)
+            return _scope.evaluate(exp._exp)
 
         elif self._is_atom(exp):
             if not exp in self._env.vars:
@@ -228,11 +240,8 @@ class Procedure:
                     raise ValueError('nonbool-in-if-test')
 
             elif exp[0] == 'pair':
-                _fst = Procedure(self._env)
-                _snd = Procedure(self._env)
-                fst = _fst.evaluate(exp[1])
-                snd = _snd.evaluate(exp[2])
-                return Pair([fst, snd])
+                result = [exp[1], exp[2]]
+                return Pair(result, scope=self)
 
             elif exp[0] in self._prim.primitives:
                 op = exp[0]
@@ -245,22 +254,16 @@ class Procedure:
                 vars = exp[1:2]
                 return Lambda(vars, exp[2])
 
-            elif exp[0] == 'rec':
-                _name = exp[1]
-                _lam = exp[2]
-                return Lambda(_lam[1:2], _lam[2], _name)
-
             elif exp[0] == 'app':
                 fn = self.evaluate(exp[1])
                 if not isinstance(fn, Lambda):
                     raise ValueError('nonprocedural-rator')
                 _env = self._env
-                cbv = Procedure(_env)
-                _val = cbv.evaluate(exp[2])
+                _val = exp[2]
+                if isinstance(_val, list) and _val[0] == 'cell':
+                    _scope = Procedure(_env)
+                    _val = _scope.evaluate(_val)
                 _env._set(fn._vars[0], _val)
-                # recursive lam
-                if fn.rec_name != None:
-                    _env._set(fn.rec_name, fn)
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
 
@@ -319,7 +322,7 @@ class Procedure:
                 env = Environment()
                 env.update(self._env.vars)
                 for _var in _vars:
-                    _name, _value = _var[0], self.evaluate(_var[1])
+                    _name, _value = _var[0], CBN(self._env, _var[1])
                     env._set(_name, _value)
                 procedure = Procedure(env)
                 return procedure.evaluate(_exp)
@@ -343,7 +346,7 @@ class Procedure:
             env = Environment()
             env.update(self._env.vars)
             for _name, _value in zip(_vars, _values):
-                _value = self.evaluate(_value)
+                _value = _value
                 env._set(_name, _value)
             procedure = Procedure(env)
             return procedure.evaluate(_exp)
