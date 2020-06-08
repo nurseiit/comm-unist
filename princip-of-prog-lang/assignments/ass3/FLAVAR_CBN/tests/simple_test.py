@@ -3,6 +3,11 @@ from interpreter import P
 import pytest
 
 
+def test_parser_error():
+    with pytest.raises(ValueError):
+        parse('(flick () #t)')
+
+
 def test_app_lam():
     assert P(parse('(flavar () (app (lam x (prim + x 1)) 2))'))([]) == 3
 
