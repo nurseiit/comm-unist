@@ -174,9 +174,16 @@ class Environment:
         return self.vars[var]
 
 
-class CBN:
-    def __init__(self, env, exp):
-        self._exp, self._env = exp, env
+class CBL:
+    def __init__(self, exp, scope):
+        self._exp = exp
+        self.scope = scope
+        self.computed = None
+
+    def __call__(self):
+        if self.computed is None:
+            self.computed = self.scope.evaluate(self._exp)
+        return self.computed
 
 
 class Lambda:
@@ -202,9 +209,8 @@ class Procedure:
                 or isinstance(exp, List)):
             return exp
 
-        elif isinstance(exp, CBN):
-            _scope = Procedure(exp._env)
-            return _scope.evaluate(exp._exp)
+        elif isinstance(exp, CBL):
+            return exp()
 
         elif self._is_atom(exp):
             if not exp in self._env.vars:
@@ -259,10 +265,7 @@ class Procedure:
                 if not isinstance(fn, Lambda):
                     raise ValueError('nonprocedural-rator')
                 _env = self._env
-                _val = exp[2]
-                if isinstance(_val, list) and _val[0] == 'cell':
-                    _scope = Procedure(_env)
-                    _val = _scope.evaluate(_val)
+                _val = CBL(exp[2], self)
                 _env._set(fn._vars[0], _val)
                 app = Procedure(_env, fn._exp)
                 return app.evaluate(app._exp)
@@ -322,7 +325,7 @@ class Procedure:
                 env = Environment()
                 env.update(self._env.vars)
                 for _var in _vars:
-                    _name, _value = _var[0], CBN(self._env, _var[1])
+                    _name, _value = _var[0], CBL(_var[1], self)
                     env._set(_name, _value)
                 procedure = Procedure(env)
                 return procedure.evaluate(_exp)
