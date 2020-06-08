@@ -301,5 +301,5 @@ def test_flavar_cbl():
 
     assert P(parse('(flavar () (let ((a 0)) (let ((f (abs (x) (begin (set! a 17) (+ x x))))) (f (begin (set! a (+ a 1)) a)))))'))([]) == 36
 
-    # assert P(parse(
-    #     '(flavar () (let ((x 1)) (let ((test (abs (a) (begin (set! x 20) (+ a x))))) (test x))))'))([]) == 21
+    assert P(parse(
+        '(flavar () (let ((x 1)) (let ((test (abs (a) (begin (set! x 20) (+ a x))))) (test x))))'))([]) == 40
