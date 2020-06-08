@@ -3,6 +3,11 @@ from interpreter import P
 import pytest
 
 
+def test_parser_error():
+    with pytest.raises(ValueError):
+        parse('(flk () #t)')
+
+
 def test_app_lam():
     assert P(parse('(flick () (app (lam x (prim + x 1)) 2))'))([]) == 3
 
@@ -212,5 +217,5 @@ def test_cell_isequal():
 
 
 def test_is_cell():
-    assert P(parse('(flk () (pair (prim cell? 0) (prim cell? (cell 0))))'))(
+    assert P(parse('(flick () (pair (prim cell? 0) (prim cell? (cell 0))))'))(
         []) == [False, True]

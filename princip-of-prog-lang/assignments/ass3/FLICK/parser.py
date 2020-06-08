@@ -2,12 +2,19 @@ import re
 
 
 def parse(src):
+    exp = parse_helper(src)
+    if exp[0] != 'flick':
+        raise ValueError('Not a flick program')
+    return exp
+
+
+def parse_helper(src):
     exp, rest = _partition_exps(src)
     if rest:
         raise ValueError("Unexpected token '%s'" % rest)
     elif exp[0] == "(":
         end = _close_paren(exp)
-        return [parse(e) for e in _split_to_exps(exp[1:end])]
+        return [parse_helper(e) for e in _split_to_exps(exp[1:end])]
     else:
         try:
             return int(exp)
