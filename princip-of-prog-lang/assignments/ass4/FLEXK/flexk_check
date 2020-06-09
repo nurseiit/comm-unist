@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import sys
+import logging
+from parser import parse
+from checker import type_check
+
+## set up a logger
+logger = logging.getLogger("flick")
+rootLogger = logging.getLogger()
+FORMAT = logging.Formatter('%(levelname)-8s %(message)s')
+rootLogger.setLevel(logging.INFO)
+
+# use the following if you want to lower the logging level to DEBUG.
+# rootLogger.setLevel(logging.DEBUG)
+
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(FORMAT)
+rootLogger.addHandler(consoleHandler)
+
+if len(sys.argv) < 1:
+    sys.stderr.write('Syntax: flexk typed_program\n')
+    sys.exit(1)
+
+try:
+    prog, prog_type = parse(sys.argv[1])
+    rst = type_check(prog, prog_type)
+    print(rst)
+except ValueError as e:
+    sys.stderr.write(str(e))
+    sys.exit(1)
