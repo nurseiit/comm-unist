@@ -1,8 +1,3 @@
-import logging
-
-logger = logging.getLogger("checker")
-
-
-def type_check(prog, prog_type):
-    logger.info('prog: {}'.format(prog))
-    logger.info('prog_type: {}'.format(prog_type))
+def type_check(_exp, _type):
+    print(_exp, '##', _type)
+    return True
