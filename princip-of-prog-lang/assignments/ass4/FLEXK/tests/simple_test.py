@@ -22,16 +22,16 @@ def test_2():
 #     ''')) == False
 
 
-# def test_5():
-#     assert type_check(*parse('''
-#     (flexk ((x int)) 1) : (=> (int) int)
-#     ''')) == True
+def test_5():
+    assert type_check(*parse('''
+    (flexk ((x int)) 1) : (=> (int) int)
+    ''')) == True
 
 
-# def test_6():
-#     assert type_check(*parse('''
-#     (flexk ((x int)) 1) : (=> () int)
-#     ''')) == False
+def test_6():
+    assert type_check(*parse('''
+    (flexk ((x int)) 1) : (=> () int)
+    ''')) == False
 
 
 # def test_7():
