@@ -44,3 +44,9 @@ def test_8():
     assert type_check(*parse('''
     (flexk ((x int) (y bool)) 1): (=> (int bool int) int)
     ''')) == False
+
+
+def test_symb():
+    assert type_check(*parse('''
+    (flexk (()) (sym captain)): (=> () symb)
+    ''')) == True

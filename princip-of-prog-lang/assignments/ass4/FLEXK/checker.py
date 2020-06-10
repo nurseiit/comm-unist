@@ -9,6 +9,11 @@ class Types(Enum):
     VOID = auto()
 
 
+class Sym:
+    def __init__(self, val):
+        self.val = val
+
+
 class TypeFlex:
     def __init__(self):
         pass
@@ -18,9 +23,15 @@ class TypeFlex:
             return False
         if not isinstance(_exp[1], list):
             return self._type_from_value(_exp[1]) is self._type_from_name(_type[1])
-        if _exp[1][0] != 'abs' or _type[1][0] != '->':
-            return False
-        return self.check(_exp[1][1:], _type[1][1:])
+        if _exp[1][0] == 'abs':
+            if _type[1][0] != '->':
+                return False
+            return self.check(_exp[1][1:], _type[1][1:])
+        return self._type_from_value(self._eval(_exp[1])) is self._type_from_name(_type[1])
+
+    def _eval(self, _exp):
+        if _exp[0] == 'sym':
+            return Sym(_exp[1])
 
     def _check_args(self, _exp, _type):
         _exp_args = []
@@ -54,7 +65,7 @@ class TypeFlex:
             return Types.BOOL
         elif isinstance(value, int):
             return Types.INT
-        elif isinstance(value, str):
+        elif isinstance(value, Sym):
             return Types.SYMB
         else:
             raise ValueError('Could not get Type from:', value)
