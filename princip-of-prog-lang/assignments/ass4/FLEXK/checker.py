@@ -16,7 +16,11 @@ class TypeFlex:
     def check(self, _exp, _type):
         if not self._check_args(_exp[0], _type[0]):
             return False
-        return self._type_from_value(_exp[1]) is self._type_from_name(_type[1])
+        if not isinstance(_exp[1], list):
+            return self._type_from_value(_exp[1]) is self._type_from_name(_type[1])
+        if _exp[1][0] != 'abs' or _type[1][0] != '->':
+            return False
+        return self.check(_exp[1][1:], _type[1][1:])
 
     def _check_args(self, _exp, _type):
         _exp_args = []
