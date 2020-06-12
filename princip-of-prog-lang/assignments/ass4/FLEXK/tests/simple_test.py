@@ -78,3 +78,18 @@ def test_prim():
     assert type_check(*parse('''
     (flexk (()) (prim + (x bool) (y int))): (=> () (-> (int int) int))
     ''')) == False
+
+
+def test_implicit_prim():
+    assert type_check(*parse('''
+    (flexk (()) (+ 2 3)): (=> () (-> (int int) int))
+    ''')) == True
+
+    assert type_check(*parse('''
+    (flexk (()) (+ 2 3)): (=> () (-> (int int) bool))
+    ''')) == False
+
+# def test_complex_abs():
+#     assert type_check(*parse('''
+#     (flexk (()) ((abs ((a int) (b int)) (/ (+ a b) 2)))):(=> () (-> (int int) int))
+#     ''')) == True

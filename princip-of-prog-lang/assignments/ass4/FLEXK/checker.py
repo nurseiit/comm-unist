@@ -28,6 +28,8 @@ class Primitive:
                                   'and', 'or',
                                   'bool=?', ]
 
+        self.all_ops = self.primitives_binary + self.primitives_unary
+
     def __call__(self, op, *args):
         # check for argc
         argc = len(args)
@@ -76,6 +78,10 @@ class TypeFlex:
             flag = self._type_from_name(
                 prim_type[-1]) is self._type_from_name(_type[1][-1])
             return flag and self._check_args(args, prim_type[1])
+
+        elif _exp[1][0] in self.prim_type.all_ops:
+            _exp[1].insert(0, 'prim')
+            return self.check(_exp, _type)
 
         return self._type_from_value(self._eval(_exp[1])) is self._type_from_name(_type[1])
 
