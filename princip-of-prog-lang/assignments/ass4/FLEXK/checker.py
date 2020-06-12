@@ -1,5 +1,4 @@
 from enum import Enum, auto
-import operator as op
 
 
 class Types(Enum):
@@ -20,22 +19,6 @@ class Sym:
 
 class Primitive:
     def __init__(self):
-        not_eq = lambda *x: not op.eq(*x)
-
-        def sym_eq(foo, bar):
-            if not isinstance(foo, Sym) or not isinstance(bar, Sym):
-                raise ValueError('not-a-symbol')
-            return foo.val == bar.val
-
-        self.primitives = {'+': op.add, '-': op.sub,
-                           '*': op.mul, '/': op.floordiv,
-                           '%': op.mod, '=': op.eq,
-                           '!=': not_eq, '<': op.lt,
-                           '<=': op.le, '>': op.gt,
-                           '>=': op.ge, 'sym=?': sym_eq,
-                           'not': op.not_, 'and': op.and_,
-                           'or': op.or_, 'bool=?': op.eq, }
-
         self.primitives_unary = ['not']
 
         self.primitives_binary = ['+', '-', '*',
@@ -45,16 +28,9 @@ class Primitive:
                                   'and', 'or',
                                   'bool=?', ]
 
-        self.only_int = ['+', '-', '*',
-                         '/', '%', '=',
-                         '!=', '<', '<=',
-                         '>', '>=']
-
-        self.only_bool = ['not', 'and', 'or', 'bool=?']
-
     def __call__(self, op, *args):
-        fn = self.primitives[op]
         # check for argc
+        print(op, args)
         argc = len(args)
         if argc > 2 or argc < 1:
             raise ValueError('wrong-number-of-args')
@@ -62,9 +38,11 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
-        # validate types
-        self._validate(op, *args)
-        return fn(*args)
+        return self._validate_and_return(op, *args)
+
+    def _validate_and_return(self, op, *args):
+        # todo
+        return self.types(op)
 
     def types(self, op):
         if op in ['+', '-', '*', '/', '%']:
@@ -80,31 +58,31 @@ class Primitive:
         else:
             raise ValueError('No type for prim op:', op)
 
-    def _validate(self, op, *args):
-        # check all args
-        for arg in args:
-            if op in self.only_bool and arg is not True and arg is not False:
-                raise ValueError('not-a-boolean')
-            if op in self.only_int and (not isinstance(arg, int) or arg is True or arg is False):
-                raise ValueError('not-an-integer')
-        if op == '/' or op == '%':
-            if args[1] == 0:
-                raise ValueError('divide-by-zero')
-
 
 class TypeFlex:
     def __init__(self):
-        pass
+        self.prim_type = Primitive()
 
     def check(self, _exp, _type):
         if not self._check_args(_exp[0], _type[0]):
             return False
+
         if not isinstance(_exp[1], list):
             return self._type_from_value(_exp[1]) is self._type_from_name(_type[1])
+
         if _exp[1][0] == 'abs':
             if _type[1][0] != '->':
                 return False
             return self.check(_exp[1][1:], _type[1][1:])
+
+        elif _exp[1][0] == 'prim':
+            # todo
+            # print(_exp[1])
+            # print(_type[1])
+            # print(self.prim_type.types(_exp[1][1]))
+            op, args = _exp[1][1], _exp[1][2:]
+            return self.prim_type(op, *args) == _type[1]
+
         return self._type_from_value(self._eval(_exp[1])) is self._type_from_name(_type[1])
 
     def _eval(self, _exp):
@@ -162,7 +140,6 @@ class TypeFlex:
 
 
 def type_check(_exp, _type):
-    print(_exp, '##', _type)
     if _exp[0] != 'flexk' or _type[0] != '=>':
         return False
     type_flex = TypeFlex()

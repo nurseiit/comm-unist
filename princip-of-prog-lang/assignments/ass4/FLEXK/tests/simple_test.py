@@ -56,3 +56,13 @@ def test_symb():
     assert type_check(*parse('''
     (flexk (()) (sym captain)): (=> () symb)
     ''')) == True
+
+
+def test_prim():
+    assert type_check(*parse('''
+    (flexk (()) (prim + 2 3)): (=> () (-> (int int) int))
+    ''')) == True
+
+    assert type_check(*parse('''
+    (flexk (()) (prim + 2 3)): (=> () (-> (int int) bool))
+    ''')) == False
