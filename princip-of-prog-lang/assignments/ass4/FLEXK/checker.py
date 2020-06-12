@@ -30,7 +30,6 @@ class Primitive:
 
     def __call__(self, op, *args):
         # check for argc
-        print(op, args)
         argc = len(args)
         if argc > 2 or argc < 1:
             raise ValueError('wrong-number-of-args')
@@ -38,10 +37,6 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
-        return self._validate_and_return(op, *args)
-
-    def _validate_and_return(self, op, *args):
-        # todo
         return self.types(op)
 
     def types(self, op):
@@ -76,12 +71,11 @@ class TypeFlex:
             return self.check(_exp[1][1:], _type[1][1:])
 
         elif _exp[1][0] == 'prim':
-            # todo
-            # print(_exp[1])
-            # print(_type[1])
-            # print(self.prim_type.types(_exp[1][1]))
             op, args = _exp[1][1], _exp[1][2:]
-            return self.prim_type(op, *args) == _type[1]
+            prim_type = self.prim_type(op, *args)
+            flag = self._type_from_name(
+                prim_type[-1]) is self._type_from_name(_type[1][-1])
+            return flag and self._check_args(args, prim_type[1])
 
         return self._type_from_value(self._eval(_exp[1])) is self._type_from_name(_type[1])
 
@@ -96,8 +90,10 @@ class TypeFlex:
         for arg in _exp:
             if arg == []:
                 _exp_args.append(Types.VOID)
-            else:
+            elif isinstance(arg, list):
                 _exp_args.append(self._type_from_name(arg[1]))
+            else:
+                _exp_args.append(self._type_from_value(arg))
 
         if len(_type) == 0:
             _type_args.append(Types.VOID)

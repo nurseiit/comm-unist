@@ -66,3 +66,15 @@ def test_prim():
     assert type_check(*parse('''
     (flexk (()) (prim + 2 3)): (=> () (-> (int int) bool))
     ''')) == False
+
+    assert type_check(*parse('''
+    (flexk (()) (prim + (x int) (y int))): (=> () (-> (int int) int))
+    ''')) == True
+
+    assert type_check(*parse('''
+    (flexk (()) (prim + (x int) (y int))): (=> () (-> (int int) bool))
+    ''')) == False
+
+    assert type_check(*parse('''
+    (flexk (()) (prim + (x bool) (y int))): (=> () (-> (int int) int))
+    ''')) == False
