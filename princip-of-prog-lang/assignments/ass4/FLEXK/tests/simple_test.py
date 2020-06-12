@@ -1,5 +1,11 @@
 from parser import parse
 from checker import type_check
+import pytest
+
+
+def test_parser_error():
+    with pytest.raises(ValueError):
+        parse('(flick () #t)')
 
 
 def test_1():

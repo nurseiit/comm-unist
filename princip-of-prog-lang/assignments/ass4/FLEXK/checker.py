@@ -66,6 +66,20 @@ class Primitive:
         self._validate(op, *args)
         return fn(*args)
 
+    def types(self, op):
+        if op in ['+', '-', '*', '/', '%']:
+            return ['->', ['int', 'int'], 'int']
+        elif op in ['<', '=', '>', '<=', '>=', '!=']:
+            return ['->', ['int', 'int'], 'bool']
+        elif op in ['or', 'and', 'bool=?']:
+            return ['->', ['bool', 'bool'], 'bool']
+        elif op == 'not':
+            return ['->', ['bool'], 'bool']
+        elif op == 'sym=?':
+            return ['->', ['symb', 'symb'], 'bool']
+        else:
+            raise ValueError('No type for prim op:', op)
+
     def _validate(self, op, *args):
         # check all args
         for arg in args:
@@ -148,6 +162,7 @@ class TypeFlex:
 
 
 def type_check(_exp, _type):
+    print(_exp, '##', _type)
     if _exp[0] != 'flexk' or _type[0] != '=>':
         return False
     type_flex = TypeFlex()
