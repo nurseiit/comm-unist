@@ -118,6 +118,7 @@ class TypeFlex:
     def __init__(self):
         self.prim_type = Primitive()
         self.helper = Helper()
+        self.vars = {}
 
     def validate(self, exps, types):
         normalised_types = self.helper.normalise_types(types)
@@ -125,9 +126,29 @@ class TypeFlex:
 
     def check(self, exps, types):
         args_types = [self.helper.get_type(x) for x in exps[0]]
+
+        for x, t in zip(exps[0], args_types):
+            if x == []:
+                continue
+            self.vars[x[0]] = t
+
         if args_types != types[0]:
             return False
-        return self.helper.type_from_value(exps[1]) is types[-1]
+
+        if not isinstance(exps[1], list):
+            return self.helper.type_from_value(exps[1]) is types[-1]
+
+        exps = exps[1]
+        types = types[1]
+
+        if exps[0] == 'abs':
+            if types[0] is not Types.FUNC:
+                return False
+            return self.check(exps[1:], types[1:])
+        elif exps[0] == 'sym':
+            return types is Types.SYMB
+
+        print('Uh, oh', exps, types)
 
 
 def type_check(_exp, _type):
