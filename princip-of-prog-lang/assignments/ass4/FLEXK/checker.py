@@ -143,22 +143,22 @@ class TypeFlex:
         normalised_types = self.helper.normalise_types(types)
         return self.check(exps, normalised_types)
 
-    def check(self, exps, types):
-        args_types = [self.helper.get_type(x) for x in exps[0]]
+    def check(self, _exps, _types):
+        args_types = [self.helper.get_type(x) for x in _exps[0]]
 
-        for x, t in zip(exps[0], args_types):
+        for x, t in zip(_exps[0], args_types):
             if x == []:
                 continue
             self.vars[x[0]] = t
 
-        if args_types != types[0]:
+        if args_types != _types[0]:
             return False
 
-        if not isinstance(exps[1], list):
-            return self.helper.type_from_value(exps[1]) is types[-1]
+        if not isinstance(_exps[1], list):
+            return self.helper.type_from_value(_exps[1]) is _types[-1]
 
-        exps = exps[1]
-        types = types[1]
+        exps = _exps[1]
+        types = _types[1]
 
         if exps[0] == 'abs':
             if types[0] is not Types.FUNC:
@@ -169,7 +169,7 @@ class TypeFlex:
             return types is Types.SYMB
 
         elif exps[0] == 'prim':
-            if types[0] != Types.FUNC:
+            if not isinstance(types, list) or types[0] != Types.FUNC:
                 return False
             types = types[1:]
             op, args = exps[1], exps[2:]
@@ -178,7 +178,11 @@ class TypeFlex:
                 return False
             return return_type is types[-1]
 
-        print('Uh, oh', exps, types)
+        elif exps[0] in self.prim_type.all_ops:
+            _exps[1].insert(0, 'prim')
+            return self.check(_exps, _types)
+
+        raise ValueError('Uh, oh', exps, types)
 
 
 def type_check(_exp, _type):
