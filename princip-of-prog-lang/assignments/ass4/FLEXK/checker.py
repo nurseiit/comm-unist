@@ -50,7 +50,6 @@ class Helper:
     def normalise_types(self, args):
         if args == []:
             return [Types.VOID]
-
         types = []
         for arg in args:
             if isinstance(arg, list):
@@ -66,6 +65,18 @@ class Helper:
             return self.type_from_name(arg[1])
         return self.type_from_value(arg)
 
+    def types_are_equal(self, foo, bar):
+        if isinstance(foo, list) != isinstance(bar, list):
+            return False
+        if not isinstance(foo, list):
+            return foo is bar
+        if len(foo) != len(bar):
+            return False
+        for x, y in zip(foo, bar):
+            if not self.types_are_equal(x, y):
+                return False
+        return True
+
 
 class Primitive:
     def __init__(self):
@@ -80,7 +91,8 @@ class Primitive:
 
         self.all_ops = self.primitives_binary + self.primitives_unary
 
-    def __call__(self, op, argc):
+    def __call__(self, op, args):
+        argc = len(args)
         # check for argc
         if argc > 2 or argc < 1:
             raise ValueError('wrong-number-of-args')
@@ -88,7 +100,14 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         elif argc == 2 and op not in self.primitives_binary:
             raise ValueError('wrong-number-of-args')
-        return self.types(op)
+
+        helper = Helper()
+        types = self.types(op)
+        foo = [helper.get_type(x) for x in args]
+        if not helper.types_are_equal(foo, types[0]):
+            raise ValueError('Prim', op, 'arguments are not valid')
+
+        return types
 
     def raw_types(self, op):
         if op in ['+', '-', '*', '/', '%']:
@@ -145,8 +164,19 @@ class TypeFlex:
             if types[0] is not Types.FUNC:
                 return False
             return self.check(exps[1:], types[1:])
+
         elif exps[0] == 'sym':
             return types is Types.SYMB
+
+        elif exps[0] == 'prim':
+            if types[0] != Types.FUNC:
+                return False
+            types = types[1:]
+            op, args = exps[1], exps[2:]
+            prim_args_types, return_type = self.prim_type(op, args)
+            if not self.helper.types_are_equal(prim_args_types, types[0]):
+                return False
+            return return_type is types[-1]
 
         print('Uh, oh', exps, types)
 
