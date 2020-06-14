@@ -47,27 +47,21 @@ class Helper:
         else:
             raise ValueError('No such Type:', name)
 
-    def check_args(self, _exp, _type_args):
-        _exp_args = []
+    def normalise_types(self, args):
+        if args == []:
+            return [Types.VOID]
 
-        for arg in _exp:
-            if arg == []:
-                _exp_args.append(Types.VOID)
-            elif isinstance(arg, list):
-                _exp_args.append(self.type_from_name(arg[1]))
+        types = []
+        for arg in args:
+            if isinstance(arg, list):
+                types.append(self.normalise_types(arg))
             else:
-                _exp_args.append(self.type_from_value(arg))
-
-        if len(_exp_args) != len(_type_args):
-            return False
-
-        _len = len(_exp_args)
-        for i in range(_len):
-            if _exp_args[i] is not _type_args[i]:
-                return False
-        return True
+                types.append(self.type_from_name(arg))
+        return types
 
     def get_type(self, arg):
+        if arg == []:
+            return Types.VOID
         if isinstance(arg, list):
             return self.type_from_name(arg[1])
         return self.type_from_value(arg)
@@ -125,39 +119,15 @@ class TypeFlex:
         self.prim_type = Primitive()
         self.helper = Helper()
 
-    def check(self, _exp, _type):
-        print('In check:', _exp, _type)
-        if not self.helper.check_args(_exp[0], _type[0]):
+    def validate(self, exps, types):
+        normalised_types = self.helper.normalise_types(types)
+        return self.check(exps, normalised_types)
+
+    def check(self, exps, types):
+        args_types = [self.helper.get_type(x) for x in exps[0]]
+        if args_types != types[0]:
             return False
-
-        if not isinstance(_exp[1], list):
-            return self.helper.type_from_value(_exp[1]) is self.helper.type_from_name(_type[1])
-
-        if _exp[1][0] == 'abs':
-            if _type[1][0] != '->':
-                return False
-            return self.check(_exp[1][1:], _type[1][1:])
-
-        elif _exp[1][0] == 'prim':
-            print(_exp[1], '###', _type[1])
-            op, args = _exp[1][1], _exp[1][2:]
-            argc = len(args)
-            args_type, return_type = self.prim_type(op, argc)
-            if not self.helper.check_args(args, args_type):
-                return False
-            return return_type is _type[1]
-
-        elif _exp[1][0] in self.prim_type.all_ops:
-            _exp[1].insert(0, 'prim')
-            return self.check(_exp, _type)
-
-        return self.helper.type_from_value(self._eval(_exp[1])) is self.helper.type_from_name(_type[1])
-
-    def _eval(self, _exp):
-        if _exp[0] == 'sym':
-            return Sym(_exp[1])
-        print('Eval with:', _exp)
-        exit(1)
+        return self.helper.type_from_value(exps[1]) is types[-1]
 
 
 def type_check(_exp, _type):
@@ -165,7 +135,7 @@ def type_check(_exp, _type):
         return False
     type_flex = TypeFlex()
     try:
-        return type_flex.check(_exp[1:], _type[1:])
+        return type_flex.validate(_exp[1:], _type[1:])
     except ValueError as e:
         print(str(e))
         return False
