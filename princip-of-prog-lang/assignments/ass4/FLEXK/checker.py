@@ -7,6 +7,7 @@ class Types(Enum):
     INT = auto()
     SYMB = auto()
     VOID = auto()
+    FUNC = auto()
 
 
 class Sym:
@@ -21,6 +22,8 @@ class Helper:
     def type_from_value(self, value):
         if value == '#u':
             return Types.UNIT
+        elif value == '->':
+            return Types.FUNC
         elif value is True or value is False:
             return Types.BOOL
         elif isinstance(value, int):
@@ -39,12 +42,13 @@ class Helper:
             return Types.INT
         elif name == 'symb':
             return Types.SYMB
+        elif name == '->':
+            return Types.FUNC
         else:
             raise ValueError('No such Type:', name)
 
-    def check_args(self, _exp, _type):
+    def check_args(self, _exp, _type_args):
         _exp_args = []
-        _type_args = []
 
         for arg in _exp:
             if arg == []:
@@ -54,12 +58,6 @@ class Helper:
             else:
                 _exp_args.append(self.type_from_value(arg))
 
-        if len(_type) == 0:
-            _type_args.append(Types.VOID)
-
-        for arg in _type:
-            _type_args.append(self.type_from_name(arg))
-
         if len(_exp_args) != len(_type_args):
             return False
 
@@ -68,6 +66,11 @@ class Helper:
             if _exp_args[i] is not _type_args[i]:
                 return False
         return True
+
+    def get_type(self, arg):
+        if isinstance(arg, list):
+            return self.type_from_name(arg[1])
+        return self.type_from_value(arg)
 
 
 class Primitive:
@@ -83,9 +86,8 @@ class Primitive:
 
         self.all_ops = self.primitives_binary + self.primitives_unary
 
-    def __call__(self, op, *args):
+    def __call__(self, op, argc):
         # check for argc
-        argc = len(args)
         if argc > 2 or argc < 1:
             raise ValueError('wrong-number-of-args')
         elif argc == 1 and op not in self.primitives_unary:
@@ -94,7 +96,7 @@ class Primitive:
             raise ValueError('wrong-number-of-args')
         return self.types(op)
 
-    def types(self, op):
+    def raw_types(self, op):
         if op in ['+', '-', '*', '/', '%']:
             return ['->', ['int', 'int'], 'int']
         elif op in ['<', '=', '>', '<=', '>=', '!=']:
@@ -108,6 +110,15 @@ class Primitive:
         else:
             raise ValueError('No type for prim op:', op)
 
+    def types(self, op):
+        helper = Helper()
+        _raw = self.raw_types(op)
+        args = []
+        for arg in _raw[1]:
+            args.append(helper.type_from_name(arg))
+        return_type = helper.type_from_name(_raw[-1])
+        return args, return_type
+
 
 class TypeFlex:
     def __init__(self):
@@ -115,6 +126,7 @@ class TypeFlex:
         self.helper = Helper()
 
     def check(self, _exp, _type):
+        print('In check:', _exp, _type)
         if not self.helper.check_args(_exp[0], _type[0]):
             return False
 
@@ -129,10 +141,11 @@ class TypeFlex:
         elif _exp[1][0] == 'prim':
             print(_exp[1], '###', _type[1])
             op, args = _exp[1][1], _exp[1][2:]
-            prim_type = self.prim_type(op, *args)
-            flag = self.helper.type_from_name(
-                prim_type[-1]) is self.helper.type_from_name(_type[1][-1])
-            return flag and self.helper.check_args(args, prim_type[1])
+            argc = len(args)
+            args_type, return_type = self.prim_type(op, argc)
+            if not self.helper.check_args(args, args_type):
+                return False
+            return return_type is _type[1]
 
         elif _exp[1][0] in self.prim_type.all_ops:
             _exp[1].insert(0, 'prim')
@@ -143,6 +156,8 @@ class TypeFlex:
     def _eval(self, _exp):
         if _exp[0] == 'sym':
             return Sym(_exp[1])
+        print('Eval with:', _exp)
+        exit(1)
 
 
 def type_check(_exp, _type):
